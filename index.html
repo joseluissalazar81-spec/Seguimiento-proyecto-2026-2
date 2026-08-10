@@ -23,13 +23,13 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
       /* ── Tema claro profesional — header oscuro ── */
-      --az:#3b6e8c;   --az2:#2d5a74;  --az-bg:rgba(59,110,140,.10);
+      --az:#284639;   --az2:#1F392F;  --az-bg:rgba(59,110,140,.10);
       --ve:#2d7a48;   --ve-bg:rgba(45,122,72,.10);
       --ro:#b03030;   --ro-bg:rgba(176,48,48,.09);
       --am:#a87810;   --am-bg:rgba(168,120,16,.10);
       --gr:#606870;   --gr-bg:rgba(96,104,112,.10);
       --tl2:#4a7c5e;  --tl2-bg:rgba(74,124,94,.10);
-      --ca:#3b6e8c;   --ca-bg:rgba(59,110,140,.10);
+      --ca:#284639;   --ca-bg:rgba(59,110,140,.10);
 
       /* Fondo y superficies — crema claro */
       --bg:#f0f4f8;
@@ -46,7 +46,7 @@
 
       /* Gradientes */
       --grad-main:#f0f4f8;
-      --grad-header:linear-gradient(135deg,#1e2d3d 0%,#243b4a 100%);
+      --grad-header:linear-gradient(135deg,#141D19 0%,#18261E 100%);
       --grad-purple:linear-gradient(135deg,#483878,#5848a0);
       --grad-cyan:linear-gradient(135deg,#186878,#208090);
       --grad-green:linear-gradient(135deg,#3a6e56,#4a8c6a);
@@ -317,7 +317,7 @@
     #overlay.open{display:block}
 
     .panel-header{
-      background:linear-gradient(135deg,#243b4a 0%,#2d5a74 100%);
+      background:linear-gradient(135deg,#18261E 0%,#1F392F 100%);
       padding:18px 22px 16px;
       flex-shrink:0;position:relative;overflow:hidden;
       border-bottom:1px solid rgba(0,0,0,.15);
@@ -362,7 +362,7 @@
     /* ── Sección título (panel) ── */
     .ps-title{
       font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
-      color:#2d5a74;margin-bottom:12px;display:flex;align-items:center;gap:8px;
+      color:#1F392F;margin-bottom:12px;display:flex;align-items:center;gap:8px;
     }
     .ps-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(176,184,204,.3),transparent)}
     .panel-section{
@@ -704,6 +704,17 @@
     #sync-btn:hover{color:white!important}
     .sync-error{color:var(--ro)!important}
 
+    /* ── Punto "en vivo" junto al estado de sincronización ── */
+    #sync-status .live-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;flex-shrink:0;
+      box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:live-pulse 2s infinite}
+    #sync-status.sync-issue .live-dot{background:#e08080;animation:none;box-shadow:none}
+    @keyframes live-pulse{
+      0%{box-shadow:0 0 0 0 rgba(74,222,128,.55)}
+      70%{box-shadow:0 0 0 6px rgba(74,222,128,0)}
+      100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}
+    }
+    @media (prefers-reduced-motion: reduce){#sync-status .live-dot{animation:none}}
+
     /* ── REVISIÓN DEL (planif flow) ── */
     .del-flow{display:flex;flex-direction:column;gap:0;margin:0 0 4px}
     .del-step{display:flex;align-items:flex-start;gap:10px;position:relative;padding-bottom:10px}
@@ -740,7 +751,7 @@
       outline:none;cursor:pointer;
     }
     .del-editor select:focus,.del-editor input[type=date]:focus{border-color:rgba(176,168,204,.5)}
-    .del-editor select option{background:#1e2d3d;color:var(--text)}
+    .del-editor select option{background:#141D19;color:var(--text)}
     .del-editor-actions{display:flex;gap:6px}
     .del-editor-save{flex:1;background:#786898;border:none;border-radius:6px;padding:7px 0;
       font-size:12px;font-weight:700;color:white;cursor:pointer;font-family:inherit;
@@ -1148,7 +1159,7 @@
     /* Panel explicativo riesgo */
     #sem-explain{
       position:absolute;z-index:500;
-      background:#1e2d3d;border:1px solid rgba(255,255,255,.18);
+      background:#141D19;border:1px solid rgba(255,255,255,.18);
       border-radius:10px;padding:14px 16px;width:280px;
       box-shadow:0 8px 32px rgba(0,0,0,.5);
       animation:fadeUp .2s ease both;
@@ -1395,7 +1406,7 @@
     .fv-idx-hdr{
       display:flex; align-items:center; gap:14px;
       padding:12px 18px;
-      background:linear-gradient(90deg,#1e2d3d 0%,#243b4a 100%);
+      background:linear-gradient(90deg,#141D19 0%,#18261E 100%);
       cursor:pointer;
       user-select:none;
       border-bottom:2px solid var(--gold,#d4943a);
@@ -1528,7 +1539,7 @@
     }
     .exec-avance-track{ background:rgba(0,0,0,.08) !important; }
     .exec-block.pasado{ background:#2d7a48 !important; color:#fff !important; }
-    .exec-block.activo{ background:#3b6e8c !important; color:#fff !important; }
+    .exec-block.activo{ background:#284639 !important; color:#fff !important; }
     .exec-block.futuro{ background:rgba(0,0,0,.08) !important; color:var(--text-muted) !important; }
     .exec-block.atrasado{ background:#b03030 !important; color:#fff !important; }
     .vt-btn{ color:var(--text-muted) !important; background:var(--surface) !important; border:1px solid var(--borde) !important; }
@@ -1546,35 +1557,35 @@
     /* ── MODAL HITO ── */
     #hito-modal-overlay{position:fixed;inset:0;z-index:600;background:rgba(20,30,45,.55);backdrop-filter:blur(3px);align-items:center;justify-content:center}
     #hito-modal{background:#fff;border-radius:14px;width:480px;max-width:95vw;max-height:80vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(20,30,45,.35)}
-    .hm-header{background:linear-gradient(135deg,#1e2d3d,#2d5a74);padding:18px 22px 16px;color:#fff}
+    .hm-header{background:linear-gradient(135deg,#141D19,#1F392F);padding:18px 22px 16px;color:#fff}
     .hm-title{font-size:15px;font-weight:800;margin-bottom:3px}
     .hm-meta{font-size:11px;opacity:.7;display:flex;gap:12px;align-items:center}
     .hm-status{display:inline-flex;align-items:center;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700}
     .hm-status.ok{background:rgba(74,140,106,.2);color:#4a8c6a;border:1px solid rgba(74,140,106,.3)}
     .hm-status.warn{background:rgba(176,48,48,.15);color:#b03030;border:1px solid rgba(176,48,48,.25)}
-    .hm-status.curr{background:rgba(59,110,140,.2);color:#3b6e8c;border:1px solid rgba(59,110,140,.3)}
+    .hm-status.curr{background:rgba(59,110,140,.2);color:#284639;border:1px solid rgba(59,110,140,.3)}
     .hm-status.next{background:rgba(96,104,112,.15);color:#606870;border:1px solid rgba(96,104,112,.2)}
     .hm-body{padding:18px 22px;overflow-y:auto;flex:1}
     .hm-progress-row{display:flex;align-items:center;gap:10px;margin-bottom:16px}
     .hm-bar-wrap{flex:1;height:10px;background:rgba(59,110,140,.12);border-radius:5px;overflow:hidden}
     .hm-bar{height:100%;border-radius:5px;transition:width .4s}
-    .hm-pct{font-size:14px;font-weight:800;font-family:"DM Mono",monospace;color:#1e2d3d;min-width:40px;text-align:right}
+    .hm-pct{font-size:14px;font-weight:800;font-family:"DM Mono",monospace;color:#141D19;min-width:40px;text-align:right}
     .hm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
     .hm-stat{border-radius:8px;padding:10px 8px;text-align:center;border:1px solid}
     .hm-stat-n{font-size:20px;font-weight:800;font-family:"DM Mono",monospace}
     .hm-stat-l{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:rgba(18,16,28,.45);margin-top:2px}
     .hm-stat.s-val{background:rgba(74,140,106,.08);border-color:rgba(74,140,106,.25)}.hm-stat.s-val .hm-stat-n{color:#3d7a5a}
-    .hm-stat.s-prod{background:rgba(59,110,140,.08);border-color:rgba(59,110,140,.22)}.hm-stat.s-prod .hm-stat-n{color:#3b6e8c}
+    .hm-stat.s-prod{background:rgba(59,110,140,.08);border-color:rgba(59,110,140,.22)}.hm-stat.s-prod .hm-stat-n{color:#284639}
     .hm-stat.s-sin{background:rgba(96,104,112,.07);border-color:rgba(96,104,112,.18)}.hm-stat.s-sin .hm-stat-n{color:#606870}
     .hm-stat.s-otro{background:rgba(212,148,58,.08);border-color:rgba(212,148,58,.22)}.hm-stat.s-otro .hm-stat-n{color:#b07828}
-    .hm-section-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#3b6e8c;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid rgba(59,110,140,.15)}
+    .hm-section-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#284639;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid rgba(59,110,140,.15)}
     .hm-risk-list{max-height:180px;overflow-y:auto}
     .hm-risk-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.05);gap:8px;font-size:12px}
     .hm-risk-row:last-child{border-bottom:none}
-    .hm-risk-name{flex:1;font-weight:600;color:#1e2d3d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .hm-risk-name{flex:1;font-weight:600;color:#141D19;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .hm-risk-fac{font-size:10px;color:rgba(18,16,28,.45);white-space:nowrap}
     .hm-risk-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;white-space:nowrap}
-    .hm-risk-badge.en-const{background:rgba(59,110,140,.12);color:#3b6e8c}
+    .hm-risk-badge.en-const{background:rgba(59,110,140,.12);color:#284639}
     .hm-risk-badge.sin{background:rgba(96,104,112,.1);color:#606870}
     .hm-risk-badge.otro{background:rgba(212,148,58,.12);color:#b07828}
     #hito-modal-close{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:50%;width:28px;height:28px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;transition:all .2s;flex-shrink:0}
@@ -1583,25 +1594,25 @@
     /* ── DNE MODAL ── */
     #dne-modal-overlay{position:fixed;inset:0;z-index:600;background:rgba(20,30,45,.5);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center}
     #dne-modal{background:#fff;border-radius:14px;width:600px;max-width:96vw;max-height:80vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(20,30,45,.3)}
-    .dne-modal-hdr{background:linear-gradient(135deg,#1e2d3d,#2d5a74);padding:16px 22px;display:flex;align-items:center;justify-content:space-between}
+    .dne-modal-hdr{background:linear-gradient(135deg,#141D19,#1F392F);padding:16px 22px;display:flex;align-items:center;justify-content:space-between}
     .dne-modal-hdr-title{font-size:14px;font-weight:800;color:#fff;display:flex;align-items:center;gap:8px}
     #dne-modal-close{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:50%;width:28px;height:28px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;flex-shrink:0;transition:background .2s}
     #dne-modal-close:hover{background:rgba(255,255,255,.28)}
     .dne-modal-body{padding:16px 20px;overflow-y:auto}
     .dne-table{width:100%;border-collapse:collapse;font-size:12px}
-    .dne-table th{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#3b6e8c;padding:7px 10px;border-bottom:2px solid rgba(59,110,140,.15);text-align:left;white-space:nowrap;background:#f8fafc}
+    .dne-table th{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#284639;padding:7px 10px;border-bottom:2px solid rgba(59,110,140,.15);text-align:left;white-space:nowrap;background:#f8fafc}
     .dne-table td{padding:9px 10px;border-bottom:1px solid rgba(0,0,0,.05);vertical-align:middle}
     .dne-table tr:last-child td{border-bottom:none}
     .dne-table tr:hover td{background:rgba(59,110,140,.04)}
     .dne-fac-chip{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;white-space:nowrap}
-    .dne-name{font-weight:600;color:#1e2d3d}
-    .dne-mail-link{color:#3b6e8c;text-decoration:none;display:inline-flex;align-items:center;gap:4px;font-size:11px}
+    .dne-name{font-weight:600;color:#141D19}
+    .dne-mail-link{color:#284639;text-decoration:none;display:inline-flex;align-items:center;gap:4px;font-size:11px}
     .dne-mail-link:hover{text-decoration:underline}
     /* DNE card en panel lateral */
     .dne-card{display:flex;align-items:center;gap:12px;padding:4px 0}
-    .dne-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#3b6e8c,#2d5a74);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0}
+    .dne-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#284639,#1F392F);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0}
     .dne-info{flex:1;min-width:0}
-    .dne-info-name{font-size:12px;font-weight:700;color:#1e2d3d}
+    .dne-info-name{font-size:12px;font-weight:700;color:#141D19}
     .dne-info-prog{font-size:10px;color:rgba(18,16,28,.45);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     /* Header DNE button */
     #dne-btn{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:4px 12px;font-size:11.5px;color:rgba(255,255,255,.92);cursor:pointer;font-family:inherit;transition:background .15s}
@@ -1610,7 +1621,7 @@
     /* ── MODAL INFORME DNE ── */
     #inf-modal-overlay{position:fixed;inset:0;z-index:650;background:rgba(20,30,45,.55);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center}
     #inf-modal{background:#fff;border-radius:14px;width:680px;max-width:97vw;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 64px rgba(20,30,45,.35)}
-    .inf-hdr{background:linear-gradient(135deg,#1e2d3d,#2d5a74);padding:16px 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+    .inf-hdr{background:linear-gradient(135deg,#141D19,#1F392F);padding:16px 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
     .inf-hdr-left{display:flex;flex-direction:column;gap:3px}
     .inf-hdr-title{font-size:14px;font-weight:800;color:#fff}
     .inf-hdr-sub{font-size:11px;color:rgba(255,255,255,.6)}
@@ -1619,35 +1630,35 @@
     .inf-body{padding:18px 22px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:16px}
     /* Selector DNE */
     .inf-select-wrap{display:flex;align-items:center;gap:10px}
-    .inf-select-wrap label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#3b6e8c;white-space:nowrap}
-    #inf-dne-select{flex:1;padding:8px 12px;border:1px solid rgba(59,110,140,.25);border-radius:8px;font-size:12px;font-family:inherit;color:#1e2d3d;background:#f8fafc;cursor:pointer}
-    #inf-dne-select:focus{outline:none;border-color:#3b6e8c}
+    .inf-select-wrap label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#284639;white-space:nowrap}
+    #inf-dne-select{flex:1;padding:8px 12px;border:1px solid rgba(59,110,140,.25);border-radius:8px;font-size:12px;font-family:inherit;color:#141D19;background:#f8fafc;cursor:pointer}
+    #inf-dne-select:focus{outline:none;border-color:#284639}
     /* Resumen automático */
     .inf-resumen{background:#f0f4f8;border-radius:10px;padding:14px 16px;border:1px solid rgba(59,110,140,.12)}
-    .inf-resumen-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#3b6e8c;margin-bottom:10px}
+    .inf-resumen-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#284639;margin-bottom:10px}
     .inf-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
     .inf-stat{background:#fff;border-radius:8px;padding:8px 6px;text-align:center;border:1px solid rgba(59,110,140,.12)}
-    .inf-stat-n{font-size:18px;font-weight:800;font-family:"DM Mono",monospace;color:#1e2d3d}
+    .inf-stat-n{font-size:18px;font-weight:800;font-family:"DM Mono",monospace;color:#141D19}
     .inf-stat-l{font-size:9px;text-transform:uppercase;letter-spacing:.05em;color:rgba(18,16,28,.4);margin-top:1px}
     .inf-asig-list{max-height:130px;overflow-y:auto;display:flex;flex-direction:column;gap:3px}
     .inf-asig-row{display:flex;align-items:center;justify-content:space-between;padding:5px 8px;background:#fff;border-radius:6px;font-size:11px;border:1px solid rgba(0,0,0,.05)}
-    .inf-asig-name{flex:1;font-weight:600;color:#1e2d3d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right:8px}
+    .inf-asig-name{flex:1;font-weight:600;color:#141D19;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right:8px}
     .inf-asig-pct{font-family:"DM Mono",monospace;font-size:11px;font-weight:700;min-width:38px;text-align:right}
     .inf-asig-planif{font-size:9px;padding:2px 7px;border-radius:10px;white-space:nowrap}
     /* Área de notas */
     .inf-notes-wrap{display:flex;flex-direction:column;gap:6px}
-    .inf-notes-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#3b6e8c;display:flex;align-items:center;gap:6px}
+    .inf-notes-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#284639;display:flex;align-items:center;gap:6px}
     .inf-notes-hint{font-size:10px;color:rgba(18,16,28,.4);font-weight:400;font-style:italic;text-transform:none;letter-spacing:0}
-    #inf-notes{width:100%;min-height:90px;padding:10px 12px;border:1px solid rgba(59,110,140,.25);border-radius:8px;font-size:12px;font-family:inherit;color:#1e2d3d;resize:vertical;background:#fafcff;line-height:1.5;box-sizing:border-box}
-    #inf-notes:focus{outline:none;border-color:#3b6e8c;background:#fff}
+    #inf-notes{width:100%;min-height:90px;padding:10px 12px;border:1px solid rgba(59,110,140,.25);border-radius:8px;font-size:12px;font-family:inherit;color:#141D19;resize:vertical;background:#fafcff;line-height:1.5;box-sizing:border-box}
+    #inf-notes:focus{outline:none;border-color:#284639;background:#fff}
     #inf-notes::placeholder{color:rgba(18,16,28,.3);font-style:italic}
     /* Botones de acción */
     .inf-actions{display:flex;gap:10px;flex-wrap:wrap;padding-top:4px;border-top:1px solid rgba(0,0,0,.07);flex-shrink:0;padding:12px 22px;background:#f8fafc}
     .inf-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;border:none;transition:all .18s}
-    .inf-btn-primary{background:linear-gradient(135deg,#1e2d3d,#2d5a74);color:#fff}
+    .inf-btn-primary{background:linear-gradient(135deg,#141D19,#1F392F);color:#fff}
     .inf-btn-primary:hover{opacity:.88;transform:translateY(-1px)}
-    .inf-btn-secondary{background:#fff;color:#1e2d3d;border:1px solid rgba(59,110,140,.3)}
-    .inf-btn-secondary:hover{background:#f0f4f8;border-color:#3b6e8c}
+    .inf-btn-secondary{background:#fff;color:#141D19;border:1px solid rgba(59,110,140,.3)}
+    .inf-btn-secondary:hover{background:#f0f4f8;border-color:#284639}
     .inf-btn-pdf{background:linear-gradient(135deg,#b03030,#c04848);color:#fff}
     .inf-btn-pdf:hover{opacity:.88;transform:translateY(-1px)}
     .inf-btn svg{flex-shrink:0}
@@ -1720,6 +1731,7 @@
   <div class="header-badge">Total <span id="header-count">43</span> asignaturas</div>
   <div class="header-sep"></div>
   <div id="sync-status" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,.75)">
+    <span class="live-dot" title="Datos en vivo desde Power Automate"></span>
     <svg id="sync-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
     <span id="sync-label">Cargando...</span>
     <button id="sync-btn" title="Recargar datos" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.7);padding:0;display:flex;align-items:center">
@@ -2635,7 +2647,9 @@ let DATA_ALL=[], AVANCE_ALL={};
 
 function setSyncLabel(txt, isError=false){
   const lbl=document.getElementById('sync-label');
+  const box=document.getElementById('sync-status');
   if(lbl){lbl.textContent=txt;lbl.className=isError?'sync-error':'';}
+  if(box){box.classList.toggle('sync-issue', isError);}
 }
 
 async function loadSheetData(silent=false){
@@ -2867,10 +2881,11 @@ function renderSidebar(){
 }
 
 // ─── FAC BAR ───
-const FAC_ORDER=["Ingeniería y Negocios","Ciencias Sociales y Educación","Formación General","Salud","Recursos Naturales y Medicina Veterinaria"];
+const FAC_ORDER=["Ingeniería y Negocios","Ciencias Sociales y Comunicaciones","Educación","Formación General","Salud","Recursos Naturales y Medicina Veterinaria"];
 const FAC_ABBR={
   "Ingeniería y Negocios":"Ing. y Neg.",
-  "Ciencias Sociales y Educación":"CC. Soc. y Ed.",
+  "Ciencias Sociales y Comunicaciones":"CC. Soc. y Com.",
+  "Educación":"Educación",
   "Formación General":"Form. General",
   "Salud":"Salud",
   "Recursos Naturales y Medicina Veterinaria":"Rec. Nat. y MV"
@@ -2892,7 +2907,7 @@ function renderFacBar(){
     const info=byFac[fac];
     const pct=Math.round(info.validadas/info.total*100);
     const isActive=filters.facultad===fac;
-    const col = FAC_COLORS[fac]||'#3b6e8c';
+    const col = FAC_COLORS[fac]||'#284639';
     const activeBg = isActive ? `background:${col}22;border-color:${col};box-shadow:0 0 0 1px ${col}40,0 4px 16px rgba(0,0,0,.3);` : '';
     return `<div class="fac-card${isActive?' active':''}" data-fac="${fac}" style="border-left:3px solid ${col};${activeBg}">
       <div class="fac-top">
@@ -3001,7 +3016,7 @@ function openPanel(idx){
   const total=p.sc+p.di+p.vd+p.dm+p.qa+p.ter;
   const avPct=av.avance||0;
 
-  const facCol = FAC_COLORS[d.facultad] || '#2d5a74';
+  const facCol = FAC_COLORS[d.facultad] || '#1F392F';
   document.querySelectorAll('#tbody tr').forEach((tr,i)=>{
     tr.classList.toggle('selected',i===idx);
     if(i===idx) tr.style.boxShadow=`inset 3px 0 0 ${facCol}`;
@@ -3753,7 +3768,8 @@ const DNE_DATA = [
 ];
 const FAC_COLORS = {
   'Ingeniería y Negocios':                    '#6F7A73',
-  'Ciencias Sociales y Educación':            '#9F83B3',
+  'Ciencias Sociales y Comunicaciones':       '#9F83B3',
+  'Educación':                                '#5B7AAB',
   'Salud':                                    '#A4CCBF',
   'Recursos Naturales y Medicina Veterinaria':'#97BB5B',
   'Formación General':                        '#97BB5B'
@@ -3762,7 +3778,7 @@ function initDneModal(){
   const tbody = document.getElementById('dne-tbody');
   if(tbody){
     tbody.innerHTML = DNE_DATA.map(d=>{
-      const col = FAC_COLORS[d.facultad]||'#3b6e8c';
+      const col = FAC_COLORS[d.facultad]||'#284639';
       return '<tr>'
         +'<td><span class="dne-fac-chip" style="background:'+col+'18;color:'+col+';border:1px solid '+col+'30">'+d.facultad+'</span></td>'
         +'<td style="color:rgba(18,16,28,.6);font-size:11px">'+d.escuela+'</td>'
@@ -5384,10 +5400,10 @@ function renderInformeResumen(idx){
   statsRow.innerHTML=
     `<div class="inf-stat"><div class="inf-stat-n">${total}</div><div class="inf-stat-l">Asignaturas</div></div>`+
     `<div class="inf-stat"><div class="inf-stat-n" style="color:#4a7c5e">${validadas}</div><div class="inf-stat-l">Completadas</div></div>`+
-    `<div class="inf-stat"><div class="inf-stat-n" style="color:#3b6e8c">${enProd}</div><div class="inf-stat-l">En producción</div></div>`+
+    `<div class="inf-stat"><div class="inf-stat-n" style="color:#284639">${enProd}</div><div class="inf-stat-l">En producción</div></div>`+
     `<div class="inf-stat"><div class="inf-stat-n" style="color:#b07828">${pctProm}%</div><div class="inf-stat-l">Avance prom.</div></div>`;
 
-  const PCOL={'Validada':'#4a7c5e','Cargada en aula':'#3b6e8c','DEL 2° Instancia':'#4a7c5e',
+  const PCOL={'Validada':'#4a7c5e','Cargada en aula':'#284639','DEL 2° Instancia':'#4a7c5e',
     'Enviada a validación DEL':'#7a5ab4','En construcción':'#b07828','No inicia':'#b03030','No aplica':'#aaa'};
   asigList.innerHTML=asigs.map(d=>{
     const av=avSrc[d.asignatura]||{};
@@ -5455,7 +5471,7 @@ function printInformePDF(dne, notas){
   const avSrc=DATA_ALL.length?AVANCE_ALL:AVANCE;
   const asigs=src.filter(d=>d.facultad===dne.facultad);
   const today=new Date().toLocaleDateString('es-CL',{day:'numeric',month:'long',year:'numeric'});
-  const PCOL={'Validada':'#4a7c5e','Cargada en aula':'#3b6e8c','DEL 2° Instancia':'#4a7c5e',
+  const PCOL={'Validada':'#4a7c5e','Cargada en aula':'#284639','DEL 2° Instancia':'#4a7c5e',
     'Enviada a validación DEL':'#7a5ab4','En construcción':'#b07828','No inicia':'#b03030','No aplica':'#aaa'};
 
   const rows=asigs.map(d=>{
@@ -5465,7 +5481,7 @@ function printInformePDF(dne, notas){
     const pCol=PCOL[planif]||'#888';
     const barCol=pct>=70?'#4a7c5e':pct>=30?'#b07828':'#b03030';
     return `<tr>
-      <td style="padding:8px 10px;border-bottom:1px solid #e8eef4;font-size:12px;font-weight:600;color:#1e2d3d">${d.asignatura}</td>
+      <td style="padding:8px 10px;border-bottom:1px solid #e8eef4;font-size:12px;font-weight:600;color:#141D19">${d.asignatura}</td>
       <td style="padding:8px 10px;border-bottom:1px solid #e8eef4;font-size:11px;color:#555">${d.docente}</td>
       <td style="padding:8px 10px;border-bottom:1px solid #e8eef4;text-align:center">
         <span style="background:${pCol}18;color:${pCol};border:1px solid ${pCol}40;border-radius:10px;padding:2px 8px;font-size:10px;font-weight:700;white-space:nowrap">${planif}</span>
@@ -5491,10 +5507,10 @@ function printInformePDF(dne, notas){
   <title>Informe e-Learning 2026-1 — ${dne.escuela}</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Segoe UI',system-ui,sans-serif;color:#1e2d3d;background:#fff;padding:32px}
+    body{font-family:'Segoe UI',system-ui,sans-serif;color:#141D19;background:#fff;padding:32px}
     @media print{body{padding:0}}
   </style></head><body>
-  <div style="background:linear-gradient(135deg,#1e2d3d,#2d5a74);color:#fff;padding:24px 32px;border-radius:10px;margin-bottom:24px">
+  <div style="background:linear-gradient(135deg,#141D19,#1F392F);color:#fff;padding:24px 32px;border-radius:10px;margin-bottom:24px">
     <div style="font-size:11px;opacity:.6;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Universidad Santo Tomás · Dirección e-Learning</div>
     <div style="font-size:20px;font-weight:800;margin-bottom:2px">Informe de Avance — e-Learning 2026-1</div>
     <div style="font-size:13px;opacity:.8">Escuela de ${dne.escuela} · Facultad de ${dne.facultad}</div>
@@ -5502,19 +5518,19 @@ function printInformePDF(dne, notas){
   </div>
   <table style="width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08)">
     <thead><tr style="background:#f0f4f8">
-      <th style="padding:10px 10px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#3b6e8c">Asignatura</th>
-      <th style="padding:10px 10px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#3b6e8c">Docente</th>
-      <th style="padding:10px 10px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#3b6e8c">Planificación</th>
-      <th style="padding:10px 10px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#3b6e8c">Avance</th>
+      <th style="padding:10px 10px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#284639">Asignatura</th>
+      <th style="padding:10px 10px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#284639">Docente</th>
+      <th style="padding:10px 10px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#284639">Planificación</th>
+      <th style="padding:10px 10px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#284639">Avance</th>
     </tr></thead>
     <tbody>${rows}</tbody>
   </table>
   ${notasHtml}
   <div style="margin-top:28px;padding-top:16px;border-top:1px solid #e8eef4;display:flex;justify-content:space-between;align-items:flex-end">
     <div>
-      <div style="font-size:13px;font-weight:700;color:#1e2d3d">Paulina Vera Benavente</div>
+      <div style="font-size:13px;font-weight:700;color:#141D19">Paulina Vera Benavente</div>
       <div style="font-size:11px;color:#666">Directora e-Learning · Universidad Santo Tomás</div>
-      <div style="font-size:11px;color:#3b6e8c">pverab@santotomas.cl</div>
+      <div style="font-size:11px;color:#284639">pverab@santotomas.cl</div>
     </div>
     <div style="font-size:9px;color:#aaa;text-align:right">Informe generado desde Dashboard UST e-Learning 2026-1</div>
   </div>
@@ -5669,7 +5685,7 @@ window.addEventListener('load', function(){
         <tbody id="dne-tbody"></tbody>
       </table>
       <div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(59,110,140,.15)">
-        <button id="dne-open-informe" onclick="abrirModalInforme()" style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;background:linear-gradient(135deg,#1e2d3d,#2d5a74);color:#fff;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .18s">
+        <button id="dne-open-informe" onclick="abrirModalInforme()" style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;background:linear-gradient(135deg,#141D19,#1F392F);color:#fff;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .18s">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
           Enviar informe a un DNE
         </button>
@@ -5681,7 +5697,7 @@ window.addEventListener('load', function(){
 <!-- ── FOOTER ── -->
 <footer style="
   border-top:2px solid var(--gold,#d4943a);
-  background:linear-gradient(135deg,#1e2d3d 0%,#243b4a 100%);
+  background:linear-gradient(135deg,#141D19 0%,#18261E 100%);
   padding:16px 40px;
   display:grid;
   grid-template-columns:1fr auto 1fr;
