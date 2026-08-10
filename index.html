@@ -4786,7 +4786,7 @@ function generarInforme(){
   </div>`;
 
   const html=`<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
-  <title>Informe Avance e-Learning 2026-1${facTitulo} — ${fechaCorta}</title>
+  <title>Informe Avance e-Learning 2026-2${facTitulo} — ${fechaCorta}</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:#1a2a3a;background:#fff;padding:28px 36px}
@@ -5338,7 +5338,7 @@ function initInformeModal(){
     const dne=unique2[idx];
     if(!dne) return;
     const body=buildInformeBody(dne, document.getElementById('inf-notes').value);
-    const subject=encodeURIComponent(`Informe de Avance e-Learning 2026-1 — ${dne.escuela}`);
+    const subject=encodeURIComponent(`Informe de Avance e-Learning 2026-2 — ${dne.escuela}`);
     const cc=encodeURIComponent('pverab@santotomas.cl');
     window.location.href=`mailto:${dne.mail}?cc=${cc}&subject=${subject}&body=${encodeURIComponent(body)}`;
   });
@@ -5429,7 +5429,7 @@ function buildInformeBody(dne, notas){
   let lines=[];
   lines.push(`Estimado/a ${dne.nombre},`);
   lines.push('');
-  lines.push(`Le envío el informe de avance del proyecto e-Learning 2026-1 correspondiente a la Escuela de ${dne.escuela}, Facultad de ${dne.facultad}. A la fecha (${today}), el estado de las asignaturas es el siguiente:`);
+  lines.push(`Le envío el informe de avance del proyecto e-Learning 2026-2 correspondiente a la Escuela de ${dne.escuela}, Facultad de ${dne.facultad}. A la fecha (${today}), el estado de las asignaturas es el siguiente:`);
   lines.push('');
   lines.push('──────────────────────────────────────');
   lines.push('ASIGNATURAS EN PRODUCCIÓN');
@@ -5504,7 +5504,7 @@ function printInformePDF(dne, notas){
     </div>`:'';
 
   const html=`<!DOCTYPE html><html><head><meta charset="utf-8">
-  <title>Informe e-Learning 2026-1 — ${dne.escuela}</title>
+  <title>Informe e-Learning 2026-2 — ${dne.escuela}</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Segoe UI',system-ui,sans-serif;color:#141D19;background:#fff;padding:32px}
@@ -5512,7 +5512,7 @@ function printInformePDF(dne, notas){
   </style></head><body>
   <div style="background:linear-gradient(135deg,#141D19,#1F392F);color:#fff;padding:24px 32px;border-radius:10px;margin-bottom:24px">
     <div style="font-size:11px;opacity:.6;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Universidad Santo Tomás · Dirección e-Learning</div>
-    <div style="font-size:20px;font-weight:800;margin-bottom:2px">Informe de Avance — e-Learning 2026-1</div>
+    <div style="font-size:20px;font-weight:800;margin-bottom:2px">Informe de Avance — e-Learning 2026-2</div>
     <div style="font-size:13px;opacity:.8">Escuela de ${dne.escuela} · Facultad de ${dne.facultad}</div>
     <div style="font-size:11px;opacity:.55;margin-top:8px">Generado el ${today} · Destinatario: ${dne.nombre}</div>
   </div>
@@ -5532,7 +5532,7 @@ function printInformePDF(dne, notas){
       <div style="font-size:11px;color:#666">Directora e-Learning · Universidad Santo Tomás</div>
       <div style="font-size:11px;color:#284639">pverab@santotomas.cl</div>
     </div>
-    <div style="font-size:9px;color:#aaa;text-align:right">Informe generado desde Dashboard UST e-Learning 2026-1</div>
+    <div style="font-size:9px;color:#aaa;text-align:right">Informe generado desde Dashboard UST e-Learning 2026-2</div>
   </div>
   </body></html>`;
 
@@ -5622,7 +5622,7 @@ window.addEventListener('load', function(){
   <div id="inf-modal">
     <div class="inf-hdr">
       <div class="inf-hdr-left">
-        <div class="inf-hdr-title">Informe de Avance — e-Learning 2026-1</div>
+        <div class="inf-hdr-title">Informe de Avance — e-Learning 2026-2</div>
         <div class="inf-hdr-sub">Genera y envía el reporte al Director/a de Escuela</div>
       </div>
       <button id="inf-modal-close" onclick="document.getElementById('inf-modal-overlay').style.display='none';document.getElementById('inf-resumen').style.display='none'">&#x2715;</button>
@@ -6071,7 +6071,7 @@ window.addEventListener('load', function(){
       return {txt:'<strong>Brandbook UST — Identidad Visual</strong>\n\nDefine los criterios gráficos institucionales:\n• Logo e imagotipo (nunca modificar proporciones ni colores)\n• Tipografía: Arial / Calibri obligatorias en recursos digitales\n• Verde corporativo: <strong>#284639</strong> (70-80% de cada pieza)\n• Color complementario por facultad:\n  - Ingeniería: #6F7A73\n  - Ciencias Sociales: #9F83B3\n  - Economía y Negocios: #97BB5B\n  - Recursos Naturales: #A4CCBF\n  - Salud: #C02B22', chips:['Manual del DG','Dupla DI-DG']};
 
     if(nq.match(/flujo.*produccion|produccion.*flujo|flujo.*proceso|proceso.*completo|fases.*produccion|diagrama.*roles/))
-      return {txt:'<strong>Flujo de Producción e-Learning 2026-1</strong>\n\nEl proceso tiene 6 fases:\n• <strong>Fase 0</strong> — Incorporación del docente (JP)\n• <strong>Fase I</strong> — Planificación con IA (DI)\n• <strong>Fase II</strong> — Co-diseño y validación QA (DI + QA)\n• <strong>Fase III</strong> — Producción semanal iterativa (DI + DG)\n• <strong>Fase IV</strong> — Publicación en plataforma (JP + IP + DI)\n• <strong>Fase V</strong> — Validación final del aula (JP + QA DEL)\n\n⭐ Regla de oro: ningún recurso entra a Fase III sin planificación aprobada por QA DEL.', chips:['Fases del proyecto','Manual del DI','Reunión de inicio']};
+      return {txt:'<strong>Flujo de Producción e-Learning 2026-2</strong>\n\nEl proceso tiene 6 fases:\n• <strong>Fase 0</strong> — Incorporación del docente (JP)\n• <strong>Fase I</strong> — Planificación con IA (DI)\n• <strong>Fase II</strong> — Co-diseño y validación QA (DI + QA)\n• <strong>Fase III</strong> — Producción semanal iterativa (DI + DG)\n• <strong>Fase IV</strong> — Publicación en plataforma (JP + IP + DI)\n• <strong>Fase V</strong> — Validación final del aula (JP + QA DEL)\n\n⭐ Regla de oro: ningún recurso entra a Fase III sin planificación aprobada por QA DEL.', chips:['Fases del proyecto','Manual del DI','Reunión de inicio']};
 
     if(nq.match(/reunion.*inicio|inicio.*reunion|kick.*off|kickoff|bienvenida.*docente|reunion.*docente/))
       return {txt:'<strong>Reunión de Inicio — Kick-off con el docente</strong>\n\nAgenda en 4 bloques:\n1. Bienvenida y contexto (presentación del equipo)\n2. El proceso de diseño (fases, flujo, rol del docente)\n3. Levantamiento de información (materiales disponibles, disponibilidad)\n4. Acuerdos y compromisos (fechas, entregables, canal de comunicación)\n\n<em>Premisa fundamental: el docente aporta el conocimiento disciplinar; el equipo pone la tecnología.</em>', chips:['Guía del docente','Fases del proyecto','Flujo de producción']};
