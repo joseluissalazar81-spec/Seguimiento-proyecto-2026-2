@@ -2112,22 +2112,6 @@
       <div class="obs-box" id="p-obs"></div>
     </div>
 
-    <!-- SEGUIMIENTO DI — stepper de estados -->
-    <div class="panel-section">
-      <div class="ps-title">Estado de Seguimiento</div>
-      <div class="seg-stepper" id="p-seg-stepper"></div>
-    </div>
-
-    <!-- DONA + ESTADO RECURSOS -->
-    <div class="panel-section">
-      <div class="ps-title">Estado de Recursos</div>
-      <div class="dona-wrap">
-        <canvas id="donaChart" class="dona-canvas"></canvas>
-        <div class="dona-legend" id="dona-legend"></div>
-      </div>
-      <div class="recursos-grid" id="recursos-grid"></div>
-    </div>
-
     <!-- HITOS SEMANAL -->
     <div class="panel-section">
       <div class="ps-title">Avance por Hitos</div>
@@ -2135,26 +2119,6 @@
         <thead><tr><th>Hito</th><th>Fecha</th><th>Estado</th></tr></thead>
         <tbody id="hitos-tbody"></tbody>
       </table>
-    </div>
-
-    <!-- DISTRIBUCIÓN HORAS -->
-    <div class="panel-section">
-      <div class="ps-title">Distribución de Horas</div>
-      <div class="horas-cards" id="horas-cards"></div>
-      <div class="horas-bar" id="horas-bar">
-        <div class="hb-pres" id="hb-pres"></div>
-        <div class="hb-asyn" id="hb-asyn"></div>
-      </div>
-      <div class="horas-legend">
-        <span><span class="sq" style="background:var(--az)"></span>Presencial</span>
-        <span><span class="sq" style="background:var(--am)"></span>Asincrónica</span>
-      </div>
-    </div>
-
-    <!-- RECURSOS T1–T4 -->
-    <div class="panel-section">
-      <div class="ps-title">Recursos a Construir</div>
-      <div class="t-grid" id="t-grid"></div>
     </div>
 
     <!-- DOCENTE -->
@@ -3020,12 +2984,7 @@ function renderTable(){
 function openPanel(idx){
   selectedIdx=idx;
   const d=currentRows[idx];
-  const _apiD = getSegAPIData(d.asignatura);
-  const p = _apiD
-    ? { ...getProd(d.asignatura, d.docente), sc: _apiD.sc, di: _apiD.bor, vd: _apiD.vd, dm: _apiD.dm, qa: _apiD.qa, ter: _apiD.ter }
-    : getProd(d.asignatura, d.docente);
   const av=AVANCE[d.asignatura]||{avance:0,obs:'',hitos:{}};
-  const total=p.sc+p.di+p.vd+p.dm+p.qa+p.ter;
   const avPct=av.avance||0;
 
   const facCol = FAC_COLORS[d.facultad] || '#1F392F';
@@ -3068,88 +3027,11 @@ function openPanel(idx){
     <span class="pchip">DI: ${d.di}</span>
     ${d.dg!=='—'?`<span class="pchip">DG: ${d.dg}</span>`:''}`;
 
-  // DONA
-  if(donaInstance){donaInstance.destroy();donaInstance=null}
-  const donaCtx=document.getElementById('donaChart').getContext('2d');
-  const donaData=[p.sc,p.di,p.vd,p.dm,p.qa,p.ter];
-  const donaColors=['#7ba7c4','#5aad82','#d4943a','#9b72cf','#5ba8d4','#2d8a5e'];
-  donaInstance=new Chart(donaCtx,{
-    type:'doughnut',
-    data:{datasets:[{data:donaData,backgroundColor:donaColors,borderWidth:2,borderColor:'#fff',hoverOffset:4}]},
-    options:{cutout:'68%',plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.raw} recursos`}}},animation:{duration:500}}
-  });
-  const labels=['No iniciado','En prod. (borrador)','Validado','En prod. DM','En implementación','Cargado en Aula'];
-  document.getElementById('dona-legend').innerHTML=labels.map((l,i)=>`
-    <div class="dl-item">
-      <span class="dl-dot" style="background:${donaColors[i]}"></span>
-      <span class="dl-label">${l}</span>
-      <span class="dl-val">${donaData[i]}</span>
-    </div>`).join('');
-
-  // TABLA RECURSOS
-  // STEPPER SEGUIMIENTO
-  const segSteps=[
-    {label:'No iniciado',           val:p.sc},
-    {label:'En producción (borrador)', val:p.di},
-    {label:'Validado',              val:p.vd},
-    {label:'En producción DM',      val:p.dm},
-    {label:'En implementación',     val:p.qa},
-    {label:'Cargado en Aula',       val:p.ter},
-  ];
-  const lastActive=segSteps.reduce((li,s,i)=>s.val>0?i:li,-1);
-  document.getElementById('p-seg-stepper').innerHTML=segSteps.map((s,i)=>{
-    const hasVal=s.val>0;
-    const isCurrent=i===lastActive;
-    return `<div class="seg-step${hasVal?' has-val':''}${isCurrent?' is-current':''}">
-      <div class="seg-step-num">${i+1}</div>
-      <div class="seg-step-info"><div class="seg-step-label">${s.label}</div></div>
-      <div class="seg-step-count">${s.val}</div>
-    </div>`;
-  }).join('');
-
-  const rcDefs=[
-    {label:'No iniciado',        cls:'rc0',val:p.sc},
-    {label:'En prod. (borrador)',cls:'rc1',val:p.di},
-    {label:'Validado',           cls:'rc2',val:p.vd},
-    {label:'En prod. DM',        cls:'rc3',val:p.dm},
-    {label:'En implementación',  cls:'rc4',val:p.qa},
-    {label:'Cargado en Aula',    cls:'rc1',val:p.ter},
-  ];
-  document.getElementById('recursos-grid').innerHTML=rcDefs.map(r=>`
-    <div class="rc ${r.cls}">
-      <div class="rc-label">${r.label}</div>
-      <div class="rc-val">${r.val}</div>
-    </div>`).join('');
-
   // HITOS TABLE
   document.getElementById('hitos-tbody').innerHTML=HITO_META.map(h=>{
     const estado=av.hitos[h.key]||'';
     return `<tr><td>${h.label}</td><td>${h.fecha}</td><td>${hitoBadge(estado)}</td></tr>`;
   }).join('');
-
-  // HORAS
-  const totalH=p.pres+p.asin;
-  const presPct=totalH>0?Math.round(p.pres/totalH*100):50;
-  document.getElementById('horas-cards').innerHTML=`
-    <div class="hora-card"><div class="hora-label">Presencial</div><div class="hora-val">${p.pres} <span class="hora-unit">hrs</span></div></div>
-    <div class="hora-card"><div class="hora-label">Asincrónica</div><div class="hora-val">${p.asin} <span class="hora-unit">hrs</span></div></div>`;
-  document.getElementById('hb-pres').style.width=presPct+'%';
-  document.getElementById('hb-asyn').style.width=(100-presPct)+'%';
-
-  // T1-T4
-  const tipos=[
-    {cls:'t1',tipo:'Tipo 1',val:p.t1,desc:'Audiovisuales e interactivos breves',kw:'Videoclase · Cápsula · Podcast · H5P · Genially · Infografía interactiva'},
-    {cls:'t2',tipo:'Tipo 2',val:p.t2,desc:'Actividades prácticas y evaluativas',kw:'Tarea · Foro · Quiz · Lectura · Mapa · Glosario · Resumen · Apunte · Infografía · Control formativo'},
-    {cls:'t3',tipo:'Tipo 3',val:p.t3,desc:'Materiales sesiones sincrónicas',kw:'Presentación · Facilitación · Dinámica · Ejercicio'},
-    {cls:'t4',tipo:'Tipo 4',val:p.t4,desc:'Actividades TPE',kw:'Link · Reflexión · Diagnóstico · Actividades'},
-  ];
-  document.getElementById('t-grid').innerHTML=tipos.map(t=>`
-    <div class="t-card ${t.cls}">
-      <div class="t-label">${t.tipo}</div>
-      <div class="t-val">${t.val}</div>
-      <div class="t-desc">${t.desc}</div>
-      <div class="t-kw">${t.kw}</div>
-    </div>`).join('');
 
   // DOCENTE
   document.getElementById('p-doc-av').textContent=initials(d.docente);
