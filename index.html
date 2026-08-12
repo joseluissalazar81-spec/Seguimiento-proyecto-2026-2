@@ -1125,9 +1125,12 @@
     /* Top row: sem + avance + DEL stats + week */
     .exec-kpis {
       display: grid;
-      grid-template-columns: 170px 1fr 220px 140px;
-      gap: 16px; align-items: center;
+      grid-template-columns: 1fr 220px;
+      gap: 24px; align-items: center;
       margin-bottom: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     @media(max-width:900px){.exec-kpis{grid-template-columns:1fr 1fr;}}
     /* Semáforo */
@@ -3928,9 +3931,9 @@ function renderProjectCharts(){
 // ── Plazos de entrega de planificación a DEL por grupo de facultades ──────────
 // Fuente: CartaGantt_2026-1 + ajuste comunicado por el equipo
 const PLANIF_DEADLINES = {
-  default:            new Date(2026,11,1), // 1 diciembre 2026
-  "Salud":            new Date(2026,11,1), // 1 diciembre 2026
-  "Formación General":new Date(2026,11,1), // 1 diciembre 2026
+  default:            new Date(2026,11,15), // 15 diciembre 2026
+  "Salud":            new Date(2026,11,15), // 15 diciembre 2026
+  "Formación General":new Date(2026,11,15), // 15 diciembre 2026
   "Recursos Naturales y Medicina Veterinaria": new Date(2026,10,14), // 14 noviembre 2026
 };
 function planifDeadline(facultad){
