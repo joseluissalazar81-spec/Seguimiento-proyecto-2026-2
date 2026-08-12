@@ -1122,6 +1122,8 @@
     .exec-hero-title::after {
       content:''; flex:1; height:1px; background:linear-gradient(90deg,rgba(130,120,190,.3),transparent);
     }
+    .live-pulse-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#e0473e;flex-shrink:0;animation:livePulse 1.6s ease-in-out infinite;}
+    @keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(224,71,62,.5);}50%{box-shadow:0 0 0 5px rgba(224,71,62,0);}}
     /* Top row: sem + avance + DEL stats + week */
     .exec-kpis {
       display: flex;
@@ -1785,7 +1787,7 @@
          EXECUTIVE HERO — visible inmediatamente al cargar
     ═══════════════════════════════════════════════════════ -->
     <div class="exec-hero" id="exec-hero">
-      <div class="exec-hero-title">Estado del Proyecto — Actualizado en tiempo real</div>
+      <div class="exec-hero-title"><span class="live-pulse-dot"></span>Estado del Proyecto — Actualizado en tiempo real</div>
 
       <!-- KPIs: semáforo + % avance + DEL stats + semana -->
       <div class="exec-kpis" id="exec-kpis">
@@ -1916,6 +1918,17 @@
         <div class="ov-chart-card" style="flex:2;min-width:0">
           <div class="ov-chart-title">Distribución de Asignaturas por Categoría</div>
           <div id="ov-category-table"></div>
+        </div>
+        <div class="ov-chart-card">
+          <div class="ov-chart-title">Estados de Planificación</div>
+          <div class="ov-donut-wrap">
+            <canvas id="ovStateDonutChart" width="140" height="140"></canvas>
+          </div>
+          <div class="ov-legend" id="ov-state-legend"></div>
+        </div>
+        <div class="ov-chart-card" style="flex:3;min-width:280px">
+          <div class="ov-chart-title">Facultad × Tipo de Virtualización</div>
+          <div id="ov-heatmap"></div>
         </div>
       </div>
     </div>
@@ -4250,7 +4263,7 @@ const GANTT_HITOS = [
   {label:'S17–S18',key:'s17s18',fecha: new Date(2026,11,15),weeksDone:18, hito:'Entrega PPRD a DEL ◆'},
 ];
 
-let ovBarInstance = null, ovDonutInstance = null;
+let ovBarInstance = null, ovDonutInstance = null, ovStateDonutInstance = null;
 let overviewVisible = false;
 
 function semaforo(pct, umbralVerde=70, umbralAmarillo=40){
@@ -4295,6 +4308,64 @@ function renderOverview(){
         </tr>
       </tbody>
     </table>`;
+
+  // ── Estados reales de planificación (donut 6 estados) ──
+  const stateLabels = ['No inicia','En construcción','Enviada a validación DEL','DEL 2° Instancia','Validada','Cargada en aula'];
+  const stateColors = ['#9CA3AF','#C8A951','#7BA7C4','#9b72cf','#27A06E','#2D8A5E'];
+  const stateCounts = [0,0,0,0,0,0];
+  src.forEach(d=>{
+    let step = Math.floor(planifStepIndex(d.planif||''));
+    if(step<0) step=0;
+    if(step>5) step=5;
+    stateCounts[step]++;
+  });
+  if(ovStateDonutInstance){ovStateDonutInstance.destroy();}
+  const ctxSD = document.getElementById('ovStateDonutChart')?.getContext('2d');
+  if(ctxSD){
+    ovStateDonutInstance = new Chart(ctxSD,{
+      type:'doughnut',
+      data:{labels:stateLabels, datasets:[{data:stateCounts, backgroundColor:stateColors, borderWidth:2, borderColor:'#fff'}]},
+      options:{cutout:'62%', plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>`${ctx.raw} asignaturas`}}}, animation:{duration:400}}
+    });
+  }
+  const stateLegendEl = document.getElementById('ov-state-legend');
+  if(stateLegendEl){
+    stateLegendEl.innerHTML = stateLabels.map((l,i)=>`
+      <div class="dl-item">
+        <span class="dl-dot" style="background:${stateColors[i]}"></span>
+        <span class="dl-label">${l}</span>
+        <span class="dl-val">${stateCounts[i]}</span>
+      </div>`).join('');
+  }
+
+  // ── Heatmap Facultad × Tipo de Virtualización ──
+  const hmFacs = FAC_ORDER.filter(f=>src.some(d=>d.facultad===f));
+  const hmCats = [...new Set(src.map(d=>(d.fmt||'').trim()).filter(Boolean))];
+  const hmMatrix = hmFacs.map(f=>hmCats.map(c=>src.filter(d=>d.facultad===f && (d.fmt||'').trim()===c).length));
+  const hmMax = Math.max(1, ...hmMatrix.flat());
+  const hmEl = document.getElementById('ov-heatmap');
+  if(hmEl){
+    hmEl.innerHTML = `
+      <div style="overflow-x:auto">
+      <table style="border-collapse:collapse;font-size:10.5px;width:100%">
+        <thead><tr>
+          <th style="padding:6px 8px;text-align:left;background:#f8fafc"></th>
+          ${hmCats.map(c=>`<th title="${c}" style="padding:6px 6px;background:#f8fafc;color:var(--az);font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:.02em;max-width:60px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${c.length>10?c.slice(0,9)+'…':c}</th>`).join('')}
+        </tr></thead>
+        <tbody>
+          ${hmFacs.map((f,ri)=>`<tr>
+            <td style="padding:6px 8px;font-weight:600;color:var(--text);white-space:nowrap;background:#fff">${FAC_ABBR[f]||f}</td>
+            ${hmCats.map((c,ci)=>{
+              const v = hmMatrix[ri][ci];
+              const op = v ? (0.12 + 0.75*(v/hmMax)) : 0;
+              return `<td style="padding:6px 6px;text-align:center;font-weight:${v?700:400};color:${v?'#fff':'#ccc'};background:rgba(40,70,57,${op})">${v||'—'}</td>`;
+            }).join('')}
+          </tr>`).join('')}
+        </tbody>
+      </table>
+      </div>`;
+  }
+
   // ── Conteos generales ──
   const total = src.length;
   let validadas=0, enProd=0, sinIniciar=0;
