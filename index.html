@@ -1872,14 +1872,7 @@
 
       <!-- Estados de planificación + Heatmap — siempre visibles -->
       <div class="ov-charts" style="margin-top:16px">
-        <div class="ov-chart-card">
-          <div class="ov-chart-title">Estados de Planificación</div>
-          <div class="ov-donut-wrap">
-            <canvas id="ovStateDonutChart" width="140" height="140"></canvas>
-          </div>
-          <div class="ov-legend" id="ov-state-legend"></div>
-        </div>
-        <div class="ov-chart-card" style="flex:3;min-width:280px">
+        <div class="ov-chart-card" style="flex:1;min-width:280px">
           <div class="ov-chart-title">Facultad × Tipo de Virtualización</div>
           <div id="ov-heatmap"></div>
         </div>
@@ -1963,15 +1956,6 @@
             <span><span class="proj-leg-dot" style="background:rgba(130,120,190,.8)"></span>Avance real</span>
             <span><span class="proj-leg-dot" style="background:rgba(0,0,0,.2);border:1px dashed rgba(0,0,0,.3)"></span>Avance esperado</span>
           </div>
-        </div>
-        <!-- Mini-torta estados planif -->
-        <div class="proj-donut-panel">
-          <div class="proj-panel-title">Estado Planificaciones</div>
-          <div class="proj-donut-wrap">
-            <canvas id="projPlanifDonut" width="150" height="150"></canvas>
-            <div class="proj-donut-center" id="proj-donut-center"></div>
-          </div>
-          <div class="proj-planif-legend" id="proj-planif-legend"></div>
         </div>
       </div>
     </div>
@@ -3930,20 +3914,6 @@ function renderProjectCharts(){
     }
   });
 
-  // Donut planificaciones
-  const planifCounts={};
-  src.forEach(d=>{ const p=d.planif||'Sin estado'; planifCounts[p]=(planifCounts[p]||0)+1; });
-  const PCOLS={'Cargada en aula':'#b0b8cc','Validada':'#90c4a0','DEL 2° Instancia':'#90bbb4','Enviada a validación DEL':'#9ab4cc','En construcción':'#d4b878','No inicia':'#aaa','No aplica':'#ccc'};
-  const pL=Object.keys(planifCounts), pD=pL.map(k=>planifCounts[k]), pC=pL.map(k=>PCOLS[k]||'#ddd');
-  const enviadas=(planifCounts['Enviada a validación DEL']||0)+(planifCounts['DEL 2° Instancia']||0)+(planifCounts['Validada']||0)+(planifCounts['Cargada en aula']||0);
-  const dcEl=document.getElementById('proj-donut-center');
-  if(dcEl) dcEl.innerHTML=`<div class="proj-donut-big">${enviadas}</div><div class="proj-donut-lbl">enviadas</div>`;
-  const legEl=document.getElementById('proj-planif-legend');
-  if(legEl) legEl.innerHTML=pL.map((l,i)=>`<div class="proj-planif-row"><span class="proj-planif-dot" style="background:${pC[i]}"></span><span class="proj-planif-lbl">${l}</span><span class="proj-planif-cnt">${pD[i]}</span></div>`).join('');
-  if(projDonutInst){ projDonutInst.destroy(); projDonutInst=null; }
-  const ctxD=document.getElementById('projPlanifDonut')?.getContext('2d');
-  if(ctxD) projDonutInst=new Chart(ctxD,{type:'doughnut',data:{labels:pL,datasets:[{data:pD,backgroundColor:pC,borderWidth:2,borderColor:'#f8f4ec'}]},options:{cutout:'68%',plugins:{legend:{display:false}},animation:{duration:400}}});
-
   const sub=document.getElementById('proj-chart-sub');
   if(sub){const d=Math.max(0,Math.round((new Date(2027,0,20)-today)/86400000));sub.textContent=`Hoy: ${today.toLocaleDateString('es-CL',{day:'numeric',month:'short',year:'numeric'})} · ${d} días restantes`;}
 }
@@ -4033,34 +4003,6 @@ function renderExecutiveHero(){
   // Usar datos filtrados para que reaccione al filtro de facultad
   const src = filtered().length ? filtered() : allSrc;
 
-  // ── Estados reales de planificación (donut 6 estados) — siempre con datos globales ──
-  const stateLabels = ['No inicia','En construcción','Enviada a validación DEL','DEL 2° Instancia','Validada','Cargada en aula'];
-  const stateColors = ['#9CA3AF','#C8A951','#7BA7C4','#9b72cf','#27A06E','#2D8A5E'];
-  const stateCounts = [0,0,0,0,0,0];
-  allSrc.forEach(d=>{
-    let step = Math.floor(planifStepIndex(d.planif||''));
-    if(step<0) step=0;
-    if(step>5) step=5;
-    stateCounts[step]++;
-  });
-  if(ovStateDonutInstance){ovStateDonutInstance.destroy();}
-  const ctxSD = document.getElementById('ovStateDonutChart')?.getContext('2d');
-  if(ctxSD){
-    ovStateDonutInstance = new Chart(ctxSD,{
-      type:'doughnut',
-      data:{labels:stateLabels, datasets:[{data:stateCounts, backgroundColor:stateColors, borderWidth:2, borderColor:'#fff'}]},
-      options:{cutout:'62%', plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>`${ctx.raw} asignaturas`}}}, animation:{duration:400}}
-    });
-  }
-  const stateLegendEl = document.getElementById('ov-state-legend');
-  if(stateLegendEl){
-    stateLegendEl.innerHTML = stateLabels.map((l,i)=>`
-      <div class="dl-item">
-        <span class="dl-dot" style="background:${stateColors[i]}"></span>
-        <span class="dl-label">${l}</span>
-        <span class="dl-val">${stateCounts[i]}</span>
-      </div>`).join('');
-  }
   const hmFacs = FAC_ORDER.filter(f=>allSrc.some(d=>d.facultad===f));
   const hmCats = [...new Set(allSrc.map(d=>(d.fmt||'').trim()).filter(Boolean))];
   const hmMatrix = hmFacs.map(f=>hmCats.map(c=>allSrc.filter(d=>d.facultad===f && (d.fmt||'').trim()===c).length));
