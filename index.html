@@ -4021,8 +4021,10 @@ function renderExecutiveHero(){
             <td style="padding:6px 8px;font-weight:600;color:var(--text);white-space:nowrap;background:#fff">${FAC_ABBR[f]||f}</td>
             ${hmCats.map((c,ci)=>{
               const v = hmMatrix[ri][ci];
-              const op = v ? (0.12 + 0.75*(v/hmMax)) : 0;
-              return `<td style="padding:6px 6px;text-align:center;font-weight:${v?700:400};color:${v?'#fff':'#ccc'};background:rgba(40,70,57,${op})">${v||'—'}</td>`;
+              const op = v ? (0.15 + 0.70*(v/hmMax)) : 0;
+              const opHex = Math.round(op*255).toString(16).padStart(2,'0');
+              const facColor = FAC_COLORS[f] || '#284639';
+              return `<td style="padding:6px 6px;text-align:center;font-weight:${v?700:400};color:${v?'#1a2a22':'#ccc'};background:${facColor}${opHex}">${v||'—'}</td>`;
             }).join('')}
           </tr>`).join('')}
         </tbody>
