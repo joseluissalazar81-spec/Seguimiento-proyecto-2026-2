@@ -1124,15 +1124,14 @@
     }
     /* Top row: sem + avance + DEL stats + week */
     .exec-kpis {
-      display: grid;
-      grid-template-columns: 1fr 220px;
-      gap: 24px; align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 28px;
       margin-bottom: 20px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
     }
-    @media(max-width:900px){.exec-kpis{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.exec-kpis{flex-direction:column; align-items:center;}}
     /* Semáforo */
     .exec-sem {
       display:flex; flex-direction:column; align-items:center; gap:8px;
@@ -1179,7 +1178,11 @@
     .sem-exp-text strong{color:#fff}
     #sem-explain-close{position:absolute;top:8px;right:10px;background:none;border:none;color:rgba(255,255,255,.5);cursor:pointer;font-size:14px;line-height:1;padding:2px}
     /* % Avance central */
-    .exec-avance {display:flex; flex-direction:column; align-items:center; gap:6px;}
+    .exec-avance {
+      display:flex; flex-direction:column; align-items:center; gap:6px;
+      padding:14px 28px; border-radius:var(--radius);
+      background:var(--az-bg); border:1px solid rgba(176,184,204,.2);
+    }
     .exec-avance-num {
       font-size:62px; font-weight:800; font-family:'DM Mono',monospace; line-height:1;
       background:linear-gradient(135deg,var(--az),var(--tl2));
@@ -1216,7 +1219,7 @@
       background:var(--az-bg); border:1px solid rgba(176,184,204,.2);
       text-align:center;
     }
-    .exec-week-num {font-size:13px; font-weight:800; color:var(--az); letter-spacing:.04em;}
+    .exec-week-num {font-size:13px; font-weight:800; color:var(--az); letter-spacing:.04em; white-space:nowrap;}
     .exec-week-big {font-size:38px; font-weight:800; font-family:'DM Mono',monospace; color:var(--az); line-height:1;}
     .exec-week-lbl {font-size:10px; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:.06em;}
     .exec-week-date {font-size:10px; color:var(--text-muted); margin-top:2px;}
