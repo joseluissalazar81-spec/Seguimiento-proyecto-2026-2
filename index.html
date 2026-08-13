@@ -1127,12 +1127,12 @@
     /* Top row: sem + avance + DEL stats + week */
     .exec-kpis {
       display: flex;
-      justify-content: center;
       align-items: stretch;
       flex-wrap: wrap;
-      gap: 28px;
-      margin-bottom: 20px;
+      gap: 20px;
     }
+    .exec-hero-row{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;margin-bottom:16px}
+    .exec-hero-row > .ov-chart-card{flex:1;min-width:280px}
     @media(max-width:600px){.exec-kpis{flex-direction:column; align-items:center;}}
     /* Semáforo */
     .exec-sem {
@@ -1859,11 +1859,8 @@
           <div class="exec-week-lbl">de 18 semanas</div>
           <div class="exec-week-date" id="exec-week-date">—</div>
         </div>
-      </div>
-
-      <!-- Facultad x Tipo de Virtualizacion — pegado a las tarjetas de arriba -->
-      <div class="ov-charts" style="margin-top:2px;margin-bottom:16px">
-        <div class="ov-chart-card" style="flex:1;min-width:280px;background:transparent;border:none;box-shadow:none;padding:0">
+        <!-- Facultad x Tipo de Virtualizacion — al lado, mismo panel -->
+        <div class="ov-chart-card" style="flex:2;min-width:340px;background:transparent;border:none;box-shadow:none;padding:0">
           <div class="ov-chart-title">Facultad × Tipo de Virtualización</div>
           <div id="ov-heatmap"></div>
         </div>
