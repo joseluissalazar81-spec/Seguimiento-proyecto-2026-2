@@ -1227,6 +1227,18 @@
     .exec-week-lbl {font-size:10px; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:.06em;}
     .exec-week-date {font-size:10px; color:var(--text-muted); margin-top:2px;}
 
+    /* ── Dirección E-learning: círculo por facultad ── */
+    .edu-hub {
+      display:flex; flex-direction:column; align-items:center; gap:6px;
+      padding:10px 10px 12px; border-radius:var(--radius);
+      background:var(--az-bg); border:1px solid rgba(176,184,204,.2);
+      text-align:center;
+    }
+    .edu-hub svg { width:150px; height:150px; display:block; }
+    .edu-hub-slice, .edu-hub-center { cursor:pointer; transition:opacity .15s; }
+    .edu-hub-slice:hover, .edu-hub-center:hover { opacity:.85; }
+    .edu-hub-lbl { font-size:9.5px; font-weight:800; color:var(--az); text-transform:uppercase; letter-spacing:.03em; }
+
     /* ── Bloques de 2 semanas (Gantt producción) ── */
     .exec-gantt-section {border-top:1px solid var(--borde); padding-top:16px;}
     .exec-gantt-hdr {
@@ -1885,6 +1897,8 @@
           <div class="exec-week-lbl">de 18 semanas</div>
           <div class="exec-week-date" id="exec-week-date">—</div>
         </div>
+        <!-- Dirección E-learning: círculo por facultad, resalta el segmento activo -->
+        <div class="edu-hub" id="edu-hub"></div>
       </div>
 
       <!-- Gantt de 9 bloques x 2 semanas -->
@@ -2700,7 +2714,63 @@ function renderFacPills(){
     html += `<button class="sb-pill${act?' active':''}" onclick="setFacFilter('${fac}')">${fac} <span class="sb-cnt">${n}</span></button>`;
   });
   bar.innerHTML = html;
+  renderEduHub();
 }
+
+// ── Círculo "Dirección E-learning": 1 facultad por cuadrante, resalta el activo ──
+// (inline SVG, no imagen — evita problemas de cache) Imita el patrón del sitio
+// educationpolicydashboard.org: al filtrar por un tema, ese segmento queda a color
+// y el resto pasa a gris.
+const EDU_HUB_COLORS = ['#8FC1DE','#F2CB7D','#8DD3D3','#A9D18C']; // pastel: azul, dorado, turquesa, verde
+const EDU_HUB_GRAY = '#D6DADF';
+const EDU_HUB_RING_COLOR = '#9DC3D6';
+const EDU_HUB_CENTER = '#F2A46B';
+function eduHubPoint(cx,cy,r,angleDeg){
+  const rad = angleDeg * Math.PI/180; // 0deg = arriba (12 en punto), sentido horario
+  return [cx + r*Math.sin(rad), cy - r*Math.cos(rad)];
+}
+function eduHubSlicePath(cx,cy,ri,ro,startDeg,endDeg){
+  const pt=(r,a)=>{ const rad=(a)*Math.PI/180; return [cx + r*Math.sin(rad), cy - r*Math.cos(rad)]; };
+  const [x1,y1]=pt(ro,startDeg), [x2,y2]=pt(ro,endDeg), [x3,y3]=pt(ri,endDeg), [x4,y4]=pt(ri,startDeg);
+  return `M${x1},${y1} A${ro},${ro} 0 0 1 ${x2},${y2} L${x3},${y3} A${ri},${ri} 0 0 0 ${x4},${y4} Z`;
+}
+function renderEduHub(){
+  const wrap = document.getElementById('edu-hub');
+  if(!wrap || !DATA.length) return;
+  const activeFac = filters.facultad || null;
+  const facs = FAC_ORDER.filter(fac=>DATA.some(d=>d.facultad===fac));
+  const cx=100, cy=100, ri=32, ro=62;
+  const slotAngles = [[-90,0],[0,90],[90,180],[180,270]];
+  const anyActive = !!activeFac;
+
+  let slicesSvg = '', labelsSvg = '';
+  slotAngles.forEach((ang,i)=>{
+    if(i>=facs.length){ // solo 4 slots; si sobran facultades no entran
+      slicesSvg += `<path d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${EDU_HUB_GRAY}" stroke="#fff" stroke-width="2"/>`;
+      return;
+    }
+    const fac = facs[i];
+    const isActive = anyActive ? activeFac===fac : true;
+    const color = isActive ? EDU_HUB_COLORS[i] : EDU_HUB_GRAY;
+    slicesSvg += `<path class="edu-hub-slice" d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${color}" stroke="#fff" stroke-width="2" onclick="setFacFilter('${fac}')"><title>${fac}</title></path>`;
+    const mid = (ang[0]+ang[1])/2;
+    const [lx,ly] = eduHubPoint(cx,cy,(ri+ro)/2, mid);
+    labelsSvg += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" font-size="8" font-weight="800" fill="#fff" style="pointer-events:none">${FAC_ABBR[fac]||fac}</text>`;
+  });
+
+  const ringColor = anyActive ? EDU_HUB_GRAY : EDU_HUB_RING_COLOR;
+  const svg = `
+    <svg viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="86" fill="none" stroke="${ringColor}" stroke-width="16"/>
+      ${slicesSvg}
+      <circle class="edu-hub-center" cx="100" cy="100" r="${ri}" fill="${EDU_HUB_CENTER}" stroke="#fff" stroke-width="3" onclick="setFacFilter(null)"><title>Ver todas las facultades</title></circle>
+      <text x="100" y="95" text-anchor="middle" font-size="10" font-weight="800" fill="#fff" style="pointer-events:none">DIRECCIÓN</text>
+      <text x="100" y="108" text-anchor="middle" font-size="10" font-weight="800" fill="#fff" style="pointer-events:none">E-LEARNING</text>
+      ${labelsSvg}
+    </svg>`;
+  wrap.innerHTML = svg + `<div class="edu-hub-lbl">${activeFac ? (FAC_ABBR[activeFac]||activeFac) : 'Todas las facultades'}</div>`;
+}
+
 function renderTeamPills(){
   const bar = document.getElementById('team-pills-bar');
   if(!bar || !DATA.length) return;
