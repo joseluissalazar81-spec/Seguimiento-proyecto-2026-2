@@ -1227,6 +1227,19 @@
     .exec-week-lbl {font-size:10px; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:.06em;}
     .exec-week-date {font-size:10px; color:var(--text-muted); margin-top:2px;}
 
+    /* ── Figura marco de política educativa (acceso a asignaturas) ── */
+    .exec-edu-figure {
+      display:flex; flex-direction:column; align-items:center; gap:4px;
+      padding:10px 12px 12px; border-radius:var(--radius);
+      background:var(--az-bg); border:1px solid rgba(176,184,204,.2);
+      text-align:center; text-decoration:none; cursor:pointer;
+      transition:transform .15s, box-shadow .15s;
+    }
+    .exec-edu-figure:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,.18); }
+    .exec-edu-figure img { width:60px; height:60px; border-radius:50%; object-fit:cover; display:block; }
+    .exec-edu-figure-lbl { font-size:9.5px; font-weight:800; color:var(--az); text-transform:uppercase; letter-spacing:.03em; max-width:100px; line-height:1.25; }
+    .exec-edu-figure-hint { font-size:9.5px; color:var(--text-muted); font-weight:600; }
+
     /* ── Bloques de 2 semanas (Gantt producción) ── */
     .exec-gantt-section {border-top:1px solid var(--borde); padding-top:16px;}
     .exec-gantt-hdr {
@@ -1860,6 +1873,12 @@
           <div class="exec-week-lbl">de 18 semanas</div>
           <div class="exec-week-date" id="exec-week-date">—</div>
         </div>
+        <!-- Marco de política educativa — acceso a asignaturas -->
+        <a class="exec-edu-figure" href="javascript:void(0)" onclick="irAAsignaturas()" title="Ver todas las asignaturas">
+          <img src="/icons/education-policy-dashboard.png" alt="Marco de política educativa: Politics, Policies, Practices, Learning" loading="lazy"/>
+          <span class="exec-edu-figure-lbl">Marco de política educativa</span>
+          <span class="exec-edu-figure-hint">Ver asignaturas →</span>
+        </a>
       </div>
 
       <!-- Gantt de 9 bloques x 2 semanas -->
@@ -5100,6 +5119,13 @@ function setView(v){
   });
   if(v==='kanban') renderKanban();
   if(v==='fac')    renderFacView();
+}
+
+// ── Acceso directo a la tabla de asignaturas (figura marco de política educativa) ──
+function irAAsignaturas(){
+  setView('table');
+  const t = document.querySelector('.table-wrap');
+  if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
 }
 
 // ── HOOK: integrar en renderTable existente ────────────────────────────────────
