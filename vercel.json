@@ -1,5 +1,10 @@
 {
   "version": 2,
+  "git": {
+    "deploymentEnabled": {
+      "data": false
+    }
+  },
   "builds": [
     { "src": "index.html",    "use": "@vercel/static" },
     { "src": "manifest.json", "use": "@vercel/static" },
