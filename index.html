@@ -1128,6 +1128,7 @@
     .exec-kpis {
       display: flex;
       align-items: stretch;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
     }
@@ -1859,11 +1860,6 @@
           <div class="exec-week-lbl">de 18 semanas</div>
           <div class="exec-week-date" id="exec-week-date">—</div>
         </div>
-        <!-- Facultad x Tipo de Virtualizacion — al lado, mismo panel -->
-        <div class="ov-chart-card" style="flex:2;min-width:340px;background:transparent;border:none;box-shadow:none;padding:0">
-          <div class="ov-chart-title">Facultad × Tipo de Virtualización</div>
-          <div id="ov-heatmap"></div>
-        </div>
       </div>
 
       <!-- Gantt de 9 bloques x 2 semanas -->
@@ -1921,8 +1917,8 @@
           <div class="ov-gantt" id="ov-gantt"></div>
         </div>
         <div class="ov-chart-card" style="flex:2;min-width:0">
-          <div class="ov-chart-title">Distribución de Asignaturas por Categoría</div>
-          <div id="ov-category-table"></div>
+          <div class="ov-chart-title">Facultad × Tipo de Virtualización</div>
+          <div id="ov-heatmap"></div>
         </div>
       </div>
     </div>
@@ -4166,30 +4162,6 @@ function renderOverview(){
 
   // Indicar si se usa fallback (build forzado 2026-08-12d)
 
-  // ── Distribución por categoría (Tipo de Virtualización) ──
-  const catCounts = {};
-  src.forEach(d=>{
-    const cat = (d.fmt||'').trim() || 'Sin especificar';
-    catCounts[cat] = (catCounts[cat]||0) + 1;
-  });
-  const catRows = Object.entries(catCounts).sort((a,b)=>b[1]-a[1]);
-  document.getElementById('ov-category-table').innerHTML = `
-    <table style="width:100%;border-collapse:collapse;font-size:12px">
-      <thead><tr>
-        <th style="text-align:left;padding:7px 10px;background:#f8fafc;color:var(--az);font-weight:700;text-transform:uppercase;font-size:10px;letter-spacing:.04em;border-bottom:2px solid rgba(40,70,57,.15)">Categoría</th>
-        <th style="text-align:right;padding:7px 10px;background:#f8fafc;color:var(--az);font-weight:700;text-transform:uppercase;font-size:10px;letter-spacing:.04em;border-bottom:2px solid rgba(40,70,57,.15)">N° asignaturas</th>
-      </tr></thead>
-      <tbody>
-        ${catRows.map(([cat,n])=>`<tr>
-          <td style="padding:6px 10px;border-bottom:1px solid #eee">${cat}</td>
-          <td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:right;font-weight:600">${n}</td>
-        </tr>`).join('')}
-        <tr style="background:#f0f4f8;font-weight:700">
-          <td style="padding:7px 10px">Total General</td>
-          <td style="padding:7px 10px;text-align:right">${src.length}</td>
-        </tr>
-      </tbody>
-    </table>`;
   // ── Conteos generales ──
   const total = src.length;
   let validadas=0, enProd=0, sinIniciar=0;
