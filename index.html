@@ -1227,18 +1227,38 @@
     .exec-week-lbl {font-size:10px; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:.06em;}
     .exec-week-date {font-size:10px; color:var(--text-muted); margin-top:2px;}
 
-    /* ── Figura marco de política educativa (acceso a asignaturas) ── */
-    .exec-edu-figure {
-      display:flex; flex-direction:column; align-items:center; gap:4px;
-      padding:10px 12px 12px; border-radius:var(--radius);
-      background:var(--az-bg); border:1px solid rgba(176,184,204,.2);
-      text-align:center; text-decoration:none; cursor:pointer;
-      transition:transform .15s, box-shadow .15s;
+    /* ── Hub Dirección E-learning: círculo central + facultades a los lados ── */
+    .edu-hub {
+      display:flex; align-items:center; justify-content:center; gap:28px;
+      padding:22px 12px; margin:4px 0 16px;
+      border-top:1px solid var(--borde); border-bottom:1px solid var(--borde);
     }
-    .exec-edu-figure:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,.18); }
-    .exec-edu-figure img { width:60px; height:60px; border-radius:50%; object-fit:cover; display:block; }
-    .exec-edu-figure-lbl { font-size:9.5px; font-weight:800; color:var(--az); text-transform:uppercase; letter-spacing:.03em; max-width:100px; line-height:1.25; }
-    .exec-edu-figure-hint { font-size:9.5px; color:var(--text-muted); font-weight:600; }
+    .edu-hub-center { flex:0 0 auto; }
+    .edu-hub-center img {
+      width:230px; height:230px; border-radius:50%; display:block;
+      box-shadow:0 6px 24px rgba(0,0,0,.2);
+    }
+    .edu-hub-side {
+      flex:1 1 0; display:flex; flex-direction:column; gap:9px; max-width:230px;
+    }
+    .edu-hub-left  { align-items:flex-end; }
+    .edu-hub-right { align-items:flex-start; }
+    .edu-hub-pill {
+      display:inline-flex; align-items:center; gap:6px;
+      padding:9px 16px; border-radius:22px;
+      background:var(--az-bg); border:1px solid rgba(176,184,204,.25);
+      font-size:11.5px; font-weight:700; color:var(--az); cursor:pointer;
+      font-family:inherit; text-align:left; white-space:nowrap;
+      transition:transform .15s, box-shadow .15s, background .15s, color .15s;
+    }
+    .edu-hub-pill:hover  { transform:translateY(-1px); box-shadow:0 3px 10px rgba(0,0,0,.14); }
+    .edu-hub-pill.active { background:var(--az); border-color:var(--az); color:#fff; }
+    @media(max-width:900px){
+      .edu-hub { flex-direction:column; }
+      .edu-hub-center img { width:170px; height:170px; }
+      .edu-hub-side { flex-direction:row; flex-wrap:wrap; justify-content:center; max-width:100%; }
+      .edu-hub-left, .edu-hub-right { align-items:center; }
+    }
 
     /* ── Bloques de 2 semanas (Gantt producción) ── */
     .exec-gantt-section {border-top:1px solid var(--borde); padding-top:16px;}
@@ -1873,12 +1893,15 @@
           <div class="exec-week-lbl">de 18 semanas</div>
           <div class="exec-week-date" id="exec-week-date">—</div>
         </div>
-        <!-- Marco de política educativa — acceso a asignaturas -->
-        <a class="exec-edu-figure" href="javascript:void(0)" onclick="irAAsignaturas()" title="Ver todas las asignaturas">
-          <img src="/icons/education-policy-dashboard.png" alt="Marco de política educativa: Politics, Policies, Practices, Learning" loading="lazy"/>
-          <span class="exec-edu-figure-lbl">Marco de política educativa</span>
-          <span class="exec-edu-figure-hint">Ver asignaturas →</span>
-        </a>
+      </div>
+
+      <!-- ── Dirección E-learning: hub central + facultades a los lados ── -->
+      <div class="edu-hub" id="edu-hub">
+        <div class="edu-hub-side edu-hub-left" id="edu-hub-left"></div>
+        <div class="edu-hub-center">
+          <img src="/icons/education-policy-dashboard.png" alt="Dirección E-learning — marco de política educativa" loading="lazy"/>
+        </div>
+        <div class="edu-hub-side edu-hub-right" id="edu-hub-right"></div>
       </div>
 
       <!-- Gantt de 9 bloques x 2 semanas -->
@@ -2694,6 +2717,24 @@ function renderFacPills(){
     html += `<button class="sb-pill${act?' active':''}" onclick="setFacFilter('${fac}')">${fac} <span class="sb-cnt">${n}</span></button>`;
   });
   bar.innerHTML = html;
+  renderEduHub();
+}
+// ── Hub Dirección E-learning: facultades repartidas a ambos lados del círculo ──
+function renderEduHub(){
+  const left = document.getElementById('edu-hub-left');
+  const right = document.getElementById('edu-hub-right');
+  if(!left || !right || !DATA.length) return;
+  const activeFac = filters.facultad || null;
+  const pill = fac=>{
+    const n = DATA.filter(d=>d.facultad===fac).length;
+    if(!n) return '';
+    const act = activeFac===fac;
+    return `<button class="edu-hub-pill${act?' active':''}" onclick="setFacFilter('${fac}')">${fac}</button>`;
+  };
+  const facs = FAC_ORDER.filter(fac=>DATA.some(d=>d.facultad===fac));
+  const half = Math.ceil(facs.length/2);
+  left.innerHTML  = facs.slice(0, half).map(pill).join('');
+  right.innerHTML = facs.slice(half).map(pill).join('');
 }
 function renderTeamPills(){
   const bar = document.getElementById('team-pills-bar');
@@ -5119,13 +5160,6 @@ function setView(v){
   });
   if(v==='kanban') renderKanban();
   if(v==='fac')    renderFacView();
-}
-
-// ── Acceso directo a la tabla de asignaturas (figura marco de política educativa) ──
-function irAAsignaturas(){
-  setView('table');
-  const t = document.querySelector('.table-wrap');
-  if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
 }
 
 // ── HOOK: integrar en renderTable existente ────────────────────────────────────
