@@ -1255,9 +1255,9 @@
       position:absolute; transform:translate(-50%,-50%);
       pointer-events:auto;
       display:flex; align-items:center; justify-content:center;
-      width:82px; padding:6px 7px; border-radius:14px;
+      width:68px; padding:4px 5px; border-radius:12px;
       background:#fff; border:2px solid var(--az);
-      font-size:8.5px; font-weight:800; color:var(--az); text-align:center; line-height:1.2;
+      font-size:7.5px; font-weight:800; color:var(--az); text-align:center; line-height:1.15;
       cursor:pointer; font-family:inherit; white-space:normal;
       box-shadow:0 2px 8px rgba(0,0,0,.2);
       transition:transform .15s, box-shadow .15s, background .15s, color .15s;
@@ -1268,7 +1268,7 @@
       .exec-kpis-main { flex-direction:column; }
       .edu-hub-col, .exec-kpis-right { flex:1 1 100%; width:100%; }
       .edu-hub { max-width:210px; }
-      .edu-hub-pill { width:70px; font-size:8px; }
+      .edu-hub-pill { width:58px; font-size:7px; padding:3px 4px; }
     }
 
     /* ── Bloques de 2 semanas (Gantt producción) ── */
@@ -1885,7 +1885,7 @@
           <!-- Círculo con anillo de facultades clicables alrededor del borde -->
           <div class="edu-hub-col">
             <div class="edu-hub" id="edu-hub">
-              <img src="/icons/education-policy-dashboard.png?v=5" alt="Dirección E-learning — marco de política educativa" loading="lazy"/>
+              <img src="/icons/education-policy-dashboard.png?v=6" alt="Dirección E-learning — marco de política educativa" loading="lazy"/>
               <div class="edu-hub-ring" id="edu-hub-ring"></div>
             </div>
           </div>
@@ -2736,6 +2736,17 @@ function renderFacPills(){
   renderEduHub();
 }
 // ── Hub Dirección E-learning: facultades repartidas a ambos lados del círculo ──
+// Posiciones (fracción del tamaño del círculo, relativa al centro) donde antes
+// estaban las palabras originales del diagrama: 2 en los anillos superiores
+// (Politics/Policies) y 4 en los cuadrantes (School Mgmt/Inputs/Learners/Teachers).
+const EDU_HUB_SPOTS = [
+  {dx:0,      dy:-0.393},
+  {dx:0,      dy:-0.306},
+  {dx:-0.098, dy:-0.098},
+  {dx:0.098,  dy:-0.098},
+  {dx:-0.098, dy:0.098},
+  {dx:0.098,  dy:0.098},
+];
 function renderEduHub(){
   const ring = document.getElementById('edu-hub-ring');
   const hub  = document.getElementById('edu-hub');
@@ -2743,12 +2754,11 @@ function renderEduHub(){
   const activeFac = filters.facultad || null;
   const facs = FAC_ORDER.filter(fac=>DATA.some(d=>d.facultad===fac));
   const size = hub.clientWidth || 260;
-  const cx = size/2, cy = size/2, R = size*0.47;
-  const n = facs.length;
+  const cx = size/2, cy = size/2;
   ring.innerHTML = facs.map((fac,i)=>{
-    const angle = (2*Math.PI*i/n) - Math.PI/2;
-    const x = cx + R*Math.cos(angle);
-    const y = cy + R*Math.sin(angle);
+    const spot = EDU_HUB_SPOTS[i % EDU_HUB_SPOTS.length];
+    const x = cx + spot.dx*size;
+    const y = cy + spot.dy*size;
     const act = activeFac===fac;
     return `<button class="edu-hub-pill${act?' active':''}" style="left:${x}px;top:${y}px" onclick="setFacFilter('${fac}')">${FAC_ABBR[fac]||fac}</button>`;
   }).join('');
