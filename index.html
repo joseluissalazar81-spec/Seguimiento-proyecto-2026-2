@@ -1233,42 +1233,38 @@
     }
     .edu-hub-col {
       flex:1.7 1 320px; min-width:260px;
-      display:flex; align-items:center; justify-content:center;
-      padding:34px 44px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      gap:14px; padding:20px 20px;
     }
     .exec-kpis-right {
       display:flex; flex-direction:column; justify-content:center; gap:12px;
       flex:1 1 200px; min-width:180px; max-width:260px;
     }
 
-    /* ── Hub Dirección E-learning: círculo con anillo de facultades en el borde ── */
+    /* ── Hub Dirección E-learning: círculo pastel decorativo + fila de facultades ── */
     .edu-hub {
-      position:relative;
-      width:100%; max-width:400px; aspect-ratio:1/1; margin:0 auto;
+      width:100%; max-width:280px; aspect-ratio:1/1; margin:0 auto;
     }
     .edu-hub img {
       width:100%; height:100%; border-radius:50%; display:block;
-      box-shadow:0 6px 24px rgba(0,0,0,.2);
+      box-shadow:0 6px 24px rgba(0,0,0,.15);
     }
-    .edu-hub-ring { position:absolute; inset:0; pointer-events:none; }
+    .edu-hub-btns {
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+      gap:6px; max-width:360px;
+    }
     .edu-hub-pill {
-      position:absolute; transform:translate(-50%,-50%);
-      pointer-events:auto;
-      display:flex; align-items:center; justify-content:center;
-      width:68px; padding:4px 5px; border-radius:12px;
-      background:#fff; border:2px solid var(--az);
-      font-size:7.5px; font-weight:800; color:var(--az); text-align:center; line-height:1.15;
-      cursor:pointer; font-family:inherit; white-space:normal;
-      box-shadow:0 2px 8px rgba(0,0,0,.2);
-      transition:transform .15s, box-shadow .15s, background .15s, color .15s;
+      padding:6px 14px; border-radius:20px;
+      font-size:11.5px; font-weight:600; font-family:inherit;
+      border:none; background:rgba(0,0,0,.045); color:var(--text-muted);
+      cursor:pointer; transition:all .15s; white-space:nowrap;
     }
-    .edu-hub-pill:hover  { transform:translate(-50%,-50%) scale(1.08); box-shadow:0 4px 14px rgba(0,0,0,.28); z-index:2; }
-    .edu-hub-pill.active { background:var(--az); color:#fff; }
+    .edu-hub-pill:hover  { background:rgba(26,72,120,.07); color:var(--az); }
+    .edu-hub-pill.active { background:var(--az); color:#fff; font-weight:700; }
     @media(max-width:900px){
       .exec-kpis-main { flex-direction:column; }
       .edu-hub-col, .exec-kpis-right { flex:1 1 100%; width:100%; }
       .edu-hub { max-width:210px; }
-      .edu-hub-pill { width:58px; font-size:7px; padding:3px 4px; }
     }
 
     /* ── Bloques de 2 semanas (Gantt producción) ── */
@@ -1882,12 +1878,12 @@
 
         <!-- ── Fila principal: círculo Dirección E-learning (izq) + Avance/Semana (der) ── -->
         <div class="exec-kpis-main">
-          <!-- Círculo con anillo de facultades clicables alrededor del borde -->
+          <!-- Círculo decorativo + fila ordenada de facultades clicables -->
           <div class="edu-hub-col">
             <div class="edu-hub" id="edu-hub">
-              <img src="/icons/education-policy-dashboard.png?v=6" alt="Dirección E-learning — marco de política educativa"/>
-              <div class="edu-hub-ring" id="edu-hub-ring"></div>
+              <img src="/icons/education-policy-dashboard.png?v=7" alt="Dirección E-learning — marco de política educativa"/>
             </div>
+            <div class="edu-hub-btns" id="edu-hub-btns"></div>
           </div>
 
           <div class="exec-kpis-right">
@@ -2739,28 +2735,14 @@ function renderFacPills(){
 // Posiciones (fracción del tamaño del círculo, relativa al centro) donde antes
 // estaban las palabras originales del diagrama: 2 en los anillos superiores
 // (Politics/Policies) y 4 en los cuadrantes (School Mgmt/Inputs/Learners/Teachers).
-const EDU_HUB_SPOTS = [
-  {dx:0,      dy:-0.393},
-  {dx:0,      dy:-0.306},
-  {dx:-0.098, dy:-0.098},
-  {dx:0.098,  dy:-0.098},
-  {dx:-0.098, dy:0.098},
-  {dx:0.098,  dy:0.098},
-];
 function renderEduHub(){
-  const ring = document.getElementById('edu-hub-ring');
-  const hub  = document.getElementById('edu-hub');
-  if(!ring || !hub || !DATA.length) return;
+  const btns = document.getElementById('edu-hub-btns');
+  if(!btns || !DATA.length) return;
   const activeFac = filters.facultad || null;
   const facs = FAC_ORDER.filter(fac=>DATA.some(d=>d.facultad===fac));
-  const size = hub.clientWidth || 260;
-  const cx = size/2, cy = size/2;
-  ring.innerHTML = facs.map((fac,i)=>{
-    const spot = EDU_HUB_SPOTS[i % EDU_HUB_SPOTS.length];
-    const x = cx + spot.dx*size;
-    const y = cy + spot.dy*size;
+  btns.innerHTML = facs.map(fac=>{
     const act = activeFac===fac;
-    return `<button class="edu-hub-pill${act?' active':''}" style="left:${x}px;top:${y}px" onclick="setFacFilter('${fac}')">${FAC_ABBR[fac]||fac}</button>`;
+    return `<button class="edu-hub-pill${act?' active':''}" onclick="setFacFilter('${fac}')">${FAC_ABBR[fac]||fac}</button>`;
   }).join('');
 }
 function renderTeamPills(){
