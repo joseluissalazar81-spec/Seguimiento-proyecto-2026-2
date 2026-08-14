@@ -2742,7 +2742,7 @@ function renderEduHub(){
   const activeFac = filters.facultad || null;
   const facs = FAC_ORDER.filter(fac=>DATA.some(d=>d.facultad===fac));
   const size = hub.clientWidth || 260;
-  const cx = size/2, cy = size/2, R = size/2 - 4;
+  const cx = size/2, cy = size/2, R = size*0.36;
   const n = facs.length;
   ring.innerHTML = facs.map((fac,i)=>{
     const angle = (2*Math.PI*i/n) - Math.PI/2;
