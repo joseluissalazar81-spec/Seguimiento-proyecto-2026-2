@@ -1227,18 +1227,23 @@
     .exec-week-lbl {font-size:10px; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:.06em;}
     .exec-week-date {font-size:10px; color:var(--text-muted); margin-top:2px;}
 
-    /* ── Fila principal exec-hero: círculo (izq) + avance/semana (der) ── */
+    /* ── Fila principal exec-hero: círculo (izq, más ancho) + avance/semana (der, más chico) ── */
     .exec-kpis-main {
-      display:flex; align-items:center; gap:28px; flex:1 1 auto; flex-wrap:wrap;
+      display:flex; align-items:center; gap:20px; flex:1 1 100%; width:100%; flex-wrap:wrap;
+    }
+    .edu-hub-col {
+      flex:1.7 1 320px; min-width:260px;
+      display:flex; align-items:center; justify-content:center;
     }
     .exec-kpis-right {
-      display:flex; flex-direction:column; gap:12px; flex:1 1 220px; min-width:200px;
+      display:flex; flex-direction:column; justify-content:center; gap:12px;
+      flex:1 1 200px; min-width:180px; max-width:260px;
     }
 
     /* ── Hub Dirección E-learning: círculo con anillo de facultades en el borde ── */
     .edu-hub {
-      position:relative; flex:0 0 auto;
-      width:260px; height:260px; margin:0 auto;
+      position:relative;
+      width:100%; max-width:400px; aspect-ratio:1/1; margin:0 auto;
     }
     .edu-hub img {
       width:100%; height:100%; border-radius:50%; display:block;
@@ -1260,7 +1265,8 @@
     .edu-hub-pill.active { background:var(--az); color:#fff; }
     @media(max-width:900px){
       .exec-kpis-main { flex-direction:column; }
-      .edu-hub { width:210px; height:210px; }
+      .edu-hub-col, .exec-kpis-right { flex:1 1 100%; width:100%; }
+      .edu-hub { max-width:210px; }
       .edu-hub-pill { width:70px; font-size:8px; }
     }
 
@@ -1876,9 +1882,11 @@
         <!-- ── Fila principal: círculo Dirección E-learning (izq) + Avance/Semana (der) ── -->
         <div class="exec-kpis-main">
           <!-- Círculo con anillo de facultades clicables alrededor del borde -->
-          <div class="edu-hub" id="edu-hub">
-            <img src="/icons/education-policy-dashboard.png" alt="Dirección E-learning — marco de política educativa" loading="lazy"/>
-            <div class="edu-hub-ring" id="edu-hub-ring"></div>
+          <div class="edu-hub-col">
+            <div class="edu-hub" id="edu-hub">
+              <img src="/icons/education-policy-dashboard.png?v=3" alt="Dirección E-learning — marco de política educativa" loading="lazy"/>
+              <div class="edu-hub-ring" id="edu-hub-ring"></div>
+            </div>
           </div>
 
           <div class="exec-kpis-right">
