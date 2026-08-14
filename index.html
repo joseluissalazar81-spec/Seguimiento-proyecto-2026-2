@@ -1234,6 +1234,7 @@
     .edu-hub-col {
       flex:1.7 1 320px; min-width:260px;
       display:flex; align-items:center; justify-content:center;
+      padding:34px 44px;
     }
     .exec-kpis-right {
       display:flex; flex-direction:column; justify-content:center; gap:12px;
@@ -1884,7 +1885,7 @@
           <!-- Círculo con anillo de facultades clicables alrededor del borde -->
           <div class="edu-hub-col">
             <div class="edu-hub" id="edu-hub">
-              <img src="/icons/education-policy-dashboard.png?v=4" alt="Dirección E-learning — marco de política educativa" loading="lazy"/>
+              <img src="/icons/education-policy-dashboard.png?v=5" alt="Dirección E-learning — marco de política educativa" loading="lazy"/>
               <div class="edu-hub-ring" id="edu-hub-ring"></div>
             </div>
           </div>
@@ -2742,7 +2743,7 @@ function renderEduHub(){
   const activeFac = filters.facultad || null;
   const facs = FAC_ORDER.filter(fac=>DATA.some(d=>d.facultad===fac));
   const size = hub.clientWidth || 260;
-  const cx = size/2, cy = size/2, R = size*0.36;
+  const cx = size/2, cy = size/2, R = size*0.47;
   const n = facs.length;
   ring.innerHTML = facs.map((fac,i)=>{
     const angle = (2*Math.PI*i/n) - Math.PI/2;
