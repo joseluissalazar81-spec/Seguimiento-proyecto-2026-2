@@ -2686,6 +2686,14 @@ const EDU_HUB_COLORS = ['#8FC1DE','#F2CB7D','#8DD3D3','#A9D18C']; // pastel: azu
 const EDU_HUB_GRAY = '#D6DADF';
 const EDU_HUB_RING_COLOR = '#98D8BC'; // verde institucional UST en versión pastel
 const EDU_HUB_CENTER = '#F2A46B';
+// Al hacer clic en un cuadrante del círculo: filtra por esa facultad, se asegura de
+// estar en la vista "por facultad" y hace scroll hasta su panel de asignaturas.
+function eduHubGoTo(fac){
+  if(currentView!=='fac') setView('fac');
+  setFacFilter(fac);
+  const el = document.getElementById('fac-view');
+  if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+}
 function eduHubSlicePath(cx,cy,ri,ro,startDeg,endDeg){
   const pt=(r,a)=>{ const rad=(a)*Math.PI/180; return [cx + r*Math.sin(rad), cy - r*Math.cos(rad)]; };
   const [x1,y1]=pt(ro,startDeg), [x2,y2]=pt(ro,endDeg), [x3,y3]=pt(ri,endDeg), [x4,y4]=pt(ri,startDeg);
@@ -2729,7 +2737,7 @@ function renderEduHub(){
       : eduHubArcPath(labelR, ang[0]+pad, ang[1]-pad, 1);
     defsSvg += `<path id="${arcId}" d="${d}" fill="none"/>`;
     // path + etiqueta van juntos en un <g> para que al pasar el mouse se muevan/agranden como una unidad
-    slicesSvg += `<g class="edu-hub-slice" onclick="setFacFilter('${fac}')">
+    slicesSvg += `<g class="edu-hub-slice" onclick="eduHubGoTo('${fac}')">
       <path d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${color}" stroke="#fff" stroke-width="2"><title>${fac}</title></path>
       <text font-size="8.2" font-weight="800" fill="#fff" style="pointer-events:none"><textPath href="#${arcId}" xlink:href="#${arcId}" startOffset="50%" text-anchor="middle">${FAC_ABBR[fac]||fac}</textPath></text>
     </g>`;
@@ -2750,7 +2758,7 @@ function renderEduHub(){
         <circle cx="100" cy="100" r="94" fill="none" stroke="rgba(0,0,0,.07)" stroke-width="1"/>
         <circle cx="100" cy="100" r="85" fill="none" stroke="${ringColor}" stroke-width="15"/>
         ${slicesSvg}
-        <g class="edu-hub-center" onclick="setFacFilter(null)">
+        <g class="edu-hub-center" onclick="eduHubGoTo(null)">
           <circle cx="100" cy="100" r="${ri}" fill="${EDU_HUB_CENTER}" stroke="#fff" stroke-width="3.5"><title>Ver todas las facultades</title></circle>
           <text x="100" y="100" text-anchor="middle" dominant-baseline="middle" font-size="8.5" font-weight="800" letter-spacing=".2" fill="#fff" style="pointer-events:none">
             <tspan x="100" dy="-6">DIRECCIÓN</tspan>
