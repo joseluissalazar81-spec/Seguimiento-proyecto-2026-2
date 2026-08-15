@@ -1816,7 +1816,7 @@
 
 <div class="layout">
   <aside id="sidebar">
-    <div id="fac-pills-bar"></div>
+    <div id="nivel-pills-bar"></div>
     <div id="team-pills-bar"></div>
   </aside>
   <main>
@@ -2689,28 +2689,40 @@ async function loadDashboardData(){
 }
 
 // ─── STATE ───
-let filters={jp:null,di:null,dg:null,implementador:null,facultad:null,planif:null};
+let filters={jp:null,di:null,dg:null,implementador:null,facultad:null,planif:null,nivel:null};
 let searchQ='',sortCol='facultad',sortDir='asc',selectedIdx=null;
 let donaInstance=null;
 
 // ─── HELPERS ───
 function initials(n){if(!n||n==='—')return'?';return n.split(' ').slice(0,2).map(w=>w[0]).join('').toUpperCase()}
 function unique(k){return[...new Set(DATA.map(d=>d[k]).filter(v=>v&&v!=='—'))].sort((a,b)=>a.localeCompare(b,'es'))}
-function renderFacPills(){
-  const bar = document.getElementById('fac-pills-bar');
+// La facultad ya se filtra desde el círculo Dirección E-learning, así que en el
+// sidebar mostramos Niveles (Pregrado/Postgrado) en vez de repetir Facultad.
+function renderNivelPills(){
+  const bar = document.getElementById('nivel-pills-bar');
   if(!bar || !DATA.length) return;
-  const activeFac = filters.facultad || null;
+  const activeNivel = filters.nivel || null;
   const total = DATA.length;
-  let html = `<div class="sb-section-label">Facultad</div>`;
-  html += `<button class="sb-pill${!activeFac?' active':''}" onclick="setFacFilter(null)">Todas <span class="sb-cnt">${total}</span></button>`;
-  FAC_ORDER.forEach(fac=>{
-    const n = DATA.filter(d=>d.facultad===fac).length;
+  let html = `<div class="sb-section-label">Niveles</div>`;
+  html += `<button class="sb-pill${!activeNivel?' active':''}" onclick="setNivelFilter(null)">Todas <span class="sb-cnt">${total}</span></button>`;
+  ['Pregrado','Postgrado'].forEach(nivel=>{
+    const n = DATA.filter(d=>d.nivel===nivel).length;
     if(!n) return;
-    const act = activeFac===fac;
-    html += `<button class="sb-pill${act?' active':''}" onclick="setFacFilter('${fac}')">${fac} <span class="sb-cnt">${n}</span></button>`;
+    const act = activeNivel===nivel;
+    html += `<button class="sb-pill${act?' active':''}" onclick="setNivelFilter('${nivel}')">${nivel} <span class="sb-cnt">${n}</span></button>`;
   });
   bar.innerHTML = html;
   renderEduHub();
+}
+function setNivelFilter(nivel){
+  filters.nivel = nivel;
+  renderNivelPills();
+  renderTable();
+  renderKPIs();
+  renderExecutiveHero();
+  updateInformeBtn();
+  if(currentView==='kanban') renderKanban();
+  if(currentView==='fac')    renderFacView();
 }
 
 // ── Círculo "Dirección E-learning": 1 facultad por cuadrante, resalta el activo ──
@@ -2858,8 +2870,8 @@ function renderTeamPills(){
   const bar = document.getElementById('team-pills-bar');
   if(!bar || !DATA.length) return;
   const roles = [
-    {key:'jp',  label:'JP — Jefe de Proyecto', field:'jp'},
     {key:'di',  label:'DI — Diseño Instruc.',  field:'di'},
+    {key:'jp',  label:'JP — Jefe de Proyecto', field:'jp'},
     {key:'dg',  label:'DG — Diseño Gráfico',   field:'dg'},
     {key:'implementador', label:'IMP — Implementador', field:'implementador'},
   ];
@@ -2893,7 +2905,7 @@ function setTeamFilter(role, val){
 function setFacFilter(fac){
   filters.facultad = fac;
   filters.jp=null; filters.di=null; filters.dg=null; filters.implementador=null; filters.planif=null;
-  renderFacPills();
+  renderNivelPills();
   renderTeamPills();
   renderTable();
   renderKPIs();
@@ -2910,6 +2922,7 @@ function filtered(){
     if(filters.implementador&&d.implementador!==filters.implementador)return false;
     if(filters.facultad&&d.facultad!==filters.facultad)return false;
     if(filters.planif&&d.planif!==filters.planif)return false;
+    if(filters.nivel&&d.nivel!==filters.nivel)return false;
     if(searchQ){const q=searchQ.toLowerCase();return d.asignatura.toLowerCase().includes(q)||d.docente.toLowerCase().includes(q)}
     return true;
   }).sort((a,b)=>{
@@ -3341,7 +3354,7 @@ document.getElementById('search').addEventListener('input',e=>{
   requestAnimationFrame(()=>{ setTimeout(renderProjectCharts, 0); });
 
   if(ok){
-    renderFacPills();
+    renderNivelPills();
     renderTeamPills();
     renderDIProgress();
     renderKPIs();
@@ -3380,7 +3393,7 @@ document.getElementById('search').addEventListener('input',e=>{
   // Botón recarga manual tabla
   document.getElementById('sync-btn')?.addEventListener('click', async()=>{
     await loadSheetData();
-    renderFacPills();
+    renderNivelPills();
     renderKPIs();
     renderTable();
     document.getElementById('header-count').textContent = DATA.length;
@@ -3391,7 +3404,7 @@ document.getElementById('search').addEventListener('input',e=>{
     await loadSheetData(true);
     renderTable();
     renderKPIs();
-    renderFacPills();
+    renderNivelPills();
     document.getElementById('header-count').textContent = DATA.length;
     renderNextDeadline();
     renderAlertBanner();
