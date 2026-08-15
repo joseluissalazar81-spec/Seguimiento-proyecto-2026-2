@@ -1233,12 +1233,17 @@
       padding:20px 10px; border-radius:var(--radius);
       background:var(--az-bg); border:1px solid rgba(176,184,204,.2);
       text-align:center;
-      flex:1 1 100%; width:100%;
+      flex:1 1 380px;
     }
-    .edu-hub svg { width:100%; max-width:440px; height:auto; display:block; }
+    .edu-hub svg { width:100%; max-width:320px; height:auto; display:block; }
     .edu-hub-slice, .edu-hub-center { cursor:pointer; transition:opacity .15s; }
     .edu-hub-slice:hover, .edu-hub-center:hover { opacity:.85; }
     .edu-hub-lbl { font-size:12px; font-weight:800; color:var(--az); text-transform:uppercase; letter-spacing:.03em; }
+    .exec-kpis-right {
+      display:flex; flex-direction:column; gap:20px;
+      flex:1 1 320px;
+    }
+    .exec-kpis-right .exec-avance, .exec-kpis-right .exec-week { flex:1 1 auto; }
 
     /* ── Bloques de 2 semanas (Gantt producción) ── */
     .exec-gantt-section {border-top:1px solid var(--borde); padding-top:16px;}
@@ -1287,52 +1292,6 @@
       position:absolute; top:2px; right:2px;
       font-size:9px; background:rgba(154,184,204,.3); border-radius:4px; padding:1px 3px;
       color:var(--ca); font-weight:800;
-    }
-    /* ── Avance real vs esperado por asignatura ── */
-    .exec-fac-strip {
-      border-top:1px solid var(--borde); padding-top:14px; margin-top:4px;
-    }
-    .exec-fac-strip-title {
-      font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
-      color:var(--text-muted); margin-bottom:10px;
-      display:flex; align-items:center; gap:16px;
-    }
-    .exec-fac-legend {display:flex; gap:12px; margin-left:auto;}
-    .exec-fac-legend-item {display:flex; align-items:center; gap:4px; font-size:9.5px; color:var(--text-muted); font-weight:600;}
-    .exec-fac-legend-dot {width:8px; height:8px; border-radius:2px; flex-shrink:0;}
-    .exec-fac-rows {display:flex; flex-direction:column; gap:5px; max-height:320px; overflow-y:auto; padding-right:4px;}
-    .exec-fac-rows::-webkit-scrollbar{width:3px}
-    .exec-fac-rows::-webkit-scrollbar-track{background:transparent}
-    .exec-fac-rows::-webkit-scrollbar-thumb{background:var(--borde);border-radius:2px}
-    .exec-asig-row {display:grid; grid-template-columns:160px 1fr 36px 52px; align-items:center; gap:8px;}
-    .exec-asig-name {
-      font-size:10.5px; color:var(--text); font-weight:500;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
-    .exec-asig-bar-wrap {
-      position:relative; height:10px; border-radius:5px;
-      background:rgba(255,255,255,.06);
-    }
-    .exec-asig-bar {height:100%; border-radius:5px; transition:width .5s cubic-bezier(.4,0,.2,1);}
-    .exec-asig-esp-line {
-      position:absolute; top:0; width:2px; height:100%;
-      background:rgba(255,255,255,.45); border-radius:1px;
-    }
-    .exec-asig-pct {
-      font-size:10px; font-family:'DM Mono',monospace; font-weight:700;
-      text-align:right; color:var(--text);
-    }
-    .exec-asig-diff {
-      font-size:9.5px; font-family:'DM Mono',monospace; font-weight:700;
-      text-align:right; padding:1px 5px; border-radius:4px;
-    }
-    .exec-asig-diff.dv  {background:rgba(168,196,160,.15); color:var(--ve);}
-    .exec-asig-diff.dam {background:rgba(212,184,120,.15);  color:var(--am);}
-    .exec-asig-diff.dro {background:rgba(200,80,80,.12);    color:var(--ro);}
-    /* Nota plazo extendido (legacy keep) */
-    .exec-fac-nota {
-      font-size:9px; color:var(--az); font-style:italic;
-      grid-column:2/-1; margin-top:-2px; margin-bottom:2px;
     }
     .exec-detalles-toggle {
       display:inline-flex; align-items:center; gap:5px;
@@ -1875,6 +1834,34 @@
 
         <!-- Dirección E-learning: círculo por facultad, resalta el segmento activo -->
         <div class="edu-hub" id="edu-hub"></div>
+
+        <div class="exec-kpis-right">
+          <!-- % avance central -->
+          <div class="exec-avance">
+            <div class="exec-avance-num" id="exec-avance-num">—%</div>
+            <div class="exec-avance-lbl">Avance real</div>
+            <div class="exec-avance-bar"><div class="exec-avance-fill" id="exec-avance-fill" style="width:0%"></div></div>
+            <div class="exec-vs-bar" id="exec-vs-bar">
+              <div class="exec-vs-row">
+                <span class="exec-vs-lbl">Real</span>
+                <div class="exec-vs-track"><div class="exec-vs-fill real" id="exec-vs-real" style="width:0%"></div></div>
+                <span class="exec-vs-pct" id="exec-vs-real-txt">—%</span>
+              </div>
+              <div class="exec-vs-row">
+                <span class="exec-vs-lbl">Esperado</span>
+                <div class="exec-vs-track"><div class="exec-vs-fill esp" id="exec-vs-esp" style="width:0%"></div></div>
+                <span class="exec-vs-pct" id="exec-vs-esp-txt">—%</span>
+              </div>
+            </div>
+          </div>
+          <!-- Semana actual -->
+          <div class="exec-week" id="exec-week">
+            <div class="exec-week-num">📍 Semana del proyecto</div>
+            <div class="exec-week-big" id="exec-week-big">—</div>
+            <div class="exec-week-lbl">de 18 semanas</div>
+            <div class="exec-week-date" id="exec-week-date">—</div>
+          </div>
+        </div>
       </div>
 
       <!-- Gantt de 9 bloques x 2 semanas -->
@@ -1884,18 +1871,6 @@
           <span class="exec-gantt-hdr-sub" id="exec-gantt-sub">—</span>
         </div>
         <div id="exec-blocks"></div>
-      </div>
-
-      <!-- Avance real vs esperado por asignatura -->
-      <div class="exec-fac-strip" id="exec-fac-strip">
-        <div class="exec-fac-strip-title">
-          <span id="exec-fac-strip-label">Avance real vs esperado</span>
-          <div class="exec-fac-legend">
-            <span class="exec-fac-legend-item"><span class="exec-fac-legend-dot" style="background:rgba(168,196,160,.7);border-radius:50%"></span>Real %</span>
-            <span class="exec-fac-legend-item"><span style="display:inline-block;width:2px;height:8px;background:rgba(255,255,255,.45);border-radius:1px;margin-right:2px"></span>Esperado</span>
-          </div>
-        </div>
-        <div class="exec-fac-rows" id="exec-fac-rows"></div>
       </div>
 
       <!-- Botón detalles técnicos -->
@@ -4175,34 +4150,6 @@ function renderExecutiveHero(){
     }).join('');
   }
 
-  // ── Avance real vs esperado — una fila por asignatura, reactivo al filtro ──
-  const facRowsEl = document.getElementById('exec-fac-rows');
-  const stripLabel = document.getElementById('exec-fac-strip-label');
-  if(facRowsEl){
-    const activeFac = filters.facultad || '';
-    if(stripLabel) stripLabel.textContent = activeFac
-      ? `Avance real vs esperado — ${FAC_ABBR[activeFac]||activeFac}`
-      : 'Avance real vs esperado por asignatura';
-    facRowsEl.innerHTML = filtered().map(d=>{
-      const rPct = (avSrc[d.asignatura]||{}).avance || 0;
-      const done = rPct >= 100;
-      const diff = rPct - pctEsperado;
-      const barColor = done ? 'rgba(168,196,160,.9)' : diff >= -5 ? 'rgba(168,196,160,.75)' : diff >= -20 ? 'rgba(212,184,120,.75)' : 'rgba(200,80,80,.65)';
-      const diffCls  = done ? 'dv' : diff >= -5 ? 'dv' : diff >= -20 ? 'dam' : 'dro';
-      const diffTxt  = done ? '✓' : (diff >= 0 ? '+' : '') + diff + 'pp';
-      const shortName = d.asignatura.length > 28 ? d.asignatura.slice(0,26)+'…' : d.asignatura;
-      const facTag = activeFac ? '' : `<span style="font-size:9px;color:var(--text-muted);opacity:.65"> ${FAC_ABBR[d.facultad]||d.facultad}</span>`;
-      return `<div class="exec-asig-row" title="${d.asignatura} — Real: ${rPct}% · Esperado: ${pctEsperado}% · Dif: ${diffTxt}">
-        <span class="exec-asig-name">${shortName}${facTag}</span>
-        <div class="exec-asig-bar-wrap">
-          <div class="exec-asig-bar" style="width:${rPct}%;background:${barColor}"></div>
-          <div class="exec-asig-esp-line" style="left:${pctEsperado}%"></div>
-        </div>
-        <span class="exec-asig-pct">${rPct}%</span>
-        <span class="exec-asig-diff ${diffCls}">${diffTxt}</span>
-      </div>`;
-    }).join('');
-  }
 }
 
 // ─── OVERVIEW PANEL ─────────────────────────────────────────────────────────
