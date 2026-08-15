@@ -1236,8 +1236,12 @@
       flex:1 1 380px;
     }
     .edu-hub svg { width:100%; max-width:320px; height:auto; display:block; }
-    .edu-hub-slice, .edu-hub-center { cursor:pointer; transition:opacity .15s; }
-    .edu-hub-slice:hover, .edu-hub-center:hover { opacity:.85; }
+    .edu-hub-slice, .edu-hub-center {
+      cursor:pointer; transform-box:view-box; transform-origin:100px 100px;
+      transition:transform .18s cubic-bezier(.34,1.4,.64,1), filter .18s;
+    }
+    .edu-hub-slice:hover { transform:scale(1.06); filter:brightness(1.06) drop-shadow(0 3px 5px rgba(0,0,0,.25)); }
+    .edu-hub-center:hover { transform:scale(1.1); filter:brightness(1.06) drop-shadow(0 3px 5px rgba(0,0,0,.25)); }
     .edu-hub-lbl {
       display:inline-flex; align-items:center; gap:6px;
       font-size:11px; font-weight:800; color:var(--az); text-transform:uppercase; letter-spacing:.04em;
@@ -2706,7 +2710,7 @@ function renderEduHub(){
     return `M${x1},${y1} A${r},${r} 0 ${large} ${sweep} ${x2},${y2}`;
   }
 
-  let slicesSvg = '', labelsSvg = '', defsSvg = '';
+  let slicesSvg = '', defsSvg = '';
   const labelR = (ri+ro)/2 + 3;
   slotAngles.forEach((ang,i)=>{
     if(i>=facs.length){ // solo 4 slots; si sobran facultades no entran
@@ -2716,7 +2720,6 @@ function renderEduHub(){
     const fac = facs[i];
     const isActive = anyActive ? activeFac===fac : true;
     const color = isActive ? EDU_HUB_COLORS[i] : EDU_HUB_GRAY;
-    slicesSvg += `<path class="edu-hub-slice" d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${color}" stroke="#fff" stroke-width="2" onclick="setFacFilter('${fac}')"><title>${fac}</title></path>`;
     const mid = (ang[0]+ang[1])/2;
     const bottomHalf = mid>90 && mid<270;
     const pad = 6; // margen para que el texto no toque los bordes del cuadrante
@@ -2725,7 +2728,11 @@ function renderEduHub(){
       ? eduHubArcPath(labelR, ang[1]-pad, ang[0]+pad, 0)
       : eduHubArcPath(labelR, ang[0]+pad, ang[1]-pad, 1);
     defsSvg += `<path id="${arcId}" d="${d}" fill="none"/>`;
-    labelsSvg += `<text font-size="8.2" font-weight="800" fill="#fff" style="pointer-events:none"><textPath href="#${arcId}" xlink:href="#${arcId}" startOffset="50%" text-anchor="middle">${FAC_ABBR[fac]||fac}</textPath></text>`;
+    // path + etiqueta van juntos en un <g> para que al pasar el mouse se muevan/agranden como una unidad
+    slicesSvg += `<g class="edu-hub-slice" onclick="setFacFilter('${fac}')">
+      <path d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${color}" stroke="#fff" stroke-width="2"><title>${fac}</title></path>
+      <text font-size="8.2" font-weight="800" fill="#fff" style="pointer-events:none"><textPath href="#${arcId}" xlink:href="#${arcId}" startOffset="50%" text-anchor="middle">${FAC_ABBR[fac]||fac}</textPath></text>
+    </g>`;
   });
 
   const ringColor = anyActive ? EDU_HUB_GRAY : EDU_HUB_RING_COLOR;
@@ -2743,13 +2750,14 @@ function renderEduHub(){
         <circle cx="100" cy="100" r="94" fill="none" stroke="rgba(0,0,0,.07)" stroke-width="1"/>
         <circle cx="100" cy="100" r="85" fill="none" stroke="${ringColor}" stroke-width="15"/>
         ${slicesSvg}
-        <circle class="edu-hub-center" cx="100" cy="100" r="${ri}" fill="${EDU_HUB_CENTER}" stroke="#fff" stroke-width="3.5" onclick="setFacFilter(null)"><title>Ver todas las facultades</title></circle>
+        <g class="edu-hub-center" onclick="setFacFilter(null)">
+          <circle cx="100" cy="100" r="${ri}" fill="${EDU_HUB_CENTER}" stroke="#fff" stroke-width="3.5"><title>Ver todas las facultades</title></circle>
+          <text x="100" y="100" text-anchor="middle" dominant-baseline="middle" font-size="8.5" font-weight="800" letter-spacing=".2" fill="#fff" style="pointer-events:none">
+            <tspan x="100" dy="-6">DIRECCIÓN</tspan>
+            <tspan x="100" dy="12">E-LEARNING</tspan>
+          </text>
+        </g>
       </g>
-      <text x="100" y="100" text-anchor="middle" dominant-baseline="middle" font-size="8.5" font-weight="800" letter-spacing=".2" fill="#fff" style="pointer-events:none">
-        <tspan x="100" dy="-6">DIRECCIÓN</tspan>
-        <tspan x="100" dy="12">E-LEARNING</tspan>
-      </text>
-      ${labelsSvg}
     </svg>`;
   wrap.innerHTML = svg + `<div class="edu-hub-lbl"><span class="edu-hub-lbl-dot" style="background:${dotColor}"></span>${activeFac ? (FAC_ABBR[activeFac]||activeFac) : 'Todas las facultades'}</div>`;
 }
