@@ -1229,21 +1229,16 @@
 
     /* ── Dirección E-learning: círculo por facultad ── */
     .edu-hub {
-      display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
-      padding:16px 10px; border-radius:var(--radius);
+      display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+      padding:20px 10px; border-radius:var(--radius);
       background:var(--az-bg); border:1px solid rgba(176,184,204,.2);
       text-align:center;
-      flex:1 1 380px;
+      flex:1 1 100%; width:100%;
     }
-    .edu-hub svg { width:100%; max-width:340px; height:auto; display:block; }
+    .edu-hub svg { width:100%; max-width:440px; height:auto; display:block; }
     .edu-hub-slice, .edu-hub-center { cursor:pointer; transition:opacity .15s; }
     .edu-hub-slice:hover, .edu-hub-center:hover { opacity:.85; }
-    .edu-hub-lbl { font-size:10.5px; font-weight:800; color:var(--az); text-transform:uppercase; letter-spacing:.03em; }
-    .exec-kpis-right {
-      display:flex; flex-direction:column; gap:20px;
-      flex:1 1 320px;
-    }
-    .exec-kpis-right .exec-avance, .exec-kpis-right .exec-week { flex:1 1 auto; }
+    .edu-hub-lbl { font-size:12px; font-weight:800; color:var(--az); text-transform:uppercase; letter-spacing:.03em; }
 
     /* ── Bloques de 2 semanas (Gantt producción) ── */
     .exec-gantt-section {border-top:1px solid var(--borde); padding-top:16px;}
@@ -1880,34 +1875,6 @@
 
         <!-- Dirección E-learning: círculo por facultad, resalta el segmento activo -->
         <div class="edu-hub" id="edu-hub"></div>
-
-        <div class="exec-kpis-right">
-          <!-- % avance central -->
-          <div class="exec-avance">
-            <div class="exec-avance-num" id="exec-avance-num">—%</div>
-            <div class="exec-avance-lbl">Avance real</div>
-            <div class="exec-avance-bar"><div class="exec-avance-fill" id="exec-avance-fill" style="width:0%"></div></div>
-            <div class="exec-vs-bar" id="exec-vs-bar">
-              <div class="exec-vs-row">
-                <span class="exec-vs-lbl">Real</span>
-                <div class="exec-vs-track"><div class="exec-vs-fill real" id="exec-vs-real" style="width:0%"></div></div>
-                <span class="exec-vs-pct" id="exec-vs-real-txt">—%</span>
-              </div>
-              <div class="exec-vs-row">
-                <span class="exec-vs-lbl">Esperado</span>
-                <div class="exec-vs-track"><div class="exec-vs-fill esp" id="exec-vs-esp" style="width:0%"></div></div>
-                <span class="exec-vs-pct" id="exec-vs-esp-txt">—%</span>
-              </div>
-            </div>
-          </div>
-          <!-- Semana actual -->
-          <div class="exec-week" id="exec-week">
-            <div class="exec-week-num">📍 Semana del proyecto</div>
-            <div class="exec-week-big" id="exec-week-big">—</div>
-            <div class="exec-week-lbl">de 18 semanas</div>
-            <div class="exec-week-date" id="exec-week-date">—</div>
-          </div>
-        </div>
       </div>
 
       <!-- Gantt de 9 bloques x 2 semanas -->
@@ -2752,6 +2719,16 @@ function renderEduHub(){
   const slotAngles = [[-90,0],[0,90],[90,180],[180,270]];
   const anyActive = !!activeFac;
 
+  // Parte un texto corto en hasta 2 líneas, cortando en el espacio más cercano al centro
+  function wrapLabel(txt){
+    if(txt.length<=9) return [txt];
+    const spaces=[...txt].map((c,i)=>c===' '?i:-1).filter(i=>i>=0);
+    if(!spaces.length) return [txt];
+    const mid=txt.length/2;
+    const cut=spaces.reduce((a,b)=>Math.abs(b-mid)<Math.abs(a-mid)?b:a);
+    return [txt.slice(0,cut), txt.slice(cut+1)];
+  }
+
   let slicesSvg = '', labelsSvg = '';
   slotAngles.forEach((ang,i)=>{
     if(i>=facs.length){ // solo 4 slots; si sobran facultades no entran
@@ -2764,7 +2741,10 @@ function renderEduHub(){
     slicesSvg += `<path class="edu-hub-slice" d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${color}" stroke="#fff" stroke-width="2" onclick="setFacFilter('${fac}')"><title>${fac}</title></path>`;
     const mid = (ang[0]+ang[1])/2;
     const [lx,ly] = eduHubPoint(cx,cy,(ri+ro)/2, mid);
-    labelsSvg += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" font-size="8" font-weight="800" fill="#fff" style="pointer-events:none">${FAC_ABBR[fac]||fac}</text>`;
+    const lines = wrapLabel(FAC_ABBR[fac]||fac);
+    const dyStart = lines.length>1 ? -4 : 0;
+    const tspans = lines.map((ln,li)=>`<tspan x="${lx}" dy="${li===0?dyStart:9}">${ln}</tspan>`).join('');
+    labelsSvg += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" font-size="7.5" font-weight="800" fill="#fff" style="pointer-events:none">${tspans}</text>`;
   });
 
   const ringColor = anyActive ? EDU_HUB_GRAY : EDU_HUB_RING_COLOR;
@@ -2773,8 +2753,10 @@ function renderEduHub(){
       <circle cx="100" cy="100" r="86" fill="none" stroke="${ringColor}" stroke-width="16"/>
       ${slicesSvg}
       <circle class="edu-hub-center" cx="100" cy="100" r="${ri}" fill="${EDU_HUB_CENTER}" stroke="#fff" stroke-width="3" onclick="setFacFilter(null)"><title>Ver todas las facultades</title></circle>
-      <text x="100" y="95" text-anchor="middle" font-size="10" font-weight="800" fill="#fff" style="pointer-events:none">DIRECCIÓN</text>
-      <text x="100" y="108" text-anchor="middle" font-size="10" font-weight="800" fill="#fff" style="pointer-events:none">E-LEARNING</text>
+      <text x="100" y="100" text-anchor="middle" dominant-baseline="middle" font-size="10.5" font-weight="800" fill="#fff" style="pointer-events:none">
+        <tspan x="100" dy="-7">DIRECCIÓN</tspan>
+        <tspan x="100" dy="14">E-LEARNING</tspan>
+      </text>
       ${labelsSvg}
     </svg>`;
   wrap.innerHTML = svg + `<div class="edu-hub-lbl">${activeFac ? (FAC_ABBR[activeFac]||activeFac) : 'Todas las facultades'}</div>`;
