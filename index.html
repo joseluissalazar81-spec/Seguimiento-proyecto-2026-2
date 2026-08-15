@@ -2682,10 +2682,6 @@ const EDU_HUB_COLORS = ['#8FC1DE','#F2CB7D','#8DD3D3','#A9D18C']; // pastel: azu
 const EDU_HUB_GRAY = '#D6DADF';
 const EDU_HUB_RING_COLOR = '#98D8BC'; // verde institucional UST en versión pastel
 const EDU_HUB_CENTER = '#F2A46B';
-function eduHubPoint(cx,cy,r,angleDeg){
-  const rad = angleDeg * Math.PI/180; // 0deg = arriba (12 en punto), sentido horario
-  return [cx + r*Math.sin(rad), cy - r*Math.cos(rad)];
-}
 function eduHubSlicePath(cx,cy,ri,ro,startDeg,endDeg){
   const pt=(r,a)=>{ const rad=(a)*Math.PI/180; return [cx + r*Math.sin(rad), cy - r*Math.cos(rad)]; };
   const [x1,y1]=pt(ro,startDeg), [x2,y2]=pt(ro,endDeg), [x3,y3]=pt(ri,endDeg), [x4,y4]=pt(ri,startDeg);
@@ -2700,17 +2696,18 @@ function renderEduHub(){
   const slotAngles = [[-90,0],[0,90],[90,180],[180,270]];
   const anyActive = !!activeFac;
 
-  // Parte un texto corto en hasta 2 líneas, cortando en el espacio más cercano al centro
-  function wrapLabel(txt){
-    if(txt.length<=9) return [txt];
-    const spaces=[...txt].map((c,i)=>c===' '?i:-1).filter(i=>i>=0);
-    if(!spaces.length) return [txt];
-    const mid=txt.length/2;
-    const cut=spaces.reduce((a,b)=>Math.abs(b-mid)<Math.abs(a-mid)?b:a);
-    return [txt.slice(0,cut), txt.slice(cut+1)];
+  // Arco (sin relleno) para que el texto de cada facultad siga la curva del anillo,
+  // igual que el diagrama original. En la mitad inferior se dibuja al revés para
+  // que el texto no quede cabeza abajo.
+  function eduHubArcPath(r,a0,a1,sweep){
+    const pt=(a)=>{ const rad=a*Math.PI/180; return [cx+r*Math.sin(rad), cy-r*Math.cos(rad)]; };
+    const [x1,y1]=pt(a0), [x2,y2]=pt(a1);
+    const large = Math.abs(a1-a0)>180 ? 1 : 0;
+    return `M${x1},${y1} A${r},${r} 0 ${large} ${sweep} ${x2},${y2}`;
   }
 
-  let slicesSvg = '', labelsSvg = '';
+  let slicesSvg = '', labelsSvg = '', defsSvg = '';
+  const labelR = (ri+ro)/2 + 3;
   slotAngles.forEach((ang,i)=>{
     if(i>=facs.length){ // solo 4 slots; si sobran facultades no entran
       slicesSvg += `<path d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${EDU_HUB_GRAY}" stroke="#fff" stroke-width="2"/>`;
@@ -2721,11 +2718,14 @@ function renderEduHub(){
     const color = isActive ? EDU_HUB_COLORS[i] : EDU_HUB_GRAY;
     slicesSvg += `<path class="edu-hub-slice" d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${color}" stroke="#fff" stroke-width="2" onclick="setFacFilter('${fac}')"><title>${fac}</title></path>`;
     const mid = (ang[0]+ang[1])/2;
-    const [lx,ly] = eduHubPoint(cx,cy,(ri+ro)/2, mid);
-    const lines = wrapLabel(FAC_ABBR[fac]||fac);
-    const dyStart = lines.length>1 ? -4 : 0;
-    const tspans = lines.map((ln,li)=>`<tspan x="${lx}" dy="${li===0?dyStart:9}">${ln}</tspan>`).join('');
-    labelsSvg += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" font-size="7.5" font-weight="800" fill="#fff" style="pointer-events:none">${tspans}</text>`;
+    const bottomHalf = mid>90 && mid<270;
+    const pad = 6; // margen para que el texto no toque los bordes del cuadrante
+    const arcId = `eduArc${i}`;
+    const d = bottomHalf
+      ? eduHubArcPath(labelR, ang[1]-pad, ang[0]+pad, 0)
+      : eduHubArcPath(labelR, ang[0]+pad, ang[1]-pad, 1);
+    defsSvg += `<path id="${arcId}" d="${d}" fill="none"/>`;
+    labelsSvg += `<text font-size="8.2" font-weight="800" fill="#fff" style="pointer-events:none"><textPath href="#${arcId}" xlink:href="#${arcId}" startOffset="50%" text-anchor="middle">${FAC_ABBR[fac]||fac}</textPath></text>`;
   });
 
   const ringColor = anyActive ? EDU_HUB_GRAY : EDU_HUB_RING_COLOR;
@@ -2737,6 +2737,7 @@ function renderEduHub(){
         <filter id="eduHubShadow" x="-30%" y="-30%" width="160%" height="160%">
           <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity=".18"/>
         </filter>
+        ${defsSvg}
       </defs>
       <g filter="url(#eduHubShadow)">
         <circle cx="100" cy="100" r="94" fill="none" stroke="rgba(0,0,0,.07)" stroke-width="1"/>
