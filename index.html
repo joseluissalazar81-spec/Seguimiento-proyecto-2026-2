@@ -2759,15 +2759,20 @@ function eduHubGoTo(fac){
   setFacFilter(fac);
   if(fac) openFacPopup(fac);
 }
+// Asignaturas disponibles para el círculo: si hay un nivel elegido (Pregrado/Postgrado),
+// el círculo solo debe ofrecer las facultades que tienen asignaturas en ese nivel.
+function eduHubData(){
+  return filters.nivel ? DATA.filter(d=>d.nivel===filters.nivel) : DATA;
+}
 // Color pastel asignado a una facultad, el mismo que su cuadrante en el círculo
 function eduHubColorFor(fac){
-  const facs = FAC_ORDER.filter(f=>DATA.some(d=>d.facultad===f));
+  const facs = FAC_ORDER.filter(f=>eduHubData().some(d=>d.facultad===f));
   const idx = facs.indexOf(fac);
   return idx>=0 ? EDU_HUB_COLORS[idx % EDU_HUB_COLORS.length] : EDU_HUB_GRAY;
 }
 // Popup con el panel de una facultad (mismo color pastel que su cuadrante)
 function openFacPopup(fac){
-  const items = DATA.filter(d=>d.facultad===fac);
+  const items = eduHubData().filter(d=>d.facultad===fac);
   if(!items.length) return;
   const today = new Date(); today.setHours(0,0,0,0);
   const deadline = planifDeadline(fac);
@@ -2819,7 +2824,7 @@ function renderEduHub(){
   const wrap = document.getElementById('edu-hub');
   if(!wrap || !DATA.length) return;
   const activeFac = filters.facultad || null;
-  const facs = FAC_ORDER.filter(fac=>DATA.some(d=>d.facultad===fac));
+  const facs = FAC_ORDER.filter(fac=>eduHubData().some(d=>d.facultad===fac));
   const cx=100, cy=100, ri=36, ro=64;
   const slotAngles = [[-90,0],[0,90],[90,180],[180,270]];
   const anyActive = !!activeFac;
