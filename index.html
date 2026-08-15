@@ -3932,16 +3932,18 @@ function renderProjectCharts(){
   const ep = Chart.getChart(progCtx);  if(ep) ep.destroy(); projProgressInst=null;
 
   // Gantt de fases (datos estáticos)
+  // Fechas reales según Carta Gantt 2026-2 (inicio 10/08/2026, fin 14/01/2027).
+  // El Bloque 5 — Producción (proceso de virtualización) debe cerrar sí o sí el 15/12.
   const FASES = [
-    {label:'Preparación',   days:[0,14],  color:'#5a9e74', desc:'Configuración de aulas virtuales, asignación de equipos y validación inicial de planificaciones didácticas.'},
-    {label:'Kick-off',      days:[14,25], color:'#4a8864', desc:'Reunión inicial con docentes: acuerdos de trabajo, entrega de guías y activación del proceso de co-diseño.'},
-    {label:'Co-diseño',     days:[14,46], color:'#c09448', desc:'Diseño instruccional colaborativo: estructura semanal, definición de actividades y recursos por asignatura.'},
-    {label:'QA Planif.',    days:[49,74], color:'#7a88be', desc:'Revisión y validación de planificaciones didácticas por el equipo DEL. Devolución con observaciones.'},
-    {label:'Producción',    days:[30,95], color:'#3a6898', desc:'Producción de recursos T1–T4: videoclases, Genially, guías de aprendizaje, foros y quizzes.'},
-    {label:'Validación',    days:[105,130],color:'#3a8888', desc:'Validación docente de recursos producidos. Ajustes finales y aprobación para carga en aula.'},
-    {label:'Clonación',     days:[132,138],color:'#b05848', desc:'Clonación de asignaturas al aula definitiva 2026-2 y verificación de acceso estudiantil.'},
+    {label:'Preparación',   days:[0,6],    color:'#5a9e74', desc:'Configuración de aulas virtuales, asignación de equipos y validación inicial de planificaciones didácticas.'},
+    {label:'Kick-off',      days:[7,13],   color:'#4a8864', desc:'Reunión inicial con docentes: acuerdos de trabajo, entrega de guías y activación del proceso de co-diseño.'},
+    {label:'Co-diseño',     days:[22,36],  color:'#c09448', desc:'Diseño instruccional colaborativo: estructura semanal, definición de actividades y recursos por asignatura.'},
+    {label:'QA Planif.',    days:[38,52],  color:'#7a88be', desc:'Revisión y validación de planificaciones didácticas por el equipo DEL. Devolución con observaciones.'},
+    {label:'Producción',    days:[36,127], color:'#3a6898', desc:'Producción de recursos T1–T4: videoclases, Genially, guías de aprendizaje, foros y quizzes. Cierra sí o sí el 15/12.'},
+    {label:'Validación',    days:[128,152],color:'#3a8888', desc:'Validación docente de recursos producidos. Ajustes finales y aprobación para carga en aula.'},
+    {label:'Clonación',     days:[149,157],color:'#b05848', desc:'Clonación de asignaturas al aula definitiva 2026-2 y verificación de acceso estudiantil.'},
   ];
-  const pStart = new Date(2026,8,1);
+  const pStart = new Date(2026,7,10); // 10 ago 2026 — inicio real del proyecto
   const today  = new Date(); today.setHours(0,0,0,0);
   const todayD = Math.round((today-pStart)/86400000);
 
@@ -4006,7 +4008,7 @@ function renderProjectCharts(){
   });
 
   const sub=document.getElementById('proj-chart-sub');
-  if(sub){const d=Math.max(0,Math.round((new Date(2027,0,20)-today)/86400000));sub.textContent=`Hoy: ${today.toLocaleDateString('es-CL',{day:'numeric',month:'short',year:'numeric'})} · ${d} días restantes`;}
+  if(sub){const d=Math.max(0,Math.round((new Date(2027,0,14)-today)/86400000));sub.textContent=`Hoy: ${today.toLocaleDateString('es-CL',{day:'numeric',month:'short',year:'numeric'})} · ${d} días restantes`;}
 }
 
 // ── Plazos de entrega de planificación a DEL por grupo de facultades ──────────
@@ -4311,7 +4313,7 @@ function renderExecutiveHero(){
 
 // Fechas del proyecto (CartaGantt real: Mar 2 → Jul 17)
 const GANTT_START = new Date(2026,8,1);   // 1 sep 2026 — inicio CartaGantt
-const GANTT_END   = new Date(2026,11,31); // 31 dic 2026 — fin CartaGantt
+const GANTT_END   = new Date(2026,11,15); // 15 dic 2026 — cierre obligatorio del Bloque 5 (Producción/virtualización)
 
 // Bloques de producción: 9 bloques × 2 semanas = 18 semanas
 // (S0 = bloque 0 especial; S1-S2 a S17-S18 = bloques 1-9)
