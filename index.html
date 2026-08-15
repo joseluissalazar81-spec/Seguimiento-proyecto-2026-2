@@ -1433,6 +1433,36 @@
     .fv-idx-chevron{ color:rgba(255,255,255,.5); transition:transform .25s; }
     .fv-idx-chevron.open{ transform:rotate(90deg); }
     .fv-idx-notaext{ font-size:9.5px; color:#d4a820; font-weight:600; }
+    /* ── Popup panel de facultad (desde el círculo Dirección E-learning) ── */
+    #fac-popup-overlay{
+      display:none; position:fixed; inset:0; z-index:200;
+      background:rgba(20,29,25,.45); backdrop-filter:blur(2px);
+      align-items:center; justify-content:center; padding:24px;
+      animation:fadeUp .18s ease both;
+    }
+    #fac-popup{
+      background:var(--surface); border-radius:14px; overflow:hidden;
+      width:100%; max-width:820px; max-height:85vh;
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
+      display:flex; flex-direction:column;
+    }
+    .fv-popup-hdr{
+      position:relative; padding:20px 50px 18px 22px;
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .fv-popup-title{ font-size:16px; font-weight:800; color:#1a2a22; letter-spacing:.02em; }
+    .fv-popup-counts{ display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+    .fv-popup-count{ display:flex; flex-direction:column; align-items:center; gap:1px; }
+    .fv-popup-count .num{ font-size:18px; font-weight:800; line-height:1; color:#1a2a22; }
+    .fv-popup-count .lbl{ font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:rgba(26,42,34,.6); }
+    .fv-popup-close{
+      position:absolute; top:14px; right:14px;
+      width:28px; height:28px; border-radius:50%; border:none;
+      background:rgba(255,255,255,.55); color:#1a2a22; font-size:14px; font-weight:700;
+      cursor:pointer; display:flex; align-items:center; justify-content:center;
+      transition:background .15s;
+    }
+    .fv-popup-close:hover{ background:rgba(255,255,255,.85); }
     .fv-obs-inline{ display:flex; align-items:center; gap:5px; margin-left:4px; cursor:pointer; }
     .fv-obs-count-dot{ display:inline-flex; align-items:center; gap:3px; padding:2px 8px; border-radius:20px; font-size:10.5px; font-weight:700; background:rgba(212,184,120,.18); border:1px solid rgba(212,184,120,.35); color:#d4a820; white-space:nowrap; transition:background .15s; }
     .fv-obs-count-dot:hover{ background:rgba(212,184,120,.32); }
@@ -2031,6 +2061,11 @@
     <div id="fac-view" style="display:block"></div>
 
   </main>
+</div>
+
+<!-- POPUP: panel de facultad (desde el círculo Dirección E-learning) -->
+<div id="fac-popup-overlay" onclick="if(event.target===this) closeFacPopup()">
+  <div id="fac-popup" role="dialog" aria-modal="true"></div>
 </div>
 
 <!-- PANEL -->
@@ -2689,11 +2724,60 @@ const EDU_HUB_CENTER = '#F2A46B';
 // Al hacer clic en un cuadrante del círculo: filtra por esa facultad, se asegura de
 // estar en la vista "por facultad" y hace scroll hasta su panel de asignaturas.
 function eduHubGoTo(fac){
-  if(currentView!=='fac') setView('fac');
   setFacFilter(fac);
-  const el = document.getElementById('fac-view');
-  if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  if(fac) openFacPopup(fac);
 }
+// Color pastel asignado a una facultad, el mismo que su cuadrante en el círculo
+function eduHubColorFor(fac){
+  const facs = FAC_ORDER.filter(f=>DATA.some(d=>d.facultad===f));
+  const idx = facs.indexOf(fac);
+  return idx>=0 ? EDU_HUB_COLORS[idx % EDU_HUB_COLORS.length] : EDU_HUB_GRAY;
+}
+// Popup con el panel de una facultad (mismo color pastel que su cuadrante)
+function openFacPopup(fac){
+  const items = DATA.filter(d=>d.facultad===fac);
+  if(!items.length) return;
+  const today = new Date(); today.setHours(0,0,0,0);
+  const deadline = planifDeadline(fac);
+  let ok=0, rev=0, atras=0, enT=0;
+  items.forEach(d=>{
+    const s = planifStepIndex(d.planif||'');
+    if(s>=4) ok++;
+    else if(s>=2) rev++;
+    else if(today>deadline) atras++;
+    else enT++;
+  });
+  const n = items.length;
+  const color = eduHubColorFor(fac);
+  const rowsHtml = items.map(d=>facTickerRowHtml(d, today, deadline)).join('');
+  const cnt = (num,lbl) => num>0 ? `<div class="fv-popup-count"><span class="num">${num}</span><span class="lbl">${lbl}</span></div>` : '';
+
+  const modal = document.getElementById('fac-popup');
+  modal.innerHTML = `
+    <div class="fv-popup-hdr" style="background:${color}">
+      <button class="fv-popup-close" onclick="closeFacPopup()" title="Cerrar">✕</button>
+      <div class="fv-popup-title">${fac.toUpperCase()}</div>
+      <div class="fv-popup-counts">
+        ${cnt(ok,'Valid.')}${cnt(rev,'En DEL')}${cnt(atras,'Atras.')}${cnt(enT,'Const.')}
+        <div class="fv-popup-count"><span class="num">${n}</span><span class="lbl">Total</span></div>
+      </div>
+    </div>
+    <div class="fv-ticker-wrap" style="display:block;max-height:60vh;overflow:auto">
+      <table class="fv-ticker-table">
+        <thead><tr>
+          <th>Asignatura / Docente</th><th>Equipo</th><th>Planificación DEL</th><th>Hitos producción</th><th>% Avance</th>
+        </tr></thead>
+        <tbody>${rowsHtml}</tbody>
+      </table>
+    </div>`;
+  document.getElementById('fac-popup-overlay').style.display = 'flex';
+}
+function closeFacPopup(){
+  document.getElementById('fac-popup-overlay').style.display = 'none';
+}
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape') closeFacPopup();
+});
 function eduHubSlicePath(cx,cy,ri,ro,startDeg,endDeg){
   const pt=(r,a)=>{ const rad=(a)*Math.PI/180; return [cx + r*Math.sin(rad), cy - r*Math.cos(rad)]; };
   const [x1,y1]=pt(ro,startDeg), [x2,y2]=pt(ro,endDeg), [x3,y3]=pt(ri,endDeg), [x4,y4]=pt(ri,startDeg);
@@ -4984,6 +5068,40 @@ function ftkHitosDots(hitos){
   }).join('');
 }
 
+// Fila de tabla para una asignatura dentro del panel de una facultad
+// (usada tanto en la vista inline como en el popup del círculo)
+function facTickerRowHtml(d, today, deadline){
+  const idx = currentRows.findIndex(x=>x.asignatura===d.asignatura&&x.docente===d.docente);
+  const av  = (AVANCE[d.asignatura]||{}).avance||0;
+  const hitos = (AVANCE[d.asignatura]||{}).hitos||{};
+  const step  = planifStepIndex(d.planif||'');
+  const isAt  = step<2 && today>deadline;
+  const avFill = av>=80?'var(--ve)':av>=40?'var(--am)':'var(--ro)';
+  return `<tr class="${isAt?'atrasada-row':''}" onclick="openPanel(${idx})">
+    <td style="min-width:180px">
+      <div class="ftk-name">${d.asignatura}${isAt?`<span class="ftk-alert">⚠ ATRASADA</span>`:''}</div>
+      <div class="ftk-doc">${d.docente}</div>
+    </td>
+    <td>
+      <div class="ftk-staff">
+        <span class="ftk-chip ftk-chip-jp">JP ${d.jp}</span>
+        <span class="ftk-chip ftk-chip-di">DI ${d.di}</span>
+      </div>
+    </td>
+    <td>
+      <span class="ftk-planif ${isAt?'ftk-p-at':ftkPlanifClass(d.planif)}">${isAt?'⚠':''}${isAt?'':ftkPlanifIcon(d.planif)+' '}${isAt?'Atrasada':(d.estadoGlobal||planifLabel(d.planif)||'No inicia')}</span>
+    </td>
+    <td>
+      <div class="ftk-hitos">${ftkHitosDots(hitos)}</div>
+    </td>
+    <td style="min-width:110px">
+      <div class="ftk-av-wrap">
+        <div class="ftk-av-bar"><div class="ftk-av-fill" style="width:${av}%;background:${av>=100?'linear-gradient(90deg,#d4af37,#f5d060)':avFill}"></div></div>
+        <span class="ftk-av-pct">${av}%${av>=100?' <span class="badge-completa">🏅</span>':''}${isEnAula(d.asignatura)?' <span class="badge-aula">🏫</span>':''}</span>
+      </div>
+    </td>
+  </tr>`;
+}
 function renderFacView(){
   const rows = filtered();
   const container = document.getElementById('fac-view');
@@ -5019,38 +5137,7 @@ function renderFacView(){
       ? `<span class="fv-idx-notaext">⏳ Plazo ${deadline.toLocaleDateString('es-CL',{day:'numeric',month:'short'})}</span>`
       : '';
 
-    const ticker_rows = items.map(d=>{
-      const idx = currentRows.findIndex(x=>x.asignatura===d.asignatura&&x.docente===d.docente);
-      const av  = (AVANCE[d.asignatura]||{}).avance||0;
-      const hitos = (AVANCE[d.asignatura]||{}).hitos||{};
-      const step  = planifStepIndex(d.planif||'');
-      const isAt  = step<2 && today>deadline;
-      const avFill = av>=80?'var(--ve)':av>=40?'var(--am)':'var(--ro)';
-      return `<tr class="${isAt?'atrasada-row':''}" onclick="openPanel(${idx})">
-        <td style="min-width:180px">
-          <div class="ftk-name">${d.asignatura}${isAt?`<span class="ftk-alert">⚠ ATRASADA</span>`:''}</div>
-          <div class="ftk-doc">${d.docente}</div>
-        </td>
-        <td>
-          <div class="ftk-staff">
-            <span class="ftk-chip ftk-chip-jp">JP ${d.jp}</span>
-            <span class="ftk-chip ftk-chip-di">DI ${d.di}</span>
-          </div>
-        </td>
-        <td>
-          <span class="ftk-planif ${isAt?'ftk-p-at':ftkPlanifClass(d.planif)}">${isAt?'⚠':''}${isAt?'':ftkPlanifIcon(d.planif)+' '}${isAt?'Atrasada':(d.estadoGlobal||planifLabel(d.planif)||'No inicia')}</span>
-        </td>
-        <td>
-          <div class="ftk-hitos">${ftkHitosDots(hitos)}</div>
-        </td>
-        <td style="min-width:110px">
-          <div class="ftk-av-wrap">
-            <div class="ftk-av-bar"><div class="ftk-av-fill" style="width:${av}%;background:${av>=100?'linear-gradient(90deg,#d4af37,#f5d060)':avFill}"></div></div>
-            <span class="ftk-av-pct">${av}%${av>=100?' <span class="badge-completa">🏅</span>':''}${isEnAula(d.asignatura)?' <span class="badge-aula">🏫</span>':''}</span>
-          </div>
-        </td>
-      </tr>`;
-    }).join('');
+    const ticker_rows = items.map(d=>facTickerRowHtml(d, today, deadline)).join('');
 
     // Obs count for inline badge
     const facId = fac.replace(/[^a-z0-9]/gi,'_');
