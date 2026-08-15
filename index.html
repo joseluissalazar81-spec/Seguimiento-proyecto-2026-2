@@ -1238,7 +1238,13 @@
     .edu-hub svg { width:100%; max-width:320px; height:auto; display:block; }
     .edu-hub-slice, .edu-hub-center { cursor:pointer; transition:opacity .15s; }
     .edu-hub-slice:hover, .edu-hub-center:hover { opacity:.85; }
-    .edu-hub-lbl { font-size:12px; font-weight:800; color:var(--az); text-transform:uppercase; letter-spacing:.03em; }
+    .edu-hub-lbl {
+      display:inline-flex; align-items:center; gap:6px;
+      font-size:11px; font-weight:800; color:var(--az); text-transform:uppercase; letter-spacing:.04em;
+      background:#fff; padding:5px 14px; border-radius:20px;
+      box-shadow:0 1px 4px rgba(0,0,0,.1);
+    }
+    .edu-hub-lbl-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
     .exec-kpis-right {
       display:flex; flex-direction:column; gap:20px;
       flex:1 1 320px;
@@ -2690,7 +2696,7 @@ function renderEduHub(){
   if(!wrap || !DATA.length) return;
   const activeFac = filters.facultad || null;
   const facs = FAC_ORDER.filter(fac=>DATA.some(d=>d.facultad===fac));
-  const cx=100, cy=100, ri=32, ro=62;
+  const cx=100, cy=100, ri=36, ro=64;
   const slotAngles = [[-90,0],[0,90],[90,180],[180,270]];
   const anyActive = !!activeFac;
 
@@ -2723,18 +2729,28 @@ function renderEduHub(){
   });
 
   const ringColor = anyActive ? EDU_HUB_GRAY : EDU_HUB_RING_COLOR;
+  const activeIdx = anyActive ? facs.indexOf(activeFac) : -1;
+  const dotColor = activeIdx>=0 ? EDU_HUB_COLORS[activeIdx] : EDU_HUB_RING_COLOR;
   const svg = `
     <svg viewBox="0 0 200 200">
-      <circle cx="100" cy="100" r="86" fill="none" stroke="${ringColor}" stroke-width="16"/>
-      ${slicesSvg}
-      <circle class="edu-hub-center" cx="100" cy="100" r="${ri}" fill="${EDU_HUB_CENTER}" stroke="#fff" stroke-width="3" onclick="setFacFilter(null)"><title>Ver todas las facultades</title></circle>
-      <text x="100" y="100" text-anchor="middle" dominant-baseline="middle" font-size="10.5" font-weight="800" fill="#fff" style="pointer-events:none">
-        <tspan x="100" dy="-7">DIRECCIÓN</tspan>
-        <tspan x="100" dy="14">E-LEARNING</tspan>
+      <defs>
+        <filter id="eduHubShadow" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity=".18"/>
+        </filter>
+      </defs>
+      <g filter="url(#eduHubShadow)">
+        <circle cx="100" cy="100" r="94" fill="none" stroke="rgba(0,0,0,.07)" stroke-width="1"/>
+        <circle cx="100" cy="100" r="85" fill="none" stroke="${ringColor}" stroke-width="15"/>
+        ${slicesSvg}
+        <circle class="edu-hub-center" cx="100" cy="100" r="${ri}" fill="${EDU_HUB_CENTER}" stroke="#fff" stroke-width="3.5" onclick="setFacFilter(null)"><title>Ver todas las facultades</title></circle>
+      </g>
+      <text x="100" y="100" text-anchor="middle" dominant-baseline="middle" font-size="8.5" font-weight="800" letter-spacing=".2" fill="#fff" style="pointer-events:none">
+        <tspan x="100" dy="-6">DIRECCIÓN</tspan>
+        <tspan x="100" dy="12">E-LEARNING</tspan>
       </text>
       ${labelsSvg}
     </svg>`;
-  wrap.innerHTML = svg + `<div class="edu-hub-lbl">${activeFac ? (FAC_ABBR[activeFac]||activeFac) : 'Todas las facultades'}</div>`;
+  wrap.innerHTML = svg + `<div class="edu-hub-lbl"><span class="edu-hub-lbl-dot" style="background:${dotColor}"></span>${activeFac ? (FAC_ABBR[activeFac]||activeFac) : 'Todas las facultades'}</div>`;
 }
 
 function renderTeamPills(){
