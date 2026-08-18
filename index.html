@@ -684,19 +684,6 @@
     .ov-leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
     .ov-leg-label{flex:1;color:var(--text-muted)}
     .ov-leg-val{font-weight:700;font-family:'DM Mono',monospace;color:var(--text)}
-    /* Gantt */
-    .ov-gantt{font-size:12px}
-    .ov-gantt-hito{margin-bottom:10px}
-    .ov-gh-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
-    .ov-gh-label{font-size:11px;font-weight:600;color:var(--text)}
-    .ov-gh-fecha{font-size:10px;color:var(--text-muted);font-family:'DM Mono',monospace}
-    .ov-gh-bar-wrap{height:7px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden;position:relative}
-    .ov-gh-bar{height:100%;border-radius:4px;transition:width .5s cubic-bezier(.4,0,.2,1)}
-    .ov-gh-bar.sem-verde{background:var(--grad-green)}
-    .ov-gh-bar.sem-amarillo{background:var(--grad-amber)}
-    .ov-gh-bar.sem-rojo{background:var(--grad-red)}
-    .ov-gh-today{position:absolute;top:0;bottom:0;width:2px;background:var(--ro);opacity:.8;box-shadow:0 0 4px var(--ro)}
-    .ov-gh-stats{display:flex;justify-content:space-between;margin-top:3px;font-size:10px;color:var(--text-muted)}
     .ov-toggle{display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-size:11px;color:var(--az);font-weight:600;padding:5px 0;border:none;background:none;font-family:inherit;transition:color .2s}
     .ov-toggle:hover{color:var(--tl2)}
     @media(max-width:900px){
@@ -1949,10 +1936,6 @@
         <div class="ov-chart-card" style="grid-column:span 2">
           <div class="ov-chart-title">Avance por facultad — hitos S0 validados</div>
           <canvas id="ovBarChart" height="160"></canvas>
-        </div>
-        <div class="ov-chart-card">
-          <div class="ov-chart-title">Posición en Gantt</div>
-          <div class="ov-gantt" id="ov-gantt"></div>
         </div>
         <div class="ov-chart-card" style="grid-column:span 2">
           <div class="ov-chart-title">Facultad × Tipo de Virtualización</div>
@@ -4507,32 +4490,6 @@ function renderOverview(){
     }
   });
 
-  // ── Gantt de hitos ──
-  const totalProj = Math.round((GANTT_END - GANTT_START) / 86400000);
-  const todayPct  = Math.min(100, Math.round((today - GANTT_START) / totalProj / 86400000 * 100 * totalProj / totalProj));
-  const todayPos  = Math.min(100, Math.round((today - GANTT_START) / 86400000 / totalProj * 100));
-
-  document.getElementById('ov-gantt').innerHTML = GANTT_HITOS.map(h=>{
-    // Contar validadas para este hito
-    const validadasH = src.filter(d=>{const av=avSrc[d.asignatura];return av&&av.hitos&&av.hitos[h.key]==='Validada'}).length;
-    const pctH = Math.round(validadasH/src.length*100);
-    const sem  = semaforo(pctH, 70, 40);
-    const vencida = today > h.fecha;
-    const fecLabel = h.fecha.toLocaleDateString('es-CL',{day:'2-digit',month:'2-digit'});
-    // posicion de la fecha límite en la barra de tiempo total
-    const fecPos = Math.min(100,Math.round((h.fecha-GANTT_START)/86400000/totalProj*100));
-    return `<div class="ov-gantt-hito">
-      <div class="ov-gh-header">
-        <span class="ov-gh-label"><span class="dot dot-${sem==='verde'?'g':sem==='amarillo'?'y':'r'}" style="display:inline-block;margin-right:4px"></span>${h.label}</span>
-        <span class="ov-gh-fecha">Límite: ${fecLabel}${vencida&&pctH<100?' <span style="color:var(--ro);font-weight:700">●</span>':''}</span>
-      </div>
-      <div class="ov-gh-bar-wrap">
-        <div class="ov-gh-bar sem-${sem}" style="width:${pctH}%"></div>
-        <div class="ov-gh-today" style="left:${todayPos}%" title="Hoy"></div>
-      </div>
-      <div class="ov-gh-stats"><span>${validadasH}/${DATA.length} validadas</span><span style="font-weight:700;color:var(--${sem==='verde'?'ve':sem==='amarillo'?'am':'ro'})">${pctH}%</span></div>
-    </div>`;
-  }).join('');
 }
 
 // Toggle panel de novedades/mejoras
