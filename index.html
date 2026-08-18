@@ -1825,7 +1825,6 @@
 <div class="layout">
   <aside id="sidebar">
     <div id="nivel-pills-bar"></div>
-    <div id="fac-pills-bar"></div>
     <div id="team-pills-bar"></div>
   </aside>
   <main>
@@ -2746,27 +2745,10 @@ function renderNivelPills(){
     html += `<button class="sb-pill${act?' active':''}" onclick="setNivelFilter('${nivel}')">${nivel} <span class="sb-cnt">${n}</span></button>`;
   });
   bar.innerHTML = html;
-  renderFacPillsBar();
   renderEduHub();
 }
-// Facultad va debajo de Niveles: primero se filtra por nivel, y estos conteos
-// de facultad ya reflejan el nivel elegido (jerarquía Nivel → Facultad).
-function renderFacPillsBar(){
-  const bar = document.getElementById('fac-pills-bar');
-  if(!bar || !DATA.length) return;
-  const activeFac = filters.facultad || null;
-  const base = filters.nivel ? DATA.filter(d=>d.nivel===filters.nivel) : DATA;
-  const total = base.length;
-  let html = `<div class="sb-section-label">Facultad</div>`;
-  html += `<button class="sb-pill${!activeFac?' active':''}" onclick="setFacFilter(null)">Todas <span class="sb-cnt">${total}</span></button>`;
-  FAC_ORDER.forEach(fac=>{
-    const n = base.filter(d=>d.facultad===fac).length;
-    if(!n) return;
-    const act = activeFac===fac;
-    html += `<button class="sb-pill${act?' active':''}" onclick="setFacFilter('${fac}')">${fac} <span class="sb-cnt">${n}</span></button>`;
-  });
-  bar.innerHTML = html;
-}
+// El filtro por facultad ya lo cumple el círculo Dirección E-learning (clic en un
+// cuadrante), así que no se repite como lista en el sidebar.
 function setNivelFilter(nivel){
   filters.nivel = nivel;
   renderNivelPills();
