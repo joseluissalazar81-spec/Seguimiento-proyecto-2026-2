@@ -2782,7 +2782,7 @@ function setNivelFilter(nivel){
 // (inline SVG, no imagen — evita problemas de cache) Imita el patrón del sitio
 // educationpolicydashboard.org: al filtrar por un tema, ese segmento queda a color
 // y el resto pasa a gris.
-const EDU_HUB_COLORS = ['#8FC1DE','#F2CB7D','#8DD3D3','#A9D18C']; // pastel: azul, dorado, turquesa, verde
+const EDU_HUB_COLORS = ['#8FC1DE','#F2CB7D','#8DD3D3','#A9D18C','#F2A98F','#B4A9E0']; // pastel: azul, dorado, turquesa, verde, coral, lavanda
 const EDU_HUB_GRAY = '#D6DADF';
 const EDU_HUB_RING_COLOR = '#98D8BC'; // verde institucional UST en versión pastel
 const EDU_HUB_CENTER = '#F2A46B';
@@ -2805,7 +2805,7 @@ function eduHubColorFor(fac){
 }
 // Versión oscura de cada color del círculo, para fondos donde el texto es blanco
 // (ej. encabezado de la tarjeta de facultad) — misma familia, buen contraste.
-const EDU_HUB_COLORS_DARK = ['#2C5A78','#7A5A1E','#1F6B6B','#3F7A2E'];
+const EDU_HUB_COLORS_DARK = ['#2C5A78','#7A5A1E','#1F6B6B','#3F7A2E','#8A3F2C','#4A3F7A'];
 function eduHubDarkColorFor(fac){
   const facs = FAC_ORDER.filter(f=>eduHubData().some(d=>d.facultad===f));
   const idx = facs.indexOf(fac);
@@ -2867,7 +2867,7 @@ function renderEduHub(){
   const activeFac = filters.facultad || null;
   const facs = FAC_ORDER.filter(fac=>eduHubData().some(d=>d.facultad===fac));
   const cx=100, cy=100, ri=36, ro=64;
-  const slotAngles = [[-90,0],[0,90],[90,180],[180,270]];
+  const slotAngles = [[-90,-30],[-30,30],[30,90],[90,150],[150,210],[210,270]];
   const anyActive = !!activeFac;
 
   // Arco (sin relleno) para que el texto de cada facultad siga la curva del anillo,
@@ -2883,7 +2883,7 @@ function renderEduHub(){
   let slicesSvg = '', defsSvg = '';
   const labelR = (ri+ro)/2 + 3;
   slotAngles.forEach((ang,i)=>{
-    if(i>=facs.length){ // solo 4 slots; si sobran facultades no entran
+    if(i>=facs.length){ // slots sin facultad asignada
       slicesSvg += `<path d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${EDU_HUB_GRAY}" stroke="#fff" stroke-width="2"/>`;
       return;
     }
@@ -2892,7 +2892,7 @@ function renderEduHub(){
     const color = isActive ? EDU_HUB_COLORS[i] : EDU_HUB_GRAY;
     const mid = (ang[0]+ang[1])/2;
     const bottomHalf = mid>90 && mid<270;
-    const pad = 6; // margen para que el texto no toque los bordes del cuadrante
+    const pad = 4; // margen para que el texto no toque los bordes del cuadrante (slots de 60°)
     const arcId = `eduArc${i}`;
     const d = bottomHalf
       ? eduHubArcPath(labelR, ang[1]-pad, ang[0]+pad, 0)
@@ -2901,7 +2901,7 @@ function renderEduHub(){
     // path + etiqueta van juntos en un <g> para que al pasar el mouse se muevan/agranden como una unidad
     slicesSvg += `<g class="edu-hub-slice" onclick="eduHubGoTo('${fac}')">
       <path d="${eduHubSlicePath(cx,cy,ri,ro,ang[0],ang[1])}" fill="${color}" stroke="#fff" stroke-width="2"><title>${fac}</title></path>
-      <text font-size="8.2" font-weight="800" fill="#fff" style="pointer-events:none"><textPath href="#${arcId}" xlink:href="#${arcId}" startOffset="50%" text-anchor="middle">${FAC_ABBR[fac]||fac}</textPath></text>
+      <text font-size="7" font-weight="800" fill="#fff" style="pointer-events:none"><textPath href="#${arcId}" xlink:href="#${arcId}" startOffset="50%" text-anchor="middle">${FAC_ABBR[fac]||fac}</textPath></text>
     </g>`;
   });
 
