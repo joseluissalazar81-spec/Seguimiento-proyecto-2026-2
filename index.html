@@ -2293,6 +2293,10 @@ const MOODLE_URLS = {
   'Electivo FP: Factores fisiológicos y psicológicos del ejercicio': 'https://aulasvirtuales.santotomas.cl/course/view.php?id=769012',
 };
 function getMoodleUrl(asignatura, facultad){
+  // Prioridad: URL cargada por el DI en su Seguimiento.xlsx (recursos-2026-2.csv),
+  // siempre más actualizada que la tabla fija de abajo.
+  const fromRecursos = RECURSOS_DATA[asignatura] && RECURSOS_DATA[asignatura].url;
+  if(fromRecursos) return fromRecursos;
   const exact=MOODLE_URLS[asignatura+'|'+facultad]||MOODLE_URLS[asignatura];
   if(exact)return exact;
   const kF=(asignatura+'|'+(facultad||'')).toLowerCase(), k2=asignatura.toLowerCase();
@@ -2522,6 +2526,8 @@ async function loadRecursosData(){
       const key = normHitoKey(r[2]);
       if(!out[asig]) out[asig] = {};
       out[asig][key] = {total:+r[3]||0, listos:+r[4]||0, pct:+r[5]||0, estado:r[6]||'', fecha:r[7]||''};
+      const url = (r[8]||'').trim();
+      if(url) out[asig].url = url;
     });
     RECURSOS_DATA = out;
   }catch(err){ console.warn('loadRecursosData error:', err); }
@@ -5057,7 +5063,7 @@ function recursosAvance(asignatura){
     hitos[h.key] = r.estado==='Cerrado' ? 'Validada' : r.listos>0 ? 'En construcción' : '';
   });
   if(totalSum===0) return null;
-  return {av: Math.round(listosSum/totalSum*100), hitos};
+  return {av: Math.round(listosSum/totalSum*100), hitos, url: rec.url||''};
 }
 function ftkHitosDots(hitos){
   return Object.entries(hitos||{}).slice(0,10).map(([k,v])=>{
