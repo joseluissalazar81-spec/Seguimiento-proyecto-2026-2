@@ -4486,7 +4486,7 @@ function renderOverview(){
     const val   = items.filter(d=>{const av=avSrc[d.asignatura];return av&&av.hitos&&av.hitos.s0==='Validada'}).length;
     return {label: FAC_ABBR[fac]||fac, val, total: items.length, pct: Math.round(val/items.length*100)};
   });
-  const barColors = FAC_ORDER.filter(f=>src.some(d=>d.facultad===f)).map(f=>FAC_COLORS[f]||'#97BB5B');
+  const barColors = FAC_ORDER.filter(f=>src.some(d=>d.facultad===f)).map(f=>eduHubColorFor(f));
 
   if(ovBarInstance){ovBarInstance.destroy();}
   const ctxB = document.getElementById('ovBarChart').getContext('2d');
