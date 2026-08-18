@@ -5177,7 +5177,9 @@ function recursosAvance(asignatura){
     const r = rec[h.key];
     if(!r) return;
     totalSum += r.total; listosSum += r.listos;
-    hitos[h.key] = r.estado==='Cerrado' ? 'Validada' : r.listos>0 ? 'En construcción' : 'No inicia';
+    // '' (sin dato) se ve igual que una asignatura sin info todavía — gris neutro,
+    // no rojo "No inicia" (que se reserva para atrasos reales, no para "aún no arranca").
+    hitos[h.key] = r.estado==='Cerrado' ? 'Validada' : r.listos>0 ? 'En construcción' : '';
   });
   if(totalSum===0) return null;
   return {av: Math.round(listosSum/totalSum*100), hitos};
