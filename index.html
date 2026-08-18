@@ -417,6 +417,10 @@
     .hitos-table tr:last-child td{border-bottom:none}
     .hitos-table td:first-child{font-size:10px;font-weight:700;color:var(--text);white-space:nowrap;width:90px}
     .hitos-table td:nth-child(2){font-size:10px;color:var(--text-muted);white-space:nowrap}
+    .hito-prog-wrap{display:flex;align-items:center;gap:7px}
+    .hito-prog-bar{flex:1;height:6px;border-radius:3px;background:rgba(0,0,0,.06);overflow:hidden;min-width:50px}
+    .hito-prog-fill{height:100%;border-radius:3px;transition:width .4s}
+    .hito-prog-txt{font-size:10px;font-weight:700;color:var(--text);font-family:'DM Mono',monospace;white-space:nowrap}
     .hb{display:inline-block;padding:3px 8px;border-radius:10px;font-size:10px;font-weight:600;white-space:nowrap}
     .hb-v{background:rgba(168,196,160,.15);color:var(--ve);border:1px solid rgba(168,196,160,.3)}
     .hb-e{background:rgba(212,184,120,.15);color:var(--am);border:1px solid rgba(212,184,120,.3)}
@@ -2514,6 +2518,28 @@ const PROD = {
 // Pega aquí la URL de tu web app después de publicarla en Apps Script
 // ─── Fuente de datos 2026-2: CSV en GitHub (actualizado por Power Automate) ──
 const CSV_URL_2026_2 = 'https://raw.githubusercontent.com/joseluissalazar81-spec/seguimiento-proyecto-2026-2/data/data/seguimiento-2026-2.csv';
+// Detalle de recursos por hito (viene de las hojas Dashboard de cada Seguimiento.xlsx de los DI).
+// Piloto en construcción — solo trae datos de las asignaturas ya conectadas; el resto sigue
+// mostrando el estado clásico (badge simple) hasta que el flujo cubra a todos los DI.
+const RECURSOS_URL = 'https://raw.githubusercontent.com/joseluissalazar81-spec/seguimiento-proyecto-2026-2/data/data/recursos-2026-2.csv';
+let RECURSOS_DATA = {};
+function normHitoKey(h){ return (h||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
+async function loadRecursosData(){
+  try{
+    const resp = await fetch(RECURSOS_URL + '?nocache=' + Date.now());
+    if(!resp.ok) return;
+    const rows = parseCSV(await resp.text()).slice(1);
+    const out = {};
+    rows.forEach(r=>{
+      const asig = (r[0]||'').trim();
+      if(!asig) return;
+      const key = normHitoKey(r[2]);
+      if(!out[asig]) out[asig] = {};
+      out[asig][key] = {total:+r[3]||0, listos:+r[4]||0, pct:+r[5]||0, estado:r[6]||'', fecha:r[7]||''};
+    });
+    RECURSOS_DATA = out;
+  }catch(err){ console.warn('loadRecursosData error:', err); }
+}
 const SEG_API_DATA = null; // no usado en 2026-2
 
 function getSegAPIData(){ return null; }
@@ -2664,6 +2690,7 @@ async function loadSheetData(silent=false){
   if(!silent) setSyncLabel('Actualizando...');
   try{
     const csvRows = await loadSheetCSV();
+    loadRecursosData(); // no bloqueante — mejora el panel de hitos cuando hay datos, si no, sigue igual
     const built = buildDataFromCSV(csvRows);
     DATA = applyOverrides(applyDgAssign(built.data)); AVANCE = built.avance;
     DATA_ALL = [...DATA]; AVANCE_ALL = {...AVANCE};
@@ -3238,8 +3265,23 @@ function openPanel(idx){
     <span class="pchip">DI: ${d.di}</span>
     ${d.dg!=='—'?`<span class="pchip">DG: ${d.dg}</span>`:''}`;
 
-  // HITOS TABLE
+  // HITOS TABLE — usa el detalle real por recurso (recursos-2026-2.csv) cuando existe
+  // para esta asignatura; si no, cae al badge clásico de siempre.
+  const recReal = RECURSOS_DATA[d.asignatura];
   document.getElementById('hitos-tbody').innerHTML=HITO_META.map(h=>{
+    const r = recReal && recReal[h.key];
+    if(r && r.total>0){
+      const fillColor = r.estado==='Cerrado' ? 'var(--ve)' : r.listos>0 ? 'var(--am)' : 'var(--gr)';
+      return `<tr>
+        <td>${h.label}</td><td>${h.fecha}</td>
+        <td>
+          <div class="hito-prog-wrap" title="${r.estado}">
+            <div class="hito-prog-bar"><div class="hito-prog-fill" style="width:${r.pct}%;background:${fillColor}"></div></div>
+            <span class="hito-prog-txt">${r.listos}/${r.total}</span>
+          </div>
+        </td>
+      </tr>`;
+    }
     const estado=av.hitos[h.key]||'';
     return `<tr><td>${h.label}</td><td>${h.fecha}</td><td>${hitoBadge(estado)}</td></tr>`;
   }).join('');
