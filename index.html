@@ -666,7 +666,7 @@
     .badge-verde{background:rgba(168,196,160,.15);color:var(--ve);border:1px solid rgba(168,196,160,.3)}
     .badge-amarillo{background:rgba(212,184,120,.15);color:var(--am);border:1px solid rgba(212,184,120,.3)}
     .badge-rojo{background:rgba(200,160,144,.15);color:var(--ro);border:1px solid rgba(200,160,144,.3)}
-    .ov-charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .ov-charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;align-items:start}
     .ov-chart-card{
       background:var(--surface);
       backdrop-filter:var(--glass);-webkit-backdrop-filter:var(--glass);
@@ -4456,7 +4456,7 @@ function renderOverview(){
   const pendiente  = Math.max(0, 100 - pctAvance - Math.round(sinIniciar/total*100));
   const sinInicPct = Math.round(sinIniciar/total*100);
   const donutData  = [pctAvance, pendiente, sinInicPct];
-  const donutColors= ['#27A06E','#C8A951','#d1d5db'];
+  const donutColors= ['#A9D18C','#F2CB7D','#D6DADF'];
 
   if(ovDonutInstance){ovDonutInstance.destroy();}
   const ctxD = document.getElementById('ovDonutChart').getContext('2d');
@@ -4490,6 +4490,7 @@ function renderOverview(){
         backgroundColor: barColors,
         borderRadius: 4,
         barThickness: 22,
+        minBarLength: 6,
       }]
     },
     options:{
