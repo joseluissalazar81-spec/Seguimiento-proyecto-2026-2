@@ -3201,7 +3201,9 @@ function renderTable(){
   info.textContent=hasF?`${currentRows.length} de ${DATA.length}`:'';
   tbody.innerHTML=currentRows.map((d,i)=>{
     const rav=AVANCE[d.asignatura]||{};
-    const rPct=rav.avance||0;
+    const recReal=recursosAvance(d.asignatura);
+    const rPct=recReal ? recReal.av : (rav.avance||0);
+    const rHitos=recReal ? recReal.hitos : (rav.hitos||{});
     const isUrg=d.reunion==='Sin respuesta';
     const isVenc=isHitoVencido(d);
     const avColor=rPct>=50?'hi':rPct>0?'mid':'lo';
@@ -3212,7 +3214,7 @@ function renderTable(){
       <td style="color:var(--text-muted)">${d.docente}${d.correo?` <a href="mailto:${d.correo}" title="${d.correo}" onclick="event.stopPropagation()" style="color:var(--az2);vertical-align:middle;display:inline-flex;margin-left:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg></a>`:''}</td>
       <td><span class="pl-dot"><span class="dot dot-${dotClass(d.planif,d)}"></span>${isAtrasada(d)?'⚠ Atrasada':(d.estadoGlobal||planifLabel(d.planif,d))}</span></td>
       <td><div class="av-cell"><div class="av-bar-wrap"><div class="av-bar" style="width:${rPct}%;${rPct>=100?'background:linear-gradient(90deg,#d4af37,#f5d060)':''}"></div></div><span class="av-pct ${avColor}">${rPct}%</span>${rPct>=100?'<span class="badge-completa">🏅 ¡Completa!</span>':''}${isEnAula(d.asignatura)?'<span class="badge-aula">🏫 En el aula</span>':''}</div></td>
-      <td class="col-hitos">${miniHitosDot(rav.hitos||{})}</td>
+      <td class="col-hitos">${miniHitosDot(rHitos)}</td>
     </tr>`;
   }).join('');
   document.querySelectorAll('#tbody tr').forEach(tr=>tr.addEventListener('click',()=>openPanel(parseInt(tr.dataset.idx))));
@@ -5158,6 +5160,23 @@ function ftkPlanifIcon(p){
   if(s>=5)      return '★';
   return '—';
 }
+// Si hay datos reales por recurso (recursos-2026-2.csv) para esta asignatura,
+// calcula el % de avance y los hitos (Validada/En construcción/No inicia) a partir
+// de ahí, para que coincida con lo que muestra el panel de detalle.
+function recursosAvance(asignatura){
+  const rec = RECURSOS_DATA[asignatura];
+  if(!rec) return null;
+  let totalSum=0, listosSum=0;
+  const hitos={};
+  HITO_META.forEach(h=>{
+    const r = rec[h.key];
+    if(!r) return;
+    totalSum += r.total; listosSum += r.listos;
+    hitos[h.key] = r.estado==='Cerrado' ? 'Validada' : r.listos>0 ? 'En construcción' : 'No inicia';
+  });
+  if(totalSum===0) return null;
+  return {av: Math.round(listosSum/totalSum*100), hitos};
+}
 function ftkHitosDots(hitos){
   return Object.entries(hitos||{}).slice(0,10).map(([k,v])=>{
     let cls='nd';
@@ -5174,8 +5193,9 @@ function ftkHitosDots(hitos){
 // (usada tanto en la vista inline como en el popup del círculo)
 function facTickerRowHtml(d, today, deadline){
   const idx = currentRows.findIndex(x=>x.asignatura===d.asignatura&&x.docente===d.docente);
-  const av  = (AVANCE[d.asignatura]||{}).avance||0;
-  const hitos = (AVANCE[d.asignatura]||{}).hitos||{};
+  const recReal = recursosAvance(d.asignatura);
+  const av  = recReal ? recReal.av : (AVANCE[d.asignatura]||{}).avance||0;
+  const hitos = recReal ? recReal.hitos : (AVANCE[d.asignatura]||{}).hitos||{};
   const step  = planifStepIndex(d.planif||'');
   const isAt  = step<2 && today>deadline;
   const avFill = av>=80?'var(--ve)':av>=40?'var(--am)':'var(--ro)';
