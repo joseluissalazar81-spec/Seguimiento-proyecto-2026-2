@@ -2803,6 +2803,14 @@ function eduHubColorFor(fac){
   const idx = facs.indexOf(fac);
   return idx>=0 ? EDU_HUB_COLORS[idx % EDU_HUB_COLORS.length] : EDU_HUB_GRAY;
 }
+// Versión oscura de cada color del círculo, para fondos donde el texto es blanco
+// (ej. encabezado de la tarjeta de facultad) — misma familia, buen contraste.
+const EDU_HUB_COLORS_DARK = ['#2C5A78','#7A5A1E','#1F6B6B','#3F7A2E'];
+function eduHubDarkColorFor(fac){
+  const facs = FAC_ORDER.filter(f=>eduHubData().some(d=>d.facultad===f));
+  const idx = facs.indexOf(fac);
+  return idx>=0 ? EDU_HUB_COLORS_DARK[idx % EDU_HUB_COLORS_DARK.length] : null;
+}
 // Popup con el panel de una facultad (mismo color pastel que su cuadrante)
 function openFacPopup(fac){
   const items = eduHubData().filter(d=>d.facultad===fac);
@@ -5305,8 +5313,9 @@ function renderFacView(){
       ? `<div class="fv-obs-panel" id="fv-obs-${facId}" style="display:none">${obsList}</div>`
       : '';
 
+    const hdrColor = eduHubDarkColorFor(fac);
     return `<div class="fv-idx-card">
-      <div class="fv-idx-hdr" onclick="toggleFvGroup(this)">
+      <div class="fv-idx-hdr" onclick="toggleFvGroup(this)"${hdrColor?` style="background:linear-gradient(90deg,${hdrColor} 0%,${hdrColor}cc 100%)"`:''}>
         <div class="fv-idx-sem ${semCls}"></div>
         <div class="fv-idx-title">${fac.toUpperCase()}${notaExt?'&nbsp;&nbsp;'+notaExt:''}</div>
         <div class="fv-idx-counts">
