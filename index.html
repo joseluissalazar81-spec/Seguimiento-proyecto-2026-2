@@ -1192,18 +1192,18 @@
     }
     .exec-avance-num {
       font-size:62px; font-weight:800; font-family:'DM Mono',monospace; line-height:1;
-      background:linear-gradient(135deg,var(--az),var(--tl2));
+      background:linear-gradient(135deg,#8FC1DE,#8DD3D3,#A9D18C,#F2CB7D);
       -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
     }
     .exec-avance-lbl {font-size:12px; color:var(--text-muted); font-weight:700; text-transform:uppercase; letter-spacing:.08em;}
     .exec-avance-bar {width:160px; height:5px; background:rgba(255,255,255,.08); border-radius:3px; overflow:hidden; margin-top:4px;}
-    .exec-avance-fill {height:100%; border-radius:3px; background:linear-gradient(90deg,var(--az2),var(--tl2)); transition:width .7s cubic-bezier(.4,0,.2,1);}
+    .exec-avance-fill {height:100%; border-radius:3px; background:linear-gradient(90deg,#8FC1DE,#8DD3D3,#A9D18C,#F2CB7D); transition:width .7s cubic-bezier(.4,0,.2,1);}
     .exec-vs-bar {width:160px; display:flex; flex-direction:column; gap:3px; margin-top:8px;}
     .exec-vs-row {display:flex; align-items:center; gap:6px;}
     .exec-vs-lbl {font-size:9px; color:var(--text-muted); width:50px; text-align:right;}
     .exec-vs-track {flex:1; height:4px; background:rgba(255,255,255,.08); border-radius:2px; overflow:hidden;}
     .exec-vs-fill {height:100%; border-radius:2px; transition:width .7s;}
-    .exec-vs-fill.real {background:linear-gradient(90deg,var(--az2),var(--tl2));}
+    .exec-vs-fill.real {background:linear-gradient(90deg,#8FC1DE,#8DD3D3,#A9D18C,#F2CB7D);}
     .exec-vs-fill.esp  {background:rgba(255,255,255,.25);}
     .exec-vs-pct {font-size:9px; font-family:'DM Mono',monospace; color:var(--text-muted); width:28px;}
     /* DEL stats */
@@ -4212,7 +4212,8 @@ function renderExecutiveHero(){
   // ── % avance real = promedio de asignaturas que ya iniciaron producción (col U > 0) ──
   let sumAv=0, countAv=0, countCero=0;
   src.forEach(d=>{
-    const av=(avSrc[d.asignatura]||{}).avance||0;
+    const recReal=recursosAvance(d.asignatura);
+    const av=recReal ? recReal.av : (avSrc[d.asignatura]||{}).avance||0;
     if(av>0){ sumAv+=av; countAv++; }
     else countCero++;
   });
