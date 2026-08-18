@@ -3437,13 +3437,6 @@ document.getElementById('search').addEventListener('input',e=>{
     // Re-renderizar con datos reales una vez cargados
     renderDIProgress();
     requestAnimationFrame(()=>{ setTimeout(renderProjectCharts, 0); });
-    // Guardar snapshot tendencia
-    const src2=DATA_ALL.length?DATA_ALL:DATA; const avS2=DATA_ALL.length?AVANCE_ALL:AVANCE;
-    let val2=0,ep2=0;
-    src2.forEach(d=>{const av=avS2[d.asignatura]||{};const hv=Object.values(av.hitos||{});
-      if(av.avance>=100||hv.every(h=>h==='Validada'||h==='No aplica'||h==='—'||!h))val2++;
-      else if(av.avance>0)ep2++;});
-    saveTrendSnapshot(src2.length>0?Math.round((val2+(ep2*.5))/src2.length*100):0);
   }
   // Conectar botón "Actualizar datos" del overview (ya cargado en DOM)
   document.getElementById('ov-refresh-btn')?.addEventListener('click', async ()=>{
@@ -4142,8 +4135,6 @@ function toggleDetalles(){
     : '▼ Ver detalles técnicos (métricas, gráficos, tabla)';
   if(detallesVisible){
     if(!ovDonutInstance && DATA_ALL.length) renderOverview();
-    injectTrendCard();
-    renderTrendChart();
   }
 }
 
@@ -4566,8 +4557,6 @@ document.getElementById('overview-toggle').addEventListener('click', async ()=>{
   if(overviewVisible && DATA.length){
     if(!DATA_ALL.length) await loadDashboardData();
     renderOverview();
-    injectTrendCard();
-    renderTrendChart();
     renderGlobalSemaforo();
   }
 });
@@ -4578,8 +4567,6 @@ document.getElementById('ov-refresh-btn')?.addEventListener('click', async ()=>{
   if(btn){btn.disabled=true; btn.textContent='Actualizando...';}
   await loadDashboardData();
   renderOverview();
-  injectTrendCard();
-  renderTrendChart();
   renderGlobalSemaforo();
   updateTimestamp();
   if(btn){btn.disabled=false; btn.textContent='🔄 Actualizar datos';}
@@ -4636,67 +4623,6 @@ function renderNextDeadline(){
     el.style.display='inline-flex';
     el.style.color = dias<=3?'var(--ro)':dias<=7?'var(--am)':'var(--am)';
   }
-}
-
-// ── 3. TENDENCIA SEMANAL (localStorage) ───────────────────────────────────────
-const TREND_KEY = 'ust_trend_2026';
-function getWeekLabel(d=new Date()){
-  const yr = d.getFullYear();
-  const wk = Math.ceil(((d - new Date(yr,0,1))/86400000 + new Date(yr,0,1).getDay()+1)/7);
-  return `${yr}-W${String(wk).padStart(2,'0')}`;
-}
-function saveTrendSnapshot(pct){
-  try{
-    const raw = JSON.parse(localStorage.getItem(TREND_KEY)||'[]');
-    const wk  = getWeekLabel();
-    const last = raw[raw.length-1];
-    if(last && last.w===wk){ last.pct=pct; }
-    else{ raw.push({w:wk,pct}); if(raw.length>8) raw.shift(); }
-    localStorage.setItem(TREND_KEY, JSON.stringify(raw));
-  }catch(e){}
-}
-function getTrendData(){
-  try{ return JSON.parse(localStorage.getItem(TREND_KEY)||'[]'); }catch(e){ return []; }
-}
-
-let ovTrendInstance = null;
-function renderTrendChart(){
-  const data = getTrendData();
-  const canvas = document.getElementById('ovTrendChart');
-  if(!canvas||data.length<2) return;
-  if(ovTrendInstance) ovTrendInstance.destroy();
-  ovTrendInstance = new Chart(canvas.getContext('2d'),{
-    type:'line',
-    data:{
-      labels: data.map(d=>d.w.replace(/\d{4}-/,'')),
-      datasets:[{
-        data: data.map(d=>d.pct),
-        borderColor:'#b0b8cc',
-        backgroundColor:'rgba(176,184,204,.12)',
-        tension:.4, fill:true,
-        pointBackgroundColor:'#b0b8cc', pointRadius:4,
-        borderWidth:2,
-      }]
-    },
-    options:{
-      scales:{
-        y:{min:0,max:100,ticks:{callback:v=>v+'%',font:{size:10},color:'rgba(255,255,255,.4)'},grid:{color:'rgba(255,255,255,.05)'}},
-        x:{ticks:{font:{size:10},color:'rgba(255,255,255,.4)'},grid:{display:false}}
-      },
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.raw}% avance`}}},
-      animation:{duration:400}
-    }
-  });
-}
-
-// Inyectar canvas de tendencia en el overview después del donut
-function injectTrendCard(){
-  const charts = document.querySelector('.ov-charts');
-  if(!charts || document.getElementById('ovTrendChart')) return;
-  const card = document.createElement('div');
-  card.className='ov-chart-card';
-  card.innerHTML=`<div class="ov-chart-title">Tendencia semanal de avance</div><canvas id="ovTrendChart" height="150"></canvas>`;
-  charts.appendChild(card);
 }
 
 // ── 7. BANNER ALERTAS (próximas entregas ≤7 días) ─────────────────────────────
