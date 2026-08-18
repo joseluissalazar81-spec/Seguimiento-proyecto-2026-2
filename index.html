@@ -666,13 +666,14 @@
     .badge-verde{background:rgba(168,196,160,.15);color:var(--ve);border:1px solid rgba(168,196,160,.3)}
     .badge-amarillo{background:rgba(212,184,120,.15);color:var(--am);border:1px solid rgba(212,184,120,.3)}
     .badge-rojo{background:rgba(200,160,144,.15);color:var(--ro);border:1px solid rgba(200,160,144,.3)}
-    .ov-charts{display:flex;gap:12px;flex-wrap:wrap}
+    .ov-charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
     .ov-chart-card{
       background:var(--surface);
       backdrop-filter:var(--glass);-webkit-backdrop-filter:var(--glass);
       border:1px solid var(--borde);border-radius:var(--radius);
-      padding:16px 18px;flex:1;min-width:180px;
+      padding:16px 18px;min-width:0;
     }
+    .ov-chart-card canvas{max-width:100%}
     .ov-chart-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--az);margin-bottom:14px}
     .ov-donut-wrap{position:relative;width:140px;height:140px;margin:0 auto 12px}
     .ov-donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
@@ -700,7 +701,6 @@
     .ov-toggle:hover{color:var(--tl2)}
     @media(max-width:900px){
       .ov-metrics{grid-template-columns:1fr 1fr}
-      .ov-charts{flex-direction:column}
     }
 
     @keyframes spin{to{transform:rotate(360deg)}}
@@ -1946,7 +1946,7 @@
           </div>
           <div class="ov-legend" id="ov-legend"></div>
         </div>
-        <div class="ov-chart-card" style="flex:2;min-width:0">
+        <div class="ov-chart-card" style="grid-column:span 2">
           <div class="ov-chart-title">Avance por facultad — hitos S0 validados</div>
           <canvas id="ovBarChart" height="160"></canvas>
         </div>
@@ -1954,9 +1954,9 @@
           <div class="ov-chart-title">Posición en Gantt</div>
           <div class="ov-gantt" id="ov-gantt"></div>
         </div>
-        <div class="ov-chart-card" style="flex:2;min-width:0">
+        <div class="ov-chart-card" style="grid-column:span 2">
           <div class="ov-chart-title">Facultad × Tipo de Virtualización</div>
-          <div id="ov-heatmap"></div>
+          <div id="ov-heatmap" style="overflow-x:auto"></div>
         </div>
       </div>
     </div>
