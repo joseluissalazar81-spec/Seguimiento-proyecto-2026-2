@@ -1985,7 +1985,7 @@
           <canvas id="projProgressChart"></canvas>
           </div>
           <div class="proj-progress-legend">
-            <span><span class="proj-leg-dot" style="background:rgba(130,120,190,.8)"></span>Avance real</span>
+            <span><span class="proj-leg-dot" style="background:#5A9BC4"></span>Avance real</span>
             <span><span class="proj-leg-dot" style="background:rgba(0,0,0,.2);border:1px dashed rgba(0,0,0,.3)"></span>Avance esperado</span>
           </div>
         </div>
@@ -3984,14 +3984,16 @@ function renderProjectCharts(){
   // Gantt de fases (datos estáticos)
   // Fechas reales según Carta Gantt 2026-2 (inicio 10/08/2026, fin 14/01/2027).
   // El Bloque 5 — Producción (proceso de virtualización) debe cerrar sí o sí el 15/12.
+  // Misma gama pastel del círculo Dirección E-learning (azul/turquesa/verde/dorado),
+  // con un tono más oscuro de cada familia para las fases que necesitan distinguirse.
   const FASES = [
-    {label:'Preparación',   days:[0,6],    color:'#5a9e74', desc:'Configuración de aulas virtuales, asignación de equipos y validación inicial de planificaciones didácticas.'},
-    {label:'Kick-off',      days:[7,13],   color:'#4a8864', desc:'Reunión inicial con docentes: acuerdos de trabajo, entrega de guías y activación del proceso de co-diseño.'},
-    {label:'Co-diseño',     days:[22,36],  color:'#c09448', desc:'Diseño instruccional colaborativo: estructura semanal, definición de actividades y recursos por asignatura.'},
-    {label:'QA Planif.',    days:[38,52],  color:'#7a88be', desc:'Revisión y validación de planificaciones didácticas por el equipo DEL. Devolución con observaciones.'},
-    {label:'Producción',    days:[36,127], color:'#3a6898', desc:'Producción de recursos T1–T4: videoclases, Genially, guías de aprendizaje, foros y quizzes. Cierra sí o sí el 15/12.'},
-    {label:'Validación',    days:[128,152],color:'#3a8888', desc:'Validación docente de recursos producidos. Ajustes finales y aprobación para carga en aula.'},
-    {label:'Clonación',     days:[149,157],color:'#b05848', desc:'Clonación de asignaturas al aula definitiva 2026-2 y verificación de acceso estudiantil.'},
+    {label:'Preparación',   days:[0,6],    color:'#A9D18C', desc:'Configuración de aulas virtuales, asignación de equipos y validación inicial de planificaciones didácticas.'},
+    {label:'Kick-off',      days:[7,13],   color:'#7FB563', desc:'Reunión inicial con docentes: acuerdos de trabajo, entrega de guías y activación del proceso de co-diseño.'},
+    {label:'Co-diseño',     days:[22,36],  color:'#F2CB7D', desc:'Diseño instruccional colaborativo: estructura semanal, definición de actividades y recursos por asignatura.'},
+    {label:'QA Planif.',    days:[38,52],  color:'#8FC1DE', desc:'Revisión y validación de planificaciones didácticas por el equipo DEL. Devolución con observaciones.'},
+    {label:'Producción',    days:[36,127], color:'#5A9BC4', desc:'Producción de recursos T1–T4: videoclases, Genially, guías de aprendizaje, foros y quizzes. Cierra sí o sí el 15/12.'},
+    {label:'Validación',    days:[128,152],color:'#8DD3D3', desc:'Validación docente de recursos producidos. Ajustes finales y aprobación para carga en aula.'},
+    {label:'Clonación',     days:[149,157],color:'#D4943A', desc:'Clonación de asignaturas al aula definitiva 2026-2 y verificación de acceso estudiantil.'},
   ];
   const pStart = new Date(2026,7,10); // 10 ago 2026 — inicio real del proyecto
   const today  = new Date(); today.setHours(0,0,0,0);
@@ -4062,7 +4064,7 @@ function renderProjectCharts(){
       labels: semLabels,
       datasets:[
         {label:'Esperado', data:espData, borderColor:'rgba(0,0,0,.25)', borderDash:[5,4], pointRadius:2, tension:0.3, fill:false},
-        {label:'Real',     data:realData, borderColor:'rgba(130,120,190,1)', backgroundColor:'rgba(130,120,190,.15)', pointRadius:8, pointBackgroundColor:'rgba(130,120,190,1)', pointBorderColor:'#fff', pointBorderWidth:2, showLine:false, fill:false},
+        {label:'Real',     data:realData, borderColor:'#5A9BC4', backgroundColor:'rgba(90,155,196,.15)', pointRadius:8, pointBackgroundColor:'#5A9BC4', pointBorderColor:'#fff', pointBorderWidth:2, showLine:false, fill:false},
       ]
     },
     options:{
