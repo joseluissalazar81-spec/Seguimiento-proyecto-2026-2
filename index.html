@@ -1937,7 +1937,7 @@
           <div class="ov-chart-title">Avance por facultad — hitos S0 validados</div>
           <canvas id="ovBarChart" height="160"></canvas>
         </div>
-        <div class="ov-chart-card" style="grid-column:span 2">
+        <div class="ov-chart-card" style="grid-column:1/-1">
           <div class="ov-chart-title">Facultad × Tipo de Virtualización</div>
           <div id="ov-heatmap" style="overflow-x:auto"></div>
         </div>
@@ -4140,7 +4140,7 @@ function renderExecutiveHero(){
       <table style="border-collapse:collapse;font-size:10.5px;width:100%">
         <thead><tr>
           <th style="padding:6px 8px;text-align:left;background:#f8fafc"></th>
-          ${hmCats.map(c=>`<th title="${c}" style="padding:6px 6px;background:#f8fafc;color:var(--az);font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:.02em;max-width:60px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${c.length>10?c.slice(0,9)+'…':c}</th>`).join('')}
+          ${hmCats.map(c=>`<th title="${c}" style="padding:6px 10px;background:#f8fafc;color:var(--az);font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap">${c}</th>`).join('')}
         </tr></thead>
         <tbody>
           ${hmFacs.map((f,ri)=>`<tr>
