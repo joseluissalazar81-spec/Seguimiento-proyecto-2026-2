@@ -3254,6 +3254,12 @@ function renderEstandar(asignatura){
       <div class="estandar-recursos-list">${recTags}</div>
     </div>`;
   }
+  if(e.mailInstitucional){
+    html += `<div class="estandar-item ei-wide">
+      <div class="ei-label">Mail institucional docente</div>
+      <div class="ei-value"><a href="mailto:${e.mailInstitucional}" style="color:inherit">${e.mailInstitucional}</a></div>
+    </div>`;
+  }
   grid.innerHTML = html;
   section.style.display = '';
 }
