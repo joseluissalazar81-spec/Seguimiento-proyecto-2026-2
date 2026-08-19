@@ -2773,6 +2773,14 @@ function setNivelFilter(nivel){
 // educationpolicydashboard.org: al filtrar por un tema, ese segmento queda a color
 // y el resto pasa a gris.
 const EDU_HUB_COLORS = ['#8FC1DE','#F2CB7D','#8DD3D3','#A9D18C','#F2A98F','#B4A9E0']; // pastel: azul, dorado, turquesa, verde, coral, lavanda
+// Aclara un color institucional hacia blanco, para versiones "pastel" del mismo tono
+// (ej. círculo de facultades: mismo color correspondiente, pero más suave)
+function lightenHex(hex, amt){
+  const h = (hex||'#000000').replace('#','');
+  const r = parseInt(h.substring(0,2),16), g = parseInt(h.substring(2,4),16), b = parseInt(h.substring(4,6),16);
+  const mix = v => Math.round(v + (255-v)*amt);
+  return '#' + [mix(r),mix(g),mix(b)].map(v=>v.toString(16).padStart(2,'0')).join('');
+}
 const EDU_HUB_GRAY = '#D6DADF';
 const EDU_HUB_RING_COLOR = '#98D8BC'; // verde institucional UST en versión pastel
 const EDU_HUB_CENTER = '#F2A46B';
@@ -2879,7 +2887,7 @@ function renderEduHub(){
     }
     const fac = facs[i];
     const isActive = anyActive ? activeFac===fac : true;
-    const color = isActive ? (FAC_COLORS[fac]||EDU_HUB_COLORS[i]) : EDU_HUB_GRAY;
+    const color = isActive ? lightenHex(FAC_COLORS[fac]||EDU_HUB_COLORS[i], 0.45) : EDU_HUB_GRAY;
     const mid = (ang[0]+ang[1])/2;
     const bottomHalf = mid>90 && mid<270;
     const pad = 4; // margen para que el texto no toque los bordes del cuadrante (slots de 60°)
@@ -2897,7 +2905,7 @@ function renderEduHub(){
 
   const ringColor = anyActive ? EDU_HUB_GRAY : EDU_HUB_RING_COLOR;
   const activeIdx = anyActive ? facs.indexOf(activeFac) : -1;
-  const dotColor = activeIdx>=0 ? (FAC_COLORS[facs[activeIdx]]||EDU_HUB_COLORS[activeIdx]) : EDU_HUB_RING_COLOR;
+  const dotColor = activeIdx>=0 ? lightenHex(FAC_COLORS[facs[activeIdx]]||EDU_HUB_COLORS[activeIdx], 0.45) : EDU_HUB_RING_COLOR;
   const svg = `
     <svg viewBox="0 0 200 200">
       <defs>
