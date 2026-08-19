@@ -3254,12 +3254,6 @@ function renderEstandar(asignatura){
       <div class="estandar-recursos-list">${recTags}</div>
     </div>`;
   }
-  if(e.mailInstitucional){
-    html += `<div class="estandar-item ei-wide">
-      <div class="ei-label">Mail institucional docente</div>
-      <div class="ei-value"><a href="mailto:${e.mailInstitucional}" style="color:inherit">${e.mailInstitucional}</a></div>
-    </div>`;
-  }
   grid.innerHTML = html;
   section.style.display = '';
 }
@@ -3335,9 +3329,11 @@ function openPanel(idx){
   const emailEl=document.getElementById('p-doc-email');
   const emailLink=document.getElementById('p-doc-email-link');
   const emailTxt=document.getElementById('p-doc-email-txt');
-  if(d.correo&&d.correo.trim()){
-    emailLink.href='mailto:'+d.correo.trim();
-    emailTxt.textContent=d.correo.trim();
+  const docenteEmail = (d.correo&&d.correo.trim()) ? d.correo.trim()
+    : ((ESTANDAR_DATA[d.asignatura]||{}).mailInstitucional || '');
+  if(docenteEmail){
+    emailLink.href='mailto:'+docenteEmail;
+    emailTxt.textContent=docenteEmail;
     emailEl.style.display='block';
   } else {
     emailEl.style.display='none';
