@@ -2094,14 +2094,6 @@
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Aula Moodle
           </a>
-          <a id="p-seg-link" href="#" target="_blank" rel="noopener"
-             style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;
-                    color:#fff;background:var(--ve);border-radius:20px;padding:5px 14px;
-                    text-decoration:none;transition:opacity .2s"
-             onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            Seguimiento
-          </a>
           <a id="p-prog-link" href="#" target="_blank" rel="noopener"
              style="display:none;align-items:center;gap:6px;font-size:12px;font-weight:600;
                     color:#fff;background:#7c3aed;border-radius:20px;padding:5px 14px;
@@ -2353,107 +2345,6 @@ function getProgramaUrl(asignatura, facultad){
   if(exact)return exact;
   const kF=(asignatura+'|'+(facultad||'')).toLowerCase(), k2=asignatura.toLowerCase();
   for(const k of Object.keys(PROGRAMA_URLS)){const kl=k.toLowerCase();if(kl===kF||kl===k2)return PROGRAMA_URLS[k];}
-  return null;
-}
-
-// ── Seguimiento DI — URLs por DI (fallback) ───────────────────────────────────
-const DI_SEG_URLS = {
-  'Andreina':         'https://docs.google.com/spreadsheets/d/1mvc5S3viFNOQr3e8oXHKPT5gQHiA0rS5AsXObR83IYA/edit?usp=drive_link',
-  'Adrelina':         'https://docs.google.com/spreadsheets/d/1mvc5S3viFNOQr3e8oXHKPT5gQHiA0rS5AsXObR83IYA/edit?usp=drive_link',
-  'Natalia':          'https://docs.google.com/spreadsheets/d/1RIQ5zJ3tv6qiUJQYeBeDu_-fG9BUmdxxog68GzAku10/edit?usp=drive_link',
-  'José Luis':        'https://docs.google.com/spreadsheets/d/1cWGEka3pfO1mJD64IsP-hwbh5bCIy44H8Y9YgalA6jg/edit?usp=drive_link',
-  'Noelia':           'https://docs.google.com/spreadsheets/d/1bd8AhhYo0MEuakMQQWeFmyYeWDKTz6FjY-X5BBNDFQ8/edit?usp=drive_link',
-  'Noelia Escalona':  'https://docs.google.com/spreadsheets/d/1bd8AhhYo0MEuakMQQWeFmyYeWDKTz6FjY-X5BBNDFQ8/edit?usp=drive_link',
-  'Magdalena Quezada':'https://docs.google.com/spreadsheets/d/1bd8AhhYo0MEuakMQQWeFmyYeWDKTz6FjY-X5BBNDFQ8/edit?usp=drive_link',
-  'Cristián':         'https://docs.google.com/spreadsheets/d/1MzcRjzWPa6PDCkZdTdOGpyMeUJTXtUGMNg3tkIORWiE/edit?usp=drive_link',
-  'Brenda':           'https://docs.google.com/spreadsheets/d/1-olfhgLaRjo0rT8P9wyCiJ_yPD98RWoL3-bD6J7ofTs/edit?usp=drive_link',
-  'Brenda Bastías':   'https://docs.google.com/spreadsheets/d/1-olfhgLaRjo0rT8P9wyCiJ_yPD98RWoL3-bD6J7ofTs/edit?usp=drive_link',
-};
-
-// ── Seguimiento DI — mapa fijo por asignatura (fuente autorizada) ─────────────
-const _JL  = DI_SEG_URLS['José Luis'];
-const _JL2 = 'https://docs.google.com/spreadsheets/d/133qfGdFmRzBxuTOZ6pWB1T3nTli2C1Ugg2xJtKFRrfM/edit?usp=drive_link';
-const _JL3 = 'https://docs.google.com/spreadsheets/d/1rnHRTp8r_emmiOxYffbnUK8xMs-gkJZCWVYGN0Qhd_Q/edit?usp=drive_link';
-const _NA2 = 'https://docs.google.com/spreadsheets/d/1L43dz5b1_QbAbc1pJSmAzHYoZUGQCmAsksVmhsA-FPc/edit?usp=drive_link';
-const _BR2 = 'https://docs.google.com/spreadsheets/d/1pZA-Q3WA1ddsNruZQS94fEhncKZUl9ZAJlDSTDZBbls/edit?usp=drive_link';
-const _BR  = DI_SEG_URLS['Brenda Bastías'];
-const _MQ  = DI_SEG_URLS['Magdalena Quezada'];
-const _NE  = DI_SEG_URLS['Noelia Escalona'];
-const _AN  = DI_SEG_URLS['Andreina'];
-const _CR  = DI_SEG_URLS['Cristián'];
-const _NA  = DI_SEG_URLS['Natalia'];
-
-const SUBJECT_SEG_URLS = {
-  // ── José Luis ──────────────────────────────────────────────────
-  'Inteligencia de Negocios':                _JL,
-  'Electivo I: Energías Renovables':         _JL,
-  'Electivo III: Modelo Neg. Residuos':      _JL,
-  'Evaluación de Proyectos':                 _JL,
-  'Sist. Prod. Cultivos Sostenibles':        _JL,
-  'Sist. Prod. Frutales Sostenibles':        _JL2,
-  'Trabajo de Título':                       _JL2,
-  'Calidad e Inocuidad Alimentaria':         _JL2,
-  'Mercado de Capitales':                    _JL2,
-  'Análisis de Datos':                       _JL2,
-  'Finanzas Corporativas|Economía y Negocios': _JL3,
-  'Finanzas Corporativas|Ingeniería y Negocios': _JL3,
-  'Políticas Públicas e Innovación':         _JL3,
-  // ── Brenda Bastías ─────────────────────────────────────────────
-  'Electivo I: Op. Humanitarias':            _BR2,
-  'Inglés Avanzado I':                       _BR2,
-  'Derecho Comercial y Laboral':             _BR2,
-  'Interculturalidad Pueblos Indígenas':     _BR2,
-  'Inglés Cultura POP':                      _BR2,
-  'FP: Herramientas y Atributos Calidad I':  _BR,
-  'FP: Bioinformática':                      _BR,
-  'Electivo FP: Herramientas y atributos calidad I': _BR,
-  'Electivo FP: Bioinformática':             _BR,
-  // ── Magdalena Quezada ──────────────────────────────────────────
-  'FP: Componentes Bioactivos en Alimentos': _MQ,
-  'FP: Bases Comportamiento Alimentario':    _MQ,
-  'FP: Mercado I+D+i I':                     _MQ,
-  'Narrativa Digital':                       _MQ,
-  'Electivo FP: Componentes Bioactivos en Alimentos': _MQ,
-  'Electivo FP: Bases Comportamiento Alimentario':    _MQ,
-  'Electivo FP: Mercado I+D+i I':            _MQ,
-  // ── Noelia Escalona ────────────────────────────────────────────
-  'FP: Factores Fisiológicos y Psicológicos del Ejercicio': _NE,
-  'Electivo FP: Factores fisiológicos y psicológicos del ejercicio': _NE,
-  // ── Andreina ───────────────────────────────────────────────────
-  'Ingeniería Térmica':                      _AN,
-  'Regresión y Pronóstico de Datos':         _AN,
-  'Pronóstico de Datos e IA':                _AN,
-  'Electivo III: Op. Humanitarias':          _AN,
-  'Análisis de Datos Cuantitativos':         _AN,
-  // ── Cristián ───────────────────────────────────────────────────
-  'Gestión Incertidumbre y Simulación':      _CR,
-  'Finanzas Corporativas|Ingeniería':        _CR,
-  'Proyecto de Título':                      _CR,
-  'Plan de Negocios':                        _CR,
-  'Contabilidad Financiera':                 _CR,
-  'Microeconomía':                           _CR,
-  // ── Natalia ────────────────────────────────────────────────────
-  'Simulación de Negocios':                  _NA,
-  'Análisis de Datos Cualitativos':          _NA,
-  'Electivo I: Tecnologías Excavación':      _NA,
-  'Electivo III: IA y Tecnologías 4.0':      _NA,
-  'Gestión de Operaciones Mineras':          _NA,
-  'Taller Emprendimiento en Minería':        _NA,
-  'FP: Neuroadaptación y Ambliopía':         _NA2,
-  'FP: Bases Gestión en Imagenología':       _NA2,
-  'Electivo FP: Neuroadaptación y ambliopía':        _NA2,
-  'Electivo FP: Bases Gestión en Imagenología':      _NA2,
-};
-
-function getSegUrl(asignatura, facultad, di){
-  // Primero: mapa fijo por asignatura (ignora campo DI del sheet)
-  const bySubject = SUBJECT_SEG_URLS[asignatura+'|'+facultad] || SUBJECT_SEG_URLS[asignatura];
-  if(bySubject) return bySubject;
-  // Fallback: buscar por nombre DI
-  if(di){
-    const diKey=Object.keys(DI_SEG_URLS).find(k=>di.toLowerCase().includes(k.toLowerCase())||k.toLowerCase().includes(di.toLowerCase()));
-    if(diKey) return DI_SEG_URLS[diKey];
-  }
   return null;
 }
 
@@ -3234,15 +3125,12 @@ function openPanel(idx){
   document.getElementById('p-avance').textContent=`Avance ${avPct}%`;
   // Link Moodle
   const moodleUrl=getMoodleUrl(d.asignatura,d.facultad);
-  const segUrl=getSegUrl(d.asignatura,d.facultad,d.di);
   const progUrl=getProgramaUrl(d.asignatura,d.facultad);
   const moodleWrap=document.getElementById('p-moodle-wrap');
   const moodleLink=document.getElementById('p-moodle-link');
-  const segLink=document.getElementById('p-seg-link');
   const progLink=document.getElementById('p-prog-link');
-  if(moodleUrl||segUrl||progUrl){moodleWrap.style.display='block';}else{moodleWrap.style.display='none';}
+  if(moodleUrl||progUrl){moodleWrap.style.display='block';}else{moodleWrap.style.display='none';}
   if(moodleUrl){moodleLink.href=moodleUrl;moodleLink.style.display='inline-flex';}else{moodleLink.style.display='none';}
-  if(segLink){if(segUrl){segLink.href=segUrl;segLink.style.display='inline-flex';}else{segLink.style.display='none';}}
   if(progLink){if(progUrl){progLink.href=progUrl;progLink.style.display='inline-flex';}else{progLink.style.display='none';}}
   document.getElementById('p-chips').innerHTML=`
     <span class="pchip">JP: ${d.jp}</span>
@@ -4208,8 +4096,9 @@ function renderExecutiveHero(){
   // Si estamos antes del primer deadline, week = 0-1
   if(currentBlockIdx === -1) currentWeek = Math.max(0, Math.round((today - GANTT_HITOS[0].fecha + 14*86400000)/86400000/7));
   // % esperado = hitos que deberían estar "Validada" hoy / 11
-  // planif (col J) siempre esperado desde inicio + cada GANTT_HITO cuya fecha ya pasó
-  const hitosEsperados = 1 + GANTT_HITOS.filter(h => today >= h.fecha).length;
+  // planif (col J) solo cuenta como esperada una vez que arrancó la construcción (S0);
+  // antes de esa fecha el esperado es 0%, no tiene sentido exigir avance todavía.
+  const hitosEsperados = today < GANTT_HITOS[0].fecha ? 0 : 1 + GANTT_HITOS.filter(h => today >= h.fecha).length;
   const pctEsperado = Math.min(100, Math.round(hitosEsperados / 11 * 100));
   // Expose for informe so both always show the same numbers
   window._dashPctReal = pctReal;
@@ -6096,16 +5985,6 @@ window.addEventListener('load', function(){
       return {txt:`<strong>Plazos de entrega de planificación al DEL:</strong>\n\n${custom}\n• Resto de facultades: <strong>${fmt(PLANIF_DEADLINES.default)}</strong>`, chips:['Contacto DEL']};
     }
 
-    // Seguimiento por DI (planilla individual)
-    if(nq.match(/seguimiento|seg\b|planilla/) && !findAsig(q)){
-      const persona=PROYECTO.equipo.find(p=>nrm(p.nombre).split(' ').some(w=>w.length>3&&nq.includes(w)));
-      if(persona && typeof DI_SEG_URLS!=='undefined'){
-        const primer=persona.nombre.split(' ')[0];
-        const url=DI_SEG_URLS[primer]||DI_SEG_URLS[persona.nombre];
-        if(url) return {txt:`<strong>Seguimiento de ${persona.nombre}</strong>\n📊 <a class="bot-a" href="${url}" target="_blank">Ver planilla de seguimiento</a>`};
-      }
-    }
-
     if(nq.match(/manual.*implementador|implementador.*manual|moodle.*manual/))
       return {txt:'<strong>Manual del Implementador — Moodle UST v1.0</strong>\n\nPrincipio: <em>"La planificación es la fuente de verdad. Si no lo indica, no se agrega."</em>\n\n<strong>3 Momentos de publicación:</strong>\n1. <strong>Estructura del aula</strong> — Sección Bienvenida (6 elementos fijos) + todas las sesiones + etiquetas de modalidad + encabezados de los 3 momentos\n2. <strong>Recursos e instrucciones</strong> — PDFs, URLs (nueva pestaña + APA), SCORMs, actividades Moodle configuradas\n3. <strong>Mini QA interno</strong> — Navegar en modo estudiante con checklist A–F antes de notificar a QA DEL\n\n<strong>Nomenclatura:</strong> <code>S[N]_[Tipo][N]_[Título].[ext]</code>\nEj: S1_Apunte1_Introduccion_al_Derecho_Penal.pdf\n\n<strong>Rúbricas: publicación DOBLE obligatoria</strong>\n→ Rúbrica nativa en Moodle + PDF descargable en las instrucciones\n\nDirigido a: Elías Castillo y Antonio Cabrera', chips:['Nomenclatura archivos','Errores críticos Moodle','Checklist QA Moodle']};
 
@@ -6624,12 +6503,6 @@ window.addEventListener('load', function(){
       const url=typeof getMoodleUrl==='function'?getMoodleUrl(asig.asignatura,asig.facultad):null;
       if(url) return {txt:`<strong>${asig.asignatura}</strong>\n🔗 <a class="bot-a" href="${url}" target="_blank">Abrir aula Moodle</a>`};
       return {txt:`No encontré el link Moodle de <strong>${asig.asignatura}</strong>.`};
-    }
-
-    if(nq.match(/seguimiento|seg\b|planilla/)){
-      const url=typeof getSegUrl==='function'?getSegUrl(asig.asignatura,asig.facultad,asig.di):null;
-      if(url) return {txt:`<strong>${asig.asignatura}</strong>\n📊 <a class="bot-a" href="${url}" target="_blank">Ver planilla de seguimiento</a>`};
-      return {txt:`No encontré la planilla de seguimiento de <strong>${asig.asignatura}</strong>.`};
     }
 
     if(nq.match(/observ|obs\b|nota/))
