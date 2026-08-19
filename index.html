@@ -2405,20 +2405,62 @@ const CSV_URL_2026_2 = 'https://raw.githubusercontent.com/joseluissalazar81-spec
 const RECURSOS_URL = 'https://raw.githubusercontent.com/joseluissalazar81-spec/seguimiento-proyecto-2026-2/data/data/recursos-2026-2.csv';
 let RECURSOS_DATA = {};
 function normHitoKey(h){ return (h||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
+// Orden real de asignaturas por DI (mismo orden que seguimiento-2026-2.csv), usado para
+// traducir las etiquetas genéricas "Asignatura 1", "Asignatura 2"... que trae el flujo de
+// Power Automate (lee cada Seguimiento.xlsx por posición, no conoce el nombre real del curso).
+// Si un DI tiene asignaturas repartidas en más de un archivo (dos JP distintos), sus cursos
+// igual quedan todos en esta misma lista combinada — el orden de aparición en el CSV agrupado
+// ya resuelve cuál bloque de "Asignatura N" corresponde a cuál tramo de la lista.
+const DI_ASIGNATURA_ORDER = {
+  "Noemí Urrutia": ["Nivelación Ciencias Básicas","Formulación y gestión de proyectos","Electivo de Formación Profesional II: Análisis de Voladuras en Minería","Finanzas 360: estrategias para tu economía personal"],
+  "Javiera Leiva": ["Modelos de optimización","Taller integrado interdisciplinario II"],
+  "Brenda Bastías": ["Estadística para Ingeniería","Machine Learning","Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas","Econometría","Modelo teórico y trabajo interdisciplinario y transdisciplinario","Desarrollo en Atención Temprana","Familia en la atención temprana e intervención en contextos diversos","Evaluación interdisciplinaria en atención infantil temprana","Innovación y Emprendimiento"],
+  "Erick Contreras": ["Administración para alta dirección","Operación Remota y Robótica en Minería","Estrategia Competitiva","Estrategias organizacionales para la creación de valor"],
+  "Catalina Salazar": ["Ética, ciudadanía y sociedad","Macroeconomía","Diseño de proyectos de intervención","Antrozoología","Ingeniería en Termofluído","Sistemas de Información Geográfica para la Conservación Biológica Aplicada"],
+  "Natalia Gallardo": ["Inglés Avanzado II","Antrozoología, Bienestar y Sociedad","Estrategias para la Conservación y Restauración de la Biodiversidad"],
+  "Bárbara González": ["Electivo: Gestión de Marketing Digital","Evaluación integral del comportamiento alimentario y nutrición","Marketing Estratégico"],
+  "Deborah Ramírez": ["Componentes Contaminantes y Tóxicos en Alimentos","Valoración Integral de la Persona Mayor"],
+  "Natalie Baeza": ["Mercado I+D+i -2","Herramientas y atributos de gestión II","Gestión de Proyectos y Administración","Conservación Biológica en un Contexto Cambio Global","Liderazgo para la transformación organizacional"],
+  "Fernanda Reyes": ["Terapia Visual","Manejo de Rumiantes en Pastoreo","Manejo y Conservación en Fauna Silvestre"],
+  "Noelia Jara": ["Análisis neuromuscular del movimiento humano","Emprendimiento en Salud II","Fundamentos del Envejecimiento y Atención Integral","Liderazgo y coaching para el cambio organizacional","Gestión de Capital humano","Fundamentos de Ecología"],
+  "Carolina Henríquez": ["Viticultura y Enología","Tecnologías de Producción Acuícola","Analítica de negocios para la gestión directiva"],
+  "Bárbara Soler": ["Planificación educativa","Enfoques Contemporaneos","Innovación Empresarial","Dirección de Marketing"],
+  "Rafael Siverio": ["Comportamiento Alimentario y Nutrición en Grupos y comunidades","Análisis de Datos para la Gestión","Fundamentos de Intervención Familiar Contemporánea","Transformaciones Sociales, Desigualdades y Políticas Sociales"],
+  "Carla Riquelme": ["Economía para las Organizaciones","Epistemologia y Trabajo Social","Metodología de la Investigación"],
+  "Alejandra Cisterna": ["Metodologías agiles para la gestión de proyectos","Metodologías de Intervención Participativa con Familias y Comunidades","Gestión y Diseño de Programas Sociales"],
+  "Yazim Meza": ["Dirección de Organizaciones y Equipos","Economía para la Dirección"],
+};
 async function loadRecursosData(){
   try{
     const resp = await fetch(RECURSOS_URL + '?nocache=' + Date.now());
     if(!resp.ok) return;
     const rows = parseCSV(await resp.text()).slice(1);
+    // Columnas del flujo de Power Automate:
+    // 0=@odata.etag 1=ItemInternalId 2=Asignatura(genérico) 3=Hito 4=Semana1 5=Semana2
+    // 6=Fecha de entrega(serial Excel, no se usa) 7=Recursos totales 8=Recursos listos
+    // 9=% Avance(decimal 0-1) 10=Estado del Hito 11=Alertas QA 12=DI
     const out = {};
+    const diPrevPos = {}, diOffset = {};
     rows.forEach(r=>{
-      const asig = (r[0]||'').trim();
-      if(!asig) return;
-      const key = normHitoKey(r[2]);
+      const asigGenerico = (r[2]||'').trim();
+      const di = (r[12]||'').trim();
+      if(!asigGenerico || !di) return;
+      const posNum = parseInt(asigGenerico.replace(/\D/g,''),10) || 1;
+      // Si la posición retrocede, es que empezó un nuevo archivo (mismo DI en otro JP) —
+      // desplazamos el índice para seguir avanzando sobre la lista combinada de ese DI.
+      if(diPrevPos[di]!==undefined && posNum < diPrevPos[di]){
+        diOffset[di] = (diOffset[di]||0) + diPrevPos[di];
+      }
+      diPrevPos[di] = posNum;
+      const combinedIdx = (diOffset[di]||0) + posNum; // 1-based
+      const lista = DI_ASIGNATURA_ORDER[di];
+      const asig = lista && lista[combinedIdx-1];
+      if(!asig) return; // slot vacío/sin curso real asignado — se omite
+      const key = normHitoKey(r[3]);
       if(!out[asig]) out[asig] = {};
-      out[asig][key] = {total:+r[3]||0, listos:+r[4]||0, pct:+r[5]||0, estado:r[6]||'', fecha:r[7]||''};
-      const url = (r[8]||'').trim();
-      if(url) out[asig].url = url;
+      const total = +r[7]||0, listos = +r[8]||0;
+      const pct = Math.round((parseFloat(r[9])||0)*100);
+      out[asig][key] = {total, listos, pct, estado:r[10]||''};
     });
     RECURSOS_DATA = out;
   }catch(err){ console.warn('loadRecursosData error:', err); }
