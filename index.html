@@ -491,6 +491,20 @@
     .team-role{font-size:10px;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
     .team-name{font-size:12.5px;font-weight:600;color:var(--text)}
 
+    .estandar-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .estandar-item{
+      padding:8px 12px;border-radius:var(--radius-sm);border:1px solid var(--borde);
+      background:var(--surface2);
+    }
+    .estandar-item .ei-label{font-size:10px;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .estandar-item .ei-value{font-size:14px;font-weight:700;color:var(--text);margin-top:2px}
+    .estandar-item.ei-wide{grid-column:1/-1}
+    .estandar-recursos-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+    .estandar-recurso-tag{
+      font-size:11px;font-weight:600;padding:3px 8px;border-radius:999px;
+      background:var(--surface3);border:1px solid var(--borde2);color:var(--text);
+    }
+
     /* ── DOCENTE ── */
     .docente-card{
       display:flex;align-items:center;gap:12px;padding:12px 14px;
@@ -2178,6 +2192,12 @@
       <div class="team-grid" id="p-team"></div>
     </div>
 
+    <!-- ESTANDARIZACIÓN (horas y recursos) -->
+    <div class="panel-section" id="p-estandar-section" style="display:none">
+      <div class="ps-title">Horas y Recursos (Estandarización)</div>
+      <div class="estandar-grid" id="p-estandar-grid"></div>
+    </div>
+
     <!-- HISTORIAL DE CAMBIOS -->
     <div class="panel-section" id="p-hist-section">
       <div class="ps-title">Historial de cambios</div>
@@ -2284,9 +2304,30 @@ const MOODLE_URLS = {
   'FP: Factores Fisiológicos y Psicológicos del Ejercicio': 'https://aulasvirtuales.santotomas.cl/course/view.php?id=769012',
   'Electivo FP: Factores fisiológicos y psicológicos del ejercicio': 'https://aulasvirtuales.santotomas.cl/course/view.php?id=769012',
 };
+// Mapa mantenido a mano en data/moodle-urls.csv (Asignatura,URL) — se sube directo a
+// GitHub cada vez que hay un aula Moodle nueva, sin pasar por Power Automate ni por
+// el Excel de cada DI (esas celdas no están en una tabla, el flujo no las puede leer).
+let MOODLE_URLS_LIVE = {};
+const MOODLE_URLS_LIVE_CSV = 'https://raw.githubusercontent.com/joseluissalazar81-spec/seguimiento-proyecto-2026-2/data/data/moodle-urls.csv';
+async function loadMoodleUrlsLive(){
+  try{
+    const resp = await fetch(MOODLE_URLS_LIVE_CSV + '?nocache=' + Date.now());
+    if(!resp.ok) return;
+    const rows = parseCSV(await resp.text()).slice(1);
+    const out = {};
+    rows.forEach(r=>{
+      const asig = (r[0]||'').trim();
+      const url  = (r[1]||'').trim();
+      if(asig && url) out[asig] = url;
+    });
+    MOODLE_URLS_LIVE = out;
+  }catch(err){ console.warn('loadMoodleUrlsLive error:', err); }
+}
 function getMoodleUrl(asignatura, facultad){
-  // Prioridad: URL cargada por el DI en su Seguimiento.xlsx (recursos-2026-2.csv),
-  // siempre más actualizada que la tabla fija de abajo.
+  // Prioridad: 1) URL cargada a mano en moodle-urls.csv (la más reciente),
+  // 2) URL que traiga recursos-2026-2.csv (si algún día se agrega esa columna),
+  // 3) tabla fija MOODLE_URLS (proceso anterior, solo como último recurso).
+  if(MOODLE_URLS_LIVE[asignatura]) return MOODLE_URLS_LIVE[asignatura];
   const fromRecursos = RECURSOS_DATA[asignatura] && RECURSOS_DATA[asignatura].url;
   if(fromRecursos) return fromRecursos;
   const exact=MOODLE_URLS[asignatura+'|'+facultad]||MOODLE_URLS[asignatura];
@@ -2475,42 +2516,82 @@ async function loadSheetCSV(){
   const resp = await fetch(url);
   if(!resp.ok) throw new Error(`CSV error ${resp.status}`);
   const text = await resp.text();
-  const rows = parseCSV(text);
-  return rows.slice(1); // omitir fila de encabezados
+  return parseCSV(text); // incluye fila de encabezados en [0]
 }
 
 // Valores que identifican filas de encabezado (no datos reales)
 const CSV_HEADER_R4 = ['jp','jefe de proyecto','jefe proyecto'];
 const CSV_HEADER_R1 = ['asignatura','nombre asignatura','nombre de asignatura'];
 
+// Normaliza un encabezado de columna (colapsa saltos de línea/espacios, sin tildes, minúscula)
+// para poder ubicar columnas por NOMBRE en vez de por posición fija. Así el parser no se rompe
+// si se agregan/reordenan columnas en la planilla maestra (ej. campos de estandarización).
+function normHdr(s){
+  return (s||'').toString().toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g,'')
+    .replace(/\s+/g,' ').trim();
+}
+
 function buildDataFromCSV(rows){
-  // CSV generado por Power Automate: 0=@odata.etag 1=ItemInternalId 2=Facultad 3=Nivel
-  // 4:Asignatura 5:Docente 6:TipoVirt 7:JP 8:DI 9:DG 10:Impl 11:Reunión 12:Planif
-  // 13:S0 14:S1-S2 15:S3-S4 16:S5-S6 17:S7-S8 18:S9-S10 19:S11-S12
-  // 20:S13-S14 21:S15-S16 22:S17-S18 23:%Avance 24:Estado 25:Obs
-  // 26:Escal 27:Correo 28:FechaSR 29:EnvDEL 30:DEL2 31:ID
-  const data=[], avance={};
-  (rows||[]).forEach(r=>{
-    if(!r[4] || !r[4].trim()) return;
-    if(r[4].trim()==='Asignatura') return;
-    const asig = r[4].trim();
-    const isRecNatC = (r[2]||'').trim() === 'Recursos Naturales y Medicina Veterinaria';
-    const HITO_COLS_C = [r[12],r[13],r[14],r[15],r[16],r[17],r[18],r[19],r[20],r[21],r[22]];
-    const nValC = HITO_COLS_C.filter(v=>(v||'').trim()==='Validada').length;
-    const pct = isRecNatC ? Math.min(100,Math.round(nValC/8*100)) : Math.round(nValC/11*100);
-    data.push({facultad:(r[2]||'').trim(),nivel:r[3]||'',asignatura:asig,docente:r[5]||'',fmt:r[6]||'',
-      jp:r[7]||'',di:r[8]||'',dg:r[9]||'—',implementador:r[10]||'',
-      reunion:r[11]||'',planif:r[12]||'',estadoGlobal:r[24]||'',obs:r[25]||'',correo:r[27]||'',
-      fechaSR:r[28]||'',envDELfecha:r[29]||'',del2fecha:r[30]||''});
-    avance[asig]={avance:pct,obs:r[25]||'',hitos:{
-      s0:mapHito(r[13]),s1s2:mapHito(r[14]),s3s4:mapHito(r[15]),
-      s5s6:mapHito(r[16]),s7s8:mapHito(r[17]),s9s10:mapHito(r[18]),
-      s11s12:mapHito(r[19]),
-      s13s14:isRecNatC ? 'No aplica' : mapHito(r[20]),
-      s15s16:isRecNatC ? 'No aplica' : mapHito(r[21]),
-      s17s18:isRecNatC ? 'No aplica' : mapHito(r[22])}};
+  const header = (rows && rows[0]) || [];
+  const dataRows = (rows || []).slice(1);
+  const idx = {};
+  header.forEach((h,i)=>{ if(idx[normHdr(h)]===undefined) idx[normHdr(h)] = i; });
+  const col = (...names) => { for(const n of names){ const i=idx[normHdr(n)]; if(i!==undefined) return i; } return -1; };
+  const get = (r,i) => (i>=0 && r[i]!==undefined) ? r[i] : '';
+
+  const iFac=col('Facultad'), iNivel=col('Nivel'), iAsig=col('Asignatura'), iDoc=col('Docente'),
+    iFmt=col('Tipo de Virtualización'), iJP=col('JP'), iDI=col('DI'), iDG=col('DG'), iImpl=col('Implementador'),
+    iReunion=col('Reunión docente'), iPlanif=col('Planificación didáctica'), iEstado=col('Estado global'),
+    iObs=col('Observaciones'), iCorreo=col('Correo docente'), iFechaSR=col('Fecha Sin Respuesta'),
+    iEnvDEL=col('Fecha envío DEL'), iDEL2=col('Fecha DEL 2° Inst.','Fecha DEL 2 Inst.');
+
+  // Columnas de estandarización (horas/recursos) — pueden no existir aún en el CSV vigente;
+  // en ese caso quedan en -1 y esta sección simplemente no se muestra.
+  const iTPE=col('TPE'), iHorasPed=col('Horas ped.','Horas ped'), iHPPres=col('HP Presenciales'),
+    iHPSinc=col('HP Sincrónicas'), iHPAsinc=col('HP Asincrónicas'), iLab=col('Laboratorio'),
+    iTerreno=col('Terreno'), iAyud=col('Ayudantía'),
+    iRec1=col('Cantidad de Recursos tipo 1'), iRec2=col('Cantidad de Recursos tipo 2'),
+    iRec3=col('Cantidad de Recursos tipo 3'), iRec4=col('Cantidad de Recursos tipo 4'),
+    iMailInst=col('Mail institucional'), iMailPers=col('Mail personal');
+  const hasEstandar = iTPE>=0 || iHorasPed>=0 || iRec1>=0;
+
+  // Columnas semanales S0...S17-18: cualquier encabezado que empiece con "S"+dígito.
+  // Robusto a que cambien las fechas del semestre (van embebidas en el encabezado).
+  const sHitoIdx = [];
+  header.forEach((h,i)=>{ if(/^s\d/i.test((h||'').toString().trim())) sHitoIdx.push(i); });
+  const hitoKeys=['s0','s1s2','s3s4','s5s6','s7s8','s9s10','s11s12','s13s14','s15s16','s17s18'];
+
+  const data=[], avance={}, estandar={};
+  dataRows.forEach(r=>{
+    const asig=(get(r,iAsig)||'').trim();
+    if(!asig || asig==='Asignatura') return;
+    const facultad=(get(r,iFac)||'').trim();
+    const isRecNatC = facultad === 'Recursos Naturales y Medicina Veterinaria';
+    const hitoVals = sHitoIdx.map(i=>get(r,i));
+    const nValC = [get(r,iPlanif), ...hitoVals].filter(v=>(v||'').trim()==='Validada').length;
+    const denom = sHitoIdx.length + 1; // planif + hitos, normalmente 11
+    const pct = isRecNatC ? Math.min(100,Math.round(nValC/8*100)) : Math.round(nValC/denom*100);
+    data.push({facultad,nivel:get(r,iNivel)||'',asignatura:asig,docente:get(r,iDoc)||'',fmt:get(r,iFmt)||'',
+      jp:get(r,iJP)||'',di:get(r,iDI)||'',dg:get(r,iDG)||'—',implementador:get(r,iImpl)||'',
+      reunion:get(r,iReunion)||'',planif:get(r,iPlanif)||'',estadoGlobal:get(r,iEstado)||'',obs:get(r,iObs)||'',
+      correo:get(r,iCorreo)||'',fechaSR:get(r,iFechaSR)||'',envDELfecha:get(r,iEnvDEL)||'',del2fecha:get(r,iDEL2)||''});
+    const hitosObj={};
+    hitoKeys.forEach((k,n)=>{ hitosObj[k] = (isRecNatC && n>=7) ? 'No aplica' : mapHito(hitoVals[n]); });
+    avance[asig]={avance:pct,obs:get(r,iObs)||'',hitos:hitosObj};
+
+    if(hasEstandar){
+      const num=v=>{const n=parseFloat(v);return isNaN(n)?0:n;};
+      estandar[asig]={
+        tpe:num(get(r,iTPE)), horasPed:num(get(r,iHorasPed)),
+        hpPresenciales:num(get(r,iHPPres)), hpSincronicas:num(get(r,iHPSinc)), hpAsincronicas:num(get(r,iHPAsinc)),
+        laboratorio:num(get(r,iLab)), terreno:num(get(r,iTerreno)), ayudantia:num(get(r,iAyud)),
+        recursos:[num(get(r,iRec1)),num(get(r,iRec2)),num(get(r,iRec3)),num(get(r,iRec4))],
+        mailInstitucional:(get(r,iMailInst)||'').trim(), mailPersonal:(get(r,iMailPers)||'').trim(),
+      };
+    }
   });
-  return {data,avance};
+  return {data,avance,estandar};
 }
 
 
@@ -2601,6 +2682,9 @@ function buildData(rows){
 let DATA=[], AVANCE={};
 // DATA_ALL: copia completa sin filtros — exclusiva para el overview ejecutivo
 let DATA_ALL=[], AVANCE_ALL={};
+// ESTANDAR_DATA: horas y cantidad de recursos por asignatura (columnas nuevas de la planilla
+// maestra). Vacío hasta que el flujo de Power Automate corra con la estructura nueva.
+let ESTANDAR_DATA={};
 
 function setSyncLabel(txt, isError=false){
   const lbl=document.getElementById('sync-label');
@@ -2616,8 +2700,10 @@ async function loadSheetData(silent=false){
   try{
     const csvRows = await loadSheetCSV();
     loadRecursosData(); // no bloqueante — mejora el panel de hitos cuando hay datos, si no, sigue igual
+    loadMoodleUrlsLive(); // no bloqueante — URLs de aula cargadas a mano en data/moodle-urls.csv
     const built = buildDataFromCSV(csvRows);
     DATA = applyOverrides(applyDgAssign(built.data)); AVANCE = built.avance;
+    ESTANDAR_DATA = built.estandar || {};
     DATA_ALL = [...DATA]; AVANCE_ALL = {...AVANCE};
     window._ust_cache = {DATA:[...DATA], AVANCE:{...AVANCE}, ts:Date.now()};
     const now=new Date();
@@ -3135,6 +3221,43 @@ function renderTable(){
   document.querySelectorAll('#tbody tr').forEach(tr=>tr.addEventListener('click',()=>openPanel(parseInt(tr.dataset.idx))));
 }
 
+function fmtNum(v){
+  if(v===undefined||v===null||isNaN(v)) return '0';
+  const r = Math.round(v*10)/10;
+  return r.toString().replace('.',',');
+}
+
+function renderEstandar(asignatura){
+  const section = document.getElementById('p-estandar-section');
+  const grid = document.getElementById('p-estandar-grid');
+  const e = ESTANDAR_DATA[asignatura];
+  if(!e){ section.style.display='none'; grid.innerHTML=''; return; }
+  const items=[
+    {label:'TPE', value:e.tpe},
+    {label:'Horas pedagógicas', value:e.horasPed},
+    {label:'HP Presenciales', value:e.hpPresenciales},
+    {label:'HP Sincrónicas', value:e.hpSincronicas},
+    {label:'HP Asincrónicas', value:e.hpAsincronicas},
+  ];
+  if(e.laboratorio) items.push({label:'Laboratorio', value:e.laboratorio});
+  if(e.terreno) items.push({label:'Terreno', value:e.terreno});
+  if(e.ayudantia) items.push({label:'Ayudantía', value:e.ayudantia});
+  let html = items.map(it=>`
+    <div class="estandar-item">
+      <div class="ei-label">${it.label}</div>
+      <div class="ei-value">${fmtNum(it.value)}</div>
+    </div>`).join('');
+  const recTags = (e.recursos||[]).map((v,i)=> v>0 ? `<span class="estandar-recurso-tag">Tipo ${i+1}: ${fmtNum(v)}</span>` : '').join('');
+  if(recTags){
+    html += `<div class="estandar-item ei-wide">
+      <div class="ei-label">Cantidad de recursos</div>
+      <div class="estandar-recursos-list">${recTags}</div>
+    </div>`;
+  }
+  grid.innerHTML = html;
+  section.style.display = '';
+}
+
 // ─── PANEL ───
 function openPanel(idx){
   selectedIdx=idx;
@@ -3233,6 +3356,9 @@ function openPanel(idx){
       <div class="team-avatar ${t.av}">${initials(t.name)}</div>
       <div><div class="team-role">${t.role}</div><div class="team-name">${t.name}</div></div>
     </div>`).join('');
+
+  // ESTANDARIZACIÓN (horas y recursos) — solo se muestra si el CSV trae estas columnas
+  renderEstandar(d.asignatura);
 
   // OBS — detectar keywords de alerta (no responde, sin respuesta)
   const obsEl=document.getElementById('p-obs');
