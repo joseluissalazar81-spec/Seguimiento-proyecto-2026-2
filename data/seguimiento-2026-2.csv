@@ -1,5 +1,16 @@
 @odata.etag,ItemInternalId,Facultad,Nivel,Asignatura,Docente,"Tipo de 
-Virtualización",JP,DI,DG,Implementador,"Reunión
+Virtualización",JP,DI,DG,Implementador,"Aplica Integridad
+Académica","Número de
+Unidades",TPE,Horas ped_x002e_,"HP
+Presenciales","HP
+Sincrónicas","HP
+Asincrónicas",Laboratorio,Terreno,Ayudantía,"Cantidad de
+Recursos tipo 1","Cantidad de
+Recursos tipo 2","Cantidad de
+Recursos tipo 3","Cantidad de
+Recursos tipo 4","Mail
+institucional","Mail
+personal","Reunión
 docente","Planificación
 didáctica","S0 Videos B y C
 15/9","S1–S2
@@ -13,72 +24,72 @@ didáctica","S0 Videos B y C
 5/12","S17–S18
 15/12",% Avance,Estado global,Observaciones,"Escalamiento
 correo",Correo docente,Fecha Sin Respuesta,Fecha envío DEL  ,Fecha DEL 2° Inst_x002e_ ,ID
-,39f335af-f2d3-4996-9271-eb3be4c76b45,Ingeniería y Negocios,Pregrado,Nivelación Ciencias Básicas,Edgardo Palma Waldron,Diseño,José Luis,Noemí Urrutia,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,1
-,68b43706-74b3-4abc-9a6e-823975afd420,Ingeniería y Negocios,Pregrado,Modelos de optimización,Wayib Emilio Kahil Delgado,Virtualización de recursos - Planificación validada,José Luis,Javiera Leiva,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,2
-,0f86d62e-c337-4618-a240-409ac87e1e67,Ingeniería y Negocios,Pregrado,Estadística para Ingeniería,Gino Chávez Pinto,Virtualización de recursos - Planificación validada,José Luis,Brenda Bastías,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,3
-,2fa7d5d6-fa63-4802-944a-fa366797da4b,Ingeniería y Negocios,Pregrado,Administración para alta dirección,Yohanna Abarzúa Calfuquir,Virtualización de recursos - Planificación validada,José Luis,Erick Contreras,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,4
-,8aa9907d-102f-4e82-90a8-c7649de28ee3,Ingeniería y Negocios,Pregrado,Machine Learning,Danilo Alberto Gomez Correa,Diseño,José Luis,Brenda Bastías,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,5
-,bcf4a2dc-6473-43b5-aa47-8debac7ab895,Ingeniería y Negocios,Pregrado,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Danilo Alberto Gomez Correa,Virtualización de recursos - Planificación validada,José Luis,Brenda Bastías,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,6
-,963e9e15-309c-4ad8-bfa4-147effb2d547,Ingeniería y Negocios,Pregrado,Formulación y gestión de proyectos,Edgardo Palma Waldron,Virtualización de recursos - Planificación validada,José Luis,Noemí Urrutia,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,7
-,66458a8c-e703-4dd7-a3ee-bb2e7cdcc735,Ingeniería y Negocios,Pregrado,"Ética, ciudadanía y sociedad",Francisco Javier Labbé de Stefano,Virtualización de recursos - Planificación validada,José Luis,Catalina Salazar,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,8
-,ec153817-d2e5-4168-b9d4-fe978330250d,Ingeniería y Negocios,Pregrado,Operación Remota y Robótica en Minería,Miguel Solis,Virtualización de recursos - Planificación validada,José Luis,Erick Contreras,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,9
-,c397ed97-617a-4b97-9c54-1173d0f9d131,Ingeniería y Negocios,Pregrado,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Cristóbal de la Guarda,Diseño,José Luis,Noemí Urrutia,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,10
-,c6bcdac9-83c1-4eb4-bc0d-b881e678eed6,Ingeniería y Negocios,Pregrado,Econometría,Germán Rojas,Ajuste pasar presencial a sincrónico,José Luis,Brenda Bastías,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,11
-,258586b4-af7d-4bd1-baee-4f454b78f558,Ingeniería y Negocios,Pregrado,Inglés Avanzado II,Claudia Jeria,Ajuste pasar presencial a sincrónico,Noelia,Natalia Gallardo,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,12
-,35f49d25-aa7d-4c37-9b20-16e5144892c8,Ingeniería y Negocios,Pregrado,Macroeconomía,Felipe Rifo,Diseño,José Luis,Catalina Salazar,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,13
-,641ff9c5-ed19-4997-b93f-7c3a48d068de,Ingeniería y Negocios,Pregrado,Electivo: Gestión de Marketing Digital,Renato Bustamante,Diseño,Noelia,Bárbara González,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,14
-,e3bbb5b4-412e-4967-90ff-d7f64e7d9fbf,Ingeniería y Negocios,Pregrado,Estrategia Competitiva,Camilo Araya,Ajuste de Diseño,José Luis,Erick Contreras,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,15
-,6fed21f5-6361-4f32-aaf0-3d93d3426938,Salud,Pregrado,Componentes Contaminantes y Tóxicos en Alimentos,Sin docente,Diseño,Noelia,Deborah Ramírez,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,16
-,b9af2c4e-7773-4094-abf2-c4ce0d813b7a,Salud,Pregrado,Mercado I+D+i -2,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,17
-,f450be3c-1951-47c3-a409-680b4e2181c9,Salud,Pregrado,Herramientas y atributos de gestión II,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,18
-,dc3085c6-3da4-4233-9315-e1a1e901e23c,Salud,Pregrado,Gestión de Proyectos y Administración,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,19
-,64cb544a-f007-4fb7-800d-0b082feffe4b,Salud,Pregrado,Terapia Visual,Sin docente,Diseño,Noelia,Fernanda Reyes,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,20
-,c648d059-1226-4cf0-956f-0702331b2242,Salud,Pregrado,Análisis neuromuscular del movimiento humano,Jair Alberto Jiménez Gajardo,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,21
-,fb5f3af5-fbe5-49a3-992e-8613eb47f165,Salud,Pregrado,Emprendimiento en Salud II,Tamara Sofía Miranda González,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,22
-,a000c020-10af-461c-b97d-d494a1619594,Salud,Pregrado,Fundamentos del Envejecimiento y Atención Integral,Sin docente,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,23
-,992d6ef6-3171-4514-9429-502cdecaca69,Salud,Pregrado,Valoración Integral de la Persona Mayor,Sin docente,Diseño,Noelia,Deborah Ramírez,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,24
-,22faf215-c229-49c8-97da-d86363be3c23,Salud,Pregrado,Liderazgo y coaching para el cambio organizacional,Marcela Liliana Briones Novillo,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,25
-,4534667b-013a-4b59-ac61-2eda03d3b5eb,Recursos Naturales y Medicina Veterinaria,Pregrado,Viticultura y Enología,Sin docente,Diseño,Noelia,Carolina Henríquez,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,26
-,f6f6dbf9-89e2-4c6b-886e-777597b04d33,Recursos Naturales y Medicina Veterinaria,Pregrado,"Antrozoología, Bienestar y Sociedad",Carmen Luz Barrios,Diseño,Noelia,Natalia Gallardo,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,27
-,d8004343-0a43-4827-bda6-e6cc7444294f,Recursos Naturales y Medicina Veterinaria,Pregrado,Tecnologías de Producción Acuícola,Ivonne Lee,Diseño,Noelia,Carolina Henríquez,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,28
-,c0c2205d-4c57-4f18-9961-18afec1353d2,Recursos Naturales y Medicina Veterinaria,Pregrado,Manejo de Rumiantes en Pastoreo,Marcela Gómez,Diseño,Noelia,Fernanda Reyes,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,29
-,06dbaff9-320f-4a0e-a86c-0073bbf40ccc,Recursos Naturales y Medicina Veterinaria,Pregrado,Manejo y Conservación en Fauna Silvestre,Frederic Toro,Diseño,Noelia,Fernanda Reyes,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,30
-,86aa4f7e-6bc5-4545-8e17-6c28744bb665,Educación,Postgrado,Modelo teórico y trabajo interdisciplinario y transdisciplinario,Sandra María Rodríguez,Diseño (40%),José Luis,Brenda Bastías,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,31
-,fcd1745b-2928-43e0-9f59-e7f46688caa8,Salud,Postgrado,Evaluación integral del comportamiento alimentario y nutrición,Sin docente,Diseño,Noelia,Bárbara González,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,32
-,f99b6c06-006b-40fe-ab23-9c7ccfb06d19,Salud,Postgrado,Diseño de proyectos de intervención,Sin docente,Diseño,José Luis,Catalina Salazar,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,33
-,05b46863-d886-435a-abde-1d3013452ebd,Salud,Postgrado,Planificación educativa,Sin docente,Diseño,José Luis,Bárbara Soler,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,34
-,f4ee76b1-dccf-4781-9aef-74ee576fe00b,Salud,Postgrado,Taller integrado interdisciplinario II,Sin docente,Diseño,José Luis,Javiera Leiva,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,35
-,fae23ea5-291c-4017-bcf4-035060c623e0,Educación,Postgrado,Desarrollo en Atención Temprana,Sin docente,Diseño (40%),José Luis,Brenda Bastías,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,36
-,179be8ca-e1be-4b42-9ba9-ee2b7cda3546,Educación,Postgrado,Familia en la atención temprana e intervención en contextos diversos,Sin docente,Diseño (40%),José Luis,Brenda Bastías,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,37
-,7543c9c9-4888-4ec2-aff5-54a5cf982962,Educación,Postgrado,Evaluación interdisciplinaria en atención infantil temprana,Sin docente,Diseño (40%),José Luis,Brenda Bastías,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,38
-,b989631f-a7ca-4553-8ab9-45e5c739c990,Salud,Postgrado,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Nelson Hun,Adecuación de semanas PG a Pre,José Luis,Rafael Siverio,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,39
-,2f8246e8-6c1d-4ab6-90a9-10b449fc790b,Salud,Pregrado,Emprendimiento en Salud I,Patricio Andrés Sepúlveda Céspedes,,José Luis,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,40
-,f99ee97b-b556-4d3c-97b5-33daa31cbb39,Recursos Naturales y Medicina Veterinaria,Postgrado,Antrozoología,Sin docente,Adecuación de semanas PG a Pre,José Luis,Catalina Salazar,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,41
-,bd51dbb0-e6ff-4cfb-bfd1-fe109d43c0e6,Ingeniería y Negocios,Pregrado,Ingeniería en Termofluído,Jorge Rojo Camcho,,José Luis,Catalina Salazar,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,42
-,597311b5-1e39-4d1f-8aca-5a2f067f7519,Ingeniería y Negocios,Pregrado,Gestión de Capital humano,Isabel Flores Cáceres,,Noelia,Noelia Jara,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,43
-,7445e6d5-fae1-4076-b3ce-3d43a7f11a1b,Ingeniería y Negocios,Pregrado,Ingeniería para el medioambiente,Marcelo Hernandez,,José Luis,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,44
-,7fce1d25-f08d-466f-a7f9-eeb9c53d2346,Ingeniería y Negocios,Pregrado,Marketing Estratégico,Renato Bustamante,,Noelia,Bárbara González,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,45
-,12745923-7d72-4841-a5a4-7b7f70d0c46a,Ingeniería y Negocios,Pregrado,Introducción al Análisis de Datos,Rodrigo Ramírez,,José Luis,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,46
-,865e1fc4-8a17-4650-bff2-2285dd6a1449,Ingeniería y Negocios,Pregrado,Economía para las Organizaciones,Sergio Álvarez,,Noelia,Carla Riquelme,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,47
-,56a7f462-d9fd-4a7e-b21e-0045090c29e5,Educación,Pregrado,Enfoques Contemporaneos,Luis Donoso Estay,,José Luis,Bárbara Soler,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,48
-,53cd9d62-d019-4873-a5e5-d92ccc962b4b,Educación,Pregrado,Epistemologia y Trabajo Social,Daniel Valenzuela Galarce,,Noelia,Carla Riquelme,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,49
-,3e77d8cf-b4f8-41f8-9e05-470ddd3e5e52,Educación,Pregrado,Metodología de la Investigación,Daniel Valenzuela Galarce,,Noelia,Carla Riquelme,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,50
-,457b58c9-7d92-4351-9ff5-c6fffbab5302,Formación General,Pregrado,Finanzas 360: estrategias para tu economía personal,Sin docente,Diseño,Noelia,Noemí Urrutia,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,51
-,5e2c8de8-c435-4a71-8f32-b703f70b11d5,,Postgrado,Fundamentos de Ecología,Sin docente,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,52
-,e012054e-f196-4f48-b157-9cc84a21ee48,,Postgrado,Conservación Biológica en un Contexto Cambio Global,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,53
-,e9770c73-49d9-4f85-b179-920817d4f5b5,,Postgrado,Estrategias para la Conservación y Restauración de la Biodiversidad,Sin docente,Diseño,Noelia,Natalia Gallardo,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,54
-,c7557976-2f74-4887-9e5c-996f0ca54532,,Postgrado,Sistemas de Información Geográfica para la Conservación Biológica Aplicada,Sin docente,Diseño,José Luis,Catalina Salazar,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,55
-,f015ae37-8451-4dfc-ae0a-dbd9e6619721,Ingeniería y Negocios,Postgrado,Estrategias organizacionales para la creación de valor,Sin docente,Diseño,José Luis,Erick Contreras,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,56
-,bca49346-55a9-4bbb-bf42-dbea91d7baf7,Ingeniería y Negocios,Postgrado,Analítica de negocios para la gestión directiva,Sin docente,Diseño,Noelia,Carolina Henríquez,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,57
-,acbe789f-9beb-4c66-a0fc-8b94dc5e418a,Ingeniería y Negocios,Postgrado,Innovación Empresarial,Sin docente,Diseño,Noelia,Bárbara Soler,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,58
-,7c4e5f65-98b2-4381-b9ea-9a4ace54c1c4,Ingeniería y Negocios,Postgrado,Metodologías agiles para la gestión de proyectos,Sin docente,Diseño,Noelia,Alejandra Cisterna,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,59
-,04a255fe-4252-4233-85d4-7a9e350b71bf,Ingeniería y Negocios,Postgrado,Liderazgo para la transformación organizacional,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,60
-,d0f99e9a-7cb7-4e50-9649-d8b01700a80a,Ingeniería y Negocios,Postgrado,Dirección de Organizaciones y Equipos,Sin docente,Diseño,José Luis,Yazim Meza,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,61
-,ee619240-464c-4e8d-ba3f-fcc738f46cbf,Ingeniería y Negocios,Postgrado,Economía para la Dirección,Sin docente,Diseño,José Luis,Yazim Meza,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,62
-,d4253eed-8e4e-49c9-9fd8-34c9a1b093db,Ingeniería y Negocios,Postgrado,Análisis de Datos para la Gestión,Sin docente,Diseño,José Luis,Rafael Siverio,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,63
-,6a0e5ac7-d0bf-4293-b03e-2e6f3d7ad94b,Ingeniería y Negocios,Postgrado,Dirección de Marketing,Sin docente,Diseño,Noelia,Bárbara Soler,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,64
-,8b786508-b171-49d4-be9a-818bb576e8ac,Ingeniería y Negocios,Postgrado,Innovación y Emprendimiento,Sin docente,Diseño,José Luis,Brenda Bastías,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,65
-,845e9665-6948-4a2d-a278-8446ee9d1de7,Educación,Postgrado,Fundamentos de Intervención Familiar Contemporánea,Sin docente,Diseño,José Luis,Rafael Siverio,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,66
-,0249627a-47c3-4c6e-9dc2-168d75a98b39,Educación,Postgrado,"Transformaciones Sociales, Desigualdades y Políticas Sociales",Sin docente,Diseño,José Luis,Rafael Siverio,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,67
-,80f7d604-7b34-43a3-9c50-3d6d55cb1d28,Educación,Postgrado,Metodologías de Intervención Participativa con Familias y Comunidades,Sin docente,Diseño,Noelia,Alejandra Cisterna,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,68
-,311cc7f2-b790-41e0-9308-78367004f65e,Educación,Postgrado,Gestión y Diseño de Programas Sociales,Sin docente,Diseño,Noelia,Alejandra Cisterna,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,69
+,65a0155f-938c-4050-b5b7-355f9283d029,Ingeniería y Negocios,Pregrado,Nivelación Ciencias Básicas,Edgardo Palma Waldron,Diseño,José Luis,Noemí Urrutia,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,1
+,de66febb-4814-4746-9f5b-400f0d7178c1,Ingeniería y Negocios,Pregrado,Modelos de optimización,Wayib Emilio Kahil Delgado,Virtualización de recursos - Planificación validada,José Luis,Javiera Leiva,,,,,,,,,,,,,,,,,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,2
+,0af307f8-650a-4d78-9953-4f060b4bb818,Ingeniería y Negocios,Pregrado,Estadística para Ingeniería,Gino Chávez Pinto,Virtualización de recursos - Planificación validada,José Luis,Brenda Bastías,,,,,,,,,,,,,,,,,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,3
+,685656c8-8523-4156-a5b1-ebb3df1f0cd3,Ingeniería y Negocios,Pregrado,Administración para alta dirección,Yohanna Abarzúa Calfuquir,Virtualización de recursos - Planificación validada,José Luis,Erick Contreras,,,,,,,,,,,,,,,,,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,4
+,fadf730f-1959-4787-b046-cde03c5a672f,Ingeniería y Negocios,Pregrado,Machine Learning,Danilo Alberto Gomez Correa,Diseño,José Luis,Brenda Bastías,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,5
+,b5afc34b-96e0-4e14-932e-c7b0dd36ef9d,Ingeniería y Negocios,Pregrado,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Danilo Alberto Gomez Correa,Virtualización de recursos - Planificación validada,José Luis,Brenda Bastías,,,,,,,,,,,,,,,,,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,6
+,211dacdf-bb54-442a-8220-b92e143d584d,Ingeniería y Negocios,Pregrado,Formulación y gestión de proyectos,Edgardo Palma Waldron,Virtualización de recursos - Planificación validada,José Luis,Noemí Urrutia,,,,,,,,,,,,,,,,,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,7
+,d9edef7a-5f14-43e0-9347-dd05b93795fb,Ingeniería y Negocios,Pregrado,"Ética, ciudadanía y sociedad",Francisco Javier Labbé de Stefano,Virtualización de recursos - Planificación validada,José Luis,Catalina Salazar,,,,,,,,,,,,,,,,,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,8
+,2f110d79-7db1-4701-a4d6-91b410f26260,Ingeniería y Negocios,Pregrado,Operación Remota y Robótica en Minería,Miguel Solis,Virtualización de recursos - Planificación validada,José Luis,Erick Contreras,,,,,,,,,,,,,,,,,,,,No inicia,,,,,,,,,,,0,🟡 Pendiente,,,,,,,9
+,8267932b-f571-4020-adfe-4a722b7720bd,Ingeniería y Negocios,Pregrado,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Cristóbal de la Guarda,Diseño,José Luis,Noemí Urrutia,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,10
+,604fd94c-d507-4f4b-b129-28e37094cfb2,Ingeniería y Negocios,Pregrado,Econometría,Germán Rojas,Ajuste pasar presencial a sincrónico,José Luis,Brenda Bastías,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,11
+,c1eb9d81-a98f-4b1a-9427-0774e3f847ca,Ingeniería y Negocios,Pregrado,Inglés Avanzado II,Claudia Jeria,Ajuste pasar presencial a sincrónico,Noelia,Natalia Gallardo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,12
+,2ba886c5-da57-475b-acdc-e4a3b96fe417,Ingeniería y Negocios,Pregrado,Macroeconomía,Felipe Rifo,Diseño,José Luis,Catalina Salazar,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,13
+,4ee2f036-514a-4b5a-a31f-1a56f7da5afd,Ingeniería y Negocios,Pregrado,Electivo: Gestión de Marketing Digital,Renato Bustamante,Diseño,Noelia,Bárbara González,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,14
+,4a94da17-e27f-42c7-9cc4-96cb3b8fbf38,Ingeniería y Negocios,Pregrado,Estrategia Competitiva,Camilo Araya,Ajuste de Diseño,José Luis,Erick Contreras,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,15
+,ceb6c7d5-6761-4c93-8b19-814b8cd7690c,Salud,Pregrado,Componentes Contaminantes y Tóxicos en Alimentos,Sin docente,Diseño,Noelia,Deborah Ramírez,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,16
+,0232b1d3-69de-4a11-bc37-b5968f157901,Salud,Pregrado,Mercado I+D+i -2,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,17
+,f0e80167-6d60-465d-ab52-fe6ce6c9cf4c,Salud,Pregrado,Herramientas y atributos de gestión II,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,18
+,0da2132a-1b43-4f67-85f2-7aa4691cc702,Salud,Pregrado,Gestión de Proyectos y Administración,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,19
+,5ecad495-838f-42b0-a1de-81b8da369cfa,Salud,Pregrado,Terapia Visual,Sin docente,Diseño,Noelia,Fernanda Reyes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,20
+,62987f82-f98b-471a-adc5-e9a97e8ac42e,Salud,Pregrado,Análisis neuromuscular del movimiento humano,Jair Alberto Jiménez Gajardo,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,21
+,ca9715ed-3ae2-4d59-a9a5-ea27bdd21e4d,Salud,Pregrado,Emprendimiento en Salud II,Tamara Sofía Miranda González,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,22
+,f9915ae0-772c-4683-8a93-649d2b148cc9,Salud,Pregrado,Fundamentos del Envejecimiento y Atención Integral,Sin docente,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,23
+,56823ba0-7a05-4b20-8e9f-2ae3e5255f5d,Salud,Pregrado,Valoración Integral de la Persona Mayor,Sin docente,Diseño,Noelia,Deborah Ramírez,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,24
+,f6c14d2b-d52e-4423-8327-7d18474a284b,Salud,Pregrado,Liderazgo y coaching para el cambio organizacional,Marcela Liliana Briones Novillo,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,25
+,9f418389-9f9b-40c4-8c73-73f81418988d,Recursos Naturales y Medicina Veterinaria,Pregrado,Viticultura y Enología,Sin docente,Diseño,Noelia,Carolina Henríquez,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,26
+,13504295-5c3c-4b8b-b739-bf85e505ae81,Recursos Naturales y Medicina Veterinaria,Pregrado,"Antrozoología, Bienestar y Sociedad",Carmen Luz Barrios,Diseño,Noelia,Natalia Gallardo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,27
+,ea62fdb8-cd4f-438e-a3b4-b0644fc5536d,Recursos Naturales y Medicina Veterinaria,Pregrado,Tecnologías de Producción Acuícola,Ivonne Lee,Diseño,Noelia,Carolina Henríquez,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,28
+,5ec3df17-f4d1-4eb2-8b5d-9b59dc4d5112,Recursos Naturales y Medicina Veterinaria,Pregrado,Manejo de Rumiantes en Pastoreo,Marcela Gómez,Diseño,Noelia,Fernanda Reyes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,29
+,d800ac52-53e7-4168-b019-565e7c9e0fbd,Recursos Naturales y Medicina Veterinaria,Pregrado,Manejo y Conservación en Fauna Silvestre,Frederic Toro,Diseño,Noelia,Fernanda Reyes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,30
+,566f4c5a-59b2-452c-80a1-aec67d58b077,Educación,Postgrado,Modelo teórico y trabajo interdisciplinario y transdisciplinario,Sandra María Rodríguez,Diseño (40%),José Luis,Brenda Bastías,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,31
+,50f7831e-289c-45a2-96b4-4bd463575246,Salud,Postgrado,Evaluación integral del comportamiento alimentario y nutrición,Sin docente,Diseño,Noelia,Bárbara González,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,32
+,84d040de-f81b-41e0-9e5f-ade5c505e9b7,Salud,Postgrado,Diseño de proyectos de intervención,Sin docente,Diseño,José Luis,Catalina Salazar,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,33
+,109c5087-1524-4e3d-9cb7-ffe54635eb12,Salud,Postgrado,Planificación educativa,Sin docente,Diseño,José Luis,Bárbara Soler,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,34
+,c6e012ec-fe37-4d44-a70e-8bf104b56a10,Salud,Postgrado,Taller integrado interdisciplinario II,Sin docente,Diseño,José Luis,Javiera Leiva,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,35
+,a35ff34a-da1d-45d3-926a-21d936de3ca2,Educación,Postgrado,Desarrollo en Atención Temprana,Sin docente,Diseño (40%),José Luis,Brenda Bastías,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,36
+,b1d69946-a3f7-4fcd-97cb-8f8d51c22653,Educación,Postgrado,Familia en la atención temprana e intervención en contextos diversos,Sin docente,Diseño (40%),José Luis,Brenda Bastías,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,37
+,adb12021-002b-4522-ac79-915716a1e78c,Educación,Postgrado,Evaluación interdisciplinaria en atención infantil temprana,Sin docente,Diseño (40%),José Luis,Brenda Bastías,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,38
+,b5f4d5ba-9780-40e9-b6ca-59151c4e76a0,Salud,Postgrado,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Nelson Hun,Adecuación de semanas PG a Pre,José Luis,Rafael Siverio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,39
+,78b1dda3-7151-47cf-a5fb-36ed798a5524,Salud,Pregrado,Emprendimiento en Salud I,Patricio Andrés Sepúlveda Céspedes,,José Luis,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,40
+,e4054203-793d-478d-9848-fcbd5e61f97e,Recursos Naturales y Medicina Veterinaria,Postgrado,Antrozoología,Sin docente,Adecuación de semanas PG a Pre,José Luis,Catalina Salazar,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,41
+,e22b0040-f3fd-418e-b978-b91105ed3a8f,Ingeniería y Negocios,Pregrado,Ingeniería en Termofluído,Jorge Rojo Camcho,,José Luis,Catalina Salazar,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,42
+,b20361d3-58da-4243-b0f3-640f517fe6c4,Ingeniería y Negocios,Pregrado,Gestión de Capital humano,Isabel Flores Cáceres,,Noelia,Noelia Jara,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,43
+,36825403-7e0c-48c9-ac9e-ad7bc34abf57,Ingeniería y Negocios,Pregrado,Ingeniería para el medioambiente,Marcelo Hernandez,,José Luis,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,44
+,c31db7ab-70af-4e8d-af39-fd46eef6e1c2,Ingeniería y Negocios,Pregrado,Marketing Estratégico,Renato Bustamante,,Noelia,Bárbara González,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,45
+,6b7554bd-1a86-4274-b449-1bf53e5380f7,Ingeniería y Negocios,Pregrado,Introducción al Análisis de Datos,Rodrigo Ramírez,,José Luis,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,46
+,096cceb9-168c-429b-8566-1329e724ad2c,Ingeniería y Negocios,Pregrado,Economía para las Organizaciones,Sergio Álvarez,,Noelia,Carla Riquelme,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,47
+,9d449ea4-bf6d-4b56-81cc-246e967f24a4,Educación,Pregrado,Enfoques Contemporaneos,Luis Donoso Estay,,José Luis,Bárbara Soler,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,48
+,cf32dc0d-08e6-45e9-af4a-bec71a671a68,Educación,Pregrado,Epistemologia y Trabajo Social,Daniel Valenzuela Galarce,,Noelia,Carla Riquelme,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,49
+,691fcacc-1263-40df-801b-b358175d73a4,Educación,Pregrado,Metodología de la Investigación,Daniel Valenzuela Galarce,,Noelia,Carla Riquelme,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,50
+,4d7c2134-cf9a-4636-9022-092b4b006d3b,Formación General,Pregrado,Finanzas 360: estrategias para tu economía personal,Sin docente,Diseño,Noelia,Noemí Urrutia,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,51
+,93ef16f5-7bcb-40b3-9757-b74ba301cc66,,Postgrado,Fundamentos de Ecología,Sin docente,Diseño,Noelia,Noelia Jara,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,52
+,a5ac1fa3-f6c2-468c-a3f0-a8ffca51be59,,Postgrado,Conservación Biológica en un Contexto Cambio Global,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,53
+,4f23c408-14ba-42ca-8728-8ceac4d06b1b,,Postgrado,Estrategias para la Conservación y Restauración de la Biodiversidad,Sin docente,Diseño,Noelia,Natalia Gallardo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,54
+,49956d53-2baa-4ce7-9e46-3223aa09a089,,Postgrado,Sistemas de Información Geográfica para la Conservación Biológica Aplicada,Sin docente,Diseño,José Luis,Catalina Salazar,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,55
+,94271362-dda8-4ee4-88c9-3cb488e1d262,Ingeniería y Negocios,Postgrado,Estrategias organizacionales para la creación de valor,Sin docente,Diseño,José Luis,Erick Contreras,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,56
+,5ceac1dd-95e6-4e83-a64e-0b0f79352d0f,Ingeniería y Negocios,Postgrado,Analítica de negocios para la gestión directiva,Sin docente,Diseño,Noelia,Carolina Henríquez,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,57
+,9aa00476-3f0b-4f23-a97d-fb0de3534707,Ingeniería y Negocios,Postgrado,Innovación Empresarial,Sin docente,Diseño,Noelia,Bárbara Soler,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,58
+,632ec06c-f65e-4a58-9306-0b1e6f2356fa,Ingeniería y Negocios,Postgrado,Metodologías agiles para la gestión de proyectos,Sin docente,Diseño,Noelia,Alejandra Cisterna,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,59
+,c36c62e4-e8be-4b21-97df-dd428e48a18e,Ingeniería y Negocios,Postgrado,Liderazgo para la transformación organizacional,Sin docente,Diseño,Noelia,Natalie Baeza,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,60
+,ea29feee-f8ec-48a4-8afc-eb8daf43b955,Ingeniería y Negocios,Postgrado,Dirección de Organizaciones y Equipos,Sin docente,Diseño,José Luis,Yazim Meza,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,61
+,ff0c35a1-ce6d-4336-9242-9b6c04534d43,Ingeniería y Negocios,Postgrado,Economía para la Dirección,Sin docente,Diseño,José Luis,Yazim Meza,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,62
+,88efa4ab-1c9c-47a5-a4d0-a4bb8dc3c4df,Ingeniería y Negocios,Postgrado,Análisis de Datos para la Gestión,Sin docente,Diseño,José Luis,Rafael Siverio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,63
+,0930cbac-ffac-4a56-9f39-573e6e2e064f,Ingeniería y Negocios,Postgrado,Dirección de Marketing,Sin docente,Diseño,Noelia,Bárbara Soler,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,64
+,c3fb0518-61bf-4a29-a862-97bf2d8c9a3b,Ingeniería y Negocios,Postgrado,Innovación y Emprendimiento,Sin docente,Diseño,José Luis,Brenda Bastías,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,65
+,43577f19-c84a-41e4-be16-426ed7a7e804,Educación,Postgrado,Fundamentos de Intervención Familiar Contemporánea,Sin docente,Diseño,José Luis,Rafael Siverio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,66
+,cacbe6f0-8503-467a-81e9-d8cbe401c2b0,Educación,Postgrado,"Transformaciones Sociales, Desigualdades y Políticas Sociales",Sin docente,Diseño,José Luis,Rafael Siverio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,67
+,cfbfa097-4c76-46bf-9cf8-e7d0c31589c4,Educación,Postgrado,Metodologías de Intervención Participativa con Familias y Comunidades,Sin docente,Diseño,Noelia,Alejandra Cisterna,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,68
+,cdb48d69-27c7-49a6-82b3-d037c333924b,Educación,Postgrado,Gestión y Diseño de Programas Sociales,Sin docente,Diseño,Noelia,Alejandra Cisterna,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,🟡 Pendiente,,,,,,,69
