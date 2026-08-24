@@ -2452,29 +2452,29 @@ function normHitoKey(h){ return (h||'').toLowerCase().replace(/[^a-z0-9]/g,''); 
 // Si un DI tiene asignaturas repartidas en más de un archivo (dos JP distintos), sus cursos
 // igual quedan todos en esta misma lista combinada — el orden de aparición en el CSV agrupado
 // ya resuelve cuál bloque de "Asignatura N" corresponde a cuál tramo de la lista.
-// Reconstruido 2026-08-20 desde el orden vigente en Reuniones_Proyecto (seguimiento-2026-2.csv)
-// tras la reasignación de asignaturas entre DI. Bárbara Soler y Deborah Ramírez ya no
-// figuran como DI en el archivo maestro (sus cursos se redistribuyeron o quedaron sin DI).
-const DI_ASIGNATURA_ORDER = {
-  "Noemí Urrutia": ["Nivelación Ciencias Básicas","Formulación y gestión de proyectos","Electivo de Formación Profesional II: Análisis de Voladuras en Minería"],
-  "Javiera Leiva": ["Diseño de proyectos de intervención","Planificación educativa"],
-  "Brenda Bastías": ["Modelo teórico y trabajo interdisciplinario y transdisciplinario","Taller integrado interdisciplinario II","Desarrollo en Atención Temprana","Familia en la atención temprana e intervención en contextos diversos","Evaluación interdisciplinaria en atención infantil temprana"],
-  "Erick Contreras": ["Administración para alta dirección","Machine Learning","Estrategias organizacionales para la creación de valor"],
-  "Catalina Salazar": ["Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas","Ética, ciudadanía y sociedad","Econometría","Macroeconomía","Fundamentos de Intervención Familiar Contemporánea"],
-  "Natalia Gallardo": ["Inglés Avanzado II","Herramientas y atributos de gestión II","Terapia Visual"],
-  "Bárbara González": ["Electivo: Gestión de Marketing Digital","Componentes Contaminantes y Tóxicos en Alimentos","Manejo y Conservación en Fauna Silvestre"],
-  "Natalie Baeza": ["Operación Remota y Robótica en Minería","Mercado I+D+i -2","Gestión de Proyectos y Administración","Evaluación integral del comportamiento alimentario y nutrición","Conservación Biológica en un Contexto Cambio Global"],
-  "Fernanda Reyes": ["Valoración Integral de la Persona Mayor","Tecnologías de Producción Acuícola","Manejo de Rumiantes en Pastoreo"],
-  "Noelia Jara": ["Análisis neuromuscular del movimiento humano","Emprendimiento en Salud II","Fundamentos del Envejecimiento y Atención Integral","Liderazgo y coaching para el cambio organizacional","Finanzas 360: estrategias para tu economía personal"],
-  "Carolina Henríquez": ["Viticultura y Enología","Antrozoología, Bienestar y Sociedad","Analítica de negocios para la gestión directiva"],
-  "Rafael Siverio": ["Comportamiento Alimentario y Nutrición en Grupos y comunidades","Antrozoología","Transformaciones Sociales, Desigualdades y Políticas Sociales"],
-  "Carla Riquelme": ["Estrategia Competitiva","Emprendimiento en Salud I"],
-  "Alejandra Cisterna": ["Fundamentos de Ecología","Innovación y Emprendimiento"],
-  "Yazim Meza": ["Dirección de Organizaciones y Equipos","Economía para la Dirección"],
-  "Daniela Cañeta": ["Modelos de optimización","Estadística para Ingeniería"],
-};
+// Reuniones_Proyecto es un documento vivo (el JP/Directora reasigna asignaturas entre DI
+// seguido) — mantener esta lista a mano se desactualiza constantemente. En vez de eso, se
+// reconstruye automáticamente en cada carga a partir de DATA_ALL (que ya viene del mismo
+// seguimiento-2026-2.csv), en el orden en que las filas aparecen para cada DI.
+// Normaliza un nombre de DI (sin tildes/mayúsculas) para que pequeñas diferencias de
+// ortografía entre el archivo maestro y el nombre del archivo individual (ej. "Cañete" vs
+// "Cañeta") igual hagan match.
+function normDiName(s){
+  return (s||'').toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();
+}
+function buildDiAsignaturaOrder(){
+  const out = {};
+  (DATA_ALL||[]).forEach(d=>{
+    if(!d.di || !d.asignatura) return;
+    const key = normDiName(d.di);
+    if(!out[key]) out[key] = [];
+    out[key].push(d.asignatura);
+  });
+  return out;
+}
 async function loadRecursosData(){
   try{
+    const DI_ASIGNATURA_ORDER = buildDiAsignaturaOrder();
     const resp = await fetch(RECURSOS_URL + '?nocache=' + Date.now());
     if(!resp.ok) return;
     const rows = parseCSV(await resp.text()).slice(1);
@@ -2496,7 +2496,7 @@ async function loadRecursosData(){
       }
       diPrevPos[di] = posNum;
       const combinedIdx = (diOffset[di]||0) + posNum; // 1-based
-      const lista = DI_ASIGNATURA_ORDER[di];
+      const lista = DI_ASIGNATURA_ORDER[normDiName(di)];
       const asig = lista && lista[combinedIdx-1];
       if(!asig) return; // slot vacío/sin curso real asignado — se omite
       const key = normHitoKey(r[3]);
@@ -2701,12 +2701,14 @@ async function loadSheetData(silent=false){
   if(!silent) setSyncLabel('Actualizando...');
   try{
     const csvRows = await loadSheetCSV();
-    loadRecursosData(); // no bloqueante — mejora el panel de hitos cuando hay datos, si no, sigue igual
-    loadMoodleUrlsLive(); // no bloqueante — URLs de aula cargadas a mano en data/moodle-urls.csv
     const built = buildDataFromCSV(csvRows);
     DATA = applyOverrides(applyDgAssign(built.data)); AVANCE = built.avance;
     ESTANDAR_DATA = built.estandar || {};
     DATA_ALL = [...DATA]; AVANCE_ALL = {...AVANCE};
+    // DI_ASIGNATURA_ORDER (usado por loadRecursosData) se arma desde DATA_ALL, así que debe
+    // llamarse recién ahora que DATA_ALL ya está listo.
+    loadRecursosData(); // no bloqueante — mejora el panel de hitos cuando hay datos, si no, sigue igual
+    loadMoodleUrlsLive(); // no bloqueante — URLs de aula cargadas a mano en data/moodle-urls.csv
     window._ust_cache = {DATA:[...DATA], AVANCE:{...AVANCE}, ts:Date.now()};
     const now=new Date();
     setSyncLabel(`Actualizado ${now.toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit'})} · ${now.toLocaleDateString('es-CL',{day:'2-digit',month:'2-digit',year:'numeric'})}`);
