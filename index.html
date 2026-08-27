@@ -76,12 +76,17 @@
     /* ── HEADER — oscuro navy con acento dorado ── */
     header{
       background:var(--grad-header);
-      padding:0 24px;
-      display:flex;align-items:center;gap:14px;
-      height:60px;position:sticky;top:0;z-index:200;
+      padding:6px 24px;
+      display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap;
+      min-height:60px;position:sticky;top:0;z-index:200;
       border-bottom:3px solid var(--gold);
       box-shadow:0 2px 12px rgba(0,0,0,.25);
     }
+    /* Los bloques de texto de la cabecera no deben partirse ni desbordar su alto */
+    header > div:first-child, .logo-text, .logo-sub,
+    #next-deadline, #sync-status, .header-badge, #global-sem{ white-space:nowrap }
+    header > div:last-child{ flex-shrink:0 }
+    #header-clock{ font-size:22px !important }
     header::before{
       content:'';position:absolute;inset:0;
       background:linear-gradient(90deg,rgba(200,160,32,.06) 0%,transparent 50%);
@@ -5366,12 +5371,18 @@ openPanel = function(idx){
   if(DATA[idx]) renderHistorial(DATA[idx].asignatura);
 };
 
-document.getElementById('mail-open-btn').addEventListener('click',()=>{
-  const to      = encodeURIComponent(document.getElementById('mail-to').value);
-  const cc      = encodeURIComponent(document.getElementById('mail-cc').value);
-  const subject = encodeURIComponent(document.getElementById('mail-subject').value);
-  const body    = encodeURIComponent(document.getElementById('mail-body').value);
-  window.location.href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
+// El botón #mail-open-btn se define más abajo en el HTML: enganchar tras DOMContentLoaded
+// y con guardia, para no cortar la ejecución del resto de este script.
+document.addEventListener('DOMContentLoaded',()=>{
+  const mailOpenBtn = document.getElementById('mail-open-btn');
+  if(!mailOpenBtn) return;
+  mailOpenBtn.addEventListener('click',()=>{
+    const to      = encodeURIComponent(document.getElementById('mail-to').value);
+    const cc      = encodeURIComponent(document.getElementById('mail-cc').value);
+    const subject = encodeURIComponent(document.getElementById('mail-subject').value);
+    const body    = encodeURIComponent(document.getElementById('mail-body').value);
+    window.location.href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
+  });
 });
 
 // ── MODAL DETALLE DE HITO ────────────────────────────────────────────────────
