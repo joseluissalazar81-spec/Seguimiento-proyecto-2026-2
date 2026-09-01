@@ -3036,6 +3036,17 @@ function planifLabel(p, d){
   return p;
 }
 
+// Texto de estado a mostrar en las tablas. El CSV trae la columna "Estado global"
+// aparte de "Planificación didáctica" y a veces queda desactualizada respecto de
+// esta última (ej.: se hizo la reunión y se envió la planificación, pero "Estado
+// global" sigue en "Planif. no enviada"). Si la planificación ya llegó a DEL
+// (paso >= 2), ese estado real manda sobre el "Estado global" del CSV.
+function planifDisplay(d){
+  if(isAtrasada(d)) return '⚠ Atrasada';
+  if(planifStepIndex(d.planif||'') >= 2) return planifLabel(d.planif, d);
+  return d.estadoGlobal || planifLabel(d.planif, d) || 'No inicia';
+}
+
 // REUNION_T: T1-T4 reales por asignatura, cargados desde las hojas de reuniones
 // Clave principal: asig_norm  (minúsculas, sin espacios extra)
 // Clave compuesta: asig_norm + '||' + docente_norm  (para asignaturas duplicadas)
@@ -3225,7 +3236,7 @@ function renderTable(){
       <td><span class="chip chip-fac">${d.facultad}</span></td>
       <td class="asig-col">${isUrg||isVenc?'<span class="urg-dot" style="background:var(--ro)"></span>':''} ${d.asignatura}${isVenc&&!isUrg?' <span style="font-size:9px;color:var(--ro);font-weight:700;vertical-align:middle">VENCIDO</span>':''}${(getOverrides()[d.asignatura]||{}).bloqueante?'<span class="row-bloq-dot" title="Bloqueada: '+((getOverrides()[d.asignatura]||{}).bloqueante||'').replace(/'/g,"&apos;")+'"></span>':''}${(()=>{const o=(rav.obs||d.obs||'').trim();if(!o)return '';let pill='';if(d.fechaSR){const ds=diasDesde(d.fechaSR);if(ds!==null&&ds>=3){let lv='Equipo';for(let i=ESCAL_NIVELES.length-1;i>=0;i--){if(ds>=ESCAL_NIVELES[i].dias){lv=ESCAL_NIVELES[i].label;break;}}pill=`<div class="row-escal-pill">⚠ ${ds}d — Informar a ${lv}</div>`;}}return `<div class="row-obs" title="${o.replace(/"/g,'&quot;')}">💬 ${o.length>65?o.slice(0,63)+'…':o}</div>${pill}`;})()}</td>
       <td style="color:var(--text-muted)">${d.docente}${d.correo?` <a href="mailto:${d.correo}" title="${d.correo}" onclick="event.stopPropagation()" style="color:var(--az2);vertical-align:middle;display:inline-flex;margin-left:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg></a>`:''}</td>
-      <td><span class="pl-dot"><span class="dot dot-${dotClass(d.planif,d)}"></span>${isAtrasada(d)?'⚠ Atrasada':(d.estadoGlobal||planifLabel(d.planif,d))}</span></td>
+      <td><span class="pl-dot"><span class="dot dot-${dotClass(d.planif,d)}"></span>${planifDisplay(d)}</span></td>
       <td><div class="av-cell"><div class="av-bar-wrap"><div class="av-bar" style="width:${rPct}%;${rPct>=100?'background:linear-gradient(90deg,#d4af37,#f5d060)':''}"></div></div><span class="av-pct ${avColor}">${rPct}%</span>${rPct>=100?'<span class="badge-completa">🏅 ¡Completa!</span>':''}${isEnAula(d.asignatura)?'<span class="badge-aula">🏫 En el aula</span>':''}</div></td>
       <td class="col-hitos">${miniHitosDot(rHitos)}</td>
     </tr>`;
@@ -5170,7 +5181,7 @@ function facTickerRowHtml(d, today, deadline){
       </div>
     </td>
     <td>
-      <span class="ftk-planif ${isAt?'ftk-p-at':ftkPlanifClass(d.planif)}">${isAt?'⚠':''}${isAt?'':ftkPlanifIcon(d.planif)+' '}${isAt?'Atrasada':(d.estadoGlobal||planifLabel(d.planif)||'No inicia')}</span>
+      <span class="ftk-planif ${isAt?'ftk-p-at':ftkPlanifClass(d.planif)}">${isAt?'⚠':''}${isAt?'':ftkPlanifIcon(d.planif)+' '}${isAt?'Atrasada':planifDisplay(d)}</span>
     </td>
     <td>
       <div class="ftk-hitos">${ftkHitosDots(hitos)}</div>
