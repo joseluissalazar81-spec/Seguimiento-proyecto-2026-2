@@ -2785,6 +2785,14 @@ function lightenHex(hex, amt){
   const mix = v => Math.round(v + (255-v)*amt);
   return '#' + [mix(r),mix(g),mix(b)].map(v=>v.toString(16).padStart(2,'0')).join('');
 }
+// Oscurece un color hacia negro, para fondos donde el texto va en blanco
+// (ej. encabezados de tarjeta de facultad) manteniendo el tono de marca.
+function darkenHex(hex, amt){
+  const h = (hex||'#000000').replace('#','');
+  const r = parseInt(h.substring(0,2),16), g = parseInt(h.substring(2,4),16), b = parseInt(h.substring(4,6),16);
+  const mix = v => Math.round(v*(1-amt));
+  return '#' + [mix(r),mix(g),mix(b)].map(v=>v.toString(16).padStart(2,'0')).join('');
+}
 const EDU_HUB_GRAY = '#D6DADF';
 const EDU_HUB_RING_COLOR = '#98D8BC'; // verde institucional UST en versión pastel
 const EDU_HUB_CENTER = '#F2A46B';
@@ -2799,8 +2807,10 @@ function eduHubGoTo(fac){
 function eduHubData(){
   return filters.nivel ? DATA.filter(d=>d.nivel===filters.nivel) : DATA;
 }
-// Color pastel asignado a una facultad, el mismo que su cuadrante en el círculo
+// Color institucional (brandbook) de una facultad; si no está en FAC_COLORS,
+// cae a la paleta genérica por posición.
 function eduHubColorFor(fac){
+  if(FAC_COLORS[fac]) return FAC_COLORS[fac];
   const facs = FAC_ORDER.filter(f=>eduHubData().some(d=>d.facultad===f));
   const idx = facs.indexOf(fac);
   return idx>=0 ? EDU_HUB_COLORS[idx % EDU_HUB_COLORS.length] : EDU_HUB_GRAY;
@@ -2809,6 +2819,7 @@ function eduHubColorFor(fac){
 // (ej. encabezado de la tarjeta de facultad) — misma familia, buen contraste.
 const EDU_HUB_COLORS_DARK = ['#2C5A78','#7A5A1E','#1F6B6B','#3F7A2E','#8A3F2C','#4A3F7A'];
 function eduHubDarkColorFor(fac){
+  if(FAC_COLORS[fac]) return darkenHex(FAC_COLORS[fac], 0.28);
   const facs = FAC_ORDER.filter(f=>eduHubData().some(d=>d.facultad===f));
   const idx = facs.indexOf(fac);
   return idx>=0 ? EDU_HUB_COLORS_DARK[idx % EDU_HUB_COLORS_DARK.length] : null;
@@ -2828,7 +2839,8 @@ function openFacPopup(fac){
     else enT++;
   });
   const n = items.length;
-  const color = eduHubColorFor(fac);
+  // Encabezado del popup: texto oscuro, así que va sobre una versión pastel del color de marca.
+  const color = lightenHex(eduHubColorFor(fac), 0.5);
   const rowsHtml = items.map(d=>facTickerRowHtml(d, today, deadline)).join('');
   const cnt = (num,lbl) => num>0 ? `<div class="fv-popup-count"><span class="num">${num}</span><span class="lbl">${lbl}</span></div>` : '';
 
@@ -3977,7 +3989,7 @@ const FAC_COLORS = {
   'Derecho':                                  '#852746',
   'Salud':                                    '#A4CCBF',
   'Recursos Naturales y Medicina Veterinaria':'#97BB5B',
-  'Formación General':                        '#97BB5B'
+  'Formación General':                        '#4E0B76'
 };
 function initDneModal(){
   const tbody = document.getElementById('dne-tbody');
