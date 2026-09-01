@@ -561,6 +561,7 @@
     .av-bar{height:100%;border-radius:3px;background:var(--grad-green);transition:width .4s cubic-bezier(.4,0,.2,1)}
     .av-pct{font-size:11px;font-weight:700;font-family:'DM Mono',monospace;white-space:nowrap;min-width:28px;text-align:right}
     .av-pct.hi{color:var(--ve)}.av-pct.mid{color:var(--am)}.av-pct.lo{color:var(--text-muted)}
+    .av-nodata{font-size:10.5px;font-style:italic;color:var(--text-light,#9aa2b0);white-space:nowrap}
 
     /* ── URGENCIA ── */
     .urg-dot{display:inline-block;width:7px;height:7px;border-radius:50%;flex-shrink:0;vertical-align:middle;margin-right:3px;animation:pulse 1.6s infinite}
@@ -3006,8 +3007,11 @@ function filtered(){
     return true;
   }).sort((a,b)=>{
     if(sortCol==='avance'){
-      const an=(AVANCE[a.asignatura]&&AVANCE[a.asignatura].avance)||0;
-      const bn=(AVANCE[b.asignatura]&&AVANCE[b.asignatura].avance)||0;
+      // % solo desde recursos-2026-2.csv; "sin datos" (null) siempre al final
+      const an=avPct(a.asignatura), bn=avPct(b.asignatura);
+      if(an===null && bn===null) return 0;
+      if(an===null) return 1;
+      if(bn===null) return -1;
       return sortDir==='asc'?an-bn:bn-an;
     }
     const av=a[sortCol]||'',bv=b[sortCol]||'';
@@ -3238,7 +3242,8 @@ function renderTable(){
   tbody.innerHTML=currentRows.map((d,i)=>{
     const rav=AVANCE[d.asignatura]||{};
     const recReal=recursosAvance(d.asignatura);
-    const rPct=recReal ? recReal.av : (rav.avance||0);
+    const rAv=avPct(d.asignatura);            // null = aún sin datos de producción
+    const rPct=rAv==null?0:rAv;
     const rHitos=recReal ? recReal.hitos : (rav.hitos||{});
     const isUrg=d.reunion==='Sin respuesta';
     const isVenc=isHitoVencido(d);
@@ -3249,7 +3254,9 @@ function renderTable(){
       <td class="asig-col">${isUrg||isVenc?'<span class="urg-dot" style="background:var(--ro)"></span>':''} ${d.asignatura}${isVenc&&!isUrg?' <span style="font-size:9px;color:var(--ro);font-weight:700;vertical-align:middle">VENCIDO</span>':''}${(getOverrides()[d.asignatura]||{}).bloqueante?'<span class="row-bloq-dot" title="Bloqueada: '+((getOverrides()[d.asignatura]||{}).bloqueante||'').replace(/'/g,"&apos;")+'"></span>':''}${(()=>{const o=(rav.obs||d.obs||'').trim();if(!o)return '';let pill='';if(d.fechaSR){const ds=diasDesde(d.fechaSR);if(ds!==null&&ds>=3){let lv='Equipo';for(let i=ESCAL_NIVELES.length-1;i>=0;i--){if(ds>=ESCAL_NIVELES[i].dias){lv=ESCAL_NIVELES[i].label;break;}}pill=`<div class="row-escal-pill">⚠ ${ds}d — Informar a ${lv}</div>`;}}return `<div class="row-obs" title="${o.replace(/"/g,'&quot;')}">💬 ${o.length>65?o.slice(0,63)+'…':o}</div>${pill}`;})()}</td>
       <td style="color:var(--text-muted)">${d.docente}${d.correo?` <a href="mailto:${d.correo}" title="${d.correo}" onclick="event.stopPropagation()" style="color:var(--az2);vertical-align:middle;display:inline-flex;margin-left:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg></a>`:''}</td>
       <td><span class="pl-dot"><span class="dot dot-${dotClass(d.planif,d)}"></span>${planifDisplay(d)}</span></td>
-      <td><div class="av-cell"><div class="av-bar-wrap"><div class="av-bar" style="width:${rPct}%;${rPct>=100?'background:linear-gradient(90deg,#d4af37,#f5d060)':''}"></div></div><span class="av-pct ${avColor}">${rPct}%</span>${rPct>=100?'<span class="badge-completa">🏅 ¡Completa!</span>':''}${isEnAula(d.asignatura)?'<span class="badge-aula">🏫 En el aula</span>':''}</div></td>
+      <td>${rAv==null
+        ? '<span class="av-nodata" title="Sin datos del flujo Actualizar recursos DI 2026-2">sin datos</span>'
+        : `<div class="av-cell"><div class="av-bar-wrap"><div class="av-bar" style="width:${rPct}%;${rPct>=100?'background:linear-gradient(90deg,#d4af37,#f5d060)':''}"></div></div><span class="av-pct ${avColor}">${rPct}%</span>${rPct>=100?'<span class="badge-completa">🏅 ¡Completa!</span>':''}${isEnAula(d.asignatura)?'<span class="badge-aula">🏫 En el aula</span>':''}</div>`}</td>
       <td class="col-hitos">${miniHitosDot(rHitos)}</td>
     </tr>`;
   }).join('');
@@ -3298,7 +3305,7 @@ function openPanel(idx){
   selectedIdx=idx;
   const d=currentRows[idx];
   const av=AVANCE[d.asignatura]||{avance:0,obs:'',hitos:{}};
-  const avPct=av.avance||0;
+  const avVal=avPct(d.asignatura);   // % solo desde recursos-2026-2.csv; null = sin datos
 
   const facCol = FAC_COLORS[d.facultad] || '#1F392F';
   document.querySelectorAll('#tbody tr').forEach((tr,i)=>{
@@ -3322,7 +3329,7 @@ function openPanel(idx){
   facTag.style.color='white';
 
   document.getElementById('p-title').textContent=d.asignatura;
-  document.getElementById('p-avance').textContent=`Avance ${avPct}%`;
+  document.getElementById('p-avance').textContent=avVal==null?'Avance sin datos':`Avance ${avVal}%`;
   // Link Moodle
   const moodleUrl=getMoodleUrl(d.asignatura,d.facultad);
   const progUrl=getProgramaUrl(d.asignatura,d.facultad);
@@ -4277,17 +4284,20 @@ function renderExecutiveHero(){
   const delPend = delAtras; // alias para compatibilidad
   const total = src.length;
 
-  // ── % avance real = promedio de asignaturas que ya iniciaron producción (col U > 0) ──
-  let sumAv=0, countAv=0, countCero=0;
+  // ── % avance real: SOLO desde recursos-2026-2.csv (flujo "Actualizar recursos DI 2026-2").
+  //    Promedio de las asignaturas con producción iniciada (>0). Las que aún no tienen
+  //    datos del flujo no se promedian (countSinDatos). ──
+  let sumAv=0, countAv=0, countCero=0, countSinDatos=0;
   src.forEach(d=>{
-    const recReal=recursosAvance(d.asignatura);
-    const av=recReal ? recReal.av : (avSrc[d.asignatura]||{}).avance||0;
+    const av=avPct(d.asignatura);
+    if(av===null){ countSinDatos++; return; }
     if(av>0){ sumAv+=av; countAv++; }
     else countCero++;
   });
   const pctReal = countAv>0 ? Math.round(sumAv/countAv) : 0;
   window._dashCountCero = countCero;
   window._dashCountAv   = countAv;
+  window._dashCountSinDatos = countSinDatos;
 
   // ── Semana actual del proyecto (basada en GANTT_HITOS deadlines) ──
   let currentWeek = 0;
@@ -4319,7 +4329,7 @@ function renderExecutiveHero(){
   let semClass='rojo', semEmoji='🔴', semLabel='Atrasado', semSub='';
   if(diffAjustado >= 5)    { semClass='verde';   semEmoji='🟢'; semLabel='A tiempo'; }
   else if(diffAjustado >= -15){ semClass='amarillo'; semEmoji='🟡'; semLabel='En riesgo'; }
-  semSub = `Real ${pctReal}% (${countAv} en prod.) vs esperado ${pctEsperado}% · ${countCero} sin iniciar`;
+  semSub = `Real ${pctReal}% (${countAv} en prod.) vs esperado ${pctEsperado}% · ${countCero} en 0% · ${countSinDatos} sin datos de recursos`;
 
   const semEl = document.getElementById('exec-sem');
   if(semEl){
@@ -4819,6 +4829,7 @@ function generarInforme(){
   const pctEsperado = window._dashPctEsperado ?? 0;
   const countAv     = window._dashCountAv     ?? 0;
   const countCero   = window._dashCountCero   ?? 0;
+  const countSinDatos = window._dashCountSinDatos ?? 0;
   const currentBlockIdx = window._dashCurrentBlockIdx ?? -1;
   const currentWeek     = window._dashCurrentWeek     ?? 0;
   const semActual = currentBlockIdx>=0 ? GANTT_HITOS[currentBlockIdx].label : 'Inicio';
@@ -4989,7 +5000,7 @@ function generarInforme(){
       </div>
       ${barReal}
       <div style="font-size:10.5px;color:#5a7080">▌ Barra sólida = avance real &nbsp;|&nbsp; línea vertical = avance esperado</div>
-      <div style="font-size:10.5px;color:#5a7080;margin-top:4px">Promedio de <strong>${countAv}</strong> asignaturas con producción iniciada · <strong>${countCero}</strong> aún sin iniciar (0%)</div>
+      <div style="font-size:10.5px;color:#5a7080;margin-top:4px">Promedio de <strong>${countAv}</strong> asignaturas con producción iniciada · <strong>${countCero}</strong> en 0% · <strong>${countSinDatos}</strong> sin datos del flujo de recursos</div>
     </div>
     <div class="rvse-badge">${semLabel}</div>
   </div>
@@ -5058,7 +5069,8 @@ function renderKanban(){
       <div class="kanban-cards">
         ${cards.length===0?'<div style="font-size:11px;color:var(--text-light);text-align:center;padding:12px">Vacío</div>':
           cards.map(d=>{
-            const av=(AVANCE[d.asignatura]||{}).avance||0;
+            const avR=avPct(d.asignatura);
+            const av=avR==null?0:avR;
             const venc = isHitoVencido(d)?'border-color:rgba(200,160,144,.4);':'';
             return `<div class="kanban-card" data-asig="${d.asignatura}" style="${venc}">
               <div class="kc-fac">${d.facultad}</div>
@@ -5067,7 +5079,7 @@ function renderKanban(){
                 <span class="chip chip-jp">${d.jp}</span>
                 <span class="chip chip-di">${d.di}</span>
               </div>
-              <div class="kc-av" style="color:${av>=70?'var(--ve)':av>0?'var(--am)':'var(--text-muted)'}">${av}% avance</div>
+              <div class="kc-av" style="color:${avR==null?'var(--text-light,#9aa2b0)':av>=70?'var(--ve)':av>0?'var(--am)':'var(--text-muted)'}">${avR==null?'sin datos':av+'% avance'}</div>
             </div>`;
           }).join('')}
       </div>
@@ -5159,6 +5171,14 @@ function recursosAvance(asignatura){
   if(totalSum===0) return null;
   return {av: Math.round(listosSum/totalSum*100), hitos, url: rec.url||''};
 }
+// Fuente ÚNICA del % de avance de una asignatura: recursos-2026-2.csv, que
+// alimenta el flujo "Actualizar recursos DI 2026-2" (recursos listos / totales).
+// Devuelve null mientras esa asignatura no tenga datos de producción: en ese
+// caso se muestra "sin datos" (sin barra) y NO entra en promedios.
+function avPct(asignatura){
+  const r = recursosAvance(asignatura);
+  return r ? r.av : null;
+}
 function ftkHitosDots(hitos){
   return Object.entries(hitos||{}).slice(0,10).map(([k,v])=>{
     let cls='nd';
@@ -5176,7 +5196,8 @@ function ftkHitosDots(hitos){
 function facTickerRowHtml(d, today, deadline){
   const idx = currentRows.findIndex(x=>x.asignatura===d.asignatura&&x.docente===d.docente);
   const recReal = recursosAvance(d.asignatura);
-  const av  = recReal ? recReal.av : (AVANCE[d.asignatura]||{}).avance||0;
+  const avReal = avPct(d.asignatura);   // null = aún sin datos de producción
+  const av  = avReal==null?0:avReal;
   const hitos = recReal ? recReal.hitos : (AVANCE[d.asignatura]||{}).hitos||{};
   const step  = planifStepIndex(d.planif||'');
   const isAt  = step<2 && today>deadline;
@@ -5199,10 +5220,12 @@ function facTickerRowHtml(d, today, deadline){
       <div class="ftk-hitos">${ftkHitosDots(hitos)}</div>
     </td>
     <td style="min-width:110px">
-      <div class="ftk-av-wrap">
+      ${avReal==null
+        ? '<span class="av-nodata" title="Sin datos del flujo Actualizar recursos DI 2026-2">sin datos</span>'
+        : `<div class="ftk-av-wrap">
         <div class="ftk-av-bar"><div class="ftk-av-fill" style="width:${av}%;background:${av>=100?'linear-gradient(90deg,#d4af37,#f5d060)':avFill}"></div></div>
         <span class="ftk-av-pct">${av}%${av>=100?' <span class="badge-completa">🏅</span>':''}${isEnAula(d.asignatura)?' <span class="badge-aula">🏫</span>':''}</span>
-      </div>
+      </div>`}
     </td>
   </tr>`;
 }
