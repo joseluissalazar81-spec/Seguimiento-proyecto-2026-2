@@ -3998,6 +3998,12 @@ const DNE_DATA = [
   {facultad:'Salud',               escuela:'Kinesiología',          programa:'Kinesiología',                     nombre:'Alexis Espinoza',  mail:'alexisespinozasa@santotomas.cl'},
   {facultad:'Salud',               escuela:'Kinesiología',          programa:'Kinesiología',                     nombre:'Rodrigo Bravo',    mail:'rodrigobravo@santotomas.cl'},
 ];
+// DNE por asignatura cuando el match por facultad no alcanza (una facultad tiene
+// varias escuelas/directores). Clave = nombre exacto de la asignatura, valor = mail
+// del DNE en DNE_DATA. Tiene prioridad sobre el match por facultad en renderDneCard.
+const DNE_ASIG = {
+  'Análisis neuromuscular del movimiento humano': 'rodrigobravo@santotomas.cl',
+};
 const FAC_COLORS = {
   'Ingeniería y Negocios':                    '#6F7A73',
   'Ciencias Sociales y Educación':            '#5B7AAB',
@@ -4033,7 +4039,8 @@ function renderDneCard(asignatura){
   const section=document.getElementById('p-dne-section');
   const card=document.getElementById('p-dne-card');
   if(!section||!card)return;
-  let dne=DNE_DATA.find(x=>x.facultad===d.facultad);
+  let dne=(DNE_ASIG[asignatura] && DNE_DATA.find(x=>x.mail===DNE_ASIG[asignatura]))
+        || DNE_DATA.find(x=>x.facultad===d.facultad);
   if(!dne){section.style.display='none';return;}
   const initials=dne.nombre.split(' ').slice(0,2).map(w=>w[0]).join('');
   section.style.display='';
