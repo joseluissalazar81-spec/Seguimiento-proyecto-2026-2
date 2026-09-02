@@ -2535,6 +2535,13 @@ function normHdr(s){
     .replace(/\s+/g,' ').trim();
 }
 
+// Correcciones de Facultad que el CSV maestro trae mal. Power Automate regenera
+// seguimiento-2026-2.csv cada hora, así que se corrige acá (clave = nombre exacto
+// de la asignatura). Ideal: arreglarlo también en la lista de origen.
+const FAC_OVERRIDE = {
+  'Inglés Avanzado II': 'Formación General',
+};
+
 function buildDataFromCSV(rows){
   const header = (rows && rows[0]) || [];
   const dataRows = (rows || []).slice(1);
@@ -2569,7 +2576,7 @@ function buildDataFromCSV(rows){
   dataRows.forEach(r=>{
     const asig=(get(r,iAsig)||'').trim();
     if(!asig || asig==='Asignatura') return;
-    const facultad=(get(r,iFac)||'').trim();
+    const facultad=(FAC_OVERRIDE[asig] || get(r,iFac) || '').trim();
     const isRecNatC = facultad === 'Recursos Naturales y Medicina Veterinaria';
     const hitoVals = sHitoIdx.map(i=>get(r,i));
     const nValC = [get(r,iPlanif), ...hitoVals].filter(v=>(v||'').trim()==='Validada').length;
