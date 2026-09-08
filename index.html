@@ -2577,6 +2577,8 @@ function buildDataFromCSV(rows){
   dataRows.forEach(r=>{
     const asig=(get(r,iAsig)||'').trim();
     if(!asig || asig==='Asignatura') return;
+    // Asignaturas anuladas quedan fuera del seguimiento (ej.: Diplomado de Derecho, 8 asig. anuladas).
+    if(/anulad/i.test((get(r,iEstado)||''))) return;
     const facultad=(FAC_OVERRIDE[asig] || get(r,iFac) || '').trim();
     const isRecNatC = facultad === 'Recursos Naturales y Medicina Veterinaria';
     const hitoVals = sHitoIdx.map(i=>get(r,i));
@@ -3149,11 +3151,10 @@ function renderSidebar(){
 }
 
 // ─── FAC BAR ───
-const FAC_ORDER=["Ingeniería y Negocios","Ciencias Sociales y Educación","Derecho","Formación General","Salud","Recursos Naturales y Medicina Veterinaria"];
+const FAC_ORDER=["Ingeniería y Negocios","Ciencias Sociales y Educación","Formación General","Salud","Recursos Naturales y Medicina Veterinaria"];
 const FAC_ABBR={
   "Ingeniería y Negocios":"Ing. y Neg.",
   "Ciencias Sociales y Educación":"CC. Soc. y Educ.",
-  "Derecho":"Derecho",
   "Formación General":"Form. General",
   "Salud":"Salud",
   "Recursos Naturales y Medicina Veterinaria":"Rec. Nat. y MV"
@@ -4038,7 +4039,6 @@ const DNE_ASIG = {
 const FAC_COLORS = {
   'Ingeniería y Negocios':                    '#6F7A73',
   'Ciencias Sociales y Educación':            '#5B7AAB',
-  'Derecho':                                  '#852746',
   'Salud':                                    '#A4CCBF',
   'Recursos Naturales y Medicina Veterinaria':'#97BB5B',
   'Formación General':                        '#4E0B76'
