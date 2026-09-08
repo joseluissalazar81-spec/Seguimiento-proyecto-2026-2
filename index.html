@@ -3039,6 +3039,8 @@ function dotClass(p, d){
   if(d && isAtrasada(d)) return 'at';
   if(!p||p==='No inicia'||p==='No enviada')return 'r';
   if(p==='En construcción'||p==='Pendiente')return 'y';
+  if(p==='Validación docente')return 'y';
+  if(p==='Ajustes según Escala')return 'y';
   if(p==='No aplica')return 'x';
   if(p==='Enviada a validación DEL')return 'd';
   if(p==='DEL 2° Instancia')return 'd2';
@@ -3052,6 +3054,7 @@ function planifLabel(p, d){
   if(d && isAtrasada(d)) return '⚠ Atrasada';
   if(!p||p==='No inicia')return 'No inicia';
   if(p==='En construcción')return 'En construcción';
+  if(p==='Validación docente')return 'Validación docente';
   if(p==='No aplica')return 'No aplica';
   if(p==='Enviada a validación DEL')return 'Enviada a DEL';
   if(p==='DEL 2° Instancia')return 'DEL 2° Inst.';
@@ -3061,14 +3064,17 @@ function planifLabel(p, d){
 }
 
 // Texto de estado a mostrar en las tablas. El CSV trae la columna "Estado global"
-// aparte de "Planificación didáctica" y a veces queda desactualizada respecto de
-// esta última (ej.: se hizo la reunión y se envió la planificación, pero "Estado
-// global" sigue en "Planif. no enviada"). Si la planificación ya llegó a DEL
-// (paso >= 2), ese estado real manda sobre el "Estado global" del CSV.
+// aparte de "Planificación didáctica", pero "Estado global" es más grueso: sólo
+// distingue "🟡 Pendiente" / "🔴 Planif. no enviada" / "🟡 Agendada" en función de
+// si hay reunión y si la planificación ya salió al DEL, y NO refleja que la
+// planificación ya está "En construcción" o en "Validación docente".
+// Por eso: si "Planificación didáctica" tiene un estado propio, ese manda; sólo
+// se cae al "Estado global" del CSV cuando la planificación aún no arrancó.
 function planifDisplay(d){
   if(isAtrasada(d)) return '⚠ Atrasada';
-  if(planifStepIndex(d.planif||'') >= 2) return planifLabel(d.planif, d);
-  return d.estadoGlobal || planifLabel(d.planif, d) || 'No inicia';
+  const p = (d.planif||'').trim();
+  if(p && p!=='No inicia' && p!=='No enviada') return planifLabel(p, d);
+  return d.estadoGlobal || planifLabel(p, d) || 'No inicia';
 }
 
 // REUNION_T: T1-T4 reales por asignatura, cargados desde las hojas de reuniones
@@ -3628,6 +3634,7 @@ function planifStepIndex(planif){
   if(!planif||planif==='No inicia'||planif==='No enviada')return 0;
   if(planif==='En construcción'||planif==='Pendiente')return 1;
   if(planif==='Ajustes según Escala')return 1.5;
+  if(planif==='Validación docente')return 1.7;
   if(planif==='Enviada a validación DEL')return 2;
   if(planif==='DEL 2° Instancia')return 3;
   if(planif==='Validada')return 4;
@@ -4386,7 +4393,7 @@ function renderExecutiveHero(){
   if(body){
     const atrasadas = src.filter(d=>{
       const step = planifStepIndex(d.planif||'');
-      return step < 2 && today > asigDeadline(d);
+      return step < 1.5 && today > asigDeadline(d);
     });
     const sinIniciar = src.filter(d=>!d.planif||d.planif==='No inicia');
     const enConst    = src.filter(d=>d.planif==='En construcción'||d.planif==='Pendiente');
@@ -5139,6 +5146,7 @@ function fvPlanifClass(p, d){
   if(d && isAtrasada(d))                     return 'p-at';
   if(!p||p==='No inicia'||p==='No enviada') return 'p-none';
   if(p==='En construcción'||p==='Pendiente') return 'p-const';
+  if(p==='Validación docente')                return 'p-const';
   if(p==='Enviada a validación DEL')          return 'p-env';
   if(p==='DEL 2° Instancia')                 return 'p-del2';
   if(p==='Validada')                         return 'p-del';
@@ -5150,6 +5158,7 @@ function fvPlanifIcon(p, d){
   if(d && isAtrasada(d))                     return '⚠';
   if(!p||p==='No inicia'||p==='No enviada') return '○';
   if(p==='En construcción'||p==='Pendiente') return '◐';
+  if(p==='Validación docente')                return '◐';
   if(p==='Enviada a validación DEL')          return '→';
   if(p==='DEL 2° Instancia')                 return '⟳';
   if(p==='Validada')                         return '✓';
@@ -5174,7 +5183,7 @@ function fvHitosDots(hitos){
 function ftkPlanifClass(p){
   const s = planifStepIndex(p||'');
   if(!p||p===''||s===0)  return 'ftk-p-none';
-  if(s===1)              return 'ftk-p-const';
+  if(s>=1 && s<2)        return 'ftk-p-const';
   if(s===2)              return 'ftk-p-env';
   if(s===3)              return 'ftk-p-del2';
   if(s===4)              return 'ftk-p-val';
@@ -5184,7 +5193,7 @@ function ftkPlanifClass(p){
 function ftkPlanifIcon(p){
   const s = planifStepIndex(p||'');
   if(!p||s===0) return '○';
-  if(s===1)     return '◐';
+  if(s>=1 && s<2) return '◐';
   if(s===2)     return '▶';
   if(s===3)     return '⟳';
   if(s===4)     return '✓';
@@ -5239,7 +5248,7 @@ function facTickerRowHtml(d, today, deadline){
   const av  = avReal==null?0:avReal;
   const hitos = recReal ? recReal.hitos : (AVANCE[d.asignatura]||{}).hitos||{};
   const step  = planifStepIndex(d.planif||'');
-  const isAt  = step<2 && today>deadline;
+  const isAt  = step<1.5 && today>deadline;
   const avFill = av>=80?'var(--ve)':av>=40?'var(--am)':'var(--ro)';
   return `<tr class="${isAt?'atrasada-row':''}" onclick="openPanel(${idx})">
     <td style="min-width:180px">
