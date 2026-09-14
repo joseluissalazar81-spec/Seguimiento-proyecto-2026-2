@@ -429,6 +429,7 @@
     .hb-d2{background:rgba(144,188,180,.15);color:var(--tl2);border:1px solid rgba(144,188,180,.3)}
     .hb-ca{background:rgba(154,184,204,.15);color:var(--ca);border:1px solid rgba(154,184,204,.3)}
     .hb-x{background:rgba(255,255,255,.05);color:var(--text-light);border:1px solid var(--borde)}
+    .hb-err{background:rgba(200,80,80,.12);color:var(--ro);border:1px solid rgba(200,80,80,.3)}
 
     /* ── MINI HITOS EN TABLA PRINCIPAL ── */
     .hitos-row{display:flex;flex-wrap:nowrap;gap:2px;align-items:center;overflow:hidden}
@@ -2504,7 +2505,11 @@ async function loadRecursosData(){
       if(!out[asig]) out[asig] = {};
       const total = +r[7]||0, listos = +r[8]||0;
       const pct = Math.round((parseFloat(r[9])||0)*100);
-      out[asig][key] = {total, listos, pct, estado:r[10]||''};
+      // El flujo "Actualizar recursos DI 2026-2" a veces trae celdas rotas (#REF!, #N/A, etc.)
+      // por una fórmula sin destino en la planilla de origen. Se marca aparte para no
+      // mostrarlo como "sin datos" (total=0), que se confunde con "aún no empezó".
+      const err = /#REF!|#N\/A|#VALUE!|#DIV\/0!|#NAME\?/i.test(`${r[7]}${r[8]}${r[9]}${r[10]}`);
+      out[asig][key] = {total, listos, pct, estado:r[10]||'', err};
     });
     RECURSOS_DATA = out;
   }catch(err){ console.warn('loadRecursosData error:', err); }
@@ -3364,6 +3369,9 @@ function openPanel(idx){
   const recReal = RECURSOS_DATA[d.asignatura];
   document.getElementById('hitos-tbody').innerHTML=HITO_META.map(h=>{
     const r = recReal && recReal[h.key];
+    if(r && r.err){
+      return `<tr><td>${h.label}</td><td>${h.fecha}</td><td><span class="hb hb-err" title="La planilla de origen (recursos-2026-2.csv) trae una fórmula rota (#REF!) para este hito — no es que falten datos, es un error a corregir en el flujo &quot;Actualizar recursos DI 2026-2&quot;">⚠ Error de datos</span></td></tr>`;
+    }
     if(r && r.total>0){
       const fillColor = r.estado==='Cerrado' ? 'var(--ve)' : r.listos>0 ? 'var(--am)' : 'var(--gr)';
       return `<tr>
