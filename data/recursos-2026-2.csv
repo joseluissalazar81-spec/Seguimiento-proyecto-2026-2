@@ -1,741 +1,741 @@
 @odata.etag,ItemInternalId,Asignatura,Hito,Semana 1,Semana 2,Fecha de entrega,Recursos totales,Recursos listos,% Avance,Estado del Hito,Alertas QA,DI
-,8490d810-9d1c-489c-9bbe-d98e28b25b14,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Yazim Meza
-,2cb19111-c624-4fff-9da7-ef96afb1d798,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Yazim Meza
-,0224cf23-8520-4247-819d-dc7effd3a414,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
-,be411f2b-9b3a-45ab-8aa0-e48776f36a35,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
-,1890b00e-d470-44d0-8c46-0a46544c1dd3,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
-,3d9e91de-cfe8-48e1-922c-96f2d813c7d4,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
-,54e3d3bc-9c10-4cd1-b31a-a84705789c8e,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
-,d46b4cd0-48f0-4a8e-ad8a-95e67c2282f0,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
-,724df015-8728-45e7-af83-cbd13a5a217b,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
-,e4d544ea-7fa5-4cd1-9a03-da96e8e2291c,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
-,83e3e5c6-ed42-4d5a-96d0-de89a661231a,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Yazim Meza
-,e36ddfad-45cd-4c37-af21-6940e4d1f6fb,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Yazim Meza
-,dacba0cd-5c54-42de-9eaf-efe9abd65b44,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
-,81bb7239-a7d7-4a38-b2e2-3dd673c33e53,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
-,476a4b5a-a152-4deb-9322-ab70e043e085,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
-,74830bf5-00a5-4382-ab07-80ef8df74ed9,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
-,ebdc13f8-4a6b-46f6-bde1-9831c2327be1,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
-,8d2e46c6-c521-4695-b7e5-a26f5d401b19,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
-,d538574c-84d6-40dd-b906-f4b6a9751711,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
-,39df8129-c6be-4edd-9f68-aa09d73c76f1,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
-,477f3784-1890-4b2d-99fe-70753ca17ca4,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Yazim Meza
-,0daa3374-ebce-45e8-83e3-7823d7d6f756,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Yazim Meza
-,aad4192d-84dd-4375-9ee5-0c011b16e389,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
-,4b34ce0b-7961-423f-851f-3522bd5ba0c1,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
-,25d45a0c-1a43-4c2e-9756-f13c66cfd1df,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
-,9636da0d-6818-4048-afbd-2dd4c7a2491f,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
-,4c88a22c-7edd-4c32-b4af-74c9786ed29d,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
-,4a6cdd1e-fd14-4e64-92b4-34ff24a5dec6,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
-,a0d6545e-aa39-4fe9-bae2-49325e11d1cd,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
-,934795eb-23d6-4f4d-ba49-58d18ab45597,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
-,cdfbc548-af16-4cc3-a6a6-86ab9f36c087,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Yazim Meza
-,2b901745-4682-461f-a0a4-f13ff8df9deb,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Yazim Meza
-,521c05c4-df10-4854-8670-34ed20aa9c0d,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
-,bfcf0eb4-a765-4d7f-a0b6-6b72d7854e72,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
-,8b117412-3d45-4963-9945-c7767654f04d,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
-,3431ff66-6178-4455-a6a0-059ba45e191b,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
-,4ce930d7-750f-4303-a149-47ec58a84769,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
-,5dabd185-0e0d-4247-8065-1d3c44b39ec6,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
-,e01bf184-cc37-4e70-8366-e7525af42290,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
-,20f80f72-4d43-411f-8d9b-d31fabe84d3d,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
-,f418c2ce-0661-4d02-b2d2-21c48f527d9c,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Yazim Meza
-,baeac08d-f20c-4574-9c29-4bf0a0d4e460,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Yazim Meza
-,9d70bbb8-7446-4aea-8aea-18414eebf409,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
-,79bf71cd-e4c4-4243-ae7d-143ee9a6cd0d,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
-,38ed3c2f-4665-4948-9ab8-2574bf832c8e,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
-,38ed0db3-2471-4716-8a26-74bb452a245b,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
-,938db353-e2ec-4608-94b8-4e6b0f3c440a,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
-,261ce374-a31d-4f47-b024-6c97bd4e29df,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
-,d3fce3e1-2476-4de9-8d27-77a421c89c85,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
-,22bcc0f7-edc5-4f0a-9bf2-2ce82bea1e20,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
-,e1eaf6a0-95b0-44c9-850f-24fb15cab5d3,Asignatura 1,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,274e9538-d0bb-4934-9f3c-1dfc2afff796,Asignatura 1,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,01657964-2e33-407d-8c11-0b3fa787b707,Asignatura 1,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,0cffe370-bd6a-4b2e-bfed-ec8c22ad2aef,Asignatura 1,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,6b166833-80d6-4a88-9387-b8dd4afca7c3,Asignatura 1,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,940eadee-aae1-4911-813f-480201a67fc1,Asignatura 1,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,71bdff45-0b30-4cc0-a0b6-254092c13d6b,Asignatura 1,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,2978618a-4c37-4013-b859-b71a96b7e360,Asignatura 1,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,a15aca82-0438-441b-a6a4-f9279dc3c5da,Asignatura 1,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,23d4927b-ea58-474c-8084-a109022475c7,Asignatura 1,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,694f8c79-c3b7-4a69-992b-289be08277f3,Asignatura 2,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,f00e8dad-d2f1-40f2-85d4-bbcf92662fed,Asignatura 2,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,f0202038-1104-40f5-ad34-bfcece18f58d,Asignatura 2,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,3203ebe5-1d0b-4ade-a0e8-4b89c7b4c285,Asignatura 2,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,3f5bc9ae-01eb-447a-9670-1ec3b82896f9,Asignatura 2,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,5505bfcd-9569-44cd-88f7-5f8e012a9362,Asignatura 2,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,8f2df487-0f86-414a-bda4-315c7603e26e,Asignatura 2,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,6a3381a3-dc33-4792-9912-36fdb21203a4,Asignatura 2,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,0dbec26a-bfe6-484c-9648-b7af3916bc82,Asignatura 2,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,dc7fb27a-5e73-45b8-a8c3-110865a63dd3,Asignatura 2,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,d1ba9eb6-0ec0-46ff-be8d-2ac7591f09f8,Asignatura 3,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,fc37d1d0-bb75-406d-8766-3c1f1a0814f6,Asignatura 3,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,bc11b7d8-065d-4e66-9a56-32fe156f306a,Asignatura 3,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,064a42a9-fe89-4072-8386-a827a5bd4fc5,Asignatura 3,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,44ca8a86-a7aa-4884-a3f2-4c6a8003586f,Asignatura 3,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,4f651b76-13eb-405b-aee6-c341834c4267,Asignatura 3,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,ecbacb6b-1550-40e9-8f9f-345cb5adc81e,Asignatura 3,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,1963e3a3-0405-4521-8270-74fe32e0e4ad,Asignatura 3,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,53a48364-5e89-456c-bb7a-883026bd2c95,Asignatura 3,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,38adede1-a798-420e-ad52-87c58c0b63a5,Asignatura 3,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,833a548f-7d37-4626-a047-d855d2a50fa3,Asignatura 4,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,99c6fdf5-c7c2-4dc1-a13b-0568b50a6711,Asignatura 4,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,39ef80bc-b406-4a06-98b8-98731dd1a342,Asignatura 4,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,75e2a270-a49a-45f7-90e2-cdbd6cce51cf,Asignatura 4,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,40db3169-ed1f-482f-9ecf-c18601c318f7,Asignatura 4,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,bd14573b-3d0e-41a9-9e4a-2384edb147d8,Asignatura 4,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,fa0e4951-aa02-435e-a129-47ec6e49374a,Asignatura 4,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,ff646266-98f2-4ec0-b98f-071c4f86bfaf,Asignatura 4,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,0bd6240c-5906-44a6-9165-ac146f7d3bdc,Asignatura 4,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,35b8f09f-3f57-46e8-b76c-69054bbaa9ba,Asignatura 4,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,cf200009-f648-4a17-826a-d88b0016894d,Asignatura 5,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,2bd65d21-394e-4e58-80c6-746625f8c9fa,Asignatura 5,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,951e7247-900c-4e35-ae9b-afc217425b7e,Asignatura 5,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,74b6a21d-09c1-46b7-81ba-59cca45d858c,Asignatura 5,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,625de3fe-78c0-41cd-8616-5eb1c4ccb0b6,Asignatura 5,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,be77b61e-6c93-45ec-ac41-4b41fba80676,Asignatura 5,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,737dc0cd-56d1-48e3-86aa-ea44c8d29b30,Asignatura 5,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,092159a6-ac9d-4403-a770-2566ca85c721,Asignatura 5,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,eb83dc08-6c52-415e-922a-e83c66a6e6c4,Asignatura 5,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,5b4db4c7-6d59-432a-85cf-0254a9f87814,Asignatura 5,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,6e5250d2-ba94-487f-ad3c-bcba4b7d51ed,Asignatura 6,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,dfa03a66-3465-4cdf-87c2-309d89ffd638,Asignatura 6,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,1ad0151b-15b0-4b3e-98dc-b96adb351625,Asignatura 6,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,39d2c505-6657-4a17-bfe8-d219106f9834,Asignatura 6,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,96dd3a4d-d153-4d26-922f-d5979ad4265f,Asignatura 6,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,a9cb5075-956d-4776-8be1-a09fd2ce544d,Asignatura 6,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,9dd1a032-d7ca-485f-8171-9728429797d3,Asignatura 6,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,c2558f06-819b-4e7b-9ffb-510012a91c6d,Asignatura 6,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,53c68f3a-44c6-4b60-bf8e-f7ae9153a386,Asignatura 6,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,d16b02a4-df04-4229-82d4-2066ab902373,Asignatura 6,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,592edc8e-f6ac-4a50-b7f7-7d229200d1a3,Asignatura 7,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,296bf23f-d689-44bb-ba43-59799a9fbd34,Asignatura 7,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,a5590d41-0cdf-4011-8fb0-183d44ab6005,Asignatura 7,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,108ebeed-f10d-48de-9602-9561894421d0,Asignatura 7,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,253d5c6a-f241-4f05-ad18-88ad44745561,Asignatura 7,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,78e05609-1f60-4480-80c6-4fc86bc1dcbf,Asignatura 7,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,bb4f9ff0-9a73-46cd-a4aa-6fb40469f492,Asignatura 7,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,241d788c-91b6-4629-921d-6c32c3041a10,Asignatura 7,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,f53e74d9-b671-455b-88ac-8a2e047addad,Asignatura 7,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,24f26e85-388e-42c0-a4d6-b297bc41f9e3,Asignatura 7,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,b190eaad-6c35-4b96-ab4c-e0e65e5497af,Asignatura 8,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,83c41580-5c57-4e70-a95a-5336e441c133,Asignatura 8,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,57a04581-8ba9-4b3c-8561-6fd4ff4d0731,Asignatura 8,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,881f272c-d4f3-49a4-b23a-67328a067a8a,Asignatura 8,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,7de74161-39ce-4c3f-bfae-9e34785d76de,Asignatura 8,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,e15deac8-9d1a-4f1c-9543-a8695823934c,Asignatura 8,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,541fed1e-acae-40b6-ad03-b19057787b27,Asignatura 8,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,ef808313-7045-49ab-863d-2d374b54529a,Asignatura 8,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,f3d8ae54-8733-4fbe-88df-f88a231268c3,Asignatura 8,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,b314db3a-c140-42ba-b486-7e9e3422a9a9,Asignatura 8,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,b095cd35-3373-45ec-8449-1b14db8de3b2,Asignatura 9,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,d6f9d50a-af6f-4e48-95b6-03c44b6a584c,Asignatura 9,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,a370b9c5-6548-44d2-844b-7077124d0e26,Asignatura 9,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,83a349f9-7bab-45b7-9ecc-b5ed3e11280a,Asignatura 9,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,74a41a10-9b2f-4c63-a5f6-bd586f44011a,Asignatura 9,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,7b198992-bd75-430a-8023-b53e1e8e4a8b,Asignatura 9,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,eba5ee16-a026-4f72-81b6-833c815bd5d9,Asignatura 9,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,0c34ffcf-2a23-46ee-b8c1-a8a032efe025,Asignatura 9,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,2f92146c-d2a9-41b2-911f-0512097b3dc0,Asignatura 9,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,283be47b-c798-4d73-8bab-d4f2a3dfb633,Asignatura 9,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
-,f284b8e0-ca03-44b6-a5cb-fef04cdea1d8,Asignatura 1,S0,S0,,46280,3,0,0,En producción,1,Bárbara González
-,9078f14c-c7a4-4618-aced-fd18fb1f7f86,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,2,Bárbara González
-,7d7a7996-0f37-43dc-973b-eb4f0e1e3a88,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
-,1d4f1473-74af-4efa-89ef-b5ba9b96bd60,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
-,be3237c4-8184-4683-8571-9b8f99364edb,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
-,0b6a18f2-16f1-4de6-908e-c2b15190ddd2,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
-,984a027a-3610-4960-81c8-17a8ee42c193,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
-,b388a360-6367-4527-9011-ed3ff9ec44ab,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
-,d7705ca7-2973-4976-ae56-22ffc237ae2c,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
-,907f8d7c-e362-4f2c-91fe-43d87743de5b,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
-,042963c2-4046-43a0-bb0c-52f56feb3963,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Bárbara González
-,d2ecc29c-cd1b-46e9-9778-1f1c08ffbae9,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Bárbara González
-,d74613ad-c780-49a8-bee7-148c7665d5d7,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
-,d0ec9280-c9d7-49a2-936c-6129b76e724e,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
-,bc879d9c-cf83-40dc-b569-836b3bb5675b,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
-,24d9f5c6-1b78-4845-a5d3-a346e9a26752,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
-,afa8c96d-f6ab-4f08-91ec-e70c788d0c70,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
-,446ad8ec-1bde-4ddc-aed0-b855840aaaf7,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
-,c9586aab-b1a4-40e1-816c-b0ad8c4f9835,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
-,dc6e541a-292f-4ec2-8f2c-88b8ecef7fa1,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
-,f35d84df-cea1-412b-8ce8-02706514bd53,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Bárbara González
-,ea256c5b-fe42-4df0-b037-c4bbc1010607,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Bárbara González
-,d8e23dfa-d9d9-4ef7-827b-89c384a7179c,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
-,0221f064-eb58-4317-84c6-b6844c826392,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
-,0aff35fb-91e3-419d-b82f-272e4b15caed,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
-,d214df4c-96fe-4838-8b43-b23a56824f40,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
-,26e42f22-4f4f-4e54-85e0-f4d135997639,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
-,991a09fb-2b84-4cc8-b8d6-614d27df6682,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
-,5b525c20-ca52-4d22-a277-f986709fa3b3,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
-,7713f8a1-3c2a-4e66-b949-c85fedd4aa66,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
-,d5c6930a-cebc-471b-86a2-d6633dfbc1b0,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Bárbara González
-,f5c02513-4974-4924-923e-8d85eace3d3e,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Bárbara González
-,01175abe-67f4-4403-adbf-70695ec356eb,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
-,c14644f5-1db7-4170-b9f0-db4470978bf5,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
-,bc06f2ca-a48c-4134-8bb0-bfd1fd2db087,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
-,6d460dd1-aa42-4130-9c40-ef16072b679e,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
-,f80f18a8-004a-47c8-b54b-f96c08cc7846,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
-,ffcf8ab5-aeb6-4148-bed6-e193cc47125c,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
-,d467d52f-2b57-4fcd-b58d-0fe5e88d2142,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
-,99890a64-7844-4e29-bfa9-32994ad63cb3,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
-,e9cced9a-e594-47ce-be56-11bb1c3acb9d,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Bárbara González
-,d185c9be-b377-40e3-b2ee-0400745d739e,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Bárbara González
-,19dcbd06-cdf7-49e7-a3f4-3822cdea168a,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
-,8a7c3400-7537-4b86-9fd7-56b84f4af8b0,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
-,fa882883-8554-45ad-8c78-d232bc46f631,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
-,9af4c7ab-f830-4b89-a74a-29282c9911b5,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
-,570e956b-2865-4cf0-b357-92518d352149,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
-,6b31186b-60d8-4667-acb6-6e294b4c154f,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
-,02b94449-d466-420e-be21-a58a56ff2fc1,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
-,5b9baa91-f841-47e8-9cec-6b47d309684c,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
-,3866edd0-e4e0-4f2a-8bee-612ade30d573,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Carla Riquelme
-,992b09af-fb85-4934-993d-f1672411f88a,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Carla Riquelme
-,0c9e6c06-3a31-4130-9a47-4a881fe35bdb,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
-,ee563d41-c2e8-4361-8598-c47d5f57edef,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
-,7130024f-f28e-4073-8356-ff223e4a1fbf,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
-,d3a9cc1f-072b-41c0-8072-1ab7169de6c7,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
-,c37a6dd3-b0d7-435d-afbd-5797085676e8,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
-,9cdf6f6a-4379-49f4-a9fa-304bd3e3c356,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
-,fa97c5d0-a231-4b64-a60b-993b7159ee66,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
-,3e698387-aca0-4edc-be88-d73c4cec16b1,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
-,d8f1b7d7-8fa8-42da-aea1-8edca6b17ba6,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Carla Riquelme
-,7948c5a1-2499-4e24-b95b-406d3985cc27,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carla Riquelme
-,fcfb60e0-4f3a-4fa7-92ad-56a54527274c,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
-,c790dbe8-e49e-4ecb-a4c3-790a366df354,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
-,681f4c0c-0d4c-44b2-a2eb-23a22308c6a2,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
-,f59667c2-a09b-40a0-98b7-74b53f6f06e0,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
-,18a0f520-6dc7-4338-9f72-ffb8cc707bb3,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
-,23197eda-02db-4424-88d9-6d2c1d75ace7,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
-,a09a6250-98e7-4f38-bbb1-256ca55954d1,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
-,40c968cd-ab7c-4921-8862-f915eb767bba,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
-,3a634ef1-3276-43f4-b6bf-0b408f742dbf,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Carla Riquelme
-,4bfb95de-721d-4a07-98a6-756f878ffd39,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carla Riquelme
-,b3d2f26b-1d0d-4b2d-bbbd-a36c87054787,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
-,98b0c03b-b641-495e-99a7-b0778551e8d2,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
-,e0f0843b-079e-4e7a-b385-1d8444362cd1,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
-,289d630d-f4aa-4b2f-92a7-533d8bd16944,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
-,7a1d1635-4684-460e-9afe-bfd7fc594213,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
-,68f21a67-4087-447d-9e57-460556178095,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
-,3c588b74-374f-4cc7-9e69-e5dd202269a0,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
-,97f364fe-c926-4009-96b1-a0d155413ec1,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
-,f7ace30d-692f-4b43-b4e5-cbac508fc92b,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Carla Riquelme
-,a0cfd578-6bcc-492b-b471-f886de45b31c,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carla Riquelme
-,c88b6bf9-56e4-4af3-8e39-0c2d2e383ec0,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
-,50a240c4-d947-4c62-89c5-ab918745de6c,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
-,3f371fd6-097d-40b6-ad1c-720d866d59ab,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
-,8d48f027-775d-4939-86bc-aeab3ac0df95,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
-,80261790-103d-43c2-b506-92d3cc1b7217,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
-,bedb62d7-1c24-4550-afe1-f38a2b66107a,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
-,7cc4e448-0c9d-469f-96a0-474804c39f24,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
-,9513836a-9a4a-48fc-9ba5-330e4c1e15a2,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
-,90faf68d-adc4-4f2a-9710-1d0b0a29900d,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Carla Riquelme
-,8d2693ad-fb5b-4fce-a994-32e5df87ed0f,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carla Riquelme
-,fec27b28-352e-41d7-873d-62d0523b8134,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
-,a457ee42-7119-49b1-974b-e3444388fe56,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
-,200d6da0-8ae3-4d9d-840f-c425de4a7da6,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
-,83457047-8190-46bd-b22a-83883ff24642,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
-,b98ed970-466c-4a94-9698-a1a22d7a5860,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
-,64138080-3768-4552-b310-f4d64cd36e6d,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
-,fd6c2308-f5ed-4806-ae41-3968dbc0e4cf,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
-,ebdd4cd3-02b1-4be2-8293-922a297af56a,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
-,edf64767-74da-488d-b4e1-993ebd0b25da,Asignatura 1,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A102)*(($B$4:$B$98=$C102)+($B$4:$B$98=$D102))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A102)*(($B$4:$B$98=$C102)+($B$4:$B$98=$D102))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A102)*(($B$4:$B$98=$C102)+($B$4:$B$98=$D102))*$G$4:$G$98)},Bárbara Soler
-,0abd754e-1b0b-4a7d-aafc-ffeb0a2d61ea,Asignatura 1,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A103)*(($B$4:$B$98=$C103)+($B$4:$B$98=$D103))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A103)*(($B$4:$B$98=$C103)+($B$4:$B$98=$D103))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A103)*(($B$4:$B$98=$C103)+($B$4:$B$98=$D103))*$G$4:$G$98)},Bárbara Soler
-,b086515c-e132-4bbe-97d0-94c9c93328b0,Asignatura 1,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A104)*(($B$4:$B$98=$C104)+($B$4:$B$98=$D104))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A104)*(($B$4:$B$98=$C104)+($B$4:$B$98=$D104))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A104)*(($B$4:$B$98=$C104)+($B$4:$B$98=$D104))*$G$4:$G$98)},Bárbara Soler
-,9228b8da-73a7-498b-8603-3a7046b22208,Asignatura 1,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A105)*(($B$4:$B$98=$C105)+($B$4:$B$98=$D105))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A105)*(($B$4:$B$98=$C105)+($B$4:$B$98=$D105))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A105)*(($B$4:$B$98=$C105)+($B$4:$B$98=$D105))*$G$4:$G$98)},Bárbara Soler
-,e721881e-aef1-4437-9096-f349ee69d46d,Asignatura 1,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A106)*(($B$4:$B$98=$C106)+($B$4:$B$98=$D106))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A106)*(($B$4:$B$98=$C106)+($B$4:$B$98=$D106))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A106)*(($B$4:$B$98=$C106)+($B$4:$B$98=$D106))*$G$4:$G$98)},Bárbara Soler
-,7b9cee0f-1525-4dae-826c-447b1af699ec,Asignatura 1,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A107)*(($B$4:$B$98=$C107)+($B$4:$B$98=$D107))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A107)*(($B$4:$B$98=$C107)+($B$4:$B$98=$D107))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A107)*(($B$4:$B$98=$C107)+($B$4:$B$98=$D107))*$G$4:$G$98)},Bárbara Soler
-,f62e1e1b-59a7-4dec-a7ef-ff92632b1caa,Asignatura 1,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A108)*(($B$4:$B$98=$C108)+($B$4:$B$98=$D108))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A108)*(($B$4:$B$98=$C108)+($B$4:$B$98=$D108))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A108)*(($B$4:$B$98=$C108)+($B$4:$B$98=$D108))*$G$4:$G$98)},Bárbara Soler
-,509ab8ad-ed99-4577-b4b0-6e1c4018032d,Asignatura 1,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A109)*(($B$4:$B$98=$C109)+($B$4:$B$98=$D109))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A109)*(($B$4:$B$98=$C109)+($B$4:$B$98=$D109))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A109)*(($B$4:$B$98=$C109)+($B$4:$B$98=$D109))*$G$4:$G$98)},Bárbara Soler
-,ba5c4587-423f-49de-ad20-75a757c35b33,Asignatura 1,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A110)*(($B$4:$B$98=$C110)+($B$4:$B$98=$D110))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A110)*(($B$4:$B$98=$C110)+($B$4:$B$98=$D110))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A110)*(($B$4:$B$98=$C110)+($B$4:$B$98=$D110))*$G$4:$G$98)},Bárbara Soler
-,aae831f1-b40e-4d59-9a6b-23aea2d00c36,Asignatura 1,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A111)*(($B$4:$B$98=$C111)+($B$4:$B$98=$D111))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A111)*(($B$4:$B$98=$C111)+($B$4:$B$98=$D111))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A111)*(($B$4:$B$98=$C111)+($B$4:$B$98=$D111))*$G$4:$G$98)},Bárbara Soler
-,f8c79e82-2afd-4ee4-a612-0f9820fce820,Asignatura 2,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A112)*(($B$4:$B$98=$C112)+($B$4:$B$98=$D112))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A112)*(($B$4:$B$98=$C112)+($B$4:$B$98=$D112))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A112)*(($B$4:$B$98=$C112)+($B$4:$B$98=$D112))*$G$4:$G$98)},Bárbara Soler
-,df05913d-3a00-4468-9c99-d4e41532e934,Asignatura 2,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A113)*(($B$4:$B$98=$C113)+($B$4:$B$98=$D113))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A113)*(($B$4:$B$98=$C113)+($B$4:$B$98=$D113))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A113)*(($B$4:$B$98=$C113)+($B$4:$B$98=$D113))*$G$4:$G$98)},Bárbara Soler
-,ac4c370e-63d4-4049-a79a-886e01a4890c,Asignatura 2,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A114)*(($B$4:$B$98=$C114)+($B$4:$B$98=$D114))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A114)*(($B$4:$B$98=$C114)+($B$4:$B$98=$D114))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A114)*(($B$4:$B$98=$C114)+($B$4:$B$98=$D114))*$G$4:$G$98)},Bárbara Soler
-,da9d6528-55b6-4998-9863-7e9e0f8a2c9c,Asignatura 2,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A115)*(($B$4:$B$98=$C115)+($B$4:$B$98=$D115))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A115)*(($B$4:$B$98=$C115)+($B$4:$B$98=$D115))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A115)*(($B$4:$B$98=$C115)+($B$4:$B$98=$D115))*$G$4:$G$98)},Bárbara Soler
-,d866f39a-5570-40c3-b388-ba6e4f22c646,Asignatura 2,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A116)*(($B$4:$B$98=$C116)+($B$4:$B$98=$D116))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A116)*(($B$4:$B$98=$C116)+($B$4:$B$98=$D116))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A116)*(($B$4:$B$98=$C116)+($B$4:$B$98=$D116))*$G$4:$G$98)},Bárbara Soler
-,671085fe-3877-462f-9f04-0e8d5314db78,Asignatura 2,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A117)*(($B$4:$B$98=$C117)+($B$4:$B$98=$D117))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A117)*(($B$4:$B$98=$C117)+($B$4:$B$98=$D117))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A117)*(($B$4:$B$98=$C117)+($B$4:$B$98=$D117))*$G$4:$G$98)},Bárbara Soler
-,c35bcca8-c865-4ee0-99d3-06c8dd74eda1,Asignatura 2,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A118)*(($B$4:$B$98=$C118)+($B$4:$B$98=$D118))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A118)*(($B$4:$B$98=$C118)+($B$4:$B$98=$D118))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A118)*(($B$4:$B$98=$C118)+($B$4:$B$98=$D118))*$G$4:$G$98)},Bárbara Soler
-,5a0a591c-ce05-49bb-847c-e9fc46745458,Asignatura 2,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A119)*(($B$4:$B$98=$C119)+($B$4:$B$98=$D119))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A119)*(($B$4:$B$98=$C119)+($B$4:$B$98=$D119))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A119)*(($B$4:$B$98=$C119)+($B$4:$B$98=$D119))*$G$4:$G$98)},Bárbara Soler
-,25fc9af2-b82a-4112-8dcc-b860934db70e,Asignatura 2,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A120)*(($B$4:$B$98=$C120)+($B$4:$B$98=$D120))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A120)*(($B$4:$B$98=$C120)+($B$4:$B$98=$D120))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A120)*(($B$4:$B$98=$C120)+($B$4:$B$98=$D120))*$G$4:$G$98)},Bárbara Soler
-,68bbbd4f-2dfe-4b56-9628-8bcb0668cefa,Asignatura 2,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A121)*(($B$4:$B$98=$C121)+($B$4:$B$98=$D121))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A121)*(($B$4:$B$98=$C121)+($B$4:$B$98=$D121))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A121)*(($B$4:$B$98=$C121)+($B$4:$B$98=$D121))*$G$4:$G$98)},Bárbara Soler
-,899d0ed8-1e27-412c-8a27-db6255139aac,Asignatura 3,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A122)*(($B$4:$B$98=$C122)+($B$4:$B$98=$D122))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A122)*(($B$4:$B$98=$C122)+($B$4:$B$98=$D122))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A122)*(($B$4:$B$98=$C122)+($B$4:$B$98=$D122))*$G$4:$G$98)},Bárbara Soler
-,93004cc3-4a04-4c26-bbda-3c538ff1f179,Asignatura 3,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A123)*(($B$4:$B$98=$C123)+($B$4:$B$98=$D123))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A123)*(($B$4:$B$98=$C123)+($B$4:$B$98=$D123))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A123)*(($B$4:$B$98=$C123)+($B$4:$B$98=$D123))*$G$4:$G$98)},Bárbara Soler
-,a38e10b0-092b-4aef-ba4d-b162acdeaeac,Asignatura 3,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A124)*(($B$4:$B$98=$C124)+($B$4:$B$98=$D124))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A124)*(($B$4:$B$98=$C124)+($B$4:$B$98=$D124))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A124)*(($B$4:$B$98=$C124)+($B$4:$B$98=$D124))*$G$4:$G$98)},Bárbara Soler
-,fd052372-0772-4b68-b66c-4eda51b56e64,Asignatura 3,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A125)*(($B$4:$B$98=$C125)+($B$4:$B$98=$D125))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A125)*(($B$4:$B$98=$C125)+($B$4:$B$98=$D125))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A125)*(($B$4:$B$98=$C125)+($B$4:$B$98=$D125))*$G$4:$G$98)},Bárbara Soler
-,0c079ed6-a983-435a-8b27-b8e788931640,Asignatura 3,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A126)*(($B$4:$B$98=$C126)+($B$4:$B$98=$D126))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A126)*(($B$4:$B$98=$C126)+($B$4:$B$98=$D126))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A126)*(($B$4:$B$98=$C126)+($B$4:$B$98=$D126))*$G$4:$G$98)},Bárbara Soler
-,a430d057-a30b-4dbf-a2a9-5ed601f42456,Asignatura 3,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A127)*(($B$4:$B$98=$C127)+($B$4:$B$98=$D127))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A127)*(($B$4:$B$98=$C127)+($B$4:$B$98=$D127))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A127)*(($B$4:$B$98=$C127)+($B$4:$B$98=$D127))*$G$4:$G$98)},Bárbara Soler
-,66c04476-7490-42c0-aac5-cfda1a51f413,Asignatura 3,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A128)*(($B$4:$B$98=$C128)+($B$4:$B$98=$D128))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A128)*(($B$4:$B$98=$C128)+($B$4:$B$98=$D128))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A128)*(($B$4:$B$98=$C128)+($B$4:$B$98=$D128))*$G$4:$G$98)},Bárbara Soler
-,85114e2f-ac15-4e6b-9822-634517e414f1,Asignatura 3,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A129)*(($B$4:$B$98=$C129)+($B$4:$B$98=$D129))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A129)*(($B$4:$B$98=$C129)+($B$4:$B$98=$D129))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A129)*(($B$4:$B$98=$C129)+($B$4:$B$98=$D129))*$G$4:$G$98)},Bárbara Soler
-,e87b9cf4-a0a0-4051-8da7-489bba5dada8,Asignatura 3,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A130)*(($B$4:$B$98=$C130)+($B$4:$B$98=$D130))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A130)*(($B$4:$B$98=$C130)+($B$4:$B$98=$D130))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A130)*(($B$4:$B$98=$C130)+($B$4:$B$98=$D130))*$G$4:$G$98)},Bárbara Soler
-,0dba5ff1-3531-4994-a8b5-ba560a51590c,Asignatura 3,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A131)*(($B$4:$B$98=$C131)+($B$4:$B$98=$D131))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A131)*(($B$4:$B$98=$C131)+($B$4:$B$98=$D131))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A131)*(($B$4:$B$98=$C131)+($B$4:$B$98=$D131))*$G$4:$G$98)},Bárbara Soler
-,f11cb6df-32bb-4418-9ef9-770924ef059f,Asignatura 4,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A132)*(($B$4:$B$98=$C132)+($B$4:$B$98=$D132))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A132)*(($B$4:$B$98=$C132)+($B$4:$B$98=$D132))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A132)*(($B$4:$B$98=$C132)+($B$4:$B$98=$D132))*$G$4:$G$98)},Bárbara Soler
-,22108f07-7592-4f3b-8aef-fd7317e4efde,Asignatura 4,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A133)*(($B$4:$B$98=$C133)+($B$4:$B$98=$D133))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A133)*(($B$4:$B$98=$C133)+($B$4:$B$98=$D133))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A133)*(($B$4:$B$98=$C133)+($B$4:$B$98=$D133))*$G$4:$G$98)},Bárbara Soler
-,7c642419-a281-4deb-ac0b-e22a9c4ca37f,Asignatura 4,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A134)*(($B$4:$B$98=$C134)+($B$4:$B$98=$D134))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A134)*(($B$4:$B$98=$C134)+($B$4:$B$98=$D134))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A134)*(($B$4:$B$98=$C134)+($B$4:$B$98=$D134))*$G$4:$G$98)},Bárbara Soler
-,d2352f12-2158-481e-bc23-fc97ca42538d,Asignatura 4,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A135)*(($B$4:$B$98=$C135)+($B$4:$B$98=$D135))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A135)*(($B$4:$B$98=$C135)+($B$4:$B$98=$D135))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A135)*(($B$4:$B$98=$C135)+($B$4:$B$98=$D135))*$G$4:$G$98)},Bárbara Soler
-,33d53b46-f4c7-4802-9a37-b495faaf331e,Asignatura 4,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A136)*(($B$4:$B$98=$C136)+($B$4:$B$98=$D136))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A136)*(($B$4:$B$98=$C136)+($B$4:$B$98=$D136))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A136)*(($B$4:$B$98=$C136)+($B$4:$B$98=$D136))*$G$4:$G$98)},Bárbara Soler
-,4893b410-f0f1-4bd5-8b41-b25631713bfa,Asignatura 4,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A137)*(($B$4:$B$98=$C137)+($B$4:$B$98=$D137))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A137)*(($B$4:$B$98=$C137)+($B$4:$B$98=$D137))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A137)*(($B$4:$B$98=$C137)+($B$4:$B$98=$D137))*$G$4:$G$98)},Bárbara Soler
-,1ebe7130-6c45-49ac-b0c6-12eb572bdcb7,Asignatura 4,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A138)*(($B$4:$B$98=$C138)+($B$4:$B$98=$D138))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A138)*(($B$4:$B$98=$C138)+($B$4:$B$98=$D138))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A138)*(($B$4:$B$98=$C138)+($B$4:$B$98=$D138))*$G$4:$G$98)},Bárbara Soler
-,f0e03a54-9fbb-418c-893c-cb4cf6ca2c00,Asignatura 4,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A139)*(($B$4:$B$98=$C139)+($B$4:$B$98=$D139))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A139)*(($B$4:$B$98=$C139)+($B$4:$B$98=$D139))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A139)*(($B$4:$B$98=$C139)+($B$4:$B$98=$D139))*$G$4:$G$98)},Bárbara Soler
-,19aea6aa-e7d2-42b7-9656-52115fcb6322,Asignatura 4,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A140)*(($B$4:$B$98=$C140)+($B$4:$B$98=$D140))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A140)*(($B$4:$B$98=$C140)+($B$4:$B$98=$D140))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A140)*(($B$4:$B$98=$C140)+($B$4:$B$98=$D140))*$G$4:$G$98)},Bárbara Soler
-,7ad1b40f-979f-4907-889f-b82df7ec7cf4,Asignatura 4,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A141)*(($B$4:$B$98=$C141)+($B$4:$B$98=$D141))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A141)*(($B$4:$B$98=$C141)+($B$4:$B$98=$D141))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A141)*(($B$4:$B$98=$C141)+($B$4:$B$98=$D141))*$G$4:$G$98)},Bárbara Soler
-,bb51d03b-e0cd-44cf-a2fe-406fdd2d98e9,Asignatura 5,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A142)*(($B$4:$B$98=$C142)+($B$4:$B$98=$D142))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A142)*(($B$4:$B$98=$C142)+($B$4:$B$98=$D142))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A142)*(($B$4:$B$98=$C142)+($B$4:$B$98=$D142))*$G$4:$G$98)},Bárbara Soler
-,6db4fa82-ac4e-475f-a5e6-98917deab2d4,Asignatura 5,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A143)*(($B$4:$B$98=$C143)+($B$4:$B$98=$D143))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A143)*(($B$4:$B$98=$C143)+($B$4:$B$98=$D143))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A143)*(($B$4:$B$98=$C143)+($B$4:$B$98=$D143))*$G$4:$G$98)},Bárbara Soler
-,9fb3cc43-d691-4378-8aab-b69bad9ed41d,Asignatura 5,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A144)*(($B$4:$B$98=$C144)+($B$4:$B$98=$D144))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A144)*(($B$4:$B$98=$C144)+($B$4:$B$98=$D144))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A144)*(($B$4:$B$98=$C144)+($B$4:$B$98=$D144))*$G$4:$G$98)},Bárbara Soler
-,ffc4f69f-6c28-4097-8950-b61b4e1e78c9,Asignatura 5,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A145)*(($B$4:$B$98=$C145)+($B$4:$B$98=$D145))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A145)*(($B$4:$B$98=$C145)+($B$4:$B$98=$D145))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A145)*(($B$4:$B$98=$C145)+($B$4:$B$98=$D145))*$G$4:$G$98)},Bárbara Soler
-,8eccf827-9f12-4c51-8bd3-7c00a028f2c0,Asignatura 5,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A146)*(($B$4:$B$98=$C146)+($B$4:$B$98=$D146))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A146)*(($B$4:$B$98=$C146)+($B$4:$B$98=$D146))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A146)*(($B$4:$B$98=$C146)+($B$4:$B$98=$D146))*$G$4:$G$98)},Bárbara Soler
-,238719f5-53b0-4166-8c13-339f7deda0b9,Asignatura 5,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A147)*(($B$4:$B$98=$C147)+($B$4:$B$98=$D147))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A147)*(($B$4:$B$98=$C147)+($B$4:$B$98=$D147))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A147)*(($B$4:$B$98=$C147)+($B$4:$B$98=$D147))*$G$4:$G$98)},Bárbara Soler
-,d370b7e8-fb67-4211-add0-f6393b3c86d6,Asignatura 5,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A148)*(($B$4:$B$98=$C148)+($B$4:$B$98=$D148))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A148)*(($B$4:$B$98=$C148)+($B$4:$B$98=$D148))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A148)*(($B$4:$B$98=$C148)+($B$4:$B$98=$D148))*$G$4:$G$98)},Bárbara Soler
-,56414afd-e679-453c-bba3-9c5ed8223770,Asignatura 5,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A149)*(($B$4:$B$98=$C149)+($B$4:$B$98=$D149))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A149)*(($B$4:$B$98=$C149)+($B$4:$B$98=$D149))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A149)*(($B$4:$B$98=$C149)+($B$4:$B$98=$D149))*$G$4:$G$98)},Bárbara Soler
-,34433119-056f-4d51-8eec-51d9f217fb20,Asignatura 5,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A150)*(($B$4:$B$98=$C150)+($B$4:$B$98=$D150))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A150)*(($B$4:$B$98=$C150)+($B$4:$B$98=$D150))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A150)*(($B$4:$B$98=$C150)+($B$4:$B$98=$D150))*$G$4:$G$98)},Bárbara Soler
-,b70ff2cd-f041-4e76-8679-2f0263ad8e8f,Asignatura 5,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A151)*(($B$4:$B$98=$C151)+($B$4:$B$98=$D151))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A151)*(($B$4:$B$98=$C151)+($B$4:$B$98=$D151))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A151)*(($B$4:$B$98=$C151)+($B$4:$B$98=$D151))*$G$4:$G$98)},Bárbara Soler
-,a9813ab8-bd9b-4244-87ff-51cb42538fdd,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
-,0c457e2f-ff5a-4685-832c-7b670ef5989c,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
-,7bd26bb2-a9bd-494b-b2b8-38af969823c5,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
-,d25b0bc1-4f1a-4601-9ada-cfb31b6f80cb,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
-,2452c26a-669b-4d34-b56e-5a0b4032c335,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
-,d122bbdb-03d8-4ac8-943c-e122f18e140c,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
-,16c4b902-a06c-48f2-a278-15d9495fa3cb,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
-,4f18ca33-c8b2-4e37-a6d6-4308e1d9858b,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
-,e2302afd-c1b2-4897-919d-407b2a650124,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
-,24ac0608-2730-413a-9cd4-f8290499e65c,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
-,740a952c-81dd-45dd-9a88-c7fd002bc64f,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
-,fd9d8781-798b-4a7d-8a12-a6a879009109,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
-,b9460db5-93e8-45ef-9df0-9aa411cfb245,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
-,005e82b2-5376-40c2-af33-04cda31f0c5f,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
-,b51f26cc-689e-4604-b560-670c3bef0b6d,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
-,8d7e0629-acbd-4d48-b4d1-eee2bf73e66b,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
-,4d030ce9-cac3-404b-899e-c7ec5d5bb002,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
-,55eb6aae-9864-4525-9aec-fefa2e1e0d00,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
-,4b98fe1b-a2d0-4b3b-a5a1-23bb14d8d552,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
-,0fa8b3ae-6a84-4331-9d08-05988ca70e8d,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
-,341ac927-ae77-4569-acfe-b21d0c482287,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
-,e66a0e0f-f18b-417d-b96c-3c5fa6d06905,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
-,8de01101-0413-401e-8350-5a0f8771ce62,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
-,099e1453-d0e7-4879-af98-8dad3c022b52,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
-,ea70dfbb-1178-4064-a131-9a325507a205,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
-,f47d1104-7311-4967-828c-1cdc81b2d9ee,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
-,8db8389f-4240-470e-b210-1980ff3cacae,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
-,97a7ec75-b288-4a59-ba93-d726b0b874a8,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
-,a140d044-81e8-427c-8037-8a9850b1b893,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
-,8fddd7c5-e611-4896-886d-c47dc818864b,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
-,0b2ac259-8310-4577-b6c2-9f1b1141a20e,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
-,62158d84-fb86-499b-a341-c9b7e7dc4277,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
-,25eb0117-29f2-4e14-bbd2-4032f67ba917,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
-,cd2acdef-406c-45a9-b860-6bf82098d4fc,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
-,76be9db3-dcea-4d70-83b6-4fc88dc342c2,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
-,887afc66-f589-46ad-b928-0b7de3263506,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
-,295fca02-4c41-4bea-a819-2f55420ebda2,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
-,02abed90-61bc-4318-a1eb-2d8ed095c900,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
-,b1c3a6ac-2bf5-4e8a-8d00-1ddd908e1acb,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
-,c867dad1-db49-4446-be36-58832022eb3a,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
-,07bfb48e-5a64-458a-bdb2-55136af64bdf,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
-,14f4a49b-5013-42d7-913c-d277cb2a3422,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
-,1b11deca-d6da-4a25-b3fd-e4c6dd1a2d50,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
-,bc17af01-9482-4726-b455-ebbda6ea234c,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
-,b83e548d-19a4-4628-83fa-42975ad55c1c,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
-,3b86c20e-e8c2-4451-9e73-b51f5999b7b7,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
-,22d5a50a-aa1a-4841-b35d-9debb53c3a53,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
-,6ba7a3c0-cb1f-408c-97e4-e06f6ec1f0ed,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
-,9f1c466c-5fd8-43c7-9622-55c6d58e778c,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
-,470c6d0d-792f-477e-aa95-e547cc594c67,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
-,f960285a-8f90-4191-918b-be243f79ebb9,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
-,cac065d4-2e56-442b-8ec4-c93c48f39907,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
-,59ed2c9e-0408-4353-be8f-51d7e0d6b396,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
-,393139d3-4318-49d6-a167-abaafe9c8b4a,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
-,4cd6dfea-e9b4-4817-bbc4-5a67bc65a023,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
-,fbb997ef-1499-47b4-98be-096ecf3b2116,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
-,8214e7fe-7c55-4377-b04e-c5da18cdc54e,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
-,6c423c0a-7455-40af-b811-3238629fed6b,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
-,912d136d-56ca-42b0-ad2d-8fbbce2fda9c,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
-,de0137ec-f20c-4860-bc09-a01bc8e38f99,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
-,11fca337-f18a-4f55-aaba-9f72e88a9897,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
-,bdfdc285-d451-45e4-8974-3fec752cd146,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
-,515c9ae2-04a6-4bc2-a4c1-2dc4f7e78d0f,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
-,7d03394a-6e6c-40f0-ae3d-0b41523c5968,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
-,7616f89f-3516-441e-a7b5-e803b74ad035,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
-,0c75bd76-6d01-4708-8c9a-2e805c9136a6,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
-,659b81bb-451c-43cd-aac4-cb33734a5850,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
-,6aa33ec9-0010-44c1-85c2-9e9195570ca3,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
-,2470c3a2-8d9f-4df3-8ae9-323dc797ed97,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
-,8b1a4f30-8b1f-4b99-be78-5da39d182630,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
-,0e71a119-e794-477c-91c5-87adc253156e,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
-,12582e0a-75e5-42c2-90af-07622aa1b6d3,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
-,e0d778de-1e06-4722-bf24-6e8e85a63b2b,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
-,fd5df3b8-731e-4a9e-ad8a-f254a0e30b6e,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
-,6369d738-7cd8-4b56-ad9a-0eb19f6cbc1e,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
-,63ac5ccb-d824-4bb0-a6eb-f256f8544c7b,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
-,2166fd8e-263e-4312-9e3c-3480e0bdda42,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
-,1fd00713-57c6-49c7-94b9-b0bf024bb899,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
-,aa363947-78e3-444d-9e0c-b8e6540bcf2b,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
-,23c68d44-10c7-46d5-928b-3ce5c5271309,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
-,efd708d6-cfb5-41a9-9d09-c942dd2bd107,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
-,4331f2e8-61e0-4133-a275-30f29f155391,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
-,f6c96853-99b9-4251-b326-e51f81aef3d1,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
-,81440233-9674-4a53-baaf-93d71f33b9c5,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
-,1c07c3ac-23ef-46be-bff7-d698d0c13fa8,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
-,036bca8d-dc77-4b8d-9499-2decb0b8a476,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
-,62fdbca4-36e3-4a24-a0b6-09848e2caa3f,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
-,093db180-88ac-4a9f-8ddf-21a756d3e2fd,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
-,701c5bb4-e0d4-4489-b9f3-12e5ef6f80e2,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
-,dd416e61-dd7c-4693-9d55-ce9e1cfc9cdf,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
-,860ffeaa-5284-453d-a63d-f6db177668b0,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
-,489c6e15-10cb-4175-bda5-e3a02bd6d378,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
-,6f988ac7-e770-4e2f-b076-2304e27db9eb,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
-,5b4df963-2a84-49b7-a2aa-33a29a73c688,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
-,6e258ca9-a135-4cb9-b1bd-b1b4e77646c5,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
-,1ca0ae5e-29c3-4741-9095-520a7ddb08fa,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
-,2bb4e1f9-939e-4a1f-a434-0e896781613a,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
-,8e8d0f2b-f877-4744-8d1e-685fbae5cb34,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
-,0d448789-9d89-4704-9c7b-31b9cdd83500,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
-,2483658d-57c3-4dc8-b3ea-abd92f576054,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
-,96fbb664-f232-4132-893c-4fce48d59d33,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
-,a358e4e1-aa91-41e7-b910-babd46c998a5,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
-,712479be-457e-4164-aeab-e416d105f410,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
-,57548b5c-ef3a-42cc-805f-b3f31151e795,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
-,23f77f9e-e5ff-4982-929a-c146fc3b67a2,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
-,3d03f820-b389-4c3b-bbdc-1bbcfcd5c55e,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
-,90f23862-9b1e-4b1d-8f74-bafcbf2fba57,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
-,0b196ada-5769-4c30-bf4c-a2e85300d353,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
-,f6cbf08b-0c9c-42fe-80e1-480d6c7de735,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
-,e52e8f9b-594c-4cd4-90c4-bf777a6c7d60,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
-,d3398b5a-ef5e-44ba-a91f-252b1ccd8da1,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
-,a90ef315-8a16-4ccb-96b7-619e4761ba9b,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
-,4dd412c2-a903-45bb-8e44-51a7cc2c8743,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
-,bef5543f-6e42-47bc-960c-75b4ddd982f4,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
-,eb11acfc-8477-4822-bd2c-41d4d4615092,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
-,c204e9f8-c17f-450c-bd8f-a44a2f4429d9,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
-,8f1f3bb8-bf41-4201-a0a4-96e45a0841c0,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
-,477ec07c-d6ce-4949-9995-93b20a10f808,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
-,7c8dcc30-4c43-4d52-8cfd-bfc337b3d064,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
-,3118cd06-dcec-4999-8617-a596371ad4c0,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
-,00cbcc32-30c4-459b-9282-5e40bdea7e3a,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
-,130c593d-0dec-4091-96cf-45325c032c96,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
-,e2393c8a-12d1-4846-9270-1d3f831856a4,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
-,fb066136-ba17-47cd-ae0f-9c8a1711e129,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
-,8d82016a-a338-4a8b-8cc5-6addf8441308,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
-,6c6b056a-d336-4198-b65b-351ce4656873,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
-,4470145b-4263-48f8-9e71-c853fd0f937f,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
-,be17084c-371a-4831-a002-6179a3cd153f,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
-,3ea799b2-02fc-4158-b873-1c7ad72695a3,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
-,05442cda-fe86-4e0c-b548-53d7b9f8a581,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
-,e432ac0b-1dbc-48ec-8db6-88989974c80b,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
-,7df5c781-0955-4e4a-9881-7b4dbc1afe3b,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
-,65c19d70-c5a4-4819-a27d-3d178b9b5f9b,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
-,0f5de939-3ec6-4df5-b7bd-5bda4931911a,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
-,5720b8bc-29a5-41f6-9149-c9498969d932,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
-,bee0126f-4c47-4571-a44b-ffbd64b86ae9,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
-,128a6037-a492-42ac-b628-c7a3be18fbc7,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
-,fbb6fc78-3867-4555-bea7-4abee94a5e0c,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
-,5fcb63cb-a539-4ef5-81e0-75ee01c1514c,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
-,a9c2a846-77d1-4d0d-9e61-24775a46e0f2,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
-,c19a7d01-eaf9-46d7-8f3c-07593c449b17,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
-,3472f3d0-404b-4cde-a718-94f504dc4f3f,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
-,8eccb9cc-52bf-4207-9e2c-3e07b4c5a2eb,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
-,b4a9bd57-4b04-4d9c-aa76-86acb05c19d2,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
-,bbfcf93c-9339-48fa-abfa-3eb4e10e7c25,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
-,7d55552c-30aa-414b-bb48-805b278c6051,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
-,cc8d2cfe-0f50-41be-9a91-bd6ba5c77bf1,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
-,d2005b0e-ae07-4e75-9f76-c0a8b7a0fc02,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
-,0a256294-e8d1-4864-a4cf-4b9725b28d85,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
-,de2d6fac-2e36-41ea-b4d6-16cf4c11a838,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
-,76e14391-82a7-4358-8f47-cc766309a6e4,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Rafael Siverio
-,62c2c35f-2248-467a-b467-2d9589f54640,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Rafael Siverio
-,620b3679-84df-483a-b08e-8c7510b646ea,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
-,06796b56-0c73-4ea8-a425-8c1f628caddb,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
-,7277c196-2265-4e08-b422-e4c2f9d4a525,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
-,3800f0a7-da8d-437e-a255-393f461be7d1,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
-,f4926936-12ea-4e6b-ab42-898a9c06e876,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
-,3b7ad2a4-0307-4be1-a264-d0d0f39bbc61,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
-,6ea7b5e1-b11b-452f-adb4-651ea479943b,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
-,68ec2aaf-dcb0-4097-b15c-b9dfa8c8706e,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
-,000bdf6e-9ddd-481a-8e02-002138f97eb7,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Rafael Siverio
-,695ac939-5c0c-4b64-a4cb-f9bc7b020bc1,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Rafael Siverio
-,fd4c4b5b-6fd6-48c3-8a1a-76d48521281e,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
-,fbb8babe-e793-4892-aaaf-b652996751ea,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
-,a57c7fa9-a39f-4e8f-b334-e5c4cab19ae1,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
-,b6cdfbef-c77f-4177-9ec1-6ac56ac331cc,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
-,365a2739-a325-4f11-a983-0bc84447ac09,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
-,f0bf4e24-e6c7-47e6-ad1f-867ac86b42bd,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
-,9419cedf-16ff-4ec6-8ea5-da05bf7f7cef,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
-,b9f13760-1a9d-4933-9cb1-d1704773f7d5,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
-,df5920fd-721f-4b21-a69b-d7ed16ba46be,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Rafael Siverio
-,092406ff-5950-4564-90b9-fb36347ddc48,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Rafael Siverio
-,c000237c-c83a-48b2-a8fc-c39100fa37a5,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
-,dbe902b6-df29-4d83-8154-25486469dafd,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
-,2ab98515-e964-4280-bf2d-406cdb9d5a6d,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
-,cb353af6-d51e-4f3d-a517-c85c6fca5f49,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
-,3235e53d-1a2a-492c-aa3b-0c95ae6fbdc6,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
-,5c9f5738-0c34-4cf9-b860-63096da240cc,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
-,c139b896-ee52-4830-9d98-c4234eac6083,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
-,fafc1027-c8ac-4b24-9a85-61c4f42a46ce,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
-,a88408ed-264c-4315-b9fc-8be527c3ac6a,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Rafael Siverio
-,761cabcb-bf97-483a-aed8-16e4f52bb318,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Rafael Siverio
-,f869c4e8-0e18-4edd-ba7c-b7ebcbf3a6de,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
-,86b92683-a6d9-42e2-b4eb-541c80db103f,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
-,dee1dd59-3231-4243-86f6-6956830b5520,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
-,0dffea31-36f3-4498-8a81-3a5a3c103948,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
-,f1d3a36c-ac4c-41e8-b355-2e3e12e71992,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
-,29235770-3c03-493d-815b-b6334c5b6136,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
-,13085964-804d-4b08-97c5-9012f2939c23,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
-,70356a6c-22bd-435b-b948-6bd96f9d8cc1,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
-,39ec3c8d-fa78-4a7f-a750-8207f42b9fc9,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Rafael Siverio
-,27797610-fe07-4303-ad21-195a4e38b10e,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Rafael Siverio
-,c8dcddaf-cda3-43ed-8aeb-5d796fbedd8f,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
-,6c5b2c1f-5ffb-4c58-a6a8-40212a9e34ad,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
-,08e40819-b592-4ba3-b774-caa90e227e1b,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
-,b8734efc-b6d1-4c46-bdb9-f2db8ec0ccc5,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
-,eddfd108-4d36-42f1-8f70-e5d45eb5f5e0,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
-,ef765a9f-bb34-4650-9e07-a43e46ff08ce,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
-,6ccbbd9c-b2f7-4c32-9305-0c1ebd110ba8,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
-,2318f7c3-7cfe-4c40-9e04-6fdffab76886,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
-,c5fb4a5a-5ef3-4097-a575-4805ad217ddb,Asignatura 1,S0,S0,,46280,3,0,0,En producción,2,Carolina Henríquez
-,25e62e23-971a-4ee3-afd3-78e6fc0b6c6c,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
-,266e3555-1c69-4eec-b8e1-36c6d7ba7724,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
-,fbefa442-8b0d-4aa0-8288-1e6b6e9b761d,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
-,c7a4d3f6-9af1-4de4-ac75-8981a2e3c0f5,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
-,ea4e0d23-4807-4a6e-af99-1442b38dc8cd,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
-,77ab8297-0989-4abd-a9d8-f58d714d403d,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
-,90218d9c-ed2b-41f7-b19b-788e8b662792,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
-,486a5a2a-d751-414f-92a7-6650be02d2c2,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
-,344e703d-26be-481e-a5fd-7c949ea1d09e,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
-,43d0ea0b-98c1-4696-b394-468222aecccc,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Carolina Henríquez
-,bc7c2779-395d-49e0-a63f-836f9e212cac,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
-,5c131cfd-67c4-41ec-a0cf-53ff8aae4f5f,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
-,041c32f2-db2b-4934-8472-53cafa04a4ad,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
-,b9cc3463-4563-438d-9a46-9793f3a0173d,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
-,05c68cde-1a16-43b4-bc5b-04d1e8cc891d,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
-,78ce67ab-e40d-489c-b910-8917347e9218,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
-,bc05802a-28e4-4fa0-896b-d43c8954a697,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
-,9d9209b5-5923-4c9a-ab2e-c9877c508d34,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
-,59a6fd74-9c6a-48f9-a93c-3fae50353030,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
-,5464920a-dee9-4b59-969f-d047b9beeb85,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Carolina Henríquez
-,4337040b-bde8-447b-9b7c-a83625986eaf,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
-,8b50b267-99b7-4306-a657-3399a9fc35fe,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
-,89f573ea-a1c2-41e9-bfce-0f7241a6f3fd,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
-,fbc559e1-8971-4be8-acfa-e113f4da5eac,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
-,73913b45-4f1b-43ed-b1d5-840ed1d4ce11,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
-,bca2bc9b-ba2f-4512-b2e0-939f53eab312,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
-,39234d0c-a0c7-40bf-93cd-8f5e9f8227ce,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
-,a0ca85aa-def1-4280-9d1f-567d0c4a495c,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
-,428bc643-e784-4c10-8661-4094a0f28a3e,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
-,9617a9e9-c72f-47f9-a14b-3d05fbd9d3b7,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Carolina Henríquez
-,625c8b1b-be65-4492-8169-771dd4594b29,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
-,a6e82def-0dff-49e9-a3f8-e77128feffd7,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
-,15524d6c-65ae-45fc-9592-e7df0939c166,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
-,ddd9b4cc-ab15-4815-97c8-dab723ff81b2,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
-,ee82e636-70d4-44a3-a983-f77d439040fd,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
-,dbd4bc6f-9e34-4a50-9117-53a30ff1919e,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
-,3d83288b-5694-49f9-bec0-c7c89049e439,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
-,a194a19e-3aaf-4990-842e-a7e668fe08f7,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
-,9cee4330-21b9-4f43-a5b8-c0262d37c89a,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
-,6deca2f3-1ea7-4fbb-b8a5-209df1e60dd9,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Carolina Henríquez
-,1c890d2a-7f33-468a-a759-188293e9a2c0,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
-,8fa7d3f7-86e9-4797-9e8a-86c09be40906,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
-,35923e82-9366-420b-b912-b81485947425,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
-,b7314ffa-1246-4525-9267-3c422cefed49,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
-,f50201dc-fe6e-4875-8b62-2b3fe1a4d391,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
-,f581c866-5d24-48cf-944b-0b441e54d8b2,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
-,4cd9c1ce-d675-4f69-9b27-708796b93d5f,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
-,360d9596-ba7d-4bce-9f3b-91498d810f09,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
-,f1b5207b-302f-4e80-9ec1-47087265c06f,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
-,f3a543b0-38a0-4f09-8685-4414b98e8972,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
-,7f33b91a-7b43-4611-b894-cee0bc219b48,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
-,b35779bb-43f4-4308-90ac-98cf1e29e99e,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
-,0732d092-240f-4094-bfc9-daff81faa035,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
-,9f074529-96c7-4e97-8dc3-bf88ee95506c,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
-,6654fd27-6286-46f7-954a-681ffd2d434e,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
-,76b95f77-e15a-4cee-811e-6515cb1666af,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
-,6abf2d2e-959a-4271-8bd5-4e654a7c0445,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
-,8da81ef0-77b4-4a56-9e71-3a55b4cd37d1,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
-,00e3b95c-8d4e-4620-8691-0b1ee8bc77ac,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
-,d10cec60-24cc-4e05-a214-814014a6bf9b,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
-,dc42b65c-beaa-4300-9432-de641ff1b6fc,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
-,2e1e361f-f9bc-45d8-9973-c0526c891053,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
-,949eafdb-3366-415f-b290-fe09a5581a76,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
-,13f9915b-62cc-4f99-b292-5012daaaa357,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
-,bb66842c-bf32-4b18-891c-7444b91374c4,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
-,50a12241-beae-4e40-aa50-9db2123732b8,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
-,457b63c1-d6b4-409f-a659-d7274a1c4f17,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
-,7637500f-1f38-4c29-a972-db110d474e65,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
-,7842119b-be91-4bf4-8f3a-052886d47484,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
-,57d6e07a-1e28-434f-96ca-7090c8394387,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
-,fa82379e-a959-441b-bc89-f422590ea707,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
-,d3172812-f67d-4720-9b75-f3da5a481ddf,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
-,c7928df5-26ea-4112-b5a6-ba8eee0f94a0,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
-,799a52b0-e367-443a-9908-f7be56224bdb,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
-,f0a5a348-d0fb-4c79-b35c-e352ff6b9947,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
-,3192d95d-12fe-4529-bf16-3a3fff8eb485,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
-,f1e03849-b371-4ef0-aba0-f5c400ce9c10,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
-,536b066c-b2ec-41c2-8b98-5ba294b6b9d2,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
-,fd4402ba-19af-4f4c-be0a-3d0330694780,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
-,fb976861-e0d3-4c5b-9138-d03208b0e9fe,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
-,3d0948ca-c84c-46a2-99cd-04409587ba05,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
-,38994e4e-9044-46a1-a324-7130f2148310,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
-,349a8f7d-d173-459c-8f89-8721a50ecd77,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
-,bfef3036-a4e2-4673-9cb0-adcd1b63a7e3,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
-,56474166-052e-4234-b8b1-400c67f3cb45,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
-,2c6f1487-1a62-4bdd-83e4-14ca985351ea,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
-,fbf1a6b1-55ed-4a24-a784-cb374a5f41e6,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
-,53fc914f-4479-4990-8602-be3a3bfabee6,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
-,05c34981-0ec3-4abd-b5e5-7347155eb917,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
-,d33e5b66-e1b1-41fc-a38a-5bcadad69401,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
-,9f00c53a-ed93-48c8-a19d-1abf2964c96c,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
-,663336dd-3609-492d-85e7-e8a3f14d5062,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
-,b2045fbe-41f2-4dbc-9514-a8e3d89a95a4,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
-,62037920-97c7-4e8e-a5de-268fd9d56295,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
-,a07dc8e7-a943-432c-b4fc-24012728c548,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
-,bf3fc30c-8bea-45a4-8bbe-ebae97add1bc,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
-,bc0e8115-7263-46e4-9329-b69003b35fcc,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
-,4ac43bb6-816a-4a6b-9973-9ef03abed343,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
-,81435daf-39a7-4d8f-971d-5804b28f4797,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
-,ac154e33-8c56-4906-bef9-3f4067e90ece,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Fernanda Reyes
-,7c431b6c-c46e-41af-87bd-4e8c13d21d73,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Fernanda Reyes
-,c900df03-2589-4522-9a82-3a56d6d9eea9,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
-,5d8d682d-8fb1-41f8-80ad-4fa1dfb3dba3,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
-,2ddc1f48-8c38-459d-adbf-3acb84d227e9,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
-,7b6c5841-9b56-4353-9fbb-9794c5017967,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
-,fb1f8688-bb2e-4e5e-8cdc-9096551b20b9,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
-,b3ebf5cf-9391-4775-b269-206c4459946a,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
-,13cf5084-e0d3-4ec2-8d53-ffa17243f55d,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
-,1d80e06d-942b-4a3a-8858-440089da706f,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
-,f2a3138a-a767-4e70-b383-73d949954dab,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Fernanda Reyes
-,cda86c05-d7b4-46e9-99c4-49ce5975191e,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fernanda Reyes
-,6325b7ae-6e08-4c66-b3d4-49bce6a7ba63,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
-,0bcae48e-78e3-4034-a46c-723333abe3f4,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
-,34cf8e4c-b6c4-45df-9011-10f2b5b4855e,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
-,36f6c06f-9c00-4a4e-a038-f468a047fd94,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
-,f4c6aaf4-b904-4504-a7a1-44e0b2f4f814,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
-,86a0d76e-29bc-4ad5-9f97-38faa8038d87,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
-,91a7440e-e47a-4e6d-9d1a-f82ac516dd70,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
-,51ce1dc8-bc3b-4b67-8b13-6ab09e7e6a01,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
-,126d09e4-2f47-4c59-9a3e-fea509aac431,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Fernanda Reyes
-,c2c755fe-2c0b-4263-8086-4976d7c6376e,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fernanda Reyes
-,b19a527f-dfb6-49f6-bab5-356436584922,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
-,a7b82a09-107a-4576-9fb6-3bc7fbcacb96,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
-,eb751558-b4c9-4645-ad41-9863bf9e9230,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
-,36fd45a1-18b9-47b2-87df-f73ee9ce49fd,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
-,551a6958-0d95-4d20-96c9-70e0e0d20117,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
-,b0178521-09e7-40ba-b587-e2045b2e6a60,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
-,f9cc0dc3-e084-4f34-9731-ca80de33bd70,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
-,61b6c189-7194-4c58-b264-b9ca070fe09b,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
-,8d087b89-59c7-46d4-9b55-2ccccc6f3d5e,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Fernanda Reyes
-,9b8d902c-9b91-4a04-8d72-8f1a46c78e4d,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fernanda Reyes
-,669effc6-c4ac-4dd8-a75a-8b1f55e99964,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
-,6cf4c0c5-8837-463d-ba00-dc68e22adb4d,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
-,7551b017-ba2d-4db5-a9ec-64732d0c708b,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
-,dbb25bdc-4eb5-448a-9978-43a6fe6a39e6,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
-,74b0f016-218d-4988-895b-76addd5432b1,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
-,b713b069-8e27-4fb7-bdf6-f0523b7aad12,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
-,52e65725-7e68-415c-a80b-0ef6e79a1603,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
-,1f301777-439d-4928-894d-19b63ec4abaf,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
-,05256309-e0ca-4615-a6cf-cfd829f7248c,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Fernanda Reyes
-,04414a68-fd5b-424a-9866-687f5dfcfd29,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fernanda Reyes
-,5f0d630c-7cdb-4499-aaaa-d1240e539521,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
-,f343b037-e5bb-47cd-a522-a5def044af44,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
-,f2557186-9751-4e5d-9742-865a8cb27d88,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
-,cef2403a-a00f-410d-9c55-910a13c74789,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
-,e23e919a-2102-4a25-b609-94657566c41b,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
-,62dedba0-cd3e-4b3c-85ff-5a1ba315221f,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
-,39c40ded-3069-47fa-82ff-e7430e8fc32b,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
-,e05ac031-d80e-4750-a9b1-f5acf242a71a,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
-,4f8832bb-adef-4bea-adbc-f1144d873dcc,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
-,a718b4ef-96ff-48a1-9346-30775ba77fc9,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
-,af2db164-18a4-4cef-9219-1b3205c4c771,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
-,ff3d7fbe-1a84-41d4-9f36-eb2030618cf0,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
-,a1298996-7fc9-4e75-ac28-ade3fe2c2bdb,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
-,b57d0343-1b2f-4ad3-b1ed-5fd6c7d24bde,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
-,19f52e03-4022-4684-a486-2ca2e91b7c37,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
-,524d87b2-6f55-403a-8012-91d35268a631,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
-,ca7653df-95f2-4525-8f4a-aa18a6924918,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
-,e02383ed-6632-4f95-ae35-ebd777ffc75a,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
-,a5116c38-f67a-46d4-89ba-cfe453adce04,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
-,a6c96ca2-eeaf-436b-88df-5693b9905b10,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
-,1933a26b-9b94-401a-a27d-3c5e4922d0f9,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
-,88e0d8a0-c6b5-47e8-80d5-4aaf4e6e4ab2,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
-,9b818ab9-5ebc-49da-af6d-575fd5981775,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
-,6fcebfe3-e492-4f19-b338-ebe8023daa9f,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
-,c74d8f23-b924-47fc-8bac-90b19e905e18,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
-,55c5d7cd-733f-4d28-9336-78abff15d60b,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
-,469c1cfc-3f72-418d-8789-f950a4a115cc,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
-,5173bb37-1ff0-4722-bdc8-6d265a71ed94,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
-,7f5e0340-8df4-4a69-ac5d-3dfa924e928f,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
-,ee03dad8-6d7f-4c8c-a325-8df4c7ca7461,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
-,abe87f91-f715-46dd-9f10-13fca033b167,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
-,07478edb-37d6-489c-8cfb-4ee7fa5c9003,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
-,d9b14bff-44d7-47d4-abc6-240d17f50391,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
-,255c2c84-886b-4ea3-a903-ac7812b6facf,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
-,a3014883-13fe-408a-84c6-3ecb0a2efff9,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
-,c736fcd9-38a8-49ef-b720-0e60ebe74d5c,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
-,3eba2034-295f-47c2-a3db-4cadbfa91bc0,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
-,1e498936-a002-4da8-8ad4-7ae27f9f9017,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
-,5d30e4e3-e423-435a-8fb4-46d4f5c71e8a,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
-,25479293-31ec-4e36-b91c-b57a9a10fd81,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
-,a0d76c8e-82ba-470e-89f6-893b8112ffd3,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
-,294de541-ac65-449d-bbd6-cb3377a83a2d,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
-,96ca3f0e-e37c-4e1e-9ad2-886888ffda53,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
-,d0cfe4e6-08aa-4faa-9aca-e133d068337c,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
-,70849b64-9733-47ef-90aa-cfaae5833170,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
-,ef475718-9210-4866-9997-120b4afd7265,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
-,3ad90998-d115-49ce-bb8e-f6d907ede050,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
-,c4acb637-48db-4938-ab6e-cdb6055d2632,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
-,0529e60d-c890-4609-a461-8258b6fce8c0,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
-,d3a618c6-7fe9-471d-8f96-2b4a45183110,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
-,87f40ec2-f806-4623-9bb3-9db2ccdee5f7,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
-,9ee8ea3f-74d6-4eb2-b86d-0b4a3556820c,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
-,a9072fd5-f3c3-442b-adf9-8b75663d1c92,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
-,34dde32a-3958-49b4-9517-0a41fd9556a2,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
-,c5a14800-d03e-46cc-8d45-fd6e8975f81c,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
-,ea9f61bc-efc7-4bb7-ba25-92c51a7f6bd0,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
-,6f49d1cf-1cd8-48d8-a9ab-366e405cf888,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
-,5a2b2a49-e330-43de-8bd8-c9f5ae19b564,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
-,1748008e-4324-422d-a42d-ee93a572740c,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Natalie Baeza
-,49b3f7cb-2074-40d9-b5c6-ad90e534d92a,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Natalie Baeza
-,90370038-ad41-4f03-bfdf-2e8293530eaa,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
-,04df6c05-7e50-4d0d-ba7a-8b304450a732,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
-,af23b15b-cab6-4df6-b494-26ae25e08f31,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
-,d87541f5-a4d7-4593-8fa8-f929ae80b874,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
-,11d1b5f5-04ee-4493-9d93-8be4135e49f1,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
-,e7e20295-a8be-4000-94a5-9a5c7192a4de,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
-,d5fc7a2b-ed50-46d6-893f-477f217344d9,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
-,1c673cbb-1f48-4e63-91de-99ac85b6400f,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
-,fafe9fa7-c322-4fae-a6e9-9e12828d4e7b,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Natalie Baeza
-,db0f7cad-7512-4f7d-a93e-d655e8218df0,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalie Baeza
-,8ac74a85-311f-4ecb-8baa-fd248633109c,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
-,b738e5c5-eac3-48ae-ae8e-6f38a10db3c5,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
-,ecb66879-2f14-422a-b193-59ef8ca09ff1,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
-,8ed714e5-145c-47a8-88bb-d8d958e2c873,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
-,e65df8bf-9b46-45b6-8390-30378bfb192d,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
-,6d7ba489-3514-48b1-a0d9-0135221a4749,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
-,41f2868b-1279-452a-9716-6661e767d723,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
-,e43be379-9bfd-4bbb-a235-2b59b27bddea,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
-,bf9f2dfb-083a-4342-a1fb-92c954ef8a30,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Natalie Baeza
-,19ee4437-a900-4d42-92b7-1e5beef024f7,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalie Baeza
-,a6f27924-932f-4976-aa3d-875f4a7b2f4e,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
-,502fa49a-65cf-4d2f-9153-4743771c7ccc,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
-,20d62b29-40c5-4fdb-8b7e-dfc163116f79,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
-,6d103270-1bb4-4e84-a1ea-90fd5a1f33ff,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
-,440d7759-1397-4974-8778-ecac365a5134,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
-,b54b6b0d-fc81-41ca-af8e-96ef9a9e4943,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
-,b5a8d16a-4d00-47ec-8a36-cf16cd44dcee,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
-,47b7c9ff-d9b7-44f6-88ca-0eab604c5a76,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
-,87087927-0cc5-462f-902b-91fd2585b062,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Natalie Baeza
-,deeebef8-2c92-44d7-b5d6-aa2ddf18a3c6,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalie Baeza
-,f0d49cbe-8b8b-4e1f-a7cb-d1921a42aced,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
-,fb560f09-fc79-431c-a0ec-6f97f937ce3a,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
-,e3419909-0313-4f98-84e7-a07954884fef,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
-,0033c186-2e9a-4dfd-9df4-76fc7a89ec6d,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
-,3c6b93ad-748b-44e3-a72c-47f773670bf0,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
-,b487d109-ba25-4490-8111-16cc03da3f25,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
-,0ad18e84-4622-4ff1-9b11-f3776c0e124e,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
-,71d8c5a3-4e9d-43e0-8b6f-5b8d2033368b,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
-,73f9e7f2-18f4-4e23-b663-624b92333c98,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Natalie Baeza
-,c638a17c-87c5-4ce3-bcd1-be29fe09e479,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalie Baeza
-,cefec025-3526-4df5-b55b-65edce71101f,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
-,9c9d1f56-fe71-4a49-bf88-81349de0dc71,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
-,c1c654a7-3682-47d0-89ce-331f48abf8cf,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
-,abada31c-346d-419e-8663-bc4a39acaf4a,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
-,335294f1-48a2-4b2b-be58-bace932b90a1,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
-,1867c4c1-3997-4a1a-9164-cde91f0652a2,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
-,a61db5ee-4742-4800-9070-77a63744dacf,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
-,e1807e9c-e38d-4d72-960a-c13b6b641c05,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
+,eb64bb88-1887-46dc-b252-2ad84d6a75b6,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Yazim Meza
+,dac4aa39-180d-43db-ab18-e2613dd99457,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Yazim Meza
+,0160b81f-e08e-4124-8665-cf9628e00ff4,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
+,1932cd25-4a17-4022-aa8d-b1d95c326622,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
+,29b0f514-f7f6-48a6-b950-d358b430695d,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
+,5f99a4e1-ccf7-4897-9af8-4a5afbeb5f1d,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
+,d7b231fe-9ec2-4153-be82-98c39aea2258,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
+,2ff9d853-3289-4474-9475-4eab14ab411c,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
+,6dec05e7-8969-4244-8ac5-e14c46b75cca,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
+,78bb7c40-e10e-45d2-a9ab-129787152255,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
+,c68f599a-b35a-4d1d-bdfb-533de9a59f6e,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Yazim Meza
+,b7fe37c9-d99d-4a44-931f-2d4cc77ddb03,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Yazim Meza
+,6392f451-b855-4822-93b8-f084597e3fcf,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
+,bf7c7bab-b777-45a4-96ec-64d17179c067,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
+,6cf317e5-5359-447d-bb27-de2852f769cb,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
+,f365f27d-9590-4896-aab8-97e2402eb95f,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
+,3764afcf-168c-4e27-855e-e8e832852818,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
+,5aa611a0-abf7-4473-94a2-061298218eb6,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
+,e00e9788-96b5-4716-b532-5d421e415e33,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
+,7ea19549-64d0-4a21-911d-6c23e6783dcc,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
+,a62dda75-ac3e-4f2f-bc31-c78f38b11c5a,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Yazim Meza
+,ff943165-9499-4b3f-8200-a1f25e9fa8af,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Yazim Meza
+,2ceb4e18-636c-4779-9a1e-6a8c9ce4189c,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
+,3a010124-9718-486c-8630-d513336f5c42,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
+,defc11c0-b8f1-4c01-a3f4-d26f1d970834,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
+,7638609a-fd1f-4ba4-bd20-2aa5bf984c52,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
+,e4226134-9a26-43bf-a8a2-6e23ac57bcdc,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
+,b8c20f2f-8981-47d5-8538-a327c0c5d44e,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
+,52978f47-c96b-45b7-9a26-cb924f960ea3,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
+,9a9f0907-2094-4851-98a0-d76a6cbe2a87,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
+,4503b55c-518b-476d-81db-d3451e7804b4,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Yazim Meza
+,1dc9775f-76e8-464f-ab86-e828e8d06f43,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Yazim Meza
+,3cf81113-7180-436f-9c28-a376ccf41405,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
+,adbcf895-cd4d-41f2-a7a8-b9cefa822eaa,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
+,c9d9dc57-fe50-4d0f-b795-dbd1afab1ab5,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
+,95b28557-b473-4bff-ad13-552a70519528,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
+,6cbf26c4-4b25-44e4-ac18-43c89115cdcb,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
+,28459da0-52eb-48fd-b5bd-3e85e27d3b2a,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
+,2907794e-be7a-416d-b34d-de6349023843,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
+,3e227ecc-538d-410c-b9c0-35154d1973a5,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
+,734f5c26-5604-441f-b883-6085205f0222,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Yazim Meza
+,56f68ce8-b9ae-4513-aa71-de522dac310d,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Yazim Meza
+,d4e7603b-a130-4c79-b28e-ae7b8d09a5d6,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Yazim Meza
+,668292db-a8e8-44cc-8515-ec104c152ca4,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Yazim Meza
+,f1256590-857e-4e3d-ace1-f89950bda9f1,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Yazim Meza
+,f9a6d18d-cc0e-41f1-8cbd-029d79db51c3,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Yazim Meza
+,f7d60e35-b8a0-4fe2-a569-dc8cf2d2e3ef,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Yazim Meza
+,35ce2507-468b-4a4f-aae5-dc21241c320d,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Yazim Meza
+,1d8350af-8ea8-4922-bc8e-3bc6a02542b2,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Yazim Meza
+,bd02e665-ced9-4ca6-bf00-0740c3450ab4,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Yazim Meza
+,516d9ccb-5a32-4ba4-9636-5d5716b2ad89,Asignatura 1,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,66ae1d4c-a030-4e16-bd4c-c7c6595c1a0a,Asignatura 1,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,4e33d834-33a6-4702-a615-9f13883f7504,Asignatura 1,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,c5034abc-c598-4e12-85bd-1b496cd6629d,Asignatura 1,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,88e692a1-0222-4353-a579-5829fc4443ef,Asignatura 1,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,07f118b9-f346-4a02-b6e5-efad6c9e4105,Asignatura 1,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,7c37133b-9679-4cf1-89f0-7fd0c92c5deb,Asignatura 1,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,cc76cad7-8ede-4562-97eb-fb599f328470,Asignatura 1,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,22aaf5ad-5e39-4918-a418-6e58b1aa84c3,Asignatura 1,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,6d21d148-3afe-45bb-bbfa-6ea4026de1d8,Asignatura 1,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,e3378a99-c7cb-47b1-82b9-0ac69037bedc,Asignatura 2,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,7d6571dc-4f4f-46a3-868c-56aca563b1f8,Asignatura 2,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,5b503659-4a64-420e-9543-df3ded365336,Asignatura 2,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,b9e89520-1c79-431b-94e2-054f9d8cfae9,Asignatura 2,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,906f29f4-bfe3-4a7a-bfd7-3281e50ddaeb,Asignatura 2,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,7d0ffa05-67c5-46f1-a3ab-5ad50d17f7fb,Asignatura 2,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,38345d91-0145-4f30-a929-58a98d436df9,Asignatura 2,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,2d169586-59fd-454d-ab41-ecc05b23bff6,Asignatura 2,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,cc89e5d3-9a98-4fdf-b385-81e5d68d277b,Asignatura 2,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,d6c73427-b06e-47d2-af4e-d7b835d42a16,Asignatura 2,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,59d7abc2-bbb0-4d35-a850-8a2eaf9e9cf2,Asignatura 3,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,f13cab7f-aae6-44de-a9d7-4bb5b070b16e,Asignatura 3,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,a22d0912-d23e-46ef-94ae-fd6d54b12c10,Asignatura 3,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,1d160275-30f3-4540-802b-569ac2ec5193,Asignatura 3,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,472f3466-26c9-4bf5-a2a5-a0ec4437428a,Asignatura 3,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,fd19bc63-acca-4578-a67b-396a8b5b7a28,Asignatura 3,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,cc63f666-2421-4be1-9d32-09c6667f2b03,Asignatura 3,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,52b2889b-87c3-4933-8a22-d3699ade7b56,Asignatura 3,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,c6300700-0102-428d-bd3f-bdb79be03716,Asignatura 3,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,c20ab94b-be1b-47a7-8fb1-7ad6368eccab,Asignatura 3,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,e9c6b2c8-6423-4e24-b796-39fd2e91519f,Asignatura 4,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,ce87d515-d01b-4aa7-8578-5d4ba7711236,Asignatura 4,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,d472df71-422d-4baf-9f38-df48d0a368f5,Asignatura 4,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,a94ca2c2-1264-4460-92e9-1265058b54cb,Asignatura 4,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,6988b777-b480-49fa-8592-f1529a20b7dc,Asignatura 4,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,3cf215ed-d606-4e64-8ae2-bd0e4db6eeaa,Asignatura 4,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,05830039-4587-4e5a-b71f-edc55f38033b,Asignatura 4,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,59926c72-96b6-4352-ad2d-de696acd94b5,Asignatura 4,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,2175d550-4468-42da-9add-e776f13751a9,Asignatura 4,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,f7cda8f6-3624-452c-96d3-cce4d3987890,Asignatura 4,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,0ed28a22-461b-4255-a27c-1687bc3674b7,Asignatura 5,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,e0180cc9-1478-46b0-b926-36f27f42ed12,Asignatura 5,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,98670368-7328-4343-b23c-0d0bdca0cd1e,Asignatura 5,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,b9f0d20e-f526-4eb2-9ea7-0f63438f6700,Asignatura 5,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,59766986-54ad-4124-a86a-cd32afd2f98e,Asignatura 5,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,43d5ab42-0e61-48b1-8b59-aa9489f32dbf,Asignatura 5,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,a6212992-042c-4d43-b03d-9b3c58767cda,Asignatura 5,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,794457c6-ceb8-4de4-81b2-d35502219882,Asignatura 5,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,f96e82e4-19a2-43fc-9a6b-52f7f9c83743,Asignatura 5,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,9bb3314e-601b-4c8b-9f94-d3f5e60db389,Asignatura 5,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,6d37535d-c1a7-433c-94a8-6e4fbffce688,Asignatura 6,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,3d9221dc-6715-434f-8e61-f5e9631abf41,Asignatura 6,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,f8ca1e1b-dab7-4c5d-ac45-22f199622792,Asignatura 6,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,5fee2fc2-8c38-48f4-9f35-a113a3b158c6,Asignatura 6,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,53520428-06cb-4538-9335-42b3e79c41a7,Asignatura 6,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,28a99b27-1d84-47a6-83ca-72e0a1387392,Asignatura 6,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,6b560f09-09df-4976-8030-f80d79522da2,Asignatura 6,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,201aaaac-35c6-4090-a892-c12623827efd,Asignatura 6,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,26d6b394-61e4-46b4-8f7e-b989b26f4870,Asignatura 6,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,c05ced0a-950e-4c1e-bf66-f0589debef02,Asignatura 6,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,6e987876-3662-4f4a-a63a-55dec2c40f4a,Asignatura 7,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,47450a06-ee79-4e2a-9ed2-7c62b20a0961,Asignatura 7,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,9f2fdd29-3d4f-4c7b-ace7-338f59412c3d,Asignatura 7,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,0bb9650e-b0ef-4fa4-957c-f21030632670,Asignatura 7,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,0285d515-ca9f-4d91-91b8-43b9a4552fbe,Asignatura 7,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,48f4a311-ac52-4f50-b81f-7a2f39391fb7,Asignatura 7,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,4d311315-b23e-4af4-969f-4c99920688a6,Asignatura 7,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,68ab0994-09dd-4472-af1e-da4b3c82dc58,Asignatura 7,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,0c39fe03-12b0-4859-bb4e-964c8b6c3e72,Asignatura 7,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,7002a20d-a11d-4ded-ae9c-39685478efed,Asignatura 7,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,5dce8a33-9668-4af4-9407-990d28bb9518,Asignatura 8,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,20479554-0b23-4514-bd58-e6c3b0a7b09c,Asignatura 8,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,85d2a606-379c-4361-8b73-439f455742aa,Asignatura 8,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,c784e474-3896-46b9-acb4-f7cc26fb1e6d,Asignatura 8,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,ee7b1f45-b47e-497e-9dd0-fc2e25d59f6c,Asignatura 8,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,f0e91ba0-1bae-43de-9bfd-43a724de8492,Asignatura 8,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,f8be62fc-eba2-4bc0-a568-a2c615b7672b,Asignatura 8,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,ac7e3772-8dc4-457a-96a2-357842f8d511,Asignatura 8,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,f8b0ff34-64a9-49fe-907e-2784fe46856c,Asignatura 8,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,ccfa6e3b-49e3-449e-9cc6-305a71799d4e,Asignatura 8,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,3f4df8e6-894b-4375-82a8-4e8603eed500,Asignatura 9,S0,S0,,46280,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,a796ef0d-2ba5-43ba-abdc-753208f07113,Asignatura 9,S1-S2,S1,S2,46290,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,6ae48a76-7875-4cb9-8c07-4c9f83adb78c,Asignatura 9,S3-S4,S3,S4,46300,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,4b75f623-c7d7-4293-8f75-cc0e3a6c0d24,Asignatura 9,S5-S6,S5,S6,46310,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,c27de7ba-1fb9-4a96-b2cc-dc3b07c5f6c0,Asignatura 9,S7-S8,S7,S8,46320,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,c2064aa4-a3b3-4e3b-9885-b26f28fb5c74,Asignatura 9,S9-S10,S9,S10,46331,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,ea34f769-cae2-4aba-a8b4-cabf1b6fa02b,Asignatura 9,S11-S12,S11,S12,46341,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,ba498ba2-70e2-4cd0-bc01-d8abe8eb961c,Asignatura 9,S13-S14,S13,S14,46351,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,1a60c4be-e4a2-4ae3-9a2e-ff659dc1862c,Asignatura 9,S15-S16,S15,S16,46361,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,c2d87530-91d8-4acc-9870-83a123f31a02,Asignatura 9,S17-S18,S17,S18,46371,#REF!,#REF!,#REF!,#REF!,#REF!,Brenda Bastías
+,c6397357-5ef4-4700-a4d4-4f62be9e7bba,Asignatura 1,S0,S0,,46280,3,0,0,En producción,1,Bárbara González
+,25cc43c8-2e70-4595-b796-c951abfbfe40,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,2,Bárbara González
+,b15820e3-abc4-417c-8864-cfb41e991eae,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
+,9ec21823-b460-4039-92ee-660dbc5c8ed3,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
+,11e6c5d7-224a-461e-bd6b-f19489b4df9b,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
+,9898196d-fd31-48d3-8435-f6948399c1c5,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
+,b5a8c967-bf92-4efb-be7b-752c165b3a59,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
+,7ba93337-4372-4ecf-bc5b-2bff953ffdb1,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
+,98c060ff-335b-44da-9cfb-bf4f56cb7719,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
+,8a5af658-b86d-4a69-8228-1bba76f7f8dc,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
+,1f23d155-d089-47d2-a8da-b34b330833de,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Bárbara González
+,c0f9d1d7-fc24-4656-8151-c64c7f3100e2,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Bárbara González
+,972e7253-d07b-4d6c-aeff-60e950a5ce17,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
+,92b9fa4f-d617-4eca-bc5c-9cb839d5dcec,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
+,e5de8147-9c62-4a0c-8618-6789c1fd663d,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
+,673f2626-9b95-4852-8ae3-e2fac873b909,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
+,0c299ab0-7e04-4030-9dac-afb1b0827b7f,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
+,359a1fda-25e0-47b0-b609-cc78628eaaf5,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
+,f72873ef-0e5b-4cd9-9ffa-7c52db704308,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
+,725cb645-f502-43d8-8c33-4222cefe8e82,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
+,2c8e3e34-b72e-4aa6-9270-250af6778f3b,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Bárbara González
+,42fc72c0-647e-45d2-b71b-5267c363c44b,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Bárbara González
+,7f1877f9-5ad2-4bcd-9fa9-41e3776671da,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
+,01c6b704-5dd3-40c0-a9d1-150fa29a6e45,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
+,4fcb130f-508a-416c-8ca4-9a3453ca0cd0,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
+,22841419-46cf-48b0-9387-9eecf0ab98bb,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
+,125e0a19-661d-4d5e-ad05-c47ff2dd50f8,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
+,1a0245b9-5ecf-4690-8249-4e7098e470c7,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
+,5da2b516-eb75-42b0-b44c-a4836d12fb72,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
+,a46aa765-ebaa-4c97-b678-4df04a0c4dae,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
+,c18447db-77e9-46bc-acf6-3c0fa0cecfd8,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Bárbara González
+,52619b4b-4c4b-471f-89d1-67a74130c395,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Bárbara González
+,7deefdb9-eadb-4998-bbde-b80d099c325e,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
+,46fb5657-26cf-46cb-b421-fa6b9438d97c,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
+,a2a93e23-c5e0-4dae-843b-675660f1a98f,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
+,d6f2bae6-aec4-4b11-a497-588da000567f,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
+,bccae114-0b4c-4528-8755-b674944edd37,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
+,fdc57e0d-0f34-4304-b3cc-778cccfb622f,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
+,c4a23d1c-84ca-40dd-84cd-639e121c9560,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
+,3b73dce9-9ae3-44cc-91cb-afd50b1d6785,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
+,13cbd00d-866a-4aec-af8c-1176d4b2ce78,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Bárbara González
+,57fcf959-57cd-4ccc-bb19-f323035fc74c,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Bárbara González
+,a37c9b39-683c-4ef7-8011-7a3c332fd1d4,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Bárbara González
+,36f8d2d1-1f5f-43f9-945d-07e20eb7620b,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Bárbara González
+,a57b53af-1469-49c7-9c81-8f4017c7b0bd,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Bárbara González
+,a1fc5ac5-2462-4e12-ac10-faae4c3bc91a,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Bárbara González
+,1f694a00-aa97-4d97-83be-cf9684974e4c,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Bárbara González
+,118e4cb4-1b0f-4f76-8b0a-cf654365e613,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Bárbara González
+,e7fb0ab1-371b-4001-984b-3f48be99c245,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Bárbara González
+,08e6c62e-c278-4e34-a328-df575d5b0c2a,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Bárbara González
+,1cc2b23e-6a1d-418d-9ae0-20e9f441adb7,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Carla Riquelme
+,a7b5a443-2b19-4a28-adf1-e3a767880743,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Carla Riquelme
+,a7c397dd-e636-46b3-a2d3-0576331d2e98,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
+,5b87f333-8895-452b-ba20-e88bc0d52ba6,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
+,41b6ec67-a80e-4bb6-b216-e60b8baf3798,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
+,92cafb50-74d5-4998-8fb2-f205ed67fc07,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
+,492f391e-3d47-482d-a42b-9f67279c330e,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
+,52d4598f-22af-41aa-8d7a-31a3c344aa28,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
+,cbef1673-15a5-4fa6-8f11-f8dfff22bc92,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
+,8c4eed76-02b4-4c5d-af8b-2af6afcd9fd8,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
+,6a6ab8cd-e1e6-4529-ac9f-b335624257d3,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Carla Riquelme
+,5c5a17cf-eaa6-4c18-a7c4-c31ac4c0986f,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carla Riquelme
+,d7e9f254-c35c-418e-8398-2bb418e6de95,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
+,807d1a52-08f9-49e1-ad14-2ed9261d10a1,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
+,df903ca4-e320-4c40-a6a8-7acb323e537e,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
+,52661299-6bf4-4202-a52f-3e4bd52a87f0,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
+,c076c375-040c-40c5-9cdd-5ca848ec0aed,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
+,1d99dc18-df56-411b-ae3d-5d8572b7e52a,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
+,59cb1e35-e76a-4318-9dc8-6691d3bdfbc3,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
+,bba9d23d-0c34-4816-a740-45f6763af8b8,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
+,e95a9c24-2a06-4095-894e-d9003312feaa,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Carla Riquelme
+,1db2e3da-c5bc-4d50-9c0a-fc523168740f,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carla Riquelme
+,e1d49e83-717b-40db-aea3-0c1ee8e137ef,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
+,57fa0638-50cc-4e87-92fe-f5fe5f6936a0,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
+,ccd0d4fe-cb76-4144-a945-37f3134e2bf8,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
+,a3f271e7-3739-4461-8a78-d3ea6db48326,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
+,23858d2f-20b0-4a9e-ac9b-4e0fa50e2a62,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
+,68026ff9-d587-48e3-a8e8-ce15819a2d52,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
+,997d950c-6989-472a-a429-7ef99c765796,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
+,9813ffd4-35fa-4aa6-bd71-2c3be5e7a201,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
+,e922742d-d7f7-4166-8301-789a7a37b6d2,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Carla Riquelme
+,3fd2ddcc-9ea3-40d5-a457-029595e5b3be,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carla Riquelme
+,c1d0f6bb-c609-413a-815d-8d0f0bf48bec,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
+,b14f9f7c-225b-4a5f-979e-40162e7fcbb3,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
+,60b931f5-e895-4477-884f-7d0cdac5152c,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
+,829ba72e-47e9-436b-ab5f-8d9a05ef6ab7,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
+,669b74b2-7381-4936-9432-97f1c2108fcb,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
+,bcbe02d9-7d40-445c-bd89-2aef827f5f8e,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
+,2a27ff64-ad5f-4ddb-842b-53025acc7459,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
+,5aa13f41-2e04-4855-ab68-1eeac4677b02,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
+,ab428285-e156-4ff1-a47d-21df21f41a5f,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Carla Riquelme
+,7b40858f-b70d-41b9-b360-3954f36d0dbc,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carla Riquelme
+,06ed28c6-13b6-4bac-8112-41f12ac85ba5,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carla Riquelme
+,08a7254b-4ae2-436d-a6ba-c1b4c4bb8c77,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carla Riquelme
+,5c5181ef-c49c-4ff9-8b58-512a7f8aab89,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carla Riquelme
+,b50aea37-fd3d-4f1f-9902-100c499abe37,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carla Riquelme
+,0284fac2-3b68-4e70-909a-effbb1cbd644,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carla Riquelme
+,113391f7-9707-42c5-aab9-1153e641c3d3,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carla Riquelme
+,5c5e26b5-ce0a-418d-a293-2a0823246073,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carla Riquelme
+,4cb48708-2dc0-496b-8918-c393ab33090c,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carla Riquelme
+,ac8b1f97-8d8b-4413-824d-7f9c2ae45598,Asignatura 1,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A102)*(($B$4:$B$98=$C102)+($B$4:$B$98=$D102))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A102)*(($B$4:$B$98=$C102)+($B$4:$B$98=$D102))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A102)*(($B$4:$B$98=$C102)+($B$4:$B$98=$D102))*$G$4:$G$98)},Bárbara Soler
+,f1f006a8-939c-4bf1-8473-18d263b21560,Asignatura 1,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A103)*(($B$4:$B$98=$C103)+($B$4:$B$98=$D103))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A103)*(($B$4:$B$98=$C103)+($B$4:$B$98=$D103))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A103)*(($B$4:$B$98=$C103)+($B$4:$B$98=$D103))*$G$4:$G$98)},Bárbara Soler
+,39e7844e-2226-40f8-b536-a0b76ec32e75,Asignatura 1,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A104)*(($B$4:$B$98=$C104)+($B$4:$B$98=$D104))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A104)*(($B$4:$B$98=$C104)+($B$4:$B$98=$D104))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A104)*(($B$4:$B$98=$C104)+($B$4:$B$98=$D104))*$G$4:$G$98)},Bárbara Soler
+,063ea834-7a16-4c27-9e1c-bcc086346d60,Asignatura 1,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A105)*(($B$4:$B$98=$C105)+($B$4:$B$98=$D105))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A105)*(($B$4:$B$98=$C105)+($B$4:$B$98=$D105))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A105)*(($B$4:$B$98=$C105)+($B$4:$B$98=$D105))*$G$4:$G$98)},Bárbara Soler
+,3e7fded8-d4e1-41e8-a99d-1a6d35ca5d43,Asignatura 1,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A106)*(($B$4:$B$98=$C106)+($B$4:$B$98=$D106))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A106)*(($B$4:$B$98=$C106)+($B$4:$B$98=$D106))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A106)*(($B$4:$B$98=$C106)+($B$4:$B$98=$D106))*$G$4:$G$98)},Bárbara Soler
+,aa995e66-955c-4cb0-a034-b75e1d3e914e,Asignatura 1,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A107)*(($B$4:$B$98=$C107)+($B$4:$B$98=$D107))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A107)*(($B$4:$B$98=$C107)+($B$4:$B$98=$D107))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A107)*(($B$4:$B$98=$C107)+($B$4:$B$98=$D107))*$G$4:$G$98)},Bárbara Soler
+,cab61661-1bf6-4ab5-ab9d-5d2702116011,Asignatura 1,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A108)*(($B$4:$B$98=$C108)+($B$4:$B$98=$D108))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A108)*(($B$4:$B$98=$C108)+($B$4:$B$98=$D108))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A108)*(($B$4:$B$98=$C108)+($B$4:$B$98=$D108))*$G$4:$G$98)},Bárbara Soler
+,2186b0cf-01d5-475c-8592-6d461ee4677b,Asignatura 1,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A109)*(($B$4:$B$98=$C109)+($B$4:$B$98=$D109))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A109)*(($B$4:$B$98=$C109)+($B$4:$B$98=$D109))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A109)*(($B$4:$B$98=$C109)+($B$4:$B$98=$D109))*$G$4:$G$98)},Bárbara Soler
+,85d2e9fd-024e-4e43-a355-fd4e45868b0a,Asignatura 1,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A110)*(($B$4:$B$98=$C110)+($B$4:$B$98=$D110))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A110)*(($B$4:$B$98=$C110)+($B$4:$B$98=$D110))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A110)*(($B$4:$B$98=$C110)+($B$4:$B$98=$D110))*$G$4:$G$98)},Bárbara Soler
+,f5cb8047-f483-4c4d-9159-be504dfbf3a7,Asignatura 1,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A111)*(($B$4:$B$98=$C111)+($B$4:$B$98=$D111))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A111)*(($B$4:$B$98=$C111)+($B$4:$B$98=$D111))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A111)*(($B$4:$B$98=$C111)+($B$4:$B$98=$D111))*$G$4:$G$98)},Bárbara Soler
+,aa4991e6-0ec4-4fdc-91e4-93ecd237e170,Asignatura 2,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A112)*(($B$4:$B$98=$C112)+($B$4:$B$98=$D112))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A112)*(($B$4:$B$98=$C112)+($B$4:$B$98=$D112))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A112)*(($B$4:$B$98=$C112)+($B$4:$B$98=$D112))*$G$4:$G$98)},Bárbara Soler
+,baaba2c7-fa58-442d-81e5-a3a46460db4c,Asignatura 2,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A113)*(($B$4:$B$98=$C113)+($B$4:$B$98=$D113))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A113)*(($B$4:$B$98=$C113)+($B$4:$B$98=$D113))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A113)*(($B$4:$B$98=$C113)+($B$4:$B$98=$D113))*$G$4:$G$98)},Bárbara Soler
+,2390efa4-ce1e-44dd-9e88-3ee2a64cf579,Asignatura 2,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A114)*(($B$4:$B$98=$C114)+($B$4:$B$98=$D114))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A114)*(($B$4:$B$98=$C114)+($B$4:$B$98=$D114))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A114)*(($B$4:$B$98=$C114)+($B$4:$B$98=$D114))*$G$4:$G$98)},Bárbara Soler
+,719a8ef5-eb77-4a95-8abd-b9d2c6578621,Asignatura 2,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A115)*(($B$4:$B$98=$C115)+($B$4:$B$98=$D115))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A115)*(($B$4:$B$98=$C115)+($B$4:$B$98=$D115))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A115)*(($B$4:$B$98=$C115)+($B$4:$B$98=$D115))*$G$4:$G$98)},Bárbara Soler
+,53825f88-a9b7-4c6b-9b55-215982b5042b,Asignatura 2,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A116)*(($B$4:$B$98=$C116)+($B$4:$B$98=$D116))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A116)*(($B$4:$B$98=$C116)+($B$4:$B$98=$D116))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A116)*(($B$4:$B$98=$C116)+($B$4:$B$98=$D116))*$G$4:$G$98)},Bárbara Soler
+,acd36d75-0c8b-4cf5-a7ab-a92feef03ee3,Asignatura 2,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A117)*(($B$4:$B$98=$C117)+($B$4:$B$98=$D117))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A117)*(($B$4:$B$98=$C117)+($B$4:$B$98=$D117))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A117)*(($B$4:$B$98=$C117)+($B$4:$B$98=$D117))*$G$4:$G$98)},Bárbara Soler
+,b4979556-5654-4ad5-8fa5-2b49d09136d0,Asignatura 2,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A118)*(($B$4:$B$98=$C118)+($B$4:$B$98=$D118))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A118)*(($B$4:$B$98=$C118)+($B$4:$B$98=$D118))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A118)*(($B$4:$B$98=$C118)+($B$4:$B$98=$D118))*$G$4:$G$98)},Bárbara Soler
+,77c66927-b4d4-40de-8c87-6a695da9ece1,Asignatura 2,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A119)*(($B$4:$B$98=$C119)+($B$4:$B$98=$D119))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A119)*(($B$4:$B$98=$C119)+($B$4:$B$98=$D119))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A119)*(($B$4:$B$98=$C119)+($B$4:$B$98=$D119))*$G$4:$G$98)},Bárbara Soler
+,635a707f-465d-4183-aa87-882cdd3593ba,Asignatura 2,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A120)*(($B$4:$B$98=$C120)+($B$4:$B$98=$D120))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A120)*(($B$4:$B$98=$C120)+($B$4:$B$98=$D120))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A120)*(($B$4:$B$98=$C120)+($B$4:$B$98=$D120))*$G$4:$G$98)},Bárbara Soler
+,adf66889-827f-4f91-8cea-fec52872452c,Asignatura 2,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A121)*(($B$4:$B$98=$C121)+($B$4:$B$98=$D121))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A121)*(($B$4:$B$98=$C121)+($B$4:$B$98=$D121))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A121)*(($B$4:$B$98=$C121)+($B$4:$B$98=$D121))*$G$4:$G$98)},Bárbara Soler
+,69b1b050-ff0d-4ca2-82ea-2a6252e84af5,Asignatura 3,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A122)*(($B$4:$B$98=$C122)+($B$4:$B$98=$D122))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A122)*(($B$4:$B$98=$C122)+($B$4:$B$98=$D122))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A122)*(($B$4:$B$98=$C122)+($B$4:$B$98=$D122))*$G$4:$G$98)},Bárbara Soler
+,a51beb1c-bcb3-4047-9ab3-1626b276d60f,Asignatura 3,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A123)*(($B$4:$B$98=$C123)+($B$4:$B$98=$D123))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A123)*(($B$4:$B$98=$C123)+($B$4:$B$98=$D123))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A123)*(($B$4:$B$98=$C123)+($B$4:$B$98=$D123))*$G$4:$G$98)},Bárbara Soler
+,92b80b56-d4d7-4631-a830-a823697b15a7,Asignatura 3,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A124)*(($B$4:$B$98=$C124)+($B$4:$B$98=$D124))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A124)*(($B$4:$B$98=$C124)+($B$4:$B$98=$D124))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A124)*(($B$4:$B$98=$C124)+($B$4:$B$98=$D124))*$G$4:$G$98)},Bárbara Soler
+,d3112463-f788-4c77-bf60-c3a0ba5749cf,Asignatura 3,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A125)*(($B$4:$B$98=$C125)+($B$4:$B$98=$D125))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A125)*(($B$4:$B$98=$C125)+($B$4:$B$98=$D125))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A125)*(($B$4:$B$98=$C125)+($B$4:$B$98=$D125))*$G$4:$G$98)},Bárbara Soler
+,3441b13a-1fe2-4861-ad35-7737decc3223,Asignatura 3,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A126)*(($B$4:$B$98=$C126)+($B$4:$B$98=$D126))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A126)*(($B$4:$B$98=$C126)+($B$4:$B$98=$D126))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A126)*(($B$4:$B$98=$C126)+($B$4:$B$98=$D126))*$G$4:$G$98)},Bárbara Soler
+,4bf9689f-376e-49cd-9382-a8524bb21f77,Asignatura 3,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A127)*(($B$4:$B$98=$C127)+($B$4:$B$98=$D127))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A127)*(($B$4:$B$98=$C127)+($B$4:$B$98=$D127))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A127)*(($B$4:$B$98=$C127)+($B$4:$B$98=$D127))*$G$4:$G$98)},Bárbara Soler
+,7143127d-3396-4857-8cee-10d9e40d7a97,Asignatura 3,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A128)*(($B$4:$B$98=$C128)+($B$4:$B$98=$D128))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A128)*(($B$4:$B$98=$C128)+($B$4:$B$98=$D128))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A128)*(($B$4:$B$98=$C128)+($B$4:$B$98=$D128))*$G$4:$G$98)},Bárbara Soler
+,7d1095f2-ab0e-4236-9dda-cc3fd5469876,Asignatura 3,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A129)*(($B$4:$B$98=$C129)+($B$4:$B$98=$D129))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A129)*(($B$4:$B$98=$C129)+($B$4:$B$98=$D129))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A129)*(($B$4:$B$98=$C129)+($B$4:$B$98=$D129))*$G$4:$G$98)},Bárbara Soler
+,33aa820e-90e0-4a64-8c8c-93471f345cab,Asignatura 3,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A130)*(($B$4:$B$98=$C130)+($B$4:$B$98=$D130))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A130)*(($B$4:$B$98=$C130)+($B$4:$B$98=$D130))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A130)*(($B$4:$B$98=$C130)+($B$4:$B$98=$D130))*$G$4:$G$98)},Bárbara Soler
+,c5e3b321-e7db-492b-976d-98c8438b2f24,Asignatura 3,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A131)*(($B$4:$B$98=$C131)+($B$4:$B$98=$D131))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A131)*(($B$4:$B$98=$C131)+($B$4:$B$98=$D131))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A131)*(($B$4:$B$98=$C131)+($B$4:$B$98=$D131))*$G$4:$G$98)},Bárbara Soler
+,b75a7f16-e9e0-4bf1-a67e-f185377cb414,Asignatura 4,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A132)*(($B$4:$B$98=$C132)+($B$4:$B$98=$D132))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A132)*(($B$4:$B$98=$C132)+($B$4:$B$98=$D132))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A132)*(($B$4:$B$98=$C132)+($B$4:$B$98=$D132))*$G$4:$G$98)},Bárbara Soler
+,f4dc0194-effa-4a8b-b08d-60e14e5964d1,Asignatura 4,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A133)*(($B$4:$B$98=$C133)+($B$4:$B$98=$D133))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A133)*(($B$4:$B$98=$C133)+($B$4:$B$98=$D133))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A133)*(($B$4:$B$98=$C133)+($B$4:$B$98=$D133))*$G$4:$G$98)},Bárbara Soler
+,e022cdcd-fa73-4d03-831a-040e9d9e1374,Asignatura 4,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A134)*(($B$4:$B$98=$C134)+($B$4:$B$98=$D134))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A134)*(($B$4:$B$98=$C134)+($B$4:$B$98=$D134))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A134)*(($B$4:$B$98=$C134)+($B$4:$B$98=$D134))*$G$4:$G$98)},Bárbara Soler
+,d83263bf-3ae4-437a-8fc9-8b37a8de6b7d,Asignatura 4,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A135)*(($B$4:$B$98=$C135)+($B$4:$B$98=$D135))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A135)*(($B$4:$B$98=$C135)+($B$4:$B$98=$D135))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A135)*(($B$4:$B$98=$C135)+($B$4:$B$98=$D135))*$G$4:$G$98)},Bárbara Soler
+,872ed0ee-7f9d-469e-934c-848f87bb706d,Asignatura 4,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A136)*(($B$4:$B$98=$C136)+($B$4:$B$98=$D136))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A136)*(($B$4:$B$98=$C136)+($B$4:$B$98=$D136))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A136)*(($B$4:$B$98=$C136)+($B$4:$B$98=$D136))*$G$4:$G$98)},Bárbara Soler
+,fdd98284-9bc3-4130-a50a-9ff54182436c,Asignatura 4,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A137)*(($B$4:$B$98=$C137)+($B$4:$B$98=$D137))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A137)*(($B$4:$B$98=$C137)+($B$4:$B$98=$D137))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A137)*(($B$4:$B$98=$C137)+($B$4:$B$98=$D137))*$G$4:$G$98)},Bárbara Soler
+,27b55091-ba10-4f8b-8576-1fa97cb3c812,Asignatura 4,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A138)*(($B$4:$B$98=$C138)+($B$4:$B$98=$D138))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A138)*(($B$4:$B$98=$C138)+($B$4:$B$98=$D138))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A138)*(($B$4:$B$98=$C138)+($B$4:$B$98=$D138))*$G$4:$G$98)},Bárbara Soler
+,1675e9f9-2385-45d9-94d6-e9cb703f304b,Asignatura 4,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A139)*(($B$4:$B$98=$C139)+($B$4:$B$98=$D139))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A139)*(($B$4:$B$98=$C139)+($B$4:$B$98=$D139))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A139)*(($B$4:$B$98=$C139)+($B$4:$B$98=$D139))*$G$4:$G$98)},Bárbara Soler
+,e1adbcec-6b54-4bc0-8345-dc0a60b38cfb,Asignatura 4,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A140)*(($B$4:$B$98=$C140)+($B$4:$B$98=$D140))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A140)*(($B$4:$B$98=$C140)+($B$4:$B$98=$D140))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A140)*(($B$4:$B$98=$C140)+($B$4:$B$98=$D140))*$G$4:$G$98)},Bárbara Soler
+,9593f8ad-e0df-44a9-ba0d-02f37a0b8409,Asignatura 4,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A141)*(($B$4:$B$98=$C141)+($B$4:$B$98=$D141))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A141)*(($B$4:$B$98=$C141)+($B$4:$B$98=$D141))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A141)*(($B$4:$B$98=$C141)+($B$4:$B$98=$D141))*$G$4:$G$98)},Bárbara Soler
+,049f681d-efc5-41af-ae00-3ebb4120f482,Asignatura 5,S0,S0,,46280,{=SUMPRODUCT(($A$4:$A$98=$A142)*(($B$4:$B$98=$C142)+($B$4:$B$98=$D142))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A142)*(($B$4:$B$98=$C142)+($B$4:$B$98=$D142))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A142)*(($B$4:$B$98=$C142)+($B$4:$B$98=$D142))*$G$4:$G$98)},Bárbara Soler
+,0fb0586b-bc79-4bda-af73-720ca2338ad8,Asignatura 5,S1-S2,S1,S2,46290,{=SUMPRODUCT(($A$4:$A$98=$A143)*(($B$4:$B$98=$C143)+($B$4:$B$98=$D143))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A143)*(($B$4:$B$98=$C143)+($B$4:$B$98=$D143))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A143)*(($B$4:$B$98=$C143)+($B$4:$B$98=$D143))*$G$4:$G$98)},Bárbara Soler
+,fa015e01-798b-468c-b005-960ec117f802,Asignatura 5,S3-S4,S3,S4,46300,{=SUMPRODUCT(($A$4:$A$98=$A144)*(($B$4:$B$98=$C144)+($B$4:$B$98=$D144))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A144)*(($B$4:$B$98=$C144)+($B$4:$B$98=$D144))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A144)*(($B$4:$B$98=$C144)+($B$4:$B$98=$D144))*$G$4:$G$98)},Bárbara Soler
+,910b7439-f1f6-43e3-8f0e-4c448ee9a0f6,Asignatura 5,S5-S6,S5,S6,46310,{=SUMPRODUCT(($A$4:$A$98=$A145)*(($B$4:$B$98=$C145)+($B$4:$B$98=$D145))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A145)*(($B$4:$B$98=$C145)+($B$4:$B$98=$D145))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A145)*(($B$4:$B$98=$C145)+($B$4:$B$98=$D145))*$G$4:$G$98)},Bárbara Soler
+,43b20b33-8477-451b-80eb-6989e4e5167f,Asignatura 5,S7-S8,S7,S8,46320,{=SUMPRODUCT(($A$4:$A$98=$A146)*(($B$4:$B$98=$C146)+($B$4:$B$98=$D146))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A146)*(($B$4:$B$98=$C146)+($B$4:$B$98=$D146))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A146)*(($B$4:$B$98=$C146)+($B$4:$B$98=$D146))*$G$4:$G$98)},Bárbara Soler
+,f059f7b6-73b9-47a2-8c27-079310861451,Asignatura 5,S9-S10,S9,S10,46331,{=SUMPRODUCT(($A$4:$A$98=$A147)*(($B$4:$B$98=$C147)+($B$4:$B$98=$D147))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A147)*(($B$4:$B$98=$C147)+($B$4:$B$98=$D147))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A147)*(($B$4:$B$98=$C147)+($B$4:$B$98=$D147))*$G$4:$G$98)},Bárbara Soler
+,dc07d36a-e444-4c2e-b92e-20cbad711601,Asignatura 5,S11-S12,S11,S12,46341,{=SUMPRODUCT(($A$4:$A$98=$A148)*(($B$4:$B$98=$C148)+($B$4:$B$98=$D148))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A148)*(($B$4:$B$98=$C148)+($B$4:$B$98=$D148))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A148)*(($B$4:$B$98=$C148)+($B$4:$B$98=$D148))*$G$4:$G$98)},Bárbara Soler
+,4ebd0ed0-1fe7-4486-9b87-ec5b8707e30c,Asignatura 5,S13-S14,S13,S14,46351,{=SUMPRODUCT(($A$4:$A$98=$A149)*(($B$4:$B$98=$C149)+($B$4:$B$98=$D149))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A149)*(($B$4:$B$98=$C149)+($B$4:$B$98=$D149))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A149)*(($B$4:$B$98=$C149)+($B$4:$B$98=$D149))*$G$4:$G$98)},Bárbara Soler
+,18305f09-f855-4154-a22a-bb81b2d568d3,Asignatura 5,S15-S16,S15,S16,46361,{=SUMPRODUCT(($A$4:$A$98=$A150)*(($B$4:$B$98=$C150)+($B$4:$B$98=$D150))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A150)*(($B$4:$B$98=$C150)+($B$4:$B$98=$D150))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A150)*(($B$4:$B$98=$C150)+($B$4:$B$98=$D150))*$G$4:$G$98)},Bárbara Soler
+,2501a187-f6ef-45c3-a06f-3b2f3708ee20,Asignatura 5,S17-S18,S17,S18,46371,{=SUMPRODUCT(($A$4:$A$98=$A151)*(($B$4:$B$98=$C151)+($B$4:$B$98=$D151))*$C$4:$C$98)},{=SUMPRODUCT(($A$4:$A$98=$A151)*(($B$4:$B$98=$C151)+($B$4:$B$98=$D151))*$D$4:$D$98)},#VALUE!,En producción,{=SUMPRODUCT(($A$4:$A$98=$A151)*(($B$4:$B$98=$C151)+($B$4:$B$98=$D151))*$G$4:$G$98)},Bárbara Soler
+,6386d448-a694-4d25-a842-090f2b9d7f5b,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
+,4e5ad2dd-92ea-4481-86c2-5861ceb3f384,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
+,e0d24c30-011f-4600-8c59-855d0a23245b,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
+,145ca6ce-dfe9-41e2-a938-4fc9482b4bc6,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
+,40f0c0fa-05d5-4667-95e2-edaa0900657e,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
+,79e293d5-35e2-4b38-86ea-17f84ff9ac7d,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
+,e117df57-b191-4bc0-ad8d-587df09efaba,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
+,8cb8b6c6-323f-4e4e-8f67-581a51c9b4a0,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
+,9d73d9cc-1d74-49bb-ae06-af9ad8071e93,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
+,c5f82f33-e857-465e-bb97-6eccf9b0b09a,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
+,77c826f0-b1b9-42cf-ade8-6e810bed7b58,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
+,9e614427-0f5f-4501-8626-636422656a66,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
+,de93a52a-1535-47ee-bf2e-fa52fa52d4d2,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
+,996886ab-63b6-4771-ae8e-682a6096579b,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
+,a7b50cc4-6579-4b8b-ac0e-be17fbe0751a,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
+,15be2179-0b2c-4b66-87fe-84ac1f263cdc,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
+,206dcbed-4b02-4706-b59b-41c1172b0b78,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
+,870db80a-86ba-4d94-a4ee-e9e5f76f3d98,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
+,00b84d0c-51e3-44df-b8b4-c454e2ccd301,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
+,4471ee6e-9af6-49f4-ab01-71b90381ae6a,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
+,6bc05d08-8b7b-4b16-a0e6-e71f254498a8,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
+,ce1c0b9b-98d0-4443-95de-43e3a51b5069,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
+,b1e52093-6e4f-4e59-80c1-056a8b666688,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
+,9e1a2267-4854-425a-9303-4fb6a5361473,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
+,fe212a9b-79ae-467a-b91e-5836f93ae05b,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
+,e43fd22d-14ef-46b8-82cb-393175e02462,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
+,c094081e-24b0-4946-ae92-acfffb6b21d4,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
+,9edb57bc-9f34-4b5d-8b2e-4a6b6cd86fbd,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
+,00938eba-a298-4ba6-aa99-02a4ca623da4,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
+,8e14f314-ed52-4a6a-8d21-c908bd4d4f1a,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
+,ff5008fc-8bcb-4923-be50-c4c9bfa233b1,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
+,a1b17f7b-4e17-48f0-80c5-d94d8c32febc,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
+,49a3b346-fbac-4641-a03a-eb196bce17e7,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
+,7d691019-f4a1-419e-960a-f801f4cd9d62,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
+,eca6eea8-5fd5-482c-9b8d-2df0386d1a94,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
+,3c80a9fb-015e-4105-9b31-f7b85ab24081,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
+,2a278739-0838-484a-9755-3392ebfe80c3,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
+,99dac0e9-4053-416c-bfd7-dd51d1774859,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
+,99e6ba78-cf40-4ad4-8401-5fb4d03017a2,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
+,a5d5250d-0b4b-4c4d-ad69-aeb0523ebe59,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
+,a884fb15-69a2-46dd-8a93-564d35f7bc28,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Javiera Leiva
+,4bba8111-bb05-4633-a9ad-644c897fa5a7,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Javiera Leiva
+,55c702cd-3eef-4d67-91e1-9782690b8b8e,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Javiera Leiva
+,5c1fd7a3-fb58-443b-862b-71088c0c6c7d,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Javiera Leiva
+,ba2db6e4-2750-486a-99fe-bf866788bb75,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Javiera Leiva
+,67a9ab39-9de0-4cc9-a4cd-7b0cd7365538,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Javiera Leiva
+,a17264a0-d98b-48dc-a0ce-840ea5db7991,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Javiera Leiva
+,d4f78fcc-5777-4ba0-8573-a22e4475eeb6,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Javiera Leiva
+,381363f6-5547-4be7-8063-36271a340386,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Javiera Leiva
+,5a175a1f-8797-4cba-97e7-0347aa251c7f,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Javiera Leiva
+,bb9e0dbd-824c-4ffa-af00-f0d2ac34aea3,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
+,6400cb65-ebed-42bb-8fd4-d4db5b5a0e59,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
+,26877a0e-2a8d-4f2c-b911-ad8817f9f2d0,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
+,755de5fb-3059-4c8c-92d9-9ab7e77de541,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
+,951ff588-62a8-4843-8b78-14b57e7dda6f,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
+,332667f3-52f3-4329-b4af-792eecf51f9a,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
+,bee12332-2b1b-4f22-b584-02237145f982,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
+,7d380c2f-a278-4e01-831a-8fcf907e9e8b,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
+,afc96bfd-f853-4b09-a2ab-311b607ee639,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
+,7150d8fb-4b46-4a45-8159-0fbb52cfbbd4,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
+,1fcb753e-ee02-40f7-9674-4babe26d696a,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
+,ed69a97e-6273-45a0-8f1d-779287e6fe35,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
+,3825f2c1-019e-435e-9c1d-7b38b1420f36,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
+,fc8756e4-ab97-4ce2-a337-05f38d646488,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
+,168bf888-8a22-4b2f-a23b-40aa8cc0e9a6,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
+,83801498-e764-4a83-9e16-f90b89356573,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
+,9b75cacb-a448-4ba5-a397-acee785008ca,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
+,0bc96ce5-0aa9-46d5-bb20-64fcb053075f,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
+,cff1fc42-51f0-4146-8be6-ce3032c36d0c,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
+,3c3bf48d-289f-4763-8ecc-3b92a5bbdc93,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
+,5afbf136-0801-4414-a6a8-66b4d1bc36ed,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
+,49de2b3f-faf0-44e1-b68c-024d1e439e93,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
+,f487c69f-31ae-402b-b469-6eebd8a88583,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
+,6acbcdaf-2ddc-41f1-a040-3cf4edd6d422,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
+,8c31dd24-cd55-43e5-8e71-77da2ffd3755,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
+,e43cc1bf-ffa4-44de-b5c9-8b8c71be7bdf,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
+,ba5bbf70-752e-4e59-aff5-6ecf6810fb98,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
+,98d43c91-145b-41d4-986c-18b02db90e60,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
+,bf01178f-7be3-459d-a334-0695a426d63c,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
+,2c30904d-4652-4cbc-a48b-fef8245cf876,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
+,acc5fdef-f546-44ca-8f83-20d2e6e948bd,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
+,4d9a92c9-4a3d-4894-9986-5fe8cef65404,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
+,05c511fc-33fc-4c0e-9cb4-58d3cbc3397c,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
+,638b9d9f-9992-4f4f-a375-c77d004e31a9,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
+,e067be7e-0353-4ca0-a0c4-ad897df4bd17,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
+,db906ad0-d44e-4e66-8a75-e5f6a9bdaa84,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
+,42d3a790-fbe2-49b1-a091-f3f9c7cd9d84,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
+,caa93f6e-2f90-4cca-92e9-4d74e2bb4db5,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
+,a9b659c7-b415-4063-a7e8-9e2c4860eb18,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
+,2eeeb692-1667-4894-ba7d-f0f163059662,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
+,1455636d-fae6-4a60-9a22-e46a68e6acb6,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Catalina Salazar
+,184ac089-cfec-4e1e-9ee7-283f62e25f5a,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Catalina Salazar
+,76feddeb-3d07-43da-a659-316eee405bd8,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Catalina Salazar
+,906257f7-39af-4b58-b33a-8318f2520114,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Catalina Salazar
+,40b42b4f-005b-4f41-803f-f5aaba5979f4,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Catalina Salazar
+,fb594362-ea1c-4127-bf61-b87fca9ddae1,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Catalina Salazar
+,9d9f8fc1-65e6-4675-8350-b611501dca80,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Catalina Salazar
+,c9aa52ba-4ec6-4c62-b6cb-85eda449626b,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Catalina Salazar
+,2c18a60a-cbcc-441b-ade1-3301e419542f,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Catalina Salazar
+,1e4ecd4c-89b9-4ba8-89b4-7ecb0de32eff,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Catalina Salazar
+,87010d94-0a76-41eb-a1a3-14987756fb59,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
+,f5a3aca0-1dac-473d-ad67-cb5185135301,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
+,f4348b3d-da1b-4f07-a7f5-ed64c868eb04,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
+,3215260d-9f7f-429e-80d8-bf68f7868568,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
+,5a8b3385-b1aa-41fb-a60a-5039eba0de35,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
+,658e7dc4-7822-48c3-89c9-3d23a10fdcea,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
+,e2e047d5-f4bb-44d8-85fa-8cae4a4742a5,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
+,8675b14e-30b9-42d0-8eda-e9fd05a64b10,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
+,83e20228-fb56-4ff6-b90d-f4929e6acaaa,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
+,b69c7dd1-0c7c-420e-971c-6369cc74c805,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
+,e1afd922-9477-4968-b147-4c927e6627d4,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
+,82a19022-b0a8-42d9-ab56-6154baf8d2e0,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
+,28d30711-b0cc-4a94-9ed6-3a0257c3946b,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
+,45054706-f665-4556-a0a9-6941e5d6c2e3,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
+,daa96d9d-43c1-4a3f-8667-459abfd012fb,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
+,292b0079-22b9-42a8-b00e-6bce5573bce4,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
+,43a4a1f4-8e85-4eb8-947f-786dc63ae621,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
+,28d0ca1d-ebd4-45c7-adc3-27c6d332831f,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
+,09a6034d-d810-49eb-940f-31d773549d26,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
+,228f6749-7321-40a0-8f91-8f61fde089f9,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
+,6acbbd83-dd5e-4f2d-a9b5-85bf29834601,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
+,3dd80c1a-113b-4f7a-93b1-fffd2456b4e5,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
+,bf1d400d-fb28-49c7-b3b1-d49f38fd93a5,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
+,c24684e2-7d67-48a2-aa9a-be3a54492b5f,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
+,01268d5a-f564-417a-b596-c62ce1a109b7,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
+,e3677404-7c28-457e-8471-f1faa504440e,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
+,f0b4ce41-fffd-4de0-becc-1df72ae5e20e,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
+,aa34b21f-5509-46d5-b6ee-b964d0934e23,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
+,3e6e071d-bd87-4a58-9461-e5dcf1e9c142,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
+,a6001a88-ad7a-41ad-a613-ca1f19e9e231,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
+,813a8560-024d-4eed-b12f-c1eb0fe09d26,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
+,06a0e589-0056-496a-8221-a6e71fb897f1,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
+,83405c7b-3b30-4c2f-8a5e-cd96307c8900,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
+,7b3fed11-2587-4bc2-a6c0-45cc2b64f85f,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
+,cd0a4871-f9b3-4e33-bcd0-1752d84c5d82,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
+,5dbf5df1-0934-415a-8233-56cdd0fb81a8,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
+,e92405a4-a8ae-413e-a567-c5a5e8a8f140,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
+,5b03bf62-12fb-46fe-8531-6b28dad5e79c,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
+,93fd9399-92a4-4e90-a3dd-2a10962906c2,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
+,4032a703-fb94-434d-b320-d7855b03c246,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
+,fab4f164-55ef-444f-9fe0-aeb8bb4bc86e,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Erick Contreras
+,506a27e5-147f-4f95-94f3-788077f8f87d,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Erick Contreras
+,b1bdd507-7089-4dfb-ba8d-0c2225f1d0fe,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Erick Contreras
+,9e68bb67-036e-4a43-a009-cae999abc7c6,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Erick Contreras
+,d7d424f8-206a-4f4a-9d4c-045d530a205b,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Erick Contreras
+,901e2d6f-42b4-49b3-a8fc-9049c32ad1b4,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Erick Contreras
+,83c259e7-6251-48c8-8947-57a45333c77c,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Erick Contreras
+,c32ff3eb-88e3-4329-b59f-81884b146e8f,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Erick Contreras
+,8e764b9a-cff3-4548-ab54-994831e1b354,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Erick Contreras
+,d4506444-1d92-48de-9cff-e1dbf6783781,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Erick Contreras
+,b8ab0b72-c345-42a7-85f1-98a4a240ea5e,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Rafael Siverio
+,904695a4-8eea-4c52-a02e-d2b1ff33fc25,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Rafael Siverio
+,6fc1f77a-c59a-4200-917e-65db2ede4e74,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
+,d48d0ca8-7fb7-4284-bf81-7fc8a3a9aa3e,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
+,db045fbc-c5c3-4346-b0d2-b276ee0798ae,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
+,31352216-2342-44e8-8b02-ba7027f60ee1,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
+,9cbc9f62-8c05-442d-b372-3bb9075d0fcb,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
+,6f5479f8-0a81-4a05-a2e9-dfc0a4c8dd24,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
+,4364118b-3455-422f-95dd-5a463b5f7b42,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
+,f93598b8-f46f-4ba2-9793-8bfdccd47458,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
+,3a638722-ab6e-4ef1-b76c-15e2e6737b7d,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Rafael Siverio
+,b6231cae-5230-453a-8bb3-4a02b3fc97ca,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Rafael Siverio
+,7e878048-aa73-4d02-b838-8d2074cb8c07,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
+,41704b54-a5f6-44d9-a1c9-d5ad67309485,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
+,040ddb96-cf84-4f63-a2f9-4629386c5922,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
+,2e6b1dab-43d8-475e-a45b-bce71ddea24e,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
+,20a403ce-e2fb-43b1-b71e-161994bb3015,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
+,c8cc8024-d2ac-4837-950a-2112bb5f4da4,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
+,80a62293-045e-4220-bb43-49c6c8fab5f2,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
+,eafe4844-92b9-4f4c-b2c8-af0343d7d71d,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
+,b678261b-1ecd-4e86-b295-fcd2dd89cdf4,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Rafael Siverio
+,396c3ea0-f070-4571-b3f2-6c1ecb4d9b46,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Rafael Siverio
+,6f4a4c48-01b0-452f-ae83-2a9d69e3e3e2,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
+,c67b9ee8-36ab-4c19-9da3-7958a330d9f8,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
+,cee48a7b-7f09-4ac0-b18d-dcfd4ab023d4,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
+,06de1c64-ad1a-4d65-a859-4bac8711f169,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
+,8e69575b-def4-4b62-8b0a-05334ec1f32a,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
+,48fbfbd5-5a0d-441d-9fd9-656120c03677,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
+,f0e25871-b430-4064-8513-8e12433b9bc4,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
+,b3bd76cf-35a9-47b2-b607-807227f57ed8,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
+,4838b3b8-d211-455a-a1ce-641ad895f1cf,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Rafael Siverio
+,e42b7e72-1e75-45c4-a09c-f3bf82de1816,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Rafael Siverio
+,3797cce2-9433-4387-90aa-c9482808b26d,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
+,a5ddbcbf-8184-4115-83b7-81675110ae85,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
+,48eaf02a-64a8-4b93-a77c-b32f68b7227f,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
+,5f0f20a0-6804-4d88-8ec5-fb479aaa50a0,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
+,b3ff3dc4-bbd8-4d8c-be0c-cd91c3376122,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
+,3f4ac06e-1047-455b-b49e-f96fa935cc03,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
+,1a176074-3aac-4e6c-bbc2-e6d76c6a0d53,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
+,f70f0de3-652e-4cc9-ab16-ceaf2bd5a756,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
+,e435ba59-dc2f-4cfe-a177-4093191f5939,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Rafael Siverio
+,9ac5c36a-b678-4d96-bc2d-3da0b265f36f,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Rafael Siverio
+,59e9c592-6c82-4047-8511-0e7e9b578a9a,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Rafael Siverio
+,1e3cb79a-bd01-4942-b0fd-a9bbf2ebf9cb,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Rafael Siverio
+,85c25ef6-565c-4a70-8ea3-8c7fe74a6bbf,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Rafael Siverio
+,faa833c3-52aa-470e-9a69-4c8ce1171987,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Rafael Siverio
+,95059f72-63a8-4cb8-b54f-8d63fc7c332f,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Rafael Siverio
+,9320ff59-534d-4f09-94f4-2cc8740c3a87,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Rafael Siverio
+,04af66f3-4c27-4a23-af32-ca0e4fe18761,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Rafael Siverio
+,332f6219-c749-4e2e-9505-fcf86ba01d34,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Rafael Siverio
+,36fb3da5-1c07-4599-8d5b-4a4c16af0e5f,Asignatura 1,S0,S0,,46280,3,0,0,En producción,2,Carolina Henríquez
+,710b0b34-4a1c-4553-a6dc-2f17d30ebbe6,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
+,2e19ad05-7f44-46de-bf99-79bb9dc2ca48,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
+,0a3dbb68-06e0-4667-9261-e68b14913e31,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
+,de07c2ec-05c1-44dc-9ec0-4087bc027624,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
+,caf3b724-514e-436c-935e-57f37c06e313,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
+,680099fd-fb25-4d03-80b9-7e25481da0ff,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
+,c58ccb44-550c-4db7-98e5-abf1945be9f0,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
+,9c29209b-ffa5-4485-9ff5-611c7a3cd0d2,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
+,8590c6b2-1b5a-4d5a-ac2a-e5e5ca3adf8f,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
+,e50d4b1e-0fcc-4f24-8570-e39e20629608,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Carolina Henríquez
+,34c6b5b0-2f02-47f7-ab96-9d504af4dea8,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
+,629e2d30-e5df-4a5f-b9f7-f26fb2289c61,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
+,3de84edb-70ef-4d43-8b63-9c1e856b3993,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
+,73eea657-f803-4c16-8cc7-c1b298feb0e8,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
+,2814da13-db62-4954-b51e-f8f5decd43a5,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
+,4c562ce1-47af-40db-9f6c-d590e69a39af,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
+,9689c01e-a9b9-4a57-b1c1-a6037d86cb35,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
+,6650d2e8-0b11-4688-ab45-e5b26e57ac6a,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
+,5e79de83-67d5-4e6b-b7d0-ffa2a1a8954c,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
+,e1d7f208-6bc4-4e4a-be15-c972f43b1c00,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Carolina Henríquez
+,30718c5a-379c-4e87-aa54-93b18cdf5d82,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
+,0ec98378-b006-42f6-b56d-60a0cc3988e0,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
+,cd69f6d1-cad8-4de4-8468-680ce4dc87c3,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
+,45931b28-11bd-48c2-b811-1903e46c1e41,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
+,ea0cbf9c-2c11-4df5-b593-d887560c377f,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
+,b62c342f-d130-4008-b104-ecc6cba338a3,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
+,495d1166-b72a-4c9a-b531-7b0cc4acfd18,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
+,afc081ff-da16-4ae7-af92-2e54f06edc55,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
+,4e3a2616-c878-477b-8b16-79900545dc8a,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
+,53a98b6c-f7df-4a5c-82c3-2f5fdad0b9fe,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Carolina Henríquez
+,7eff6cfd-0eda-41c7-9135-10cbd98c52ca,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
+,8fa23a2e-f876-4360-aea2-86e435b0ff9f,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
+,2db7ce4e-0876-45f5-9950-5b4fe395fd2a,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
+,aa345407-1804-4712-94f2-fc2cba9c2b05,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
+,055f629e-98cd-4b11-91b5-182e70f5a7d6,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
+,42ea5a2d-52ec-4e19-8620-0eccaabd916a,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
+,d600f0bc-7832-4d2c-9360-93d8b9df8c29,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
+,69788059-c553-4887-b6d6-725a21dde997,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
+,c46b9025-8b8b-45a5-87e0-f667aa09f1d1,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
+,cee36235-1cea-413a-8491-685f0032ff84,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Carolina Henríquez
+,e99a10cf-d577-4993-b0ac-e6fe90232592,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Carolina Henríquez
+,0bcfb021-94db-4d66-974b-fbbcbe3fa6de,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Carolina Henríquez
+,bfb80914-5472-4d64-b8c6-4c7424ec45f5,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Carolina Henríquez
+,45c4e345-abc8-4042-a05f-0fc69163d492,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Carolina Henríquez
+,23b677ae-b110-49cc-ac67-f69e73bd380d,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Carolina Henríquez
+,2462ff56-4b5d-4ca6-bbc9-cf0a2fded9c8,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Carolina Henríquez
+,462001ed-b62a-40c2-8d50-6dbd68ae3222,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Carolina Henríquez
+,2a63c758-6955-4777-aef2-beac970229a7,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Carolina Henríquez
+,d3a9774d-0b67-43c5-b376-a77e5a2cddc6,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Carolina Henríquez
+,a2bed07b-7ca8-4cd0-8ae0-bd467e69ef59,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
+,6297431a-2eea-43ab-bf4e-d100e0100a7e,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
+,494ec851-b4df-450b-8ef3-522fe40af808,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
+,94d207e5-ab7d-4082-959a-939db1cf3c3e,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
+,0c5acbdd-4056-4035-a450-638051aa3d39,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
+,51dfd0ea-0867-4264-9961-61648a150213,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
+,e1ebb748-a9c0-45b4-833c-256791fa54cc,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
+,b1dbe1b5-1507-41e8-8d62-97fdc977b0d5,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
+,3a6705ce-b489-48a4-b400-876b80f931e3,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
+,6a00c1bf-1f6a-4394-b070-3a253fdd3bfe,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
+,1b83dafd-2a7b-451d-a2ba-641987f4e81f,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
+,72d88800-8b78-4525-ab6c-411f33acbd04,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
+,f88781d7-65f7-4cb2-87e1-22f3312a51eb,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
+,d2a36947-f5be-43f6-a056-c4c0fea9e873,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
+,127f888c-9db0-4f30-b897-7866ccfd7963,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
+,0891c8d4-686c-46de-a9f0-e54b52697106,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
+,1284bfce-585a-4c6a-af8e-7fcaa95ea84d,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
+,85b938c5-504a-4fb7-ae1a-12b4a3cc64cd,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
+,70a8a586-9c8f-48f8-abc3-dfb5c6fd68cb,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
+,e9c1c8dd-162b-4b7d-8284-4e197a80292f,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
+,6bfbb0e8-39bb-41db-8aa5-ccdaa5ad1147,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
+,0135a70f-91a3-40e3-bad4-6685888d8080,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
+,555e42e4-d2bd-44ae-abd4-43b444d6db20,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
+,2682e345-6b04-41a4-9037-f09dd7ded66a,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
+,eaf501cc-c62f-4ff8-a404-dc07c2a9fd90,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
+,04160d4b-d838-401b-ab32-12c72e29bff7,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
+,1e72b2a2-d38c-4873-ae60-860e1bd2fa81,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
+,a51d09e5-0b99-4cf8-b57c-ecb9153cc78f,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
+,0cc0dcf6-d741-46e3-ad22-b47a352f85d0,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
+,73dccab1-5949-4df8-b75f-6b3bd1e2d49d,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
+,90859aaa-463d-453d-a586-21be57372aba,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
+,60335f49-ad12-4db8-9aba-64cdcb82ba13,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
+,e7786cd4-918e-43b0-a813-e3783fe3c9b8,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
+,9e3c6bca-bf98-4483-b465-666e5c774094,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
+,94c8812f-f6d7-42b3-b609-1c7bf523272d,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
+,ecb6e855-b45c-4b84-a586-87046236fbc0,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
+,615931b8-0339-4b20-ab70-79eb46daab5b,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
+,82b89d45-1baf-4d20-8db9-59d79ad77aa1,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
+,7a405136-7c5f-4a93-aa2b-e042eff26875,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
+,138081ee-9d1a-4d31-b353-5c6390e1d709,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
+,65c7a4f5-4254-4d2a-b1c5-cb44818ba1bc,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Deborah Ramírez
+,28046ae4-0ecb-4f06-8b92-b3738386a32e,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Deborah Ramírez
+,6ee08fea-3b8c-4997-9e94-dd55a52b49fe,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Deborah Ramírez
+,c8aefba5-72b1-46ca-bcc1-778de0154740,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Deborah Ramírez
+,85c90ed4-2099-40c0-85e4-bf5a5e83f56b,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Deborah Ramírez
+,d1810d5a-4061-4b69-980d-68c598449d89,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Deborah Ramírez
+,532b5a31-30d9-4076-9076-d367820fec6f,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Deborah Ramírez
+,3276712f-30ee-4b5d-b7d3-4240ac3a8f59,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Deborah Ramírez
+,d9651d9b-4627-4b94-a156-09f0530a0b10,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Deborah Ramírez
+,46b80557-79c9-4f56-b637-b2a024d68245,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Deborah Ramírez
+,d9eaa94f-4694-40f6-8b28-53c201d6e282,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Fernanda Reyes
+,a8dc53f3-30ab-4792-916f-d7dbd27d794b,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Fernanda Reyes
+,9f495e00-2112-4fbc-ae74-7fd219076e9a,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
+,a711bff9-cda0-48b8-9bd4-83a14ca38d01,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
+,9678a7f6-76d2-4411-9193-3ea3e5ca8724,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
+,e0ba3496-7775-4217-8521-5e5b13a65890,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
+,07d3d3cc-4f80-4bb0-99dd-60f84a69f11a,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
+,86b3b8c9-2464-4d4d-82b7-b0127e2a3b48,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
+,3e198f86-eb13-439d-a2bd-9476876d4b2e,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
+,9962e99a-369f-4b36-ac61-fd8fcd032536,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
+,a042a89e-f114-470f-a679-10caac5752a8,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Fernanda Reyes
+,fbfdeae2-8f31-4040-9bbe-58b588af82d3,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fernanda Reyes
+,059922c6-ad23-496b-847d-6faf98aa84ac,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
+,1a3f6515-a002-4392-a1a9-bd6e97c28b82,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
+,d2a69b8b-4256-4f83-92ad-6ab5a8c839d1,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
+,b148c0a9-28a0-4c79-bdbc-72c4ee0b5cb8,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
+,b15fb75d-9cbc-4f99-a723-5ce6d25362dd,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
+,9b74f9ac-1a6a-4f9f-840f-a3fa5f0d4cb2,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
+,871add5b-87f2-4261-bd2d-240f73bbe0a8,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
+,902cf08f-3867-4902-b752-7550d73eb0c1,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
+,1437b180-bea6-4b3c-9827-3ec9c104eb88,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Fernanda Reyes
+,e2ad8804-31ae-42dc-a562-00c76fe71cf0,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fernanda Reyes
+,55073baf-9f9b-4788-b31a-616b9a683455,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
+,5e2d827d-2041-49ac-a9e4-c54eab96758f,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
+,b9a19b60-0081-4171-8e2a-691134282bf5,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
+,ac611ceb-a4d8-433b-95e0-91d8820518e6,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
+,b5083704-170e-4e53-a6f0-3fb89949b2eb,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
+,75d2b5d6-e4e1-4ef5-93fe-e328afdd11c6,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
+,e9e1e9c7-06e3-49f0-bc8e-251d12b9e5cb,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
+,46796dda-f250-4505-817b-c00ebc97e6b9,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
+,a633c2cd-8648-49e5-ad3f-f5452930cdfe,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Fernanda Reyes
+,a2674cb1-a9a5-4aa9-b49c-3a67830db637,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fernanda Reyes
+,a6558c15-6fb0-4c24-9036-b316f414cbe6,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
+,b7efec8e-ca92-4ab3-b751-45e89d87b410,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
+,4cd9edfc-f641-442c-8a9d-5fce3a85e472,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
+,aaa2c6d7-a251-4bec-ad78-c9c6f3f57a88,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
+,19fdf93a-33ab-41c4-b41e-f42afd212610,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
+,36fbee54-daed-4d59-80cf-cc51e9492752,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
+,2ff04493-e0f8-4dd2-a1d9-7bb870ddfd04,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
+,09229b0a-e605-4153-802c-8da64aadaa4f,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
+,9c8a946a-2239-4bcd-88e4-a644471b3e6a,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Fernanda Reyes
+,7bb37e12-055b-4317-a839-d48e65675ef8,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fernanda Reyes
+,42b2a308-4cef-469d-ae88-cd5f5228c663,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fernanda Reyes
+,a97ccefc-1c27-4b0e-93ab-b4021924863f,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fernanda Reyes
+,315d6b13-636e-4a9c-9bbd-1a02817b9c2b,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fernanda Reyes
+,00a17b72-53e2-4788-a86a-42f15e4531a4,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fernanda Reyes
+,90f512db-a506-427c-b41b-556a60913869,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fernanda Reyes
+,64669425-76ba-4690-a4af-23c083ea7760,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fernanda Reyes
+,74590d6a-0983-4119-909e-0b5137c96283,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fernanda Reyes
+,e269b670-c5ba-4f6f-ae35-0baccdced5b2,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fernanda Reyes
+,12539798-17e2-4c50-bd56-adc72964324a,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
+,972d0c4b-0d94-4c52-9245-ed69f9b5b20e,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
+,3f672cb1-5b83-4216-9185-6a79b4cfe012,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
+,b8917503-3592-4609-8f9a-e44fdf35b1ba,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
+,82066f2d-5410-4545-99cf-fbadc8502924,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
+,b15863c5-0d38-4dd0-b5ee-56be436b940a,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
+,59393fd5-90aa-4d45-8467-3f2d0356564b,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
+,542ec1c8-6680-4d7d-8ca4-84947b7b27c9,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
+,90ece150-4bbd-4211-bc44-44307714d759,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
+,2c60676f-c5fa-4feb-9a85-7e86fff9bf30,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
+,12e374a9-20c7-4887-9992-4ba12da0c713,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
+,b5bd20ef-90f0-480d-a118-5a7d95da934c,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
+,652131a3-515e-4273-8b49-3c12ac3b2f3f,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
+,62c52574-245c-4f52-8cb8-d1c8eefded78,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
+,379970d4-3bd3-4c6e-82a5-ada45a39521b,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
+,3567839b-7bca-48dd-bd45-7b461336fdf1,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
+,11a7da47-fba5-47bd-95be-cd2a1b1a30a8,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
+,92fbe603-9d84-4a91-9cea-04363660ea37,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
+,b2b0248a-89a8-4a22-979f-8f2fa9a53766,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
+,bbd7f7ee-e1a1-484b-a004-14730d7ab9b6,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
+,e2f1148e-38ad-4fa0-aa25-6449f5749b4d,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
+,b5128288-e3ff-48af-b56e-bd4de031b964,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
+,ff731c0e-06f3-4585-9a06-5828540a0f64,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
+,ada84e11-98c6-4094-987f-ad43fc1abcc0,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
+,c2588f59-c29e-4dc2-85ee-5c32226cdba5,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
+,8253a69c-df3e-46f8-8b03-eb7ee7650a8e,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
+,7e1407ff-4ed6-4441-948e-043816c097fc,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
+,c73016fa-4738-4c01-bd8a-d8b058854474,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
+,817b3ac7-0e8a-48c4-aa86-b637dba21cab,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
+,8391b941-13f6-4cd8-96b7-94731fe89d37,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
+,d5a3fc29-7dc0-4214-83fa-c8c9eb9652da,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
+,f2369eb3-b8ec-4c5f-be78-8ad3622ed773,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
+,1fbe86e4-1a79-46e0-910c-ded85b559c54,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
+,39066e7f-5b2a-486c-8983-6f5c2957eded,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
+,0307c0ef-61c0-4a8f-bffa-f5ce0f708028,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
+,d7f4d410-8e08-4a47-b2b3-6e1012bf8f5f,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
+,23e68b44-ea98-4837-ad27-2a40c4f41f40,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
+,d0282748-44dc-42ad-8f9b-c78fba8ff949,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
+,b6532b32-9121-447b-b768-b2b606893d1b,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
+,38ec0733-8772-447b-bf85-4beadf22f8d0,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
+,50ec0075-0ebb-417a-961f-555ea10be731,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Natalia Gallardo
+,7e3f0d1e-e5b2-47ff-9238-7329e527a66d,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalia Gallardo
+,c55b7a56-b1f0-4d5b-b833-a64d2f6fd043,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalia Gallardo
+,76ba43fe-5b9f-4a75-ab40-c81913d6ebed,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalia Gallardo
+,1bdbfe63-2609-4f55-8788-45c3f2fb0421,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalia Gallardo
+,9d644d78-bcf5-46a5-aba9-5e3596b03125,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalia Gallardo
+,72e54d48-0fea-4f33-9b89-ef79ddc62e21,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalia Gallardo
+,bde48d46-d9db-4427-a7eb-d261c0214af7,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalia Gallardo
+,112b2511-34ba-407d-a7c8-f88e7fa4e87e,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalia Gallardo
+,0f757e16-1089-4a10-b957-9865f215f28e,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalia Gallardo
+,66bd773a-128d-441d-94cf-a50dd78c422b,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Natalie Baeza
+,5568890f-9882-4207-afb1-748663aafbc3,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Natalie Baeza
+,e84783bf-ec54-4b23-bd89-094ac3825225,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
+,42b4a9d5-4b9c-4e5b-816e-b928636dd6de,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
+,a7cac3d3-0d44-48a3-a0a5-ed4fdc61c2da,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
+,8b0209e4-e1f6-4b33-9f84-d5d2eb14000b,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
+,ca784428-bd80-48f8-ad26-1a131fa63f98,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
+,9496358e-1802-4d5e-84be-bd36bd7536b4,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
+,65f4f7f4-0ae1-4db6-94d9-c000196e4899,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
+,e55169c5-83be-40ee-b96c-662e81546fae,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
+,95a1b8d7-54dd-477d-9103-38b16f68d478,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Natalie Baeza
+,65590045-0335-4582-9785-ceba44d72579,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalie Baeza
+,b7c8a806-7dd2-4eb1-a1af-557bc0f7cd1d,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
+,4dfa9d9f-3c28-47e1-8544-3d9818ae3cd3,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
+,97fe0665-7e8b-450e-80dc-88ce7cd4176c,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
+,f2ec7486-eff6-4c70-a4c3-5f58ce3d4c27,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
+,783db942-15ed-4857-9048-31d60752e48a,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
+,f66cd966-7e14-4d1e-ae50-eac043be013b,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
+,695cec3f-ca45-4847-b8ea-ad923b7d52fc,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
+,fd93dc5b-32e6-40a3-93b1-8e4cc7717961,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
+,286f2907-7f4a-44a7-984d-b95be84dd5c7,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Natalie Baeza
+,08392d93-d16b-41bb-99e4-2591abd02998,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalie Baeza
+,ce215753-57d5-4f5e-b919-1ddd96799dc1,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
+,27d039a6-dcb7-4bb8-9ae7-bb96b7320538,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
+,752cf6cd-1575-4c35-82a9-7beda3fc48fe,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
+,5b7139d0-cbb3-43cc-b2dd-0e8fd1ea718b,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
+,5da10b4a-fd66-4a05-be53-d3b99acd4aea,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
+,d02233c9-f927-4bfe-887f-d2da7e59cf1c,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
+,285cb081-5540-401b-8250-1801badd3ce9,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
+,dd82a2c2-8bd0-44f9-8c51-7000e16b42f6,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
+,23e6e0e1-84d0-484a-a27f-4413fdabf4c3,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Natalie Baeza
+,5ce6d1bb-9166-471d-a9e6-d86d3cdb9fdf,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalie Baeza
+,b224484b-41bc-46c8-89e6-6469b64274f0,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
+,034f3d22-78ec-48e2-984a-5f1b69ceb727,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
+,b26b1b5f-94cf-4789-8dde-ac49b702db5b,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
+,5dff7688-5c41-4c30-8c60-dfa1722e2ff0,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
+,c1f6ec91-a7e7-431d-9847-727a251e1546,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
+,2f6cc88d-eef2-4f64-8318-73b70df5beb3,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
+,dd1d07e9-fb59-4a58-9158-0277d5289c39,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
+,c80e0476-66e4-46e1-a598-5af3e112426c,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
+,8da2529a-74b0-46bd-aebe-a9f374902df3,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Natalie Baeza
+,460f4298-6cc3-4ed0-922f-a55621939dd1,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Natalie Baeza
+,0be4aa6f-65a9-4e30-b659-f061b5d1fe77,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Natalie Baeza
+,e80398dd-1fa5-4615-a249-36460cc760ed,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Natalie Baeza
+,8758ec8a-8516-4221-a79e-4eeb844e61b3,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Natalie Baeza
+,308b857f-26ab-4cfe-843a-8d9b23bb5e27,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Natalie Baeza
+,e46a0ccf-a8e6-4e9c-97cd-b69ce84c65ac,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Natalie Baeza
+,6c06bad9-3c6d-4caa-9d25-065923fea102,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Natalie Baeza
+,d522643e-496c-4134-8bd6-632fcc8f731a,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Natalie Baeza
+,33c8c420-ecc1-47ab-9192-56bb5a72aa91,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Natalie Baeza
