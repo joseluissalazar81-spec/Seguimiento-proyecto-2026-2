@@ -4369,11 +4369,15 @@ function renderExecutiveHero(){
   });
   // Si estamos antes del primer deadline, week = 0-1
   if(currentBlockIdx === -1) currentWeek = Math.max(0, Math.round((today - GANTT_HITOS[0].fecha + 14*86400000)/86400000/7));
-  // % esperado = hitos que deberían estar "Validada" hoy / 11
-  // planif (col J) solo cuenta como esperada una vez que arrancó la construcción (S0);
-  // antes de esa fecha el esperado es 0%, no tiene sentido exigir avance todavía.
-  const hitosEsperados = today < GANTT_HITOS[0].fecha ? 0 : 1 + GANTT_HITOS.filter(h => today >= h.fecha).length;
-  const pctEsperado = Math.min(100, Math.round(hitosEsperados / 11 * 100));
+  // % esperado = rampa lineal por días transcurridos del cronograma completo
+  // (desde GANTT_HITOS[0], inicio de producción, hasta el último hito S17-18).
+  // Antes de esa fecha el esperado es 0%; no tiene sentido exigir avance todavía.
+  // (Antes era un salto por hito alcanzado — el mismo día de S0 ya marcaba 18%,
+  // "planif" + "S0" juntos, en vez de subir gradual desde el día 1.)
+  const projStart = GANTT_HITOS[0].fecha;
+  const projEnd = GANTT_HITOS[GANTT_HITOS.length-1].fecha;
+  const pctEsperado = today <= projStart ? 0
+    : Math.min(100, Math.round((today - projStart) / (projEnd - projStart) * 100));
   // Expose for informe so both always show the same numbers
   window._dashPctReal = pctReal;
   window._dashPctEsperado = pctEsperado;
@@ -5103,7 +5107,7 @@ function generarInforme(){
       <div style="font-size:11.5px;color:#5a7080">Universidad Santo Tomás</div>
     </div>
   </div>
-  <div class="nota">Informe generado automáticamente desde el sistema de seguimiento e-Learning UST 2026-2 · ${fechaStr} · El avance esperado se calcula en base al cronograma de 18 semanas aprobado (inicio 2 mar 2026). El avance real corresponde al promedio ponderado de producción de recursos digitales por asignatura.</div>
+  <div class="nota">Informe generado automáticamente desde el sistema de seguimiento e-Learning UST 2026-2 · ${fechaStr} · El avance esperado se calcula en base al cronograma de 18 semanas aprobado (inicio ${GANTT_HITOS[0].fecha.toLocaleDateString('es-CL',{day:'numeric',month:'long',year:'numeric'})}). El avance real corresponde al promedio ponderado de producción de recursos digitales por asignatura.</div>
   <script>window.onload=()=>window.print();<\/script>
   </body></html>`;
 
