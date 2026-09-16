@@ -2585,17 +2585,22 @@ function buildDataFromCSV(rows){
     // Asignaturas anuladas quedan fuera del seguimiento (ej.: Diplomado de Derecho, 8 asig. anuladas).
     if(/anulad/i.test((get(r,iEstado)||''))) return;
     const facultad=(FAC_OVERRIDE[asig] || get(r,iFac) || '').trim();
+    const nivel=(get(r,iNivel)||'').trim();
     const isRecNatC = facultad === 'Recursos Naturales y Medicina Veterinaria';
+    // Postgrado dura 6 semanas: S0–S5–S6 son las únicas que aplican, S7 en adelante
+    // se marcan "No aplica" (solo afecta al respaldo — si recursos-2026-2.csv trae
+    // datos reales para esas semanas en algún postgrado puntual, esos priman igual).
+    const isPostgrado = nivel === 'Postgrado';
     const hitoVals = sHitoIdx.map(i=>get(r,i));
     const nValC = [get(r,iPlanif), ...hitoVals].filter(v=>(v||'').trim()==='Validada').length;
     const denom = sHitoIdx.length + 1; // planif + hitos, normalmente 11
     const pct = isRecNatC ? Math.min(100,Math.round(nValC/8*100)) : Math.round(nValC/denom*100);
-    data.push({facultad,nivel:get(r,iNivel)||'',asignatura:asig,docente:get(r,iDoc)||'',fmt:get(r,iFmt)||'',
+    data.push({facultad,nivel,asignatura:asig,docente:get(r,iDoc)||'',fmt:get(r,iFmt)||'',
       jp:get(r,iJP)||'',di:get(r,iDI)||'',dg:get(r,iDG)||'—',implementador:get(r,iImpl)||'',
       reunion:get(r,iReunion)||'',planif:get(r,iPlanif)||'',estadoGlobal:get(r,iEstado)||'',obs:get(r,iObs)||'',
       correo:get(r,iCorreo)||'',fechaSR:get(r,iFechaSR)||'',envDELfecha:get(r,iEnvDEL)||'',del2fecha:get(r,iDEL2)||''});
     const hitosObj={};
-    hitoKeys.forEach((k,n)=>{ hitosObj[k] = (isRecNatC && n>=7) ? 'No aplica' : mapHito(hitoVals[n]); });
+    hitoKeys.forEach((k,n)=>{ hitosObj[k] = (isRecNatC && n>=7) || (isPostgrado && n>=4) ? 'No aplica' : mapHito(hitoVals[n]); });
     avance[asig]={avance:pct,obs:get(r,iObs)||'',hitos:hitosObj};
 
     if(hasEstandar){
