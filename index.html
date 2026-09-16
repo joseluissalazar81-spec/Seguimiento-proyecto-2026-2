@@ -430,6 +430,7 @@
     .hb-ca{background:rgba(154,184,204,.15);color:var(--ca);border:1px solid rgba(154,184,204,.3)}
     .hb-x{background:rgba(255,255,255,.05);color:var(--text-light);border:1px solid var(--borde)}
     .hb-err{background:rgba(200,80,80,.12);color:var(--ro);border:1px solid rgba(200,80,80,.3)}
+    .hb-manual{background:rgba(154,184,204,.15);color:var(--ca);border:1px dashed rgba(154,184,204,.45)}
 
     /* ── MINI HITOS EN TABLA PRINCIPAL ── */
     .hitos-row{display:flex;flex-wrap:nowrap;gap:2px;align-items:center;overflow:hidden}
@@ -2447,6 +2448,20 @@ const CSV_URL_2026_2 = 'https://raw.githubusercontent.com/joseluissalazar81-spec
 // mostrando el estado clásico (badge simple) hasta que el flujo cubra a todos los DI.
 const RECURSOS_URL = 'https://raw.githubusercontent.com/joseluissalazar81-spec/seguimiento-proyecto-2026-2/data/data/recursos-2026-2.csv';
 let RECURSOS_DATA = {};
+// Overrides manuales de avance — para asignaturas donde recursos-2026-2.csv trae datos
+// rotos (ej. #REF! en la planilla de origen) pero se sabe con certeza el estado real
+// (ej. "ya la entregamos 100%"). Archivo chico, mantenido a mano en data/avance-overrides.json
+// (mismo patrón que data/moodle-urls.csv). Formato: {"Nombre exacto de la asignatura":
+// {"avance": 100, "nota": "texto explicando por qué se puso a mano"}}.
+const AVANCE_OVERRIDES_URL = 'https://raw.githubusercontent.com/joseluissalazar81-spec/seguimiento-proyecto-2026-2/data/data/avance-overrides.json';
+let AVANCE_OVERRIDES = {};
+async function loadAvanceOverrides(){
+  try{
+    const resp = await fetch(AVANCE_OVERRIDES_URL + '?nocache=' + Date.now());
+    if(!resp.ok) return; // el archivo puede no existir aún — no es un error
+    AVANCE_OVERRIDES = await resp.json();
+  }catch(err){ console.warn('loadAvanceOverrides error:', err); }
+}
 function normHitoKey(h){ return (h||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
 // Orden real de asignaturas por DI (mismo orden que seguimiento-2026-2.csv), usado para
 // traducir las etiquetas genéricas "Asignatura 1", "Asignatura 2"... que trae el flujo de
@@ -2729,6 +2744,7 @@ async function loadSheetData(silent=false){
     // DI_ASIGNATURA_ORDER (usado por loadRecursosData) se arma desde DATA_ALL, así que debe
     // llamarse recién ahora que DATA_ALL ya está listo.
     loadRecursosData(); // no bloqueante — mejora el panel de hitos cuando hay datos, si no, sigue igual
+    loadAvanceOverrides(); // no bloqueante — overrides manuales de avance, cargados a mano en data/avance-overrides.json
     loadMoodleUrlsLive(); // no bloqueante — URLs de aula cargadas a mano en data/moodle-urls.csv
     window._ust_cache = {DATA:[...DATA], AVANCE:{...AVANCE}, ts:Date.now()};
     const now=new Date();
@@ -3281,7 +3297,7 @@ function renderTable(){
       <td><span class="pl-dot"><span class="dot dot-${dotClass(d.planif,d)}"></span>${planifDisplay(d)}</span></td>
       <td>${rAv==null
         ? '<span class="av-nodata" title="Sin datos del flujo Actualizar recursos DI 2026-2">sin datos</span>'
-        : `<div class="av-cell"><div class="av-bar-wrap"><div class="av-bar" style="width:${rPct}%;${rPct>=100?'background:linear-gradient(90deg,#d4af37,#f5d060)':''}"></div></div><span class="av-pct ${avColor}">${rPct}%</span>${rPct>=100?'<span class="badge-completa">🏅 ¡Completa!</span>':''}${isEnAula(d.asignatura)?'<span class="badge-aula">🏫 En el aula</span>':''}</div>`}</td>
+        : `<div class="av-cell"><div class="av-bar-wrap"><div class="av-bar" style="width:${rPct}%;${rPct>=100?'background:linear-gradient(90deg,#d4af37,#f5d060)':''}"></div></div><span class="av-pct ${avColor}">${rPct}%</span>${AVANCE_OVERRIDES[d.asignatura]?`<span title="${(AVANCE_OVERRIDES[d.asignatura].nota||'Confirmado manualmente').replace(/"/g,'&quot;')}" style="font-size:10px">✎</span>`:''}${rPct>=100?'<span class="badge-completa">🏅 ¡Completa!</span>':''}${isEnAula(d.asignatura)?'<span class="badge-aula">🏫 En el aula</span>':''}</div>`}</td>
       <td class="col-hitos">${miniHitosDot(rHitos)}</td>
     </tr>`;
   }).join('');
@@ -3354,7 +3370,9 @@ function openPanel(idx){
   facTag.style.color='white';
 
   document.getElementById('p-title').textContent=d.asignatura;
-  document.getElementById('p-avance').textContent=avVal==null?'Avance sin datos':`Avance ${avVal}%`;
+  const avManualNota = (AVANCE_OVERRIDES[d.asignatura]||{}).nota||'';
+  document.getElementById('p-avance').textContent=avVal==null?'Avance sin datos':`Avance ${avVal}%${AVANCE_OVERRIDES[d.asignatura]?' (manual)':''}`;
+  document.getElementById('p-avance').title=avManualNota;
   // Link Moodle
   const moodleUrl=getMoodleUrl(d.asignatura,d.facultad);
   const progUrl=getProgramaUrl(d.asignatura,d.facultad);
@@ -3372,7 +3390,12 @@ function openPanel(idx){
   // HITOS TABLE — usa el detalle real por recurso (recursos-2026-2.csv) cuando existe
   // para esta asignatura; si no, cae al badge clásico de siempre.
   const recReal = RECURSOS_DATA[d.asignatura];
+  const manualOv = AVANCE_OVERRIDES[d.asignatura];
   document.getElementById('hitos-tbody').innerHTML=HITO_META.map(h=>{
+    if(manualOv){
+      const tip = (manualOv.nota || 'Confirmado manualmente — no viene de recursos-2026-2.csv').replace(/"/g,'&quot;');
+      return `<tr><td>${h.label}</td><td>${h.fecha}</td><td><span class="hb hb-manual" title="${tip}">✎ Confirmado manual</span></td></tr>`;
+    }
     const r = recReal && recReal[h.key];
     if(r && r.err){
       return `<tr><td>${h.label}</td><td>${h.fecha}</td><td><span class="hb hb-err" title="La planilla de origen (recursos-2026-2.csv) trae una fórmula rota (#REF!) para este hito — no es que falten datos, es un error a corregir en el flujo &quot;Actualizar recursos DI 2026-2&quot;">⚠ Error de datos</span></td></tr>`;
@@ -5221,6 +5244,14 @@ function ftkPlanifIcon(p){
 // calcula el % de avance y los hitos (Validada/En construcción/No inicia) a partir
 // de ahí, para que coincida con lo que muestra el panel de detalle.
 function recursosAvance(asignatura){
+  // Override manual manda sobre cualquier dato de recursos-2026-2.csv (roto o no) —
+  // ver AVANCE_OVERRIDES / data/avance-overrides.json.
+  const manual = AVANCE_OVERRIDES[asignatura];
+  if(manual){
+    const hitos={};
+    HITO_META.forEach(h=>{ hitos[h.key]='Validada'; });
+    return {av: Math.max(0,Math.min(100,+manual.avance||0)), hitos, url:'', manual:true, nota: manual.nota||''};
+  }
   const rec = RECURSOS_DATA[asignatura];
   if(!rec) return null;
   let totalSum=0, listosSum=0;
