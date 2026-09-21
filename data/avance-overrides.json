@@ -1,6 +1,6 @@
 {
   "Modelo teórico y trabajo interdisciplinario y transdisciplinario": {
     "avance": 100,
-    "nota": "Confirmado manualmente (JLS, sept. 2026): aula ya entregada 100%. El flujo de Power Automate no genera ninguna fila para esta asignatura en recursos-2026-2.csv (se salta la posición 4 del archivo de Brenda Bastías) — no es que falte avance, es que el flujo nunca la reporta."
+    "nota": "Confirmado manualmente (JLS, sept. 2026): aula ya entregada 100%. recursos-2026-2.csv trae esta asignatura en 0% ('En producción', 0 recursos listos) — el dato del flujo está desactualizado/incorrecto para este caso puntual, no es que falte avance."
   }
 }
