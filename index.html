@@ -5254,18 +5254,23 @@ function recursosAvance(asignatura){
   }
   const rec = RECURSOS_DATA[asignatura];
   if(!rec) return null;
-  let totalSum=0, listosSum=0;
+  // Cada hito pesa lo mismo (1/N), sin importar cuántos recursos tenga adentro —
+  // sumar listos/total de TODOS los hitos juntos (como se hacía antes) infla el %
+  // hacia el hito con más archivos (ej. un hito con 20 recursos domina sobre uno
+  // con 2), aunque ambos sean "un hito" igual de válido dentro de la asignatura.
+  let pctSum=0, hitoCount=0;
   const hitos={};
   HITO_META.forEach(h=>{
     const r = rec[h.key];
     if(!r) return;
-    totalSum += r.total; listosSum += r.listos;
     // '' (sin dato) se ve igual que una asignatura sin info todavía — gris neutro,
     // no rojo "No inicia" (que se reserva para atrasos reales, no para "aún no arranca").
     hitos[h.key] = r.estado==='Cerrado' ? 'Validada' : r.listos>0 ? 'En construcción' : '';
+    const hitoPct = r.total>0 ? (r.listos/r.total*100) : (parseFloat(r.pct)||0);
+    pctSum += hitoPct; hitoCount++;
   });
-  if(totalSum===0) return null;
-  return {av: Math.round(listosSum/totalSum*100), hitos, url: rec.url||''};
+  if(hitoCount===0) return null;
+  return {av: Math.round(pctSum/hitoCount), hitos, url: rec.url||''};
 }
 // Fuente ÚNICA del % de avance de una asignatura: recursos-2026-2.csv, que
 // alimenta el flujo "Actualizar recursos DI 2026-2" (recursos listos / totales).
