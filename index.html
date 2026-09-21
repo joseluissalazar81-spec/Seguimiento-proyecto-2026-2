@@ -5258,11 +5258,23 @@ function recursosAvance(asignatura){
   // sumar listos/total de TODOS los hitos juntos (como se hacía antes) infla el %
   // hacia el hito con más archivos (ej. un hito con 20 recursos domina sobre uno
   // con 2), aunque ambos sean "un hito" igual de válido dentro de la asignatura.
+  //
+  // N no siempre es 10: los postgrados duran 6 semanas (solo S0-S5/S6 aplican, mismo
+  // criterio que buildDataFromCSV/isPostgrado) y Recursos Naturales y Medicina
+  // Veterinaria llega hasta S11-S12. Los hitos posteriores a eso no aplican — ni
+  // siquiera cuando el flujo de Power Automate trae ahí recursos>0 (la plantilla de
+  // carpetas es la misma para todas las asignaturas, dure 6 o 18 semanas, así que
+  // esas carpetas están de más para un postgrado) — promediarlos igual que los demás
+  // diluiría a la mitad o menos el % de una asignatura que en realidad ya terminó.
+  const d = (DATA_ALL||[]).find(x=>x.asignatura===asignatura);
+  const isRecNatC = !!d && d.facultad === 'Recursos Naturales y Medicina Veterinaria';
+  const isPostgrado = !!d && d.nivel === 'Postgrado';
   let pctSum=0, hitoCount=0;
   const hitos={};
-  HITO_META.forEach(h=>{
+  HITO_META.forEach((h,n)=>{
     const r = rec[h.key];
     if(!r) return;
+    if((isRecNatC && n>=7) || (isPostgrado && n>=4)) return; // fuera de la duración real de la asignatura
     // '' (sin dato) se ve igual que una asignatura sin info todavía — gris neutro,
     // no rojo "No inicia" (que se reserva para atrasos reales, no para "aún no arranca").
     hitos[h.key] = r.estado==='Cerrado' ? 'Validada' : r.listos>0 ? 'En construcción' : '';
