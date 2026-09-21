@@ -2601,21 +2601,22 @@ function buildDataFromCSV(rows){
     if(/anulad/i.test((get(r,iEstado)||''))) return;
     const facultad=(FAC_OVERRIDE[asig] || get(r,iFac) || '').trim();
     const nivel=(get(r,iNivel)||'').trim();
-    const isRecNatC = facultad === 'Recursos Naturales y Medicina Veterinaria';
     // Postgrado dura 6 semanas: S0–S5–S6 son las únicas que aplican, S7 en adelante
     // se marcan "No aplica" (solo afecta al respaldo — si recursos-2026-2.csv trae
     // datos reales para esas semanas en algún postgrado puntual, esos priman igual).
+    // Recursos Naturales y Medicina Veterinaria SÍ corre las 18 semanas completas
+    // igual que el resto de facultades — no tiene tratamiento especial.
     const isPostgrado = nivel === 'Postgrado';
     const hitoVals = sHitoIdx.map(i=>get(r,i));
     const nValC = [get(r,iPlanif), ...hitoVals].filter(v=>(v||'').trim()==='Validada').length;
     const denom = sHitoIdx.length + 1; // planif + hitos, normalmente 11
-    const pct = isRecNatC ? Math.min(100,Math.round(nValC/8*100)) : Math.round(nValC/denom*100);
+    const pct = Math.round(nValC/denom*100);
     data.push({facultad,nivel,asignatura:asig,docente:get(r,iDoc)||'',fmt:get(r,iFmt)||'',
       jp:get(r,iJP)||'',di:get(r,iDI)||'',dg:get(r,iDG)||'—',implementador:get(r,iImpl)||'',
       reunion:get(r,iReunion)||'',planif:get(r,iPlanif)||'',estadoGlobal:get(r,iEstado)||'',obs:get(r,iObs)||'',
       correo:get(r,iCorreo)||'',fechaSR:get(r,iFechaSR)||'',envDELfecha:get(r,iEnvDEL)||'',del2fecha:get(r,iDEL2)||''});
     const hitosObj={};
-    hitoKeys.forEach((k,n)=>{ hitosObj[k] = (isRecNatC && n>=7) || (isPostgrado && n>=4) ? 'No aplica' : mapHito(hitoVals[n]); });
+    hitoKeys.forEach((k,n)=>{ hitosObj[k] = (isPostgrado && n>=4) ? 'No aplica' : mapHito(hitoVals[n]); });
     avance[asig]={avance:pct,obs:get(r,iObs)||'',hitos:hitosObj};
 
     if(hasEstandar){
@@ -5258,11 +5259,23 @@ function recursosAvance(asignatura){
   // sumar listos/total de TODOS los hitos juntos (como se hacía antes) infla el %
   // hacia el hito con más archivos (ej. un hito con 20 recursos domina sobre uno
   // con 2), aunque ambos sean "un hito" igual de válido dentro de la asignatura.
+  //
+  // N no siempre es 10: los postgrados duran 6 semanas (solo S0-S5/S6 aplican, mismo
+  // criterio que buildDataFromCSV/isPostgrado) — el resto de facultades, incluida
+  // Recursos Naturales y Medicina Veterinaria, corre las 18 semanas completas, así
+  // que ahí N sigue siendo 10. Los hitos que no aplican no se promedian — ni siquiera
+  // cuando el flujo de Power Automate trae ahí recursos>0 (la plantilla de carpetas
+  // es la misma para todas las asignaturas, dure 6 o 18 semanas, así que esas
+  // carpetas están de más para un postgrado) — porque eso diluiría a menos del real
+  // el % de una asignatura que en realidad ya terminó lo que le correspondía.
+  const d = (DATA_ALL||[]).find(x=>x.asignatura===asignatura);
+  const isPostgrado = !!d && d.nivel === 'Postgrado';
   let pctSum=0, hitoCount=0;
   const hitos={};
-  HITO_META.forEach(h=>{
+  HITO_META.forEach((h,n)=>{
     const r = rec[h.key];
     if(!r) return;
+    if(isPostgrado && n>=4) return; // fuera de la duración real (6 semanas) de la asignatura
     // '' (sin dato) se ve igual que una asignatura sin info todavía — gris neutro,
     // no rojo "No inicia" (que se reserva para atrasos reales, no para "aún no arranca").
     hitos[h.key] = r.estado==='Cerrado' ? 'Validada' : r.listos>0 ? 'En construcción' : '';
