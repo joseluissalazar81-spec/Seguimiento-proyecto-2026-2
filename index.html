@@ -2668,6 +2668,7 @@ function parsePct(v){
 }
 function mapHito(v){
   if(!v||v==='—'||v==='')return '—';
+  if(/cargada en aula/i.test(v))return 'Cargada en aula';
   if(v.includes('Validada'))return 'Validada';
   if(v.includes('Enviada'))return 'Enviada';
   if(v.includes('En construcción'))return 'En construcción';
@@ -3052,11 +3053,7 @@ function filtered(){
     return true;
   }).sort((a,b)=>{
     if(sortCol==='avance'){
-      // % solo desde recursos-2026-2.csv; "sin datos" (null) siempre al final
-      const an=avPct(a.asignatura), bn=avPct(b.asignatura);
-      if(an===null && bn===null) return 0;
-      if(an===null) return 1;
-      if(bn===null) return -1;
+      const an=(AVANCE[a.asignatura]||{}).avance ?? 0, bn=(AVANCE[b.asignatura]||{}).avance ?? 0;
       return sortDir==='asc'?an-bn:bn-an;
     }
     const av=a[sortCol]||'',bv=b[sortCol]||'';
@@ -3291,10 +3288,8 @@ function renderTable(){
   info.textContent=hasF?`${currentRows.length} de ${DATA.length}`:'';
   tbody.innerHTML=currentRows.map((d,i)=>{
     const rav=AVANCE[d.asignatura]||{};
-    const recReal=recursosAvance(d.asignatura);
-    const rAv=avPct(d.asignatura);            // null = aún sin datos de producción
-    const rPct=rAv==null?0:rAv;
-    const rHitos=recReal ? recReal.hitos : (rav.hitos||{});
+    const rPct=rav.avance||0;
+    const rHitos=rav.hitos||{};
     const isUrg=d.reunion==='Sin respuesta';
     const isVenc=isHitoVencido(d);
     const avColor=rPct>=50?'hi':rPct>0?'mid':'lo';
@@ -3304,9 +3299,7 @@ function renderTable(){
       <td class="asig-col">${isUrg||isVenc?'<span class="urg-dot" style="background:var(--ro)"></span>':''} ${d.asignatura}${isVenc&&!isUrg?' <span style="font-size:9px;color:var(--ro);font-weight:700;vertical-align:middle">VENCIDO</span>':''}${(getOverrides()[d.asignatura]||{}).bloqueante?'<span class="row-bloq-dot" title="Bloqueada: '+((getOverrides()[d.asignatura]||{}).bloqueante||'').replace(/'/g,"&apos;")+'"></span>':''}${(()=>{const o=(rav.obs||d.obs||'').trim();if(!o)return '';let pill='';if(d.fechaSR){const ds=diasDesde(d.fechaSR);if(ds!==null&&ds>=3){let lv='Equipo';for(let i=ESCAL_NIVELES.length-1;i>=0;i--){if(ds>=ESCAL_NIVELES[i].dias){lv=ESCAL_NIVELES[i].label;break;}}pill=`<div class="row-escal-pill">⚠ ${ds}d — Informar a ${lv}</div>`;}}return `<div class="row-obs" title="${o.replace(/"/g,'&quot;')}">💬 ${o.length>65?o.slice(0,63)+'…':o}</div>${pill}`;})()}</td>
       <td style="color:var(--text-muted)">${d.docente}${d.correo?` <a href="mailto:${d.correo}" title="${d.correo}" onclick="event.stopPropagation()" style="color:var(--az2);vertical-align:middle;display:inline-flex;margin-left:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg></a>`:''}</td>
       <td><span class="pl-dot"><span class="dot dot-${dotClass(d.planif,d)}"></span>${planifDisplay(d)}</span></td>
-      <td>${rAv==null
-        ? '<span class="av-nodata" title="Sin datos del flujo Actualizar recursos DI 2026-2">sin datos</span>'
-        : `<div class="av-cell"><div class="av-bar-wrap"><div class="av-bar" style="width:${rPct}%;${rPct>=100?'background:linear-gradient(90deg,#d4af37,#f5d060)':''}"></div></div><span class="av-pct ${avColor}">${rPct}%</span>${AVANCE_OVERRIDES[d.asignatura]?`<span title="${(AVANCE_OVERRIDES[d.asignatura].nota||'Confirmado manualmente').replace(/"/g,'&quot;')}" style="font-size:10px">✎</span>`:''}${rPct>=100?'<span class="badge-completa">🏅 ¡Completa!</span>':''}${isEnAula(d.asignatura)?'<span class="badge-aula">🏫 En el aula</span>':''}</div>`}</td>
+      <td><div class="av-cell"><div class="av-bar-wrap"><div class="av-bar" style="width:${rPct}%;${rPct>=100?'background:linear-gradient(90deg,#d4af37,#f5d060)':''}"></div></div><span class="av-pct ${avColor}">${rPct}%</span>${rPct>=100?'<span class="badge-completa">🏅 ¡Completa!</span>':''}${isEnAula(d.asignatura)?'<span class="badge-aula">🏫 En el aula</span>':''}</div></td>
       <td class="col-hitos">${miniHitosDot(rHitos)}</td>
     </tr>`;
   }).join('');
@@ -3355,7 +3348,6 @@ function openPanel(idx){
   selectedIdx=idx;
   const d=currentRows[idx];
   const av=AVANCE[d.asignatura]||{avance:0,obs:'',hitos:{}};
-  const avVal=avPct(d.asignatura);   // % solo desde recursos-2026-2.csv; null = sin datos
 
   const facCol = FAC_COLORS[d.facultad] || '#1F392F';
   document.querySelectorAll('#tbody tr').forEach((tr,i)=>{
@@ -3379,9 +3371,8 @@ function openPanel(idx){
   facTag.style.color='white';
 
   document.getElementById('p-title').textContent=d.asignatura;
-  const avManualNota = (AVANCE_OVERRIDES[d.asignatura]||{}).nota||'';
-  document.getElementById('p-avance').textContent=avVal==null?'Avance sin datos':`Avance ${avVal}%${AVANCE_OVERRIDES[d.asignatura]?' (manual)':''}`;
-  document.getElementById('p-avance').title=avManualNota;
+  document.getElementById('p-avance').textContent=`Avance ${av.avance||0}%`;
+  document.getElementById('p-avance').title='';
   // Link Moodle
   const moodleUrl=getMoodleUrl(d.asignatura,d.facultad);
   const progUrl=getProgramaUrl(d.asignatura,d.facultad);
@@ -5170,8 +5161,7 @@ function renderKanban(){
       <div class="kanban-cards">
         ${cards.length===0?'<div style="font-size:11px;color:var(--text-light);text-align:center;padding:12px">Vacío</div>':
           cards.map(d=>{
-            const avR=avPct(d.asignatura);
-            const av=avR==null?0:avR;
+            const av=(AVANCE[d.asignatura]||{}).avance||0;
             const venc = isHitoVencido(d)?'border-color:rgba(200,160,144,.4);':'';
             return `<div class="kanban-card" data-asig="${d.asignatura}" style="${venc}">
               <div class="kc-fac">${d.facultad}</div>
@@ -5180,7 +5170,7 @@ function renderKanban(){
                 <span class="chip chip-jp">${d.jp}</span>
                 <span class="chip chip-di">${d.di}</span>
               </div>
-              <div class="kc-av" style="color:${avR==null?'var(--text-light,#9aa2b0)':av>=70?'var(--ve)':av>0?'var(--am)':'var(--text-muted)'}">${avR==null?'sin datos':av+'% avance'}</div>
+              <div class="kc-av" style="color:${av>=70?'var(--ve)':av>0?'var(--am)':'var(--text-muted)'}">${av}% avance</div>
             </div>`;
           }).join('')}
       </div>
@@ -5255,62 +5245,10 @@ function ftkPlanifIcon(p){
   if(s>=5)      return '★';
   return '—';
 }
-// Si hay datos reales por recurso (recursos-2026-2.csv) para esta asignatura,
-// calcula el % de avance y los hitos (Validada/En construcción/No inicia) a partir
-// de ahí, para que coincida con lo que muestra el panel de detalle.
-function recursosAvance(asignatura){
-  // Override manual manda sobre cualquier dato de recursos-2026-2.csv (roto o no) —
-  // ver AVANCE_OVERRIDES / data/avance-overrides.json.
-  const manual = AVANCE_OVERRIDES[asignatura];
-  if(manual){
-    const hitos={};
-    HITO_META.forEach(h=>{ hitos[h.key]='Validada'; });
-    return {av: Math.max(0,Math.min(100,+manual.avance||0)), hitos, url:'', manual:true, nota: manual.nota||''};
-  }
-  const rec = RECURSOS_DATA[asignatura];
-  if(!rec) return null;
-  // Cada hito pesa lo mismo (1/N), sin importar cuántos recursos tenga adentro —
-  // sumar listos/total de TODOS los hitos juntos (como se hacía antes) infla el %
-  // hacia el hito con más archivos (ej. un hito con 20 recursos domina sobre uno
-  // con 2), aunque ambos sean "un hito" igual de válido dentro de la asignatura.
-  //
-  // N no siempre es 10: los postgrados duran 6 semanas (solo S0-S5/S6 aplican, mismo
-  // criterio que buildDataFromCSV/isPostgrado) — el resto de facultades, incluida
-  // Recursos Naturales y Medicina Veterinaria, corre las 18 semanas completas, así
-  // que ahí N sigue siendo 10. Los hitos que no aplican no se promedian — ni siquiera
-  // cuando el flujo de Power Automate trae ahí recursos>0 (la plantilla de carpetas
-  // es la misma para todas las asignaturas, dure 6 o 18 semanas, así que esas
-  // carpetas están de más para un postgrado) — porque eso diluiría a menos del real
-  // el % de una asignatura que en realidad ya terminó lo que le correspondía.
-  const d = (DATA_ALL||[]).find(x=>x.asignatura===asignatura);
-  const isPostgrado = !!d && d.nivel === 'Postgrado';
-  let pctSum=0, hitoCount=0;
-  const hitos={};
-  HITO_META.forEach((h,n)=>{
-    const r = rec[h.key];
-    if(!r) return;
-    if(isPostgrado && n>=4) return; // fuera de la duración real (6 semanas) de la asignatura
-    // '' (sin dato) se ve igual que una asignatura sin info todavía — gris neutro,
-    // no rojo "No inicia" (que se reserva para atrasos reales, no para "aún no arranca").
-    hitos[h.key] = r.estado==='Cerrado' ? 'Validada' : r.listos>0 ? 'En construcción' : '';
-    const hitoPct = r.total>0 ? (r.listos/r.total*100) : (parseFloat(r.pct)||0);
-    pctSum += hitoPct; hitoCount++;
-  });
-  if(hitoCount===0) return null;
-  return {av: Math.round(pctSum/hitoCount), hitos, url: rec.url||''};
-}
-// Fuente ÚNICA del % de avance de una asignatura: recursos-2026-2.csv, que
-// alimenta el flujo "Actualizar recursos DI 2026-2" (recursos listos / totales).
-// Devuelve null mientras esa asignatura no tenga datos de producción: en ese
-// caso se muestra "sin datos" (sin barra) y NO entra en promedios.
-function avPct(asignatura){
-  const r = recursosAvance(asignatura);
-  return r ? r.av : null;
-}
 function ftkHitosDots(hitos){
   return Object.entries(hitos||{}).slice(0,10).map(([k,v])=>{
     let cls='nd';
-    if(v==='Validada'||v==='Realizada') cls='val';
+    if(v==='Validada'||v==='Realizada'||v==='Cargada en aula') cls='val';
     else if(v==='Enviada') cls='env';
     else if(v==='En construcción') cls='con';
     else if(v==='No inicia') cls='nin';
@@ -5323,10 +5261,9 @@ function ftkHitosDots(hitos){
 // (usada tanto en la vista inline como en el popup del círculo)
 function facTickerRowHtml(d, today, deadline){
   const idx = currentRows.findIndex(x=>x.asignatura===d.asignatura&&x.docente===d.docente);
-  const recReal = recursosAvance(d.asignatura);
-  const avReal = avPct(d.asignatura);   // null = aún sin datos de producción
-  const av  = avReal==null?0:avReal;
-  const hitos = recReal ? recReal.hitos : (AVANCE[d.asignatura]||{}).hitos||{};
+  const avData = AVANCE[d.asignatura]||{};
+  const av = avData.avance||0;
+  const hitos = avData.hitos||{};
   const step  = planifStepIndex(d.planif||'');
   const isAt  = step<1.5 && today>deadline;
   const avFill = av>=80?'var(--ve)':av>=40?'var(--am)':'var(--ro)';
@@ -5348,12 +5285,10 @@ function facTickerRowHtml(d, today, deadline){
       <div class="ftk-hitos">${ftkHitosDots(hitos)}</div>
     </td>
     <td style="min-width:110px">
-      ${avReal==null
-        ? '<span class="av-nodata" title="Sin datos del flujo Actualizar recursos DI 2026-2">sin datos</span>'
-        : `<div class="ftk-av-wrap">
+      <div class="ftk-av-wrap">
         <div class="ftk-av-bar"><div class="ftk-av-fill" style="width:${av}%;background:${av>=100?'linear-gradient(90deg,#d4af37,#f5d060)':avFill}"></div></div>
         <span class="ftk-av-pct">${av}%${av>=100?' <span class="badge-completa">🏅</span>':''}${isEnAula(d.asignatura)?' <span class="badge-aula">🏫</span>':''}</span>
-      </div>`}
+      </div>
     </td>
   </tr>`;
 }
