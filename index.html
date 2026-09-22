@@ -2575,7 +2575,7 @@ function buildDataFromCSV(rows){
     iFmt=col('Tipo de Virtualización'), iJP=col('JP'), iDI=col('DI'), iDG=col('DG'), iImpl=col('Implementador'),
     iReunion=col('Reunión docente'), iPlanif=col('Planificación didáctica'), iEstado=col('Estado global'),
     iObs=col('Observaciones'), iCorreo=col('Correo docente'), iFechaSR=col('Fecha Sin Respuesta'),
-    iEnvDEL=col('Fecha envío DEL'), iDEL2=col('Fecha DEL 2° Inst.','Fecha DEL 2 Inst.');
+    iEnvDEL=col('Fecha envío DEL'), iDEL2=col('Fecha DEL 2° Inst.','Fecha DEL 2 Inst.'), iAvance=col('% Avance');
 
   // Columnas de estandarización (horas/recursos) — pueden no existir aún en el CSV vigente;
   // en ese caso quedan en -1 y esta sección simplemente no se muestra.
@@ -2608,9 +2608,11 @@ function buildDataFromCSV(rows){
     // igual que el resto de facultades — no tiene tratamiento especial.
     const isPostgrado = nivel === 'Postgrado';
     const hitoVals = sHitoIdx.map(i=>get(r,i));
-    const nValC = [get(r,iPlanif), ...hitoVals].filter(v=>(v||'').trim()==='Validada').length;
-    const denom = sHitoIdx.length + 1; // planif + hitos, normalmente 11
-    const pct = Math.round(nValC/denom*100);
+    // % avance: una sola fuente — la columna "% Avance" ya calculada en Reuniones_Proyecto
+    // (fórmula ponderada 0.5/1.0 con denominador dinámico que excluye "No aplica"/"—",
+    // mantenida a mano por el JP). El JS ya no la recalcula por su cuenta con nValC/denom,
+    // para que nunca diverja de lo que el JP ve en su propio Excel.
+    const pct = Math.round(parsePct(get(r,iAvance)) * 100);
     data.push({facultad,nivel,asignatura:asig,docente:get(r,iDoc)||'',fmt:get(r,iFmt)||'',
       jp:get(r,iJP)||'',di:get(r,iDI)||'',dg:get(r,iDG)||'—',implementador:get(r,iImpl)||'',
       reunion:get(r,iReunion)||'',planif:get(r,iPlanif)||'',estadoGlobal:get(r,iEstado)||'',obs:get(r,iObs)||'',
@@ -2658,6 +2660,12 @@ function parseCSV(text){
 }
 
 // Mapear estado de hito
+// Normaliza el valor de la columna "% Avance" del CSV (fórmula ponderada de Reuniones_Proyecto):
+// puede venir como fracción ("0.17") o como texto con símbolo ("17%") según cómo se exporte.
+function parsePct(v){
+  const t = String(v||'').trim();
+  return t.endsWith('%') ? parseFloat(t)/100 : (parseFloat(t) || 0);
+}
 function mapHito(v){
   if(!v||v==='—'||v==='')return '—';
   if(v.includes('Validada'))return 'Validada';
@@ -4367,20 +4375,25 @@ function renderExecutiveHero(){
   const delPend = delAtras; // alias para compatibilidad
   const total = src.length;
 
-  // ── % avance real: SOLO desde recursos-2026-2.csv (flujo "Actualizar recursos DI 2026-2").
-  //    Promedio de las asignaturas con producción iniciada (>0). Las que aún no tienen
-  //    datos del flujo no se promedian (countSinDatos). ──
-  let sumAv=0, countAv=0, countCero=0, countSinDatos=0;
+  // ── % avance real: desde AVANCE (Reuniones_Proyecto → seguimiento-2026-2.csv), columna
+  //    "% Avance" ya calculada con la fórmula ponderada del JP (0.5/1.0 por hito).
+  //    Excluye asignaturas sin docente asignado: todavía no pueden arrancar, no es justo
+  //    promediarlas como atrasadas. Entre las que sí tienen docente, se promedian TODAS
+  //    — incluidas las que están en 0% (con docente asignado y sin avanzar, eso sí es un
+  //    atraso real, a diferencia de una asignatura que aún no tiene a quién asignarle). ──
+  let sumAv=0, countAv=0, countCero=0, countSinDocente=0, countSinDatos=0;
   src.forEach(d=>{
-    const av=avPct(d.asignatura);
-    if(av===null){ countSinDatos++; return; }
-    if(av>0){ sumAv+=av; countAv++; }
-    else countCero++;
+    if(!(d.docente||'').trim()){ countSinDocente++; return; }
+    const av=(avSrc[d.asignatura]||{}).avance;
+    if(av===undefined || av===null){ countSinDatos++; return; }
+    sumAv+=av; countAv++;
+    if(av===0) countCero++;
   });
   const pctReal = countAv>0 ? Math.round(sumAv/countAv) : 0;
   window._dashCountCero = countCero;
   window._dashCountAv   = countAv;
   window._dashCountSinDatos = countSinDatos;
+  window._dashCountSinDocente = countSinDocente;
 
   // ── Semana actual del proyecto (basada en GANTT_HITOS deadlines) ──
   let currentWeek = 0;
@@ -4416,7 +4429,7 @@ function renderExecutiveHero(){
   let semClass='rojo', semEmoji='🔴', semLabel='Atrasado', semSub='';
   if(diffAjustado >= 5)    { semClass='verde';   semEmoji='🟢'; semLabel='A tiempo'; }
   else if(diffAjustado >= -15){ semClass='amarillo'; semEmoji='🟡'; semLabel='En riesgo'; }
-  semSub = `Real ${pctReal}% (${countAv} en prod.) vs esperado ${pctEsperado}% · ${countCero} en 0% · ${countSinDatos} sin datos de recursos`;
+  semSub = `Real ${pctReal}% (${countAv} con docente asignado) vs esperado ${pctEsperado}% · ${countCero} en 0% · ${countSinDocente} sin docente (excluidas) · ${countSinDatos} sin datos`;
 
   const semEl = document.getElementById('exec-sem');
   if(semEl){
@@ -4917,6 +4930,7 @@ function generarInforme(){
   const countAv     = window._dashCountAv     ?? 0;
   const countCero   = window._dashCountCero   ?? 0;
   const countSinDatos = window._dashCountSinDatos ?? 0;
+  const countSinDocente = window._dashCountSinDocente ?? 0;
   const currentBlockIdx = window._dashCurrentBlockIdx ?? -1;
   const currentWeek     = window._dashCurrentWeek     ?? 0;
   const semActual = currentBlockIdx>=0 ? GANTT_HITOS[currentBlockIdx].label : 'Inicio';
@@ -5087,7 +5101,7 @@ function generarInforme(){
       </div>
       ${barReal}
       <div style="font-size:10.5px;color:#5a7080">▌ Barra sólida = avance real &nbsp;|&nbsp; línea vertical = avance esperado</div>
-      <div style="font-size:10.5px;color:#5a7080;margin-top:4px">Promedio de <strong>${countAv}</strong> asignaturas con producción iniciada · <strong>${countCero}</strong> en 0% · <strong>${countSinDatos}</strong> sin datos del flujo de recursos</div>
+      <div style="font-size:10.5px;color:#5a7080;margin-top:4px">Promedio de <strong>${countAv}</strong> asignaturas con docente asignado · <strong>${countCero}</strong> en 0% · <strong>${countSinDocente}</strong> sin docente (excluidas) · <strong>${countSinDatos}</strong> sin datos</div>
     </div>
     <div class="rvse-badge">${semLabel}</div>
   </div>
