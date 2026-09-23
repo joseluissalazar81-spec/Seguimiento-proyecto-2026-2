@@ -2492,18 +2492,21 @@ function buildDiAsignaturaOrder(){
 async function loadRecursosData(){
   try{
     const DI_ASIGNATURA_ORDER = buildDiAsignaturaOrder();
+    const ASIG_BY_NAME = {};
+    (DATA_ALL||[]).forEach(d=>{ if(d.asignatura) ASIG_BY_NAME[normDiName(d.asignatura)] = d.asignatura; });
     const resp = await fetch(RECURSOS_URL + '?nocache=' + Date.now());
     if(!resp.ok) return;
     const rows = parseCSV(await resp.text()).slice(1);
     // Columnas del flujo de Power Automate:
     // 0=@odata.etag 1=ItemInternalId 2=Asignatura(genérico) 3=Hito 4=Semana1 5=Semana2
     // 6=Fecha de entrega(serial Excel, no se usa) 7=Recursos totales 8=Recursos listos
-    // 9=% Avance(decimal 0-1) 10=Estado del Hito 11=Alertas QA 12=DI
+    // 9=% Avance(decimal 0-1) 10=Estado del Hito 11=Alertas QA 12=Asignatura Real 13=DI
     const out = {};
     const diPrevPos = {}, diOffset = {};
     rows.forEach(r=>{
       const asigGenerico = (r[2]||'').trim();
-      const di = (r[12]||'').trim();
+      const asigReal = (r[12]||'').trim();
+      const di = (r[13]||'').trim();
       if(!asigGenerico || !di) return;
       const posNum = parseInt(asigGenerico.replace(/\D/g,''),10) || 1;
       // Si la posición retrocede, es que empezó un nuevo archivo (mismo DI en otro JP) —
@@ -2512,9 +2515,15 @@ async function loadRecursosData(){
         diOffset[di] = (diOffset[di]||0) + diPrevPos[di];
       }
       diPrevPos[di] = posNum;
-      const combinedIdx = (diOffset[di]||0) + posNum; // 1-based
-      const lista = DI_ASIGNATURA_ORDER[normDiName(di)];
-      const asig = lista && lista[combinedIdx-1];
+      // Si el Excel del DI ya trae "Asignatura Real" (columna agregada al archivo), se usa
+      // directo — es la fuente confiable. Si no, se cae al método anterior (posición + orden
+      // de Track 1) hasta que se corrija ese archivo.
+      let asig = asigReal && ASIG_BY_NAME[normDiName(asigReal)];
+      if(!asig){
+        const combinedIdx = (diOffset[di]||0) + posNum; // 1-based
+        const lista = DI_ASIGNATURA_ORDER[normDiName(di)];
+        asig = lista && lista[combinedIdx-1];
+      }
       if(!asig) return; // slot vacío/sin curso real asignado — se omite
       const key = normHitoKey(r[3]);
       if(!out[asig]) out[asig] = {};
