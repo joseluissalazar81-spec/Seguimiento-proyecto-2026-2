@@ -2119,6 +2119,14 @@
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             Programa
           </a>
+          <a id="p-seguimiento-link" href="#" target="_blank" rel="noopener"
+             style="display:none;align-items:center;gap:6px;font-size:12px;font-weight:600;
+                    color:#fff;background:#1a8a5a;border-radius:20px;padding:5px 14px;
+                    text-decoration:none;transition:opacity .2s"
+             onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+            Seguimiento
+          </a>
         </div>
       </div>
     </div>
@@ -2584,7 +2592,8 @@ function buildDataFromCSV(rows){
     iFmt=col('Tipo de Virtualización'), iJP=col('JP'), iDI=col('DI'), iDG=col('DG'), iImpl=col('Implementador'),
     iReunion=col('Reunión docente'), iPlanif=col('Planificación didáctica'), iEstado=col('Estado global'),
     iObs=col('Observaciones'), iCorreo=col('Correo docente'), iFechaSR=col('Fecha Sin Respuesta'),
-    iEnvDEL=col('Fecha envío DEL'), iDEL2=col('Fecha DEL 2° Inst.','Fecha DEL 2 Inst.'), iAvance=col('% Avance');
+    iEnvDEL=col('Fecha envío DEL'), iDEL2=col('Fecha DEL 2° Inst.','Fecha DEL 2 Inst.'), iAvance=col('% Avance'),
+    iLinkSeg=col('Link Seguimiento');
 
   // Columnas de estandarización (horas/recursos) — pueden no existir aún en el CSV vigente;
   // en ese caso quedan en -1 y esta sección simplemente no se muestra.
@@ -2625,7 +2634,8 @@ function buildDataFromCSV(rows){
     data.push({facultad,nivel,asignatura:asig,docente:get(r,iDoc)||'',fmt:get(r,iFmt)||'',
       jp:get(r,iJP)||'',di:get(r,iDI)||'',dg:get(r,iDG)||'—',implementador:get(r,iImpl)||'',
       reunion:get(r,iReunion)||'',planif:get(r,iPlanif)||'',estadoGlobal:get(r,iEstado)||'',obs:get(r,iObs)||'',
-      correo:get(r,iCorreo)||'',fechaSR:get(r,iFechaSR)||'',envDELfecha:get(r,iEnvDEL)||'',del2fecha:get(r,iDEL2)||''});
+      correo:get(r,iCorreo)||'',fechaSR:get(r,iFechaSR)||'',envDELfecha:get(r,iEnvDEL)||'',del2fecha:get(r,iDEL2)||'',
+      linkSeguimiento:(get(r,iLinkSeg)||'').trim()});
     const hitosObj={};
     hitoKeys.forEach((k,n)=>{ hitosObj[k] = (isPostgrado && n>=4) ? 'No aplica' : mapHito(hitoVals[n]); });
     avance[asig]={avance:pct,obs:get(r,iObs)||'',hitos:hitosObj};
@@ -3388,9 +3398,16 @@ function openPanel(idx){
   const moodleWrap=document.getElementById('p-moodle-wrap');
   const moodleLink=document.getElementById('p-moodle-link');
   const progLink=document.getElementById('p-prog-link');
-  if(moodleUrl||progUrl){moodleWrap.style.display='block';}else{moodleWrap.style.display='none';}
+  // Acceso directo "Seguimiento" — enlaza al Excel personal del DI (Seguimiento_[DI].xlsx).
+  // Solo se muestra cuando la asignatura ya tiene DG asignado, porque recién ahí ese DG
+  // necesita entrar a revisar el archivo del DI.
+  const seguimientoLink=document.getElementById('p-seguimiento-link');
+  const hasDG = (d.dg||'—').trim()!=='—' && (d.dg||'').trim()!=='';
+  const seguimientoUrl = hasDG ? (d.linkSeguimiento||'') : '';
+  if(moodleUrl||progUrl||seguimientoUrl){moodleWrap.style.display='block';}else{moodleWrap.style.display='none';}
   if(moodleUrl){moodleLink.href=moodleUrl;moodleLink.style.display='inline-flex';}else{moodleLink.style.display='none';}
   if(progLink){if(progUrl){progLink.href=progUrl;progLink.style.display='inline-flex';}else{progLink.style.display='none';}}
+  if(seguimientoLink){if(seguimientoUrl){seguimientoLink.href=seguimientoUrl;seguimientoLink.style.display='inline-flex';}else{seguimientoLink.style.display='none';}}
   document.getElementById('p-chips').innerHTML=`
     <span class="pchip">JP: ${d.jp}</span>
     <span class="pchip">DI: ${d.di}</span>
