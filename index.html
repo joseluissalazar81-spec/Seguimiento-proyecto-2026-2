@@ -4236,18 +4236,12 @@ function renderProjectCharts(){
   const src = DATA_ALL.length ? DATA_ALL : DATA;
   const avSrc = DATA_ALL.length ? AVANCE_ALL : AVANCE;
   const total = src.length || 1;
-  let validated=0, inProd=0;
-  src.forEach(d=>{
-    const av = avSrc[d.asignatura]||{};
-    const hv = Object.values(av.hitos||{});
-    if(av.avance>=100 || hv.every(h=>!h||h==='Validada'||h==='No aplica'||h==='—')) validated++;
-    else if(av.avance>0) inProd++;
-  });
-  const pctReal = Math.round((validated + inProd*0.5) / total * 100);
-
-  const semLabels = ['Inicio','S0','S1-S2','S3-S4','S5-S6','S7-S8','S9-S10','S11-S12','S13-S14','S15-S16','S17-S18'];
-  const espData   = [0,11,22,33,44,55,66,77,88,94,100];
-  const hitoFechas= [null,new Date(2026,8,12),new Date(2026,8,26),new Date(2026,9,10),new Date(2026,9,24),new Date(2026,10,7),new Date(2026,10,21),new Date(2026,11,5),new Date(2026,11,19),new Date(2027,0,2),new Date(2027,0,16)];
+  // Mismas fórmulas que el semáforo: real = columna % Avance de Reuniones, esperado por hitos.
+  const base = asigsConAvance(src, avSrc);
+  const pctReal = promedio(base.map(d=>avSrc[d.asignatura].avance));
+  const semLabels = ['Inicio', ...GANTT_HITOS.map(h=>h.label)];
+  const hitoFechas= [null, ...GANTT_HITOS.map(h=>h.fecha)];
+  const espData   = hitoFechas.map(f=> f ? promedio(base.map(d=>esperadoAsig(d, f))) : 0);
   const currentIdx = hitoFechas.filter(f=>f&&today>=f).length;
   const realData = semLabels.map((_,i)=> i===currentIdx ? pctReal : null);
 
@@ -4438,15 +4432,8 @@ function renderExecutiveHero(){
   });
   // Si estamos antes del primer deadline, week = 0-1
   if(currentBlockIdx === -1) currentWeek = Math.max(0, Math.round((today - GANTT_HITOS[0].fecha + 14*86400000)/86400000/7));
-  // % esperado = rampa lineal por días transcurridos del cronograma completo
-  // (desde GANTT_HITOS[0], inicio de producción, hasta el último hito S17-18).
-  // Antes de esa fecha el esperado es 0%; no tiene sentido exigir avance todavía.
-  // (Antes era un salto por hito alcanzado — el mismo día de S0 ya marcaba 18%,
-  // "planif" + "S0" juntos, en vez de subir gradual desde el día 1.)
-  const projStart = GANTT_HITOS[0].fecha;
-  const projEnd = GANTT_HITOS[GANTT_HITOS.length-1].fecha;
-  const pctEsperado = today <= projStart ? 0
-    : Math.min(100, Math.round((today - projStart) / (projEnd - projStart) * 100));
+  // % esperado por hitos (ver esperadoAsig), promediado sobre las mismas asignaturas que el real.
+  const pctEsperado = promedio(asigsConAvance(src, avSrc).map(d=>esperadoAsig(d, today)));
   // Expose for informe so both always show the same numbers
   window._dashPctReal = pctReal;
   window._dashPctEsperado = pctEsperado;
@@ -4606,6 +4593,24 @@ const GANTT_HITOS = [
   {label:'S15–S16',key:'s15s16',fecha: new Date(2026,11,5), weeksDone:17, hito:'Producción'},
   {label:'S17–S18',key:'s17s18',fecha: new Date(2026,11,15),weeksDone:18, hito:'Entrega PPRD a DEL ◆'},
 ];
+
+// ── % esperado por hitos: misma regla que la columna "% Avance" de Reuniones_Proyecto ──
+// Ítems = planificación didáctica + hitos que aplican (postgrado: 6 semanas → S0…S5–S6).
+// A la fecha dada: plazo vencido = 1 (debería estar terminado), próximo plazo = 0,5
+// (debería estar en producción), resto = 0. Así, una asignatura al día marca real = esperado.
+const PLANIF_ESPERADA = new Date(2026,9,5); // "Entrega planif. DEL" (S3–S4)
+function esperadoAsig(d, fecha){
+  const hitos = (d && d.nivel==='Postgrado') ? GANTT_HITOS.slice(0,4) : GANTT_HITOS;
+  const plazos = [PLANIF_ESPERADA, ...hitos.map(h=>h.fecha)];
+  const proximo = hitos.map(h=>h.fecha).find(f=>fecha<=f);
+  const pts = plazos.reduce((s,f)=> s + (fecha>f ? 1 : (f===proximo || f===PLANIF_ESPERADA) ? 0.5 : 0), 0);
+  return Math.round(pts/plazos.length*100);
+}
+// Conjunto que se promedia (igual para real y esperado): con docente asignado y con dato de avance.
+function asigsConAvance(src, avSrc){
+  return src.filter(d=>(d.docente||'').trim() && (avSrc[d.asignatura]||{}).avance!=null);
+}
+function promedio(arr){ return arr.length ? Math.round(arr.reduce((a,b)=>a+b,0)/arr.length) : 0; }
 
 let ovBarInstance = null, ovDonutInstance = null, ovStateDonutInstance = null;
 let overviewVisible = false;
@@ -5015,11 +5020,12 @@ function generarInforme(){
   const facRows=FAC_ORDER.filter(f=>facData[f]&&facData[f].n>0).map(f=>{
     const fd=facData[f];
     const pct=fd.nAv?Math.round(fd.sumAv/fd.nAv):0;
-    const facDiff=pct-pctEsperado;
+    const facEsp=promedio(src.filter(d=>d.facultad===f).map(d=>esperadoAsig(d, hoy)));
+    const facDiff=pct-facEsp;
     const facColor=facDiff>=-5?'#27a06e':facDiff>=-20?'#d4a820':'#c04848';
     const facLabel=facDiff>=-5?'✓ A tiempo':facDiff>=-20?'⚡ En riesgo':'✗ Atrasada';
     const barBg=`<div style="background:#e8eef4;border-radius:3px;height:7px;width:100%"><div style="background:${facColor};height:7px;border-radius:3px;width:${pct}%"></div></div>`;
-    const espBar=`<div style="background:transparent;border-radius:3px;height:7px;width:100%;border:1px dashed #aaa;margin-top:2px"><div style="background:rgba(0,0,0,.2);height:5px;border-radius:2px;margin:1px;width:${pctEsperado}%"></div></div>`;
+    const espBar=`<div style="background:transparent;border-radius:3px;height:7px;width:100%;border:1px dashed #aaa;margin-top:2px"><div style="background:rgba(0,0,0,.2);height:5px;border-radius:2px;margin:1px;width:${facEsp}%"></div></div>`;
     const atCol=fd.atras>0?'color:#c04848;font-weight:700':'color:#888';
     return `<tr>
       <td style="padding:8px 10px;border-bottom:1px solid #e8eef4;font-weight:600;font-size:12.5px">${f}</td>
@@ -5032,7 +5038,7 @@ function generarInforme(){
           <span style="font-weight:700;color:${facColor};min-width:32px">${pct}%</span>
           <div style="flex:1">${barBg}${espBar}</div>
         </div>
-        <div style="font-size:10px;color:#888;margin-top:2px">Esperado: ${pctEsperado}% · Dif: <span style="color:${facColor};font-weight:700">${facDiff>=0?'+':''}${facDiff}pp</span></div>
+        <div style="font-size:10px;color:#888;margin-top:2px">Esperado: ${facEsp}% · Dif: <span style="color:${facColor};font-weight:700">${facDiff>=0?'+':''}${facDiff}pp</span></div>
       </td>
       <td style="text-align:center;padding:8px;border-bottom:1px solid #e8eef4;font-size:12px;font-weight:700;color:${facColor}">${facLabel}</td>
     </tr>`;
