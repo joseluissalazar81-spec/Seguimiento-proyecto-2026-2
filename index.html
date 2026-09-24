@@ -2248,7 +2248,11 @@ function miniHitosDot(hitos){
     else if(v==='DEL 2° Instancia') cls='mh-d2';
     else if(v.startsWith('Enviada')) cls='mh-e';
     else if(v==='En construcción') cls='mh-c';
-    else if(v==='No inicia') cls='mh-n';
+    else if(v==='No inicia'||v==='Sin comenzar') cls='mh-n';
+    // Estados nuevos de Reuniones_Proyecto (mismos pesos que la columna % Avance: 1 / 0,5 / 0)
+    else if(v==='Terminado') cls='mh-v';
+    else if(/validaci[oó]n docente|^QA$/i.test(v)) cls='mh-e';
+    else if(/^En (producci[oó]n|implementaci[oó]n)/i.test(v)) cls='mh-c';
     return `<div class="mh" title="${h.label}: ${v||'—'}"><span class="mh-key">${SHORT[i]}</span><div class="mh-dot ${cls}"></div></div>`;
   }).join('')+'</div>';
 }
@@ -2260,7 +2264,10 @@ function hitoBadge(estado){
   if(estado==='DEL 2° Instancia')return '<span class="hb hb-d2">DEL 2°</span>';
   if(estado==='Enviada'||estado.startsWith('Enviada'))return '<span class="hb hb-e">Enviada</span>';
   if(estado==='En construcción')return '<span class="hb hb-c">En construcción</span>';
-  if(estado==='No inicia')return '<span class="hb hb-n">No inicia</span>';
+  if(estado==='No inicia'||estado==='Sin comenzar')return `<span class="hb hb-n">${estado}</span>`;
+  if(estado==='Terminado')return '<span class="hb hb-v">Terminado</span>';
+  if(/validaci[oó]n docente|^QA$/i.test(estado))return `<span class="hb hb-e">${estado}</span>`;
+  if(/^En (producci[oó]n|implementaci[oó]n)/i.test(estado))return `<span class="hb hb-c">${estado}</span>`;
   if(estado==='—')return '<span class="hb hb-x">—</span>';
   return `<span class="hb hb-x">${estado}</span>`;
 }
@@ -2607,8 +2614,16 @@ function buildDataFromCSV(rows){
 
   // Columnas semanales S0...S17-18: cualquier encabezado que empiece con "S"+dígito.
   // Robusto a que cambien las fechas del semestre (van embebidas en el encabezado).
-  const sHitoIdx = [];
-  header.forEach((h,i)=>{ if(/^s\d/i.test((h||'').toString().trim())) sHitoIdx.push(i); });
+  // Se toma solo la primera columna de cada hito: Reuniones_Proyecto trae una "S15–S16 5/13"
+  // duplicada que, si se contara, corría S17–S18 fuera de la lista de 10 hitos.
+  const sHitoIdx = [], sHitoSeen = new Set();
+  header.forEach((h,i)=>{
+    const t = normHdr(h);
+    if(!/^s\d/.test(t)) return;
+    const k = t.split(' ')[0];
+    if(sHitoSeen.has(k)) return;
+    sHitoSeen.add(k); sHitoIdx.push(i);
+  });
   const hitoKeys=['s0','s1s2','s3s4','s5s6','s7s8','s9s10','s11s12','s13s14','s15s16','s17s18'];
 
   const data=[], avance={}, estandar={};
