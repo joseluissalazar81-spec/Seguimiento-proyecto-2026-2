@@ -5423,9 +5423,7 @@ function renderFacView(){
     const wOk=Math.round(ok/n*100), wRev=Math.round(rev/n*100),
           wAt=Math.round(atras/n*100), wEnT=Math.round(enT/n*100);
 
-    const notaExt = fac !== 'Recursos Naturales y Medicina Veterinaria'
-      ? `<span class="fv-idx-notaext">⏳ Plazo ${deadline.toLocaleDateString('es-CL',{day:'numeric',month:'short'})}</span>`
-      : '';
+    const notaExt = ''; // sin etiqueta de plazo en el encabezado de la facultad
 
     const ticker_rows = items.map(d=>facTickerRowHtml(d, today, deadline)).join('');
 
