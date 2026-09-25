@@ -2599,7 +2599,7 @@ function buildDataFromCSV(rows){
     iFmt=col('Tipo de Virtualización'), iJP=col('JP'), iDI=col('DI'), iDG=col('DG'), iImpl=col('Implementador'),
     iReunion=col('Reunión docente'), iPlanif=col('Planificación didáctica'), iEstado=col('Estado global'),
     iObs=col('Observaciones'), iCorreo=col('Correo docente'), iFechaSR=col('Fecha Sin Respuesta'),
-    iEnvDEL=col('Fecha envío DEL'), iDEL2=col('Fecha DEL 2° Inst.','Fecha DEL 2 Inst.'), iAvance=col('% Avance'),
+    iEnvDEL=col('Fecha envío DEL'), iDEL2=col('Fecha DEL 2° Inst.','Fecha DEL 2 Inst.'), iAvance=col('% Avance'), iEsperado=col('% Esperado a hoy'), iReunionDoc=col('Reunión docente'),
     iLinkSeg=col('Link Seguimiento');
 
   // Columnas de estandarización (horas/recursos) — pueden no existir aún en el CSV vigente;
@@ -2653,7 +2653,9 @@ function buildDataFromCSV(rows){
       linkSeguimiento:(get(r,iLinkSeg)||'').trim()});
     const hitosObj={};
     hitoKeys.forEach((k,n)=>{ hitosObj[k] = (isPostgrado && n>=4) ? 'No aplica' : mapHito(hitoVals[n]); });
-    avance[asig]={avance:pct,obs:get(r,iObs)||'',hitos:hitosObj};
+    // % esperado: columna "% Esperado a hoy" de Reuniones (misma fuente que el % real).
+    const esperado = iEsperado>=0 ? Math.round(parsePct(get(r,iEsperado))*100) : null;
+    avance[asig]={avance:pct,esperado,obs:get(r,iObs)||'',hitos:hitosObj};
 
     if(hasEstandar){
       const num=v=>{const n=parseFloat(v);return isNaN(n)?0:n;};
@@ -4241,7 +4243,7 @@ function renderProjectCharts(){
   const pctReal = promedio(base.map(d=>avSrc[d.asignatura].avance));
   const semLabels = ['Inicio', ...GANTT_HITOS.map(h=>h.label)];
   const hitoFechas= [null, ...GANTT_HITOS.map(h=>h.fecha)];
-  const espData   = hitoFechas.map(f=> f ? promedio(base.map(d=>esperadoAsig(d, f))) : 0);
+  const espData   = hitoFechas.map(f=> f ? promedio(base.map(d=>esperadoAsig(d, f, avSrc[d.asignatura].hitos))) : 0);
   const currentIdx = hitoFechas.filter(f=>f&&today>=f).length;
   const realData = semLabels.map((_,i)=> i===currentIdx ? pctReal : null);
 
@@ -4432,8 +4434,8 @@ function renderExecutiveHero(){
   });
   // Si estamos antes del primer deadline, week = 0-1
   if(currentBlockIdx === -1) currentWeek = Math.max(0, Math.round((today - GANTT_HITOS[0].fecha + 14*86400000)/86400000/7));
-  // % esperado por hitos (ver esperadoAsig), promediado sobre las mismas asignaturas que el real.
-  const pctEsperado = promedio(asigsConAvance(src, avSrc).map(d=>esperadoAsig(d, today)));
+  // % esperado: columna "% Esperado a hoy" de Reuniones, promediada sobre las mismas asignaturas que el real.
+  const pctEsperado = promedio(asigsConAvance(src, avSrc).map(d=>esperadoHoy(d, avSrc, today)));
   // Expose for informe so both always show the same numbers
   window._dashPctReal = pctReal;
   window._dashPctEsperado = pctEsperado;
@@ -4594,17 +4596,23 @@ const GANTT_HITOS = [
   {label:'S17–S18',key:'s17s18',fecha: new Date(2026,11,15),weeksDone:18, hito:'Entrega PPRD a DEL ◆'},
 ];
 
-// ── % esperado por hitos: misma regla que la columna "% Avance" de Reuniones_Proyecto ──
-// Ítems = planificación didáctica + hitos que aplican (postgrado: 6 semanas → S0…S5–S6).
-// A la fecha dada: plazo vencido = 1 (debería estar terminado), próximo plazo = 0,5
-// (debería estar en producción), resto = 0. Así, una asignatura al día marca real = esperado.
-const PLANIF_ESPERADA = new Date(2026,9,5); // "Entrega planif. DEL" (S3–S4)
-function esperadoAsig(d, fecha){
-  const hitos = (d && d.nivel==='Postgrado') ? GANTT_HITOS.slice(0,4) : GANTT_HITOS;
-  const plazos = [PLANIF_ESPERADA, ...hitos.map(h=>h.fecha)];
-  const proximo = hitos.map(h=>h.fecha).find(f=>fecha<=f);
-  const pts = plazos.reduce((s,f)=> s + (fecha>f ? 1 : (f===proximo || f===PLANIF_ESPERADA) ? 0.5 : 0), 0);
-  return Math.round(pts/plazos.length*100);
+// ── % esperado: misma regla que la columna "% Esperado a hoy" de Reuniones_Proyecto ──
+// Cada ítem (planificación + hitos que aplican) cuenta 1 cuando su fecha límite ya pasó
+// (debería estar Terminado). Fechas de _Listas!J:K — postgrado corre 15/11–15/12.
+// Para hoy se usa el valor del CSV; esta función solo dibuja la curva del gráfico.
+const PLAZOS_PREGRADO  = [[2026,8,15],[2026,8,15],[2026,8,25],[2026,9,5],[2026,9,15],[2026,9,25],[2026,10,5],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
+const PLAZOS_POSTGRADO = [[2026,10,15],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
+function esperadoAsig(d, fecha, hitos){
+  if(d && d.reunion && d.reunion!=='Realizada') return 0;
+  const plazos = (d && d.nivel==='Postgrado') ? PLAZOS_POSTGRADO : PLAZOS_PREGRADO;
+  // Igual que Reuniones: los ítems "No aplica" salen del denominador (índice 0 = planificación).
+  const estados = [d && d.planif, ...HITO_META.map(h=>(hitos||{})[h.key])];
+  const aplica = plazos.map((f,i)=>({f, ok: estados[i]!=='No aplica'})).filter(x=>x.ok);
+  return aplica.length ? Math.round(aplica.filter(x=>x.f<=fecha).length/aplica.length*100) : 0;
+}
+function esperadoHoy(d, avSrc, fecha){
+  const e=(avSrc[d.asignatura]||{}).esperado;
+  return e!=null ? e : esperadoAsig(d, fecha, (avSrc[d.asignatura]||{}).hitos);
 }
 // Conjunto que se promedia (igual para real y esperado): con docente asignado y con dato de avance.
 function asigsConAvance(src, avSrc){
@@ -5020,7 +5028,7 @@ function generarInforme(){
   const facRows=FAC_ORDER.filter(f=>facData[f]&&facData[f].n>0).map(f=>{
     const fd=facData[f];
     const pct=fd.nAv?Math.round(fd.sumAv/fd.nAv):0;
-    const facEsp=promedio(src.filter(d=>d.facultad===f).map(d=>esperadoAsig(d, hoy)));
+    const facEsp=promedio(src.filter(d=>d.facultad===f).map(d=>esperadoHoy(d, avSrc, hoy)));
     const facDiff=pct-facEsp;
     const facColor=facDiff>=-5?'#27a06e':facDiff>=-20?'#d4a820':'#c04848';
     const facLabel=facDiff>=-5?'✓ A tiempo':facDiff>=-20?'⚡ En riesgo':'✗ Atrasada';
