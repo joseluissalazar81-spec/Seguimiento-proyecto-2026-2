@@ -3739,6 +3739,8 @@ const PLANIF_FLOW = [
 ];
 
 function planifStepIndex(planif){
+  // Reuniones escribe "Cargada en Aula" (A mayúscula): se normaliza para reconocerla.
+  if(/^cargada en aula$/i.test((planif||'').trim())) planif='Cargada en aula';
   if(!planif||planif==='No inicia'||planif==='No enviada')return 0;
   if(planif==='En construcción'||planif==='Pendiente')return 1;
   if(planif==='Ajustes según Escala')return 1.5;
