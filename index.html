@@ -4605,7 +4605,7 @@ const GANTT_HITOS = [
 // Esperado = bloques con fecha límite ya pasada ÷ bloques que aplican (11 − "No aplica").
 // Sin avance parcial; el bloque que vence hoy cuenta desde mañana. Fechas de _Listas!J:K.
 // Para hoy el panel usa el valor del CSV; esta función solo dibuja la curva del gráfico.
-const PLAZOS_PREGRADO  = [[2026,8,15],[2026,8,15],[2026,8,25],[2026,9,5],[2026,9,15],[2026,9,25],[2026,10,5],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
+const PLAZOS_PREGRADO  = [[2026,9,1],[2026,8,15],[2026,8,25],[2026,9,5],[2026,9,15],[2026,9,25],[2026,10,5],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
 const PLAZOS_POSTGRADO = [[2026,10,15],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
 function esperadoAsig(d, fecha, hitos){
   if(d && !tieneDocente(d)) return 0;
