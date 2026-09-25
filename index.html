@@ -3109,7 +3109,7 @@ function rbClass(r){if(r==='Realizada')return'rb rb-r';if(r==='Agendada')return'
 function isAtrasada(d){
   const today = new Date(); today.setHours(0,0,0,0);
   const step = planifStepIndex(d.planif||'');
-  return step < 1.5 && today > asigDeadline(d);
+  return step < 4 && today > asigDeadline(d);
 }
 
 function dotClass(p, d){
@@ -4278,13 +4278,11 @@ function renderProjectCharts(){
   if(sub){const d=Math.max(0,Math.round((new Date(2027,0,14)-today)/86400000));sub.textContent=`Hoy: ${today.toLocaleDateString('es-CL',{day:'numeric',month:'short',year:'numeric'})} · ${d} días restantes`;}
 }
 
-// ── Plazos de entrega de planificación a DEL por grupo de facultades ──────────
-// Fuente: CartaGantt_2026-1 + ajuste comunicado por el equipo
+// ── Plazo de la planificación didáctica: debe estar VALIDADA el 1 de octubre 2026 ──
+// (definido por el JP el 25/9; mismo plazo que _Listas!J2 de Reuniones_Proyecto).
+// Se deja por facultad por si vuelve a haber plazos diferenciados.
 const PLANIF_DEADLINES = {
-  default:            new Date(2026,11,15), // 15 diciembre 2026
-  "Salud":            new Date(2026,11,15), // 15 diciembre 2026
-  "Formación General":new Date(2026,11,15), // 15 diciembre 2026
-  "Recursos Naturales y Medicina Veterinaria": new Date(2026,10,14), // 14 noviembre 2026
+  default:            new Date(2026,9,1), // 1 octubre 2026
 };
 function planifDeadline(facultad){
   return PLANIF_DEADLINES[facultad] || PLANIF_DEADLINES.default;
@@ -4475,7 +4473,7 @@ function renderExecutiveHero(){
   if(body){
     const atrasadas = src.filter(d=>{
       const step = planifStepIndex(d.planif||'');
-      return step < 1.5 && today > asigDeadline(d);
+      return step < 4 && today > asigDeadline(d);
     });
     const sinIniciar = src.filter(d=>!d.planif||d.planif==='No inicia');
     const enConst    = src.filter(d=>d.planif==='En construcción'||d.planif==='Pendiente');
@@ -4607,8 +4605,8 @@ const GANTT_HITOS = [
 // Cada ítem (planificación + hitos que aplican) cuenta 1 cuando su fecha límite ya pasó
 // (debería estar Terminado). Fechas de _Listas!J:K — postgrado corre 15/11–15/12.
 // Para hoy se usa el valor del CSV; esta función solo dibuja la curva del gráfico.
-const PLAZOS_PREGRADO  = [[2026,8,15],[2026,8,15],[2026,8,25],[2026,9,5],[2026,9,15],[2026,9,25],[2026,10,5],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
-const PLAZOS_POSTGRADO = [[2026,10,15],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
+const PLAZOS_PREGRADO  = [[2026,9,1],[2026,8,15],[2026,8,25],[2026,9,5],[2026,9,15],[2026,9,25],[2026,10,5],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
+const PLAZOS_POSTGRADO = [[2026,9,1],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
 const VENTANA_ESPERADO_DIAS = 10; // _Listas!J14
 function esperadoAsig(d, fecha, hitos){
   if(d && !tieneDocente(d)) return 0;
@@ -5008,7 +5006,7 @@ function generarInforme(){
     else if(s===1.5) nEscala++;
     else if(s>=1) nConstr++;
     else nNoInicia++;
-    if(s<1.5&&hoy>dl) nAtras++;
+    if(s<4&&hoy>dl) nAtras++;
     const o=(avSrc[d.asignatura]||{}).obs||d.obs||'';
     if(o.trim()){nObs++;if(d.fechaSR){const ds=diasDesde(d.fechaSR);if(ds!==null&&ds>=3)nEscalPend++;}}
   });
@@ -5028,7 +5026,7 @@ function generarInforme(){
     else if(s===1.5) fd.escala++;
     else if(s>=1) fd.constr++;
     else fd.noInicia++;
-    if(s<1.5&&hoy>dl) fd.atras++;
+    if(s<4&&hoy>dl) fd.atras++;
     const o=(avSrc[d.asignatura]||{}).obs||d.obs||'';
     if(o.trim()){
       let escalMsg='';
