@@ -1,551 +1,821 @@
 @odata.etag,ItemInternalId,Asignatura,Hito,Semana 1,Semana 2,Fecha de entrega,Recursos totales,Recursos listos,% Avance,Estado del Hito,Alertas QA,Asignatura Real,DI
-,fb69b1ed-21ad-426c-87c6-ea33cd8687e0,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,7f975b5c-e4f9-4f92-8345-9cf4409fe654,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,02b2b845-6cee-4add-916b-c00fa4e47b23,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,fdcc3908-58f6-4374-89d8-3a2b607e6075,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,53d894f9-d8c4-4b50-bb51-a4b004bac67a,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,4f872085-f2ef-4c3b-b983-fc92ef82367e,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,3f9ab78e-fa00-4a43-8a50-7c26a7f2a17c,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,6ef9896f-1a89-456d-9cec-5a9cd9207c5d,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,57e12172-3757-4570-807f-6a9320ba9f3c,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,7d86a27f-3e62-4ad1-be2a-6213da6bb076,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
-,048e3dc6-b97f-4d7e-87d1-98e326075761,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,20b8100b-eeb9-4b0f-84ba-5e9cd4fa319f,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,9db9c873-ff17-4b49-ad28-24be8b80f1a4,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,a303186b-60c9-423b-af1f-0bd13ece42e4,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,34821ae2-60d9-424d-a929-7189171fb66c,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,1885191d-f092-428b-9e43-56105b534997,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,fd4c00e1-bc8b-4be3-9ffd-a42ce8eab499,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,1ad1dbe4-32b1-4238-b127-b5ec9f626f3e,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,1ccbd03a-3d92-4631-a88a-f6572e7174e9,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,199580e1-3f03-4685-b068-e4b0e983eced,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Economía para la Dirección,Yazim Meza
-,6a5d7f2c-b049-4073-bc7a-4317109cb56d,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Yazim Meza
-,51353e0d-141b-4405-9822-127cc58996e9,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Yazim Meza
-,50da5c7e-fd15-477b-8b2c-b9aeb49adb6e,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Yazim Meza
-,15c05a3b-1952-42a7-81dc-b986f0689975,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Yazim Meza
-,f9dd1abd-2b50-46a4-9cfb-5fab1fa261bf,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Yazim Meza
-,8ca447e5-53c0-47b5-bf25-f74344ccf49c,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Yazim Meza
-,51e8479f-7717-44c2-b1d9-b690300aa4f7,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Yazim Meza
-,cef9cbf9-2f34-4336-8bcb-b66066646b65,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Yazim Meza
-,e0162377-8974-4ce7-afd5-0fc8aeff9cc0,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Yazim Meza
-,e8273822-48ac-463f-a6f4-dbf4f9413402,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Yazim Meza
-,42449209-df0e-40f2-bd47-463557116bfd,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Yazim Meza
-,e16cdd22-780b-4af7-ba6c-03adf5c4f05b,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Yazim Meza
-,c64ac5fb-4e4f-429d-a5c1-e2b7a28d3fed,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Yazim Meza
-,82b1bba0-dcf0-4b27-990f-fe369bcfc7d0,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Yazim Meza
-,ec112141-0188-4cbc-8afc-94f632276853,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Yazim Meza
-,d12c531d-fb84-49fe-9b14-f4a493649142,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Yazim Meza
-,9edbd9be-3fd7-4334-84ff-9e89735b228c,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Yazim Meza
-,1fb96ec7-f1a0-418e-991b-56bc42498df2,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Yazim Meza
-,1535b6c5-8ebb-4773-b6ff-d06330422020,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Yazim Meza
-,084f0aeb-1799-42a3-a467-0cd542c47e60,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Yazim Meza
-,83af317a-014c-45a2-9815-6e0785587d03,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Yazim Meza
-,8df5e247-57b5-43a1-ab46-de4aaffb6c2c,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Yazim Meza
-,0aa3cdd8-ab53-4a6d-8a85-b8032cb7ffb2,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Yazim Meza
-,9ee2d97c-a991-4e79-a99f-7615aef3b940,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Yazim Meza
-,fe8afb10-e37b-4eaf-9c73-10469ec7cd55,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Yazim Meza
-,4f93a4e9-a574-4a08-a1cb-0ff2bc230050,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Yazim Meza
-,5b989393-1591-4c84-890b-1ee0fd3a6363,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Yazim Meza
-,3b2c596f-ba04-4bd5-8a89-5da2549ab477,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Yazim Meza
-,b10fb576-2bf0-4e77-a7f2-fbbc0ba058a5,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Yazim Meza
-,bb9058a9-2e79-4e6f-8eb8-74dc298d6b2f,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Yazim Meza
-,420ac5f2-9660-4c8d-9bd0-2b6ce6de6a7d,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,24b8359a-a3c2-43d9-86e9-fbe7689646fa,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,b86f7132-5f53-48ca-a2ca-bac25af2fc61,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,9789d822-f602-487f-ae4b-fe095bdb664d,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,04e42034-f80d-43d8-a911-9090a4d86a17,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,2c41e00f-3d43-4cbe-a6dc-e6800a209045,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,70554297-6ca3-4fd9-8c4c-a70c6808ec95,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,33f6c79c-aa24-4da1-bbd7-e6ddd9145f0e,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,822ee4f8-20ba-4ed6-81dd-0c8461f289fd,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,42dc9645-fda2-499a-b517-878fd767c967,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
-,cde75c92-002e-4768-82ae-e95159cb5847,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,1a609b0c-a7b8-40ee-b9dc-ff5308b097cd,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,81d2d9bd-06f2-490f-9665-db5cd375f331,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,56a54251-3173-4fca-af63-b1ce15dcd35d,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,6ffdc8dc-de88-46d2-a9d4-2de77bcf6253,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,e1e7a0aa-40e4-444b-8e90-27eba5b196e4,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,b764881d-a2e3-450a-9ab7-6032c2602ac8,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,f8e07712-0059-4cea-ae39-25b79c3e363b,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,b742a33e-9df4-4c19-a9d2-f2b4fff36919,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,755fcb8a-2a67-4704-9572-105c5ff39408,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
-,25a8d867-f9de-4eb4-bfdf-519ec47c4f78,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Noemí Urrutia
-,1d60822f-b75e-415e-8a63-38cc2ac5e22b,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Noemí Urrutia
-,3548d9e3-e823-434a-b654-8eb0f7e72323,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Noemí Urrutia
-,8c3eae6b-b375-432c-b9d3-b23a2c3543f3,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Noemí Urrutia
-,3d41761a-3d46-4088-a747-d9566cfd86e5,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Noemí Urrutia
-,6132c971-5730-4fa5-92c1-c68de77589dc,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Noemí Urrutia
-,bec4c23c-4437-454a-86db-a41bfdd9a7ae,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Noemí Urrutia
-,8465a23b-7e80-4ec8-b59b-3b87509ff9e2,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Noemí Urrutia
-,964dac4f-5411-47af-8616-c3cf2f846eba,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Noemí Urrutia
-,9c5edf0d-59c2-4a34-8a06-940983b73297,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Noemí Urrutia
-,39699892-15f2-45bc-bec7-2007cc52352c,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Noemí Urrutia
-,5a629edc-231b-4862-921b-d01b3dccd15d,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Noemí Urrutia
-,e0dade44-b4b2-4c14-9d1e-c11d71f0988c,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Noemí Urrutia
-,a595bda4-fd57-47da-bfa3-e49904ac5537,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Noemí Urrutia
-,49230f23-a2fa-49d3-9804-a4c9a9a4d275,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Noemí Urrutia
-,3d248716-6058-448a-b6df-0b2252761752,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Noemí Urrutia
-,9f8ea637-4792-4b2c-978e-3f75e6775885,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Noemí Urrutia
-,9688d09b-c9b5-4a2b-8bc1-46013ad9161d,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Noemí Urrutia
-,79880823-a212-4315-875f-583b03030ce4,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Noemí Urrutia
-,7469e2a9-296d-4243-86d0-48b7cd9dadbc,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Noemí Urrutia
-,19405bf9-bc83-44fe-a9d2-50b31971f9e6,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Noemí Urrutia
-,511b86e9-2c99-4d7e-8f97-d1a81fbb6a28,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Noemí Urrutia
-,806216e2-a53a-4ade-bb95-26b98337b60a,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Noemí Urrutia
-,e5b69ea8-05a7-4c49-8390-893f3544c2eb,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Noemí Urrutia
-,c7b9cacb-6868-4f2b-84ef-03fee1933bfb,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Noemí Urrutia
-,03323513-2906-40c8-a45f-8effbe3e7fe1,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Noemí Urrutia
-,3ed9b22f-e4ed-494a-b852-0b191e60df07,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Noemí Urrutia
-,6bab64c4-4879-4ca1-96d3-eb6884028e43,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Noemí Urrutia
-,d42ea904-7f38-46f5-8a32-0091e8c265d1,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Noemí Urrutia
-,f7a45dce-5e28-462d-aa10-d72a364f99d1,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Noemí Urrutia
-,7f041a98-cbfd-41e3-a367-bb276ba65d9a,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,2c36dcf4-701b-4f09-99c1-25d49fd1980b,Asignatura 1,S1-S2,S1,S2,46290,12,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,65be235f-fa7b-483e-9bc6-016b634cd692,Asignatura 1,S3-S4,S3,S4,46300,4,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,d64ada48-89a8-4d6b-a67d-3f0a35e36a91,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,5bb2db67-8109-43cb-a8ec-91ffb4cbfdc6,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,ebd0ce2c-b0e7-46db-a092-ec7d224e4351,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,0628ec20-2604-421b-b2d6-2f420887072c,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,919ab6ab-0b11-4d60-ad5a-d6d089a23a0f,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,4237c1ad-2658-47bd-bbac-a9abd9dcc1f2,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,78f394fc-2b38-4c74-9bfd-48b97cfb8abc,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
-,70161330-846d-4d22-b34d-ed02a35a4495,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,027b9b94-c3d6-4839-b931-8c0ceb6f5f0e,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,c62b8739-eda9-4e94-a630-5efd7a57afe2,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,f4c34008-b0c0-432d-b524-08fcb5b37994,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,f0f29317-657c-4e70-b8ee-dfc349f91947,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,94526b8b-863d-4706-a267-f882cae73dbf,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,f77ab49f-1668-4b3f-ac59-3bd5a103c729,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,be88083e-4ff0-4890-bd40-738d23787890,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,10b1723e-dff0-4eab-8f47-3aeaadc17d63,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,f42af0e8-cf82-480e-820d-54ed3cfb05c2,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
-,bf64c082-9f1f-49d1-832d-1e27cd3df4d1,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Bárbara González
-,026b14f3-0374-483e-885c-cff2ae5000e4,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara González
-,3c8276da-c22b-4c86-a0d5-ceb516404237,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara González
-,8b918774-9283-4a7f-bc0b-e10894c7f5f3,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara González
-,7ba758d1-b51a-462f-8581-7e75c3bc8912,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara González
-,4e50aa9d-fb4f-4c7d-b1ba-d959bf9eca19,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara González
-,8370dc9d-9852-409d-b499-fc5a3eb51540,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara González
-,6f3e5efa-34a3-408d-af0a-dfa9bc2e2d92,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara González
-,2c4ea4d2-6042-452e-9950-083a95aa5342,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara González
-,b9c0dd0e-fb3b-4673-9cbd-ebe5217803ae,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara González
-,5d56641e-2847-4d0c-a687-399b100c9af2,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Bárbara González
-,f4b6b2f6-d4a3-492c-9693-fb3a73877026,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara González
-,910e21ba-fee2-41fb-8a31-ca761b050d5a,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara González
-,3d4ac62b-fa05-4511-8ceb-61fa9ce27454,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara González
-,c7bc2501-02ce-4ea9-86d9-e16313065878,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara González
-,c25e09f6-fd16-4985-8da9-04588b40725c,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara González
-,cd849b2d-a601-4ac4-8ff2-0895e95a6990,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara González
-,298c830e-9a4b-44b6-bf69-cc54f7740d66,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara González
-,2cef733e-2a8b-4103-aaf7-a303f3b3f29b,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara González
-,c1fcb8f8-c95d-44d4-9e1f-7d47c06c6fe7,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara González
-,3523e44e-bb4d-466a-a108-f61be5ce3b2a,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Bárbara González
-,a65fbb3b-d2d6-4bc8-93a9-bbafe361bf7b,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara González
-,12949122-8841-41d4-a11f-73e64645e0d9,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara González
-,950258f2-3d70-4993-bfbd-369fa6cc62fc,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara González
-,4ce26631-aab6-44c5-9474-d0d43a9f501e,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara González
-,19011061-ae5b-4cdf-8d9c-2c4e680254b3,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara González
-,42148226-2311-46ac-bc84-b5dbc2ba677c,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara González
-,0bf9054c-2c36-48df-b3d5-b0286f0535a5,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara González
-,6da51332-f623-41a4-abc2-c263d9b03fbc,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara González
-,bd443836-b824-4e3f-ab4b-4e973c6cfb03,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara González
-,3f12e0a5-3469-469f-a330-0f683b3f2987,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
-,4a0b3b79-260d-4095-b76b-95a5d4fa8fae,Asignatura 1,S1-S2,S1,S2,46290,15,0,0,En producción,2,Estrategia Competitiva,Carla Riquelme
-,960d9712-2140-49ab-a8f5-6ba52892ec40,Asignatura 1,S3-S4,S3,S4,46300,15,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
-,e074f928-8611-427b-9e62-31565a4fa8b3,Asignatura 1,S5-S6,S5,S6,46310,19,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
-,44269046-96ad-4ad9-84a9-4cbfccd27687,Asignatura 1,S7-S8,S7,S8,46320,13,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
-,91194b6c-6b6e-4ad6-bb6a-649238111e69,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
-,b6c1c6e6-b4d9-48cb-875e-b357377c2235,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
-,b2acd090-00cf-4ea6-b104-8000516e3b3b,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
-,d927c35e-aa1d-484c-9723-75932c3eb79b,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
-,6dca0432-0137-4881-8357-9bf81f5065cc,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
-,9d602f1c-73a4-4327-8aa1-36f2ba5355af,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,4ff27f9f-793d-4e5a-80c5-f2f044b32aee,Asignatura 2,S1-S2,S1,S2,46290,16,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,930e22fd-5a46-4e24-aa2b-906de87ef302,Asignatura 2,S3-S4,S3,S4,46300,6,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,c1a82a4e-9ca5-42e5-a804-715eb1059758,Asignatura 2,S5-S6,S5,S6,46310,4,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,4724eb08-1d57-4440-8141-299ab268d7ae,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,f68182ed-ebec-4f19-8744-495cc58a5566,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,d599eced-2e4e-4903-a38b-5c26c2f12686,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,25b580eb-2062-4390-a5e1-0cdf5eedbd5f,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,756713c1-80db-47d8-bab5-fef989b0bcc5,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,32f215f7-669a-4cef-a898-47dd4d6efa07,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
-,ddcf3d14-9de4-4110-ac84-a1fd271246b1,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,9fe94db4-40a4-4358-9d31-32b75cf795ac,Asignatura 3,S1-S2,S1,S2,46290,13,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,242454dd-85ae-4a3b-a43e-1bb8db9ea7eb,Asignatura 3,S3-S4,S3,S4,46300,17,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,35c9a290-706d-4b0e-82c5-2a7ffabe2ad8,Asignatura 3,S5-S6,S5,S6,46310,9,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,88e923eb-237b-48ba-b596-def626e71cde,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,91138dd9-91e0-4c4c-b127-f4ea97b0dc0f,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,32bd743a-bf4b-49b9-8643-8c578e578114,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,7a394999-9f98-4b32-8f1d-098c1b678034,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,3d26dc98-766b-4bd8-9456-8053c935262b,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,791f8bc6-fe87-4dca-92b3-80f9a9f6189b,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
-,c0dc64ee-474f-4d7b-9862-da95d0c40a36,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Carla Riquelme
-,7c4ee772-430c-4be0-8a4a-6cc16469f4e9,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Carla Riquelme
-,dff3f9c2-190a-4e0a-ab4d-7d0978ea9d62,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Carla Riquelme
-,79f49138-485b-40bf-a8d3-99dd24858475,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Carla Riquelme
-,871c1d32-fde8-45dd-b8f8-48d101f02186,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Carla Riquelme
-,25088d12-fd30-4daf-9372-d70bce014bc8,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Carla Riquelme
-,034f0125-2c66-4707-8c53-892e2efa255d,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Carla Riquelme
-,8843c615-9e27-4f8b-bdca-d5f542a84dfb,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Carla Riquelme
-,90ceddbf-c361-4e52-a831-149d5bdac107,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Carla Riquelme
-,907325f6-372f-41bd-836d-aeb17939b34f,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Carla Riquelme
-,f516344f-10d2-477a-ac61-79d7abe2f742,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Carla Riquelme
-,889b0565-ac27-4605-8c12-331de3ca008d,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Carla Riquelme
-,c0ff8ca4-703e-4608-a302-0fd5495e94c9,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Carla Riquelme
-,a2d0fadc-5488-403e-b684-50c5019dbf99,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Carla Riquelme
-,28d2799f-7676-4a21-bf1b-531208349380,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Carla Riquelme
-,12170927-3a64-49ba-a3ef-819d5c2e7934,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Carla Riquelme
-,6819058f-35f0-4773-8854-8b96a8d70173,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Carla Riquelme
-,d7623f1f-42c3-4bbb-97a4-d334f3eda600,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Carla Riquelme
-,a83cd9ab-547b-4570-bef9-32252d6fb880,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Carla Riquelme
-,ac5cded4-d29f-46f1-89df-4f9e7cff51fd,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Carla Riquelme
-,e85ce688-ec4f-4966-b170-adeaee45b4f3,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,a6ebd4b5-08cf-4af3-995d-0c74591c7cda,Asignatura 1,S1-S2,S1,S2,46290,9,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,140ac38a-3121-4125-90aa-9db8cf80b3cf,Asignatura 1,S3-S4,S3,S4,46300,7,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,802bf4bf-f75f-4d13-883f-82cb6ddb2ed7,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,96539e32-4e3a-42ea-8c9d-39e48af3b49b,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,8c940364-1d38-4c03-a66e-bd1cfa5813b9,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,a996da00-8227-4c32-b022-225d378031ae,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,91cb79c9-8006-4601-ad6a-d5523cf54553,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,63315b0c-2ef1-4c71-bc40-2651d6f83c2c,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,7902c618-a781-4ec3-a31a-30f9a594ad15,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
-,9418b2e4-96b7-4ebf-a567-f73e311cd594,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,f344741b-99f3-493c-b91b-8b22cd09906b,Asignatura 2,S1-S2,S1,S2,46290,11,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,5272a937-85f0-418c-9dc4-25e1bd076cb4,Asignatura 2,S3-S4,S3,S4,46300,5,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,7d5066bf-1c21-4848-81f2-306ccc09449b,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,dbda4729-77fa-4c12-8067-314df6cecb68,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,cf1ae90e-fc94-4a4b-a756-387af00dedf9,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,4ce2e4bf-1fa9-4485-9306-538887102aa2,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,5edadf8f-e76f-42d6-a201-e3bbf600c621,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,0a353d76-bbee-4515-b7c9-a5486470abdc,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,a042994c-8179-4a9b-a0e1-0708726bf213,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
-,64ee7a91-6787-4188-b7df-91fbc7e8c817,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Bárbara Soler
-,4ec08b73-7bf7-4862-ac67-eac626666069,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara Soler
-,86ed6efb-6d81-439b-9259-0e9d055899b7,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara Soler
-,94f815c1-95c1-4180-9cfc-3528f2acb312,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara Soler
-,471288ad-89a6-45a7-b7bd-018782653993,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara Soler
-,ba29ab21-4a66-41c5-adc8-3236792d65b4,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara Soler
-,c5a153d8-d762-4fc8-97a3-94833ae6a32d,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara Soler
-,fbe37eb6-ad63-418c-a6c3-a1bc159e8c2a,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara Soler
-,ddd3db2f-ecfc-4d87-a518-97092f8ef6a5,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara Soler
-,26910d60-250c-44dd-b0f4-86e41f5b633d,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara Soler
-,31b9bf4d-466f-4a9d-b92a-705edb4a478f,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Bárbara Soler
-,0f9af7f0-0339-4b71-a0db-65c568f577c8,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara Soler
-,6f93dac5-3f91-49f6-a760-6f37976308d3,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara Soler
-,cc44c9ef-35c6-44b3-bf41-d6f1535aa7a3,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara Soler
-,abfc7268-8e8d-4abe-a701-c2588b84b225,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara Soler
-,256085e7-54dd-40eb-a3ed-f15948dff9fd,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara Soler
-,674ed031-8ab7-48cc-a366-094923744181,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara Soler
-,757d2502-52d9-4196-b9e5-c14417b931c5,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara Soler
-,8188c8db-ce1a-4f99-b96e-f5efa81b4368,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara Soler
-,eae2f68c-4d8c-4836-a750-b5c418474187,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara Soler
-,1fe5dc60-4fed-4a5d-b707-5dc6d4621df5,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Bárbara Soler
-,2bf24db5-2f10-47fa-a320-a7ae0c9fa5ee,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara Soler
-,29877aa7-dc1e-44b1-a802-94ad598aa2e6,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara Soler
-,27644568-5000-4e8c-92ee-02af78058314,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara Soler
-,29e63ea8-422c-494d-9130-eca3ecc54695,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara Soler
-,320f9013-8b5b-46c8-9194-9902b2474e73,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara Soler
-,0f7bd684-1132-4baa-863e-e79611a4ba33,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara Soler
-,4d4911d5-08ef-441e-a664-741d15520386,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara Soler
-,2ed91008-525d-43a8-8b4b-3a5eeb7aecbf,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara Soler
-,f092b3ab-c2e9-4e8f-9695-9c1d21907c6d,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara Soler
-,33b902b4-f782-4ffe-92a1-4cf294f59171,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,863955c8-1335-4a2e-8178-dfefb6567517,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,60a42ee6-9882-46a6-9da1-8743d327ac0b,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,9cf6633e-957d-4e7e-9bfa-f12b70938ae3,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,7d6c13ef-7e4e-4685-adf4-03a9e281ba2d,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,cccc5709-179f-46a6-bd13-c0effa593981,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,5d656141-48bb-472a-a774-af7b70054bc9,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,0169a540-fc1c-4048-801b-4eb4e29683c6,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,e6df056f-b347-4c6a-afc6-882d2eacfe69,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,671ac2ea-a669-4103-aa8e-37e1a447cfd3,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
-,5f544e8a-6871-48b6-ab55-cafd63a3c08e,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,31c23a5f-522f-447a-ba36-abac3f8d490d,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,d52c04c1-51ee-456b-b6ea-bfb6d1f4c81d,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,ed4f2406-96dd-400e-b329-64fca2cf1796,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,b4636dac-10d3-410c-bdb5-0fc8b3c4eaad,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,f02db51f-b73c-4c3f-b88d-6b5cad226121,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,a86d9997-2b01-49e3-9790-7938a8a9cfcb,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,ec2e5f6c-772f-4364-beac-74ce24b4a285,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,fd91b573-7a5c-48b3-832b-7114092d331e,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,3f36684a-6826-48d9-a273-52ba45df6138,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Planificación educativa,Javiera Leiva
-,e3b1284b-ccb7-4117-a86b-061e8369c3c7,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Javiera Leiva
-,3feb6953-4523-4fc0-ad10-660e84d9dcbe,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Javiera Leiva
-,3f240f70-e77c-454c-8194-8295d84cd74b,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Javiera Leiva
-,cfa02904-795b-4bf9-aaae-14b29bd3e26b,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Javiera Leiva
-,172edd19-7b04-40e5-9228-ef841f45b0ea,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Javiera Leiva
-,0f308c75-505f-4e55-9689-7a6d7d3ddcb1,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Javiera Leiva
-,f60b5136-3bd7-4b7c-ad78-005ee924b2df,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Javiera Leiva
-,813e8d54-df1f-45de-a96f-b60aeb696792,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Javiera Leiva
-,07a90f3f-800c-40ea-b453-3c8f0d839748,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Javiera Leiva
-,7a54edd6-7712-48db-a7b6-b8e56e72abae,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Javiera Leiva
-,09bf3abf-ad3b-4e04-b7cd-8121d3ced697,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Javiera Leiva
-,ceed0392-decb-4a10-bbb5-7432c7d8b7f6,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Javiera Leiva
-,412da08b-433e-4a2b-8950-4098fde34016,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Javiera Leiva
-,b5616ce5-6c12-4649-8df9-37351ad7e731,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Javiera Leiva
-,247ca00a-3f90-4e29-a5a9-af892a1e12ab,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Javiera Leiva
-,081a2661-7e70-4396-96e0-750eaaa8c970,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Javiera Leiva
-,868f32e4-f1ee-4cfc-8594-c280a579c3ff,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Javiera Leiva
-,65c6ea76-b23e-4b5e-a27a-7ef3b535a9a0,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Javiera Leiva
-,419b8f0f-eaf1-4d35-abea-1ef845b873eb,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Javiera Leiva
-,a90f0630-e05a-4bf9-ac65-593fe335166f,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Javiera Leiva
-,2fa2acf4-5f3d-499c-82b5-611b6622b60b,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Javiera Leiva
-,ad81c492-04f7-477c-bb4d-8d657b52a8e1,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Javiera Leiva
-,b50fd3e3-6c6f-49ff-9307-e9af22905383,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Javiera Leiva
-,c3c72705-c810-42f0-bdbd-b732d557eafd,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Javiera Leiva
-,5b387d7e-9835-40f3-8095-fe165dcee0cf,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Javiera Leiva
-,a117c5c4-dd1c-4ff6-a367-8e2b377d3424,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Javiera Leiva
-,8979131d-ede2-4924-a644-f7569a128e6e,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Javiera Leiva
-,e55a3d25-3369-4d1f-8f45-da09de791f08,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Javiera Leiva
-,85b18613-d63d-4e98-9248-2f1ec860bd9c,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Javiera Leiva
-,307c55ea-9a60-47ed-9beb-7d2b75a00c89,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Javiera Leiva
-,b25336fd-eb7c-4703-b886-f55b3766e79b,Asignatura 1,S0,S0,,46280,3,0,0,En producción,2,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,d178b60a-78f3-4a41-8553-8faa16fcd9a5,Asignatura 1,S1-S2,S1,S2,46290,10,0,0,En producción,7,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,f9e9d59b-f6a7-4e90-b288-a3eee2a065e0,Asignatura 1,S3-S4,S3,S4,46300,6,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,bd3ec6b1-7f99-4500-86f4-c9d70b988c44,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,a3a7d176-c881-4a8c-ad11-62f25ff2c055,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,ce42cb53-8c95-4f66-8b5e-e3e05361efda,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,45566e24-acbd-462c-b2cf-bafab31594c5,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,867972e7-3653-4ca6-a681-f2f48f88b43e,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,88b87eb2-87ac-4673-9903-a3918817278c,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,9e02362f-80df-4051-b981-d19bfe51a135,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
-,14a3534f-3650-46e2-918b-b5ff79f9fe89,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Econometría,Catalina Salazar
-,1b2d6fcd-bbbb-4b46-adfe-f96eb234bea0,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Econometría,Catalina Salazar
-,add4888e-9530-4796-9b94-9f762c769e0b,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Econometría,Catalina Salazar
-,4a3fce91-b88c-40ec-b33f-ea89b6640b7e,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Econometría,Catalina Salazar
-,0f94a437-c2e6-4e7a-8504-e7ccfc676feb,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Econometría,Catalina Salazar
-,75950754-1d02-4aff-8391-74c4cb3712d4,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Econometría,Catalina Salazar
-,1d412d01-bc7b-4460-bca6-f7367c8f0fff,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Econometría,Catalina Salazar
-,beb4e17a-0450-4e24-9d3d-4fdb893f8793,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Econometría,Catalina Salazar
-,50de76ab-ee28-4671-a423-e65dd78c97c2,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Econometría,Catalina Salazar
-,d0cd32dc-354e-4710-ba88-b60fc4378e23,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Econometría,Catalina Salazar
-,8e1df9ff-3f23-4c3d-b200-2a2a35e9c1bf,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,f61591e0-6a90-411a-b541-c12fbf31339f,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,e80cef72-78fa-4fbd-b75e-7cd0985cb5f3,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,df84c02a-9876-4f53-b3f2-dd4b31c8e4bd,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,15911369-4cf0-4b89-b663-ebb898952318,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,6a380c58-f3fc-4a41-a1cb-516a39f2dcb0,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,7788441c-71c8-4c22-9623-24310d4aa643,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,c0f62521-8ee9-461f-85de-a6eb4845d299,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,748760be-3bc1-4e8c-b427-fd209b5e27cb,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,553bffbf-abbd-4393-82f8-fd62f2ad0fdd,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Macroeconomía,Catalina Salazar
-,e016b4ac-129f-4b13-8f78-068ba7bcb71d,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Catalina Salazar
-,d1054e5e-257f-4da8-8d67-c1930a813ca0,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Catalina Salazar
-,7e702d65-1ae3-47bf-bc0c-5a1285e3ac49,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Catalina Salazar
-,c4141ebc-dcbb-4087-a234-3564af263638,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Catalina Salazar
-,5b4aa637-5f11-480f-b825-860d6dca4e00,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Catalina Salazar
-,9026e89c-5117-4f9b-b902-22ba66de07a8,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Catalina Salazar
-,26bf637e-976a-4085-9578-531a6e2541de,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Catalina Salazar
-,c6c6fc00-3fca-4589-b30a-1562153b0b5c,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Catalina Salazar
-,2b955b37-19f5-4f6c-87b1-c5a157e7577d,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Catalina Salazar
-,cb8945b3-a88c-4b14-9b65-e0385c246487,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Catalina Salazar
-,cf23ba9c-e5b9-4fe6-af32-61bbc22134c3,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Catalina Salazar
-,398a426e-e699-4cc3-9471-40fe448dd5cb,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Catalina Salazar
-,da86e0cc-5017-43a4-923e-b24ffea582ef,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Catalina Salazar
-,4146e0a8-6ffa-489a-9b45-5742133f0df6,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Catalina Salazar
-,24708b2a-99db-4942-9bad-643647beff39,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Catalina Salazar
-,4ec08f74-5d86-491d-84b8-3aad1ed48cf0,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Catalina Salazar
-,01f71203-90e3-46d8-9708-c295b42ff08e,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Catalina Salazar
-,17712079-1a46-4b95-9307-6d847d77493b,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Catalina Salazar
-,2045ca7f-4c91-46e6-849c-05262b469226,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Catalina Salazar
-,af7bd4a7-616a-4d8f-b00a-e626ed34a0d9,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Catalina Salazar
-,98502f84-b028-4c15-8f28-7022b5bac13a,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,af955640-f554-455c-832c-c3a18dae2138,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,77160f63-7974-4cc9-a651-01776df10775,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,1e545e94-6bbd-4435-b6e8-f473701c13fb,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,72d11c99-2668-4f1e-83ec-baaee7a8d3b0,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,345e903d-43d0-4789-bc74-8c6210daa8b4,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,3c7f3108-0f44-4ccf-910b-81c5fa386d16,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,cabfb881-ae40-49ed-84db-3eb4c287a57d,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,269634bc-a2c0-4664-b56d-13f4e6122b45,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,f9d189ee-9475-454b-8150-53cd99927e90,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
-,71cf8eb6-4d57-42b5-978c-4fe9e5340df5,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,8207aa4a-24f0-467e-9616-85c2ef9f5cdf,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,a28b91ab-3693-4919-9278-c56cd5d46da3,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,f379b3dc-3e56-48e8-a685-f3b8da4947f2,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,a39f50ca-02ec-4624-b6f1-ef0b8f686662,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,bcaf4559-717c-4153-89a7-233f9ac79997,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,904260d8-b078-4837-b03f-2d2f38ce7cc2,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,c2821c9f-87ef-4aba-93b1-8dc22730b7d1,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,fc98ec61-c176-4d16-b8b9-25c1c6bbd6df,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,6c23ee76-1a74-447a-8723-fadd1406aae5,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
-,bbf83ffe-1953-43bd-afde-5f982c65e887,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,31d4566f-b7ca-42d5-ac0d-29a4512db8e6,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,f157aabe-33d9-427a-b8e4-1faff04d6c52,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,fb1191ee-d31b-4331-87df-8c94b05656da,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,0c43817c-3bf4-45e0-91fc-5f476b97e1c8,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,e7510fd7-a9ba-4fb8-aef4-0db5bd63832f,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,85c8c5f7-65e7-4448-a144-b74ed8fe059c,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,a17f4791-4353-4acb-98a0-158a62b6e07d,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,8eda9fef-b765-4b31-afc9-68adbcd7a5e9,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,da5b988d-c986-4417-99fb-9c8ecdd64c0d,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
-,d24feebf-e0cf-4216-b28c-3eed9dd718ba,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Rafael Siverio
-,df213a97-93bb-4bc9-a530-70f6928a8db3,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Rafael Siverio
-,522181bf-4067-4daf-92fc-999a67c5355b,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Rafael Siverio
-,d7b3570c-3a23-4664-8c4e-3473bbacd810,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Rafael Siverio
-,559a144a-0079-4b99-b5c7-7d3fb8e253c6,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Rafael Siverio
-,e396510b-178c-42b1-888c-f88c862e7130,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Rafael Siverio
-,773cb6ba-bc1c-424b-a4ee-7bfceb360449,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Rafael Siverio
-,1d517e2f-3cee-4c97-9853-7ee2fc5fcabf,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Rafael Siverio
-,5e1a4ae5-f234-46c0-afb2-6de903abe25d,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Rafael Siverio
-,dc18d1f6-9181-4652-b3ec-bb1975421a31,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Rafael Siverio
-,9e7e21b8-54df-4d23-a335-717a31e8d4da,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Rafael Siverio
-,32fe4b07-0f1c-4f76-b7c1-77e075eb7967,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Rafael Siverio
-,baf62852-96a1-452c-80aa-f2f67c8a3261,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Rafael Siverio
-,da1e791b-a0e0-4024-8a60-9ddd95e6e4de,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Rafael Siverio
-,deb350c9-bdce-407b-b1a3-c65249b72966,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Rafael Siverio
-,f7c5ffe3-525b-477f-9e75-e9888552bfde,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Rafael Siverio
-,b608dcca-d7c8-45b5-8a8a-13123bbf7250,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Rafael Siverio
-,17d16d92-d1a6-4e2f-b191-c96aaf2d1c7d,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Rafael Siverio
-,0357232e-ecc8-4697-a9a0-6f35e648233d,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Rafael Siverio
-,051a5f32-6c17-4012-961f-2a27ba7f0495,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Rafael Siverio
-,23632d5c-062e-4183-8c2a-0861e16623cd,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,df89a672-e789-4407-a411-e11a0ea86629,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,c0ebc1bb-f1c6-4bd2-8acd-499cc418113a,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,b813e7eb-2a02-450b-9655-413263a8b471,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,54563755-0dd2-4b0a-b053-6d091f9369dd,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,c64c29f2-a494-4fe2-882d-45149308648c,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,df65292b-2075-48aa-b0f8-1afad043dd6c,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,c80430bf-2a1e-4342-96e2-367f06dac44c,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,c8192760-3e05-4e16-915c-8dfdf4077f52,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,7947b259-172c-4907-b259-43694fd64b9c,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
-,7c17b60d-1af2-4205-9000-4856e97109c6,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,f52effe0-db52-412b-acac-04efbad60736,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,8395446e-6f90-4495-aef8-c2a500864215,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,9ff6f234-bc7d-4ff9-a135-6c6a861ee9d5,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,aa023412-1e0c-4b88-93c4-99da69693302,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,a3745ab6-ec8a-4d64-bf3c-944d8b30dcca,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,f6b58185-f2dd-4fc9-95e3-700814322548,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,9a440172-17c4-4299-9634-dc94728b9b82,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,8563f2b0-9a47-4d94-b1d7-d2225c18835e,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,a5b3011e-0838-46b9-80cf-320cf78bc397,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
-,dcfc1817-7e2a-4d4a-822a-25db1b16b0f7,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,e9d80c63-4cc3-4899-a286-24eed3da1c19,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,c52a2a4b-b01c-448c-8142-a796025abf64,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,09f1947a-0b2f-4900-9e99-544d53c29eaf,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,7bc9cda9-9be2-460d-bc87-efd8d0c272ed,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,3c0cdd37-5881-4a03-9e0c-bb34413cd50d,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,6793582c-440b-41a6-bcc0-321d7ed05cbb,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,19dfc48f-4d83-441d-be93-8627a914c9d6,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,df67c062-e0eb-4d51-80c2-ebc54ff6a2b5,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,0a1fa4f5-f847-478d-9915-294651d978fb,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
-,220fc176-8487-4020-b21b-4f702fd01fab,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Carolina Henríquez
-,c214fac4-8bdf-4f3e-9d25-f8056f1e91e0,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Carolina Henríquez
-,76349349-a21b-4c7e-bdab-09fcb6afbdc2,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Carolina Henríquez
-,01250b66-9ce8-41f4-88bb-91e6d7d98661,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Carolina Henríquez
-,8c6b0cca-d15a-43ce-b235-b6b29c7688da,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Carolina Henríquez
-,48dfb147-9ff1-4a54-abf4-4d59b63c57f3,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Carolina Henríquez
-,91842d8c-173c-4e7a-a917-08f09d11e7f9,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Carolina Henríquez
-,d3813f61-dc45-4d76-a0b1-3a1e00a09baf,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Carolina Henríquez
-,256eaea7-3244-4c19-ab66-4db4542f5b03,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Carolina Henríquez
-,fa9b6ba2-98d0-4c54-944d-cb49545eeef9,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Carolina Henríquez
-,5fb6be46-2cb9-4bf1-98f7-bf66f36b2007,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Carolina Henríquez
-,965e4a64-197f-4b77-b7dd-7e753a85fd08,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Carolina Henríquez
-,7a9a33e6-e044-480b-af29-90f99a2303e4,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Carolina Henríquez
-,ad55305e-29f7-4889-abf9-def4587e2376,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Carolina Henríquez
-,27579afd-fc03-44e8-a698-049f4d900f68,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Carolina Henríquez
-,f4aed5da-cee7-4659-8741-ff3b81e017ef,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Carolina Henríquez
-,097471bb-d3c7-4b8c-b13e-2e21f4dc3b86,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Carolina Henríquez
-,c42f5e6e-fc10-4fa7-bac2-18e3b0122594,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Carolina Henríquez
-,5f9b3b8a-ef4f-4d67-a4ba-063055b010fe,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Carolina Henríquez
-,6fe3407a-6453-4c98-8fd4-6baa4d697031,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Carolina Henríquez
-,fbc59cfc-4c27-4617-a4bb-cf4714145dce,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,bb405468-999b-49dc-8dd1-eecf1b1d3349,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,232f166c-e3a4-4c9e-ba04-466cf68d92f9,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,ae8f512c-6a93-46a9-b758-7a3d9fd9fde0,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,6211c925-861b-4b5f-8139-adc372506edf,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,26a4fcf5-fffd-43ab-99d4-5b2ef4514199,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,6076ce14-a7e6-4ec9-90af-b85ed910a9dc,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,590924cd-0654-4e99-ae8d-5339581a44dc,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,2a4c80e6-3c58-4705-83b4-1bdd8d96fcff,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,7e087c58-6219-4998-bcdc-38af0a7e3c07,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
-,28e8f4f3-acf9-472b-ad80-d7a83328d5d8,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,2efb34d8-3617-48e0-b0e5-fbd393b8b582,Asignatura 2,S1-S2,S1,S2,46290,11,0,0,En producción,10,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,919ca6ca-8cf7-4540-a0f5-a4ed9b2892c5,Asignatura 2,S3-S4,S3,S4,46300,6,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,fc1c1a6c-fe1f-4723-850f-65441858fe78,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,f8cffac2-626e-489c-8141-1b73e8de240d,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,348213d9-bb18-4bb8-b9a9-1733cb87a07e,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,383fbfc2-8f1c-4cba-9021-1ae64dcca450,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,f6f99847-afc7-4244-8043-5ba4ce9e761e,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,13748a27-b0bd-46dd-9cc2-d96f4bc4dceb,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,70347f6e-6757-435c-b128-dd5df520ff6f,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
-,223f0f97-2d7f-4fb6-af7f-95c94a30758a,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Deborah Ramírez
-,f893179a-ca77-4075-ab2c-a2ab2e0c0a15,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Deborah Ramírez
-,f7dc0e0a-1346-4917-867c-0a7b2c98cd3b,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Deborah Ramírez
-,06f917a8-758c-4267-a259-ece4ba92c41a,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Deborah Ramírez
-,328179ab-0e4a-44c8-bbb9-66d165657c1c,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Deborah Ramírez
-,484f2536-9c76-4ea4-ae8f-7c7b011baed8,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Deborah Ramírez
-,5a5dfecf-a99f-47b4-a6d3-84f478605188,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Deborah Ramírez
-,d178f1b9-c96e-47a7-930e-1dd7d3b8cc4a,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Deborah Ramírez
-,c4f74cdf-4608-402a-9a30-fc62ba69486c,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Deborah Ramírez
-,afeec940-95ca-4c61-a8b7-bd054399467f,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Deborah Ramírez
-,e011052f-734e-499f-a352-722277e2913e,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Deborah Ramírez
-,75472ebb-72b9-4291-a12b-91017f6c8c40,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Deborah Ramírez
-,03b19ee6-b287-43d7-aeaf-57f29f27a665,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Deborah Ramírez
-,598ba737-ffa2-442e-9d8c-5e14017642c7,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Deborah Ramírez
-,37dff1d4-b4ac-4c46-aa90-8fe7e46ee06d,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Deborah Ramírez
-,e8df1f5f-b86e-4e63-8f09-a1ecbb6cf54c,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Deborah Ramírez
-,988c7c2d-debe-40d2-8b20-ff827e57de43,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Deborah Ramírez
-,8913f2b6-7ed9-45bd-b510-0d59d8357564,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Deborah Ramírez
-,ed34ca36-ff45-4e94-980f-ef091b1f7ff2,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Deborah Ramírez
-,57eadc47-9521-492b-9df3-7a29ab706e8d,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Deborah Ramírez
-,64ba5ec9-131d-4a4c-9d0f-b5c8eef6d99a,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Deborah Ramírez
-,14d5ff19-0e07-41e2-8960-87837b4da0d1,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Deborah Ramírez
-,0644b30f-af32-4307-b4a1-25f8a17da24a,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Deborah Ramírez
-,236f49e3-6b88-4294-bc97-e5995f647ccf,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Deborah Ramírez
-,d248859a-e21f-4630-bed0-a15a0476b826,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Deborah Ramírez
-,b1b00fa5-ef82-4c1d-99ab-049328760978,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Deborah Ramírez
-,e0df34ef-8683-43f8-a1ef-493c6d311f58,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Deborah Ramírez
-,823d6a30-8aa2-4683-bcde-302897e049b8,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Deborah Ramírez
-,9bf1089b-c6e7-4259-b193-f9b68a027267,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Deborah Ramírez
-,7086de7d-1a44-4307-b1a7-83909a4e1e9b,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Deborah Ramírez
-,07d92519-69ef-4638-9119-e2a7b4b88524,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,476c1adf-c2ba-4d96-a2bf-ab67c4570fc7,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,d5f51f4a-99cc-4133-8eae-022cdb95993b,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,af027226-ed03-4be1-b6f4-49feeb29c943,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,17f9f7fe-560a-4999-9479-ca660c7e0ec9,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,079162b1-e367-4387-af7d-9369b3bbe5f1,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,0795239c-6138-4392-89fc-0180b77b41d7,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,2dae1b33-895c-44a0-aae9-6664695ca883,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,baefff54-9142-4f14-9a7b-052059ea85e4,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,1cb6fa9f-13fc-4d8b-aee6-b5a463a2c643,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
-,db7b693a-871e-4740-93d8-51762a9602fb,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,06c6b22c-df5c-462f-bd3e-85c85ad240c6,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,575b47d5-b2dc-457b-8b56-a70ca7bf5a8d,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,49e1b80b-2fc5-406a-a7ed-b7d4443327d9,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,a29a1ef0-c951-4f46-98a6-c4d943792ef9,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,7d47f1f3-3166-42e3-9436-038211384598,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,87bc4db6-3204-4e78-836b-8cf528ac609f,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,aee96c9d-f107-4d1d-9555-a10f9ecf1808,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,5c205e9c-6d81-49c1-8b58-497357101871,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,0fcec676-5f1c-42e4-be0f-6456f64f33b0,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
-,89d930dd-09b8-4c4a-9b65-5dd7219fc4c3,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,2c5a6afc-9b27-4669-b3a5-c8a64181c210,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,50ff1940-eb15-48d5-acba-875db04cf3db,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,572f5666-389b-4581-9680-b6d824d4fcfb,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,e694f5c2-2e1f-40ae-b4fa-59aca82d59de,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,29a4844b-baae-4e6d-8b31-8ee3770274e7,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,e68442f8-bd8e-4491-8f51-d7f8df219af9,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,4472ee02-bb40-4204-a5ea-f8b551fda916,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,8b9be1ef-9c6e-4963-be7e-f6a3a9dd62ba,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,8fd08d8f-eda4-4645-bbe1-f64c835daff8,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
-,f0d022ba-e30c-4761-9c68-4044b7b47f7e,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Fernanda Reyes
-,f6a04cd0-8dd7-4345-b451-798186220205,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Fernanda Reyes
-,eb3681b8-bbd9-40ab-a7d4-283db88288bc,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Fernanda Reyes
-,4ac2ceb9-388f-417c-bfd8-d2dce46c134b,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Fernanda Reyes
-,54c30aa3-7534-4eaf-91c1-4a15edfb354a,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Fernanda Reyes
-,08a34a23-09c8-405d-9576-8d59ca6c7b3b,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Fernanda Reyes
-,845407eb-cc88-43ea-9c0c-97db7850215b,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Fernanda Reyes
-,85df3121-6114-489e-88cd-ac883b00166c,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Fernanda Reyes
-,0b18a344-96bc-4c8a-adb6-e4ab5c7fa812,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Fernanda Reyes
-,98b8924f-f5b1-4c7c-a47f-87025cf744da,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Fernanda Reyes
-,f9535618-f9a6-4c99-839b-3156ba92b32d,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Fernanda Reyes
-,78a60828-b69a-42a9-a5d9-f3372390523f,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Fernanda Reyes
-,ed4db154-91fc-4836-9e41-e42c4b3fdce2,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Fernanda Reyes
-,f7722d76-8a0b-48f9-ae65-6efc54c63b7a,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Fernanda Reyes
-,feb1f24a-2fb3-4499-9da9-a7f743e88779,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Fernanda Reyes
-,453e69f8-c7d1-4225-813b-f309f3d09b97,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Fernanda Reyes
-,72f21465-dae3-471c-be7a-ca48a52fa11b,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Fernanda Reyes
-,8e924e23-af1e-42ee-b6ca-7a4a73312532,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Fernanda Reyes
-,ab65f43e-417d-4cbc-8d52-a0d11464d1b4,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Fernanda Reyes
-,482b1ebc-1f85-4fac-9c50-fed7a622719b,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Fernanda Reyes
+,ecb64dbb-c3a7-4b22-9e89-593f03e03821,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,55bc731f-3533-4e18-a917-b1ad4cfe10fe,Asignatura 1,S1-S2,S1,S2,46290,12,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,506abfb1-a84f-49f9-8837-336d8650f29d,Asignatura 1,S3-S4,S3,S4,46300,4,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,19ef85e6-4031-489d-b942-e147fad4ce19,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,e932e4ed-e6e9-4914-9068-e9c9807f850d,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,75eb6289-be03-437b-95ee-c08ad8bf8608,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,4d501a8c-48a6-46c2-a7d2-0ef268063867,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,fe2bc0f0-72eb-486e-a740-66bafb5388e4,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,f2196299-37ab-4316-8056-4cc2759c140a,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,da0ff482-38c3-45fa-ad9d-3797e94ac931,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Electivo: Gestión de Marketing Digital,Bárbara González
+,ee23fd46-6c11-4e34-a6cb-7f448604f78d,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,916c3495-c4f8-4ab9-aeb6-6294ff9c20d2,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,3eb50037-2edd-408f-bd6b-abf937084bc2,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,53c13ac8-f0db-4f07-a80a-a688deb6dbf6,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,9ef56fdb-571c-44bb-ab48-b9b2d55d5d5d,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,0e1df2dc-06e3-467a-b2a5-d2fa6ceaf08d,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,8259522b-8d62-4b3a-a028-b7f82aef136d,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,6c4ddc3e-1112-4145-b439-a8ef1a88f030,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,e4fa5997-681d-46e6-a10f-04d9d432375d,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,aa7554e9-235d-4b58-b33f-33d266c43d16,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fundamentos de Intervención Familiar Contemporánea,Bárbara González
+,d052284c-0df0-430c-8e42-42fc61cf9c07,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Bárbara González
+,869ee0fc-11ce-40f0-904f-1a84cf2f96f7,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara González
+,3360a5e7-abbd-4c99-8c5d-e6db7eebc4d3,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara González
+,335259c4-80a9-470b-8e5a-5daaf2aab887,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara González
+,5239efde-af4f-4264-a4f7-10caeeeb077d,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara González
+,b91e82a7-f674-48ca-83a3-ecf81e9e795f,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara González
+,c183ee0e-ab70-41e5-8c35-358bb0021313,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara González
+,04600f52-029e-4994-b1cf-635daa4dfda8,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara González
+,b3bdd1d2-6f07-48e0-b58a-7b113b527226,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara González
+,e2ab0c85-8052-4e59-bc67-1a3a40244f43,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara González
+,ae706606-936e-4d76-95bb-780c825a9f9f,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Bárbara González
+,81d7067c-166c-4035-abfb-006024469de7,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara González
+,95885328-eda2-4af0-b95f-d5581ba31d29,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara González
+,d783ae93-59a7-4bd1-b8ee-c7934c427257,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara González
+,79d7f227-e1c9-4830-93fd-8ede63fd420b,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara González
+,322e063b-0bbd-4c18-a26a-23620552b9cd,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara González
+,ffc51e02-f495-4063-bbf7-acdd0b83718b,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara González
+,e8d1e594-8312-420a-a257-663ca1776f3a,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara González
+,51320acd-a7c5-47cd-b66a-2c9693ff3282,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara González
+,0bbb4278-f6ef-48e1-b880-5f1dda797d2a,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara González
+,70b3adee-2272-4515-86e2-1f9b6177f114,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Bárbara González
+,863691c5-19b6-4f75-8dc4-01e7e50b0c57,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara González
+,9462ca37-7a1a-4b8e-9449-145c93a0b4d4,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara González
+,28f39284-c8a4-433b-9e8c-eb6af3be3adf,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara González
+,b9ea72f8-f852-4956-a86c-d9db295c156b,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara González
+,62fac9f9-67ac-4b95-9f15-e8201c886eb5,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara González
+,8b41ca0e-a1a7-43c0-80c8-7666a05672b9,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara González
+,9728126d-b966-4e52-a662-eb4f76d4fe4a,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara González
+,61f76a48-e67e-46b5-8419-8e4db3f52716,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara González
+,87bf2193-4862-4720-b483-57e60e6451fb,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara González
+,3200c84f-114b-4063-8d68-9b0b3fe6c31d,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,2aae0d5d-72b1-4b7a-920c-18a63ded378b,Asignatura 1,S1-S2,S1,S2,46290,9,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,3e455efe-4a15-48f0-9811-e719082e6703,Asignatura 1,S3-S4,S3,S4,46300,7,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,194bdb96-5077-4b67-9d9f-f26764c6eb72,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,34f076cc-7508-4a08-b45c-5b56d0a4d48d,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,23281e16-46f0-4ae6-9bee-fa2922c796a1,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,e761dfb8-7efc-46fb-a717-6823bfddad39,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,c5d93e56-e36c-4bcf-bb87-f446c409d542,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,77843f32-549a-436b-bdb5-ee784d6a70a5,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,3f199ecf-459f-42c7-a2b1-562d75d1096c,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Electivo de Formación Profesional II: Análisis de Voladuras en Minería,Bárbara Soler
+,49fbe777-9900-4564-a619-c3289061bfdf,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,caf54993-8bdc-4a60-8ae4-7bc02d88fdf0,Asignatura 2,S1-S2,S1,S2,46290,11,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,acfe6793-6921-4a0c-b297-4ed7fdc0dce8,Asignatura 2,S3-S4,S3,S4,46300,5,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,6677620c-1f80-4eb3-81bb-dc09786a51c5,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,1c364129-627c-43f0-ab9d-a81ab6fdbcf1,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,3ee96957-ecf6-4c73-be5e-e4783a585147,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,e30eaa9f-b76d-4827-8801-e146c3163e30,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,5863697c-9faf-44d3-99b0-c1b258b3f238,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,5e064818-94ae-4855-a1aa-0b1d8b3fe6ec,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,cc66a79a-c767-47bc-91d8-cd3a88ceb257,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Herramientas y atributos de gestión de calidad II,Bárbara Soler
+,4ce1acfd-db8a-4707-9385-a2f3e43cec9f,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Bárbara Soler
+,af5a52d6-4e6a-49a2-bd07-9ba562921b5e,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara Soler
+,521c08ce-f48a-499a-91c4-31471b70d350,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara Soler
+,95a1b0d9-bec9-480c-88e0-7605bc387250,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara Soler
+,a458d5da-3331-4c11-afe6-32a6a0908649,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara Soler
+,fd9cd1c9-d9cf-463d-a0c2-192fae623042,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara Soler
+,d129355c-57ac-4934-ad9e-d51e451271c2,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara Soler
+,069ba718-605e-44f5-9875-403eef6dcf58,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara Soler
+,270cde3b-cb1b-41df-8f18-f30cc67add72,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara Soler
+,4328e313-90aa-4638-ae24-ced3f33e9b21,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara Soler
+,007db85e-6aaa-4ab6-9a30-c1815a7dd2ed,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Bárbara Soler
+,ece904eb-1f60-4860-900b-2d8d66f13ef9,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara Soler
+,9f8e58f6-f358-4fc6-8fc4-d6fdb396cc64,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara Soler
+,649b7331-9317-4a96-aa47-090cb734643c,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara Soler
+,e457d250-8eae-4000-a6cd-524f1cf1bc0c,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara Soler
+,36a29403-7556-4762-b67d-15cc19691853,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara Soler
+,173829cd-387d-4702-bbb1-f730c3faf99f,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara Soler
+,90b7e849-85be-4349-8838-4a4651f19e95,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara Soler
+,b6013057-4657-42b0-9aa2-61d06c06bb51,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara Soler
+,4b17fc12-c7e1-490c-ba6b-e67d72117a8c,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara Soler
+,427cc9a6-df3e-4db1-877c-1977fd4a4735,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Bárbara Soler
+,9355d638-310d-4d9a-88ec-90606145b3c7,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Bárbara Soler
+,3f98ea0f-b20a-40ce-977e-9e245c73cb6f,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Bárbara Soler
+,90f40255-61ea-404d-bfe9-cead43fd0dc8,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Bárbara Soler
+,79a27258-41aa-42dd-8458-39e3a79ce7f8,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Bárbara Soler
+,7661a074-5230-45c4-a88b-5d691e26178c,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Bárbara Soler
+,c238e7dc-fe9e-4a32-a778-a5069607308d,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Bárbara Soler
+,408ee332-9a6c-427e-934e-6da0c8835c19,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Bárbara Soler
+,25c7e8ba-6343-4695-b58b-b63dd776a0f1,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Bárbara Soler
+,af50ff03-8576-4203-95cb-5a10d68ce997,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Bárbara Soler
+,4f56795d-2fce-4343-ba3e-c956ba175377,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,0ac25148-aea9-4c32-96a6-b53236b237ca,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,14bb7cd5-5aa5-49ef-926e-fefe0d0c3135,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,521852aa-00f5-446c-838c-36f17dd65af7,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,4eabb627-66b0-4662-bc28-9b6ecc1fcdd0,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,39f2b2aa-aff0-4cb2-9301-62c006db2770,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,25b7307e-717f-47d7-b45f-d02154d52d67,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,31579ffa-11ce-4d4b-9bea-4c196ff286f9,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,21fdf6be-ee18-40a7-8312-ff5b570e79ff,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,7c300685-4065-4cef-b9a7-0933f01a4d2a,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Viticultura y Enología,Carolina Henríquez
+,b064d761-f9c0-445f-81a1-8fc1c232cbf9,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,740e76ae-5610-4887-aa23-69bf050cf263,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,fafbcbfb-638a-4c62-85b5-086c53c6543e,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,df408bd1-9ee6-4a45-b061-3049b974507a,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,82d6ee3e-3d45-40ac-ac70-47d29eb5e671,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,3824d49f-27a7-47d0-addd-13ea544b0f8a,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,e686c8bf-a728-4ddc-9e4b-3f3b76291c32,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,49e82220-8e83-4c0a-b328-d58abb5ec563,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,c1e3c0b8-16ba-4cd9-b5ce-8563ee0c560f,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,59340ff3-cf1d-441b-940c-322ce4badc11,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,"Antrozoología, Bienestar y Sociedad",Carolina Henríquez
+,7e82e0b8-b122-4f2a-865b-8ed0b79c955f,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,67dc7a0b-a44b-4e34-bb91-0d909b700d58,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,910f0ff7-d817-429d-88fc-e61c77cfdfc0,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,d9a037bd-c38e-453f-8bb6-db2baf6f795d,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,2467dccc-7883-4051-8a29-25c92c30e9a3,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,cdef3d2e-5cbf-4f7c-a9b4-0c14ad3c38f1,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,2099ac90-0a22-44c5-a111-7d0f26641303,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,14fdac30-2e57-44d8-9daa-5f3454ccbc6c,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,3d64a4f7-eff2-4214-a0da-891b1605d7b8,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,e7922552-2b64-4c7c-a899-600fd7920858,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Analítica de negocios para la gestión directiva,Carolina Henríquez
+,7a9c460b-54d6-46b5-8157-5c4f794a078a,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Carolina Henríquez
+,9231e8bf-5bff-4daf-8e60-c3084eca2936,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Carolina Henríquez
+,2d5cdd04-d2d1-4676-b9ad-bfeefdcf998b,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Carolina Henríquez
+,40ebc285-e22c-4193-a276-b7555bf70723,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Carolina Henríquez
+,b2401c09-9f4b-46bc-b940-4c0a0439a841,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Carolina Henríquez
+,bd142fa9-2aed-460e-ace8-e2d2891c1f1c,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Carolina Henríquez
+,c7f5a35f-b9b5-4a9e-b113-a9e64a403c1f,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Carolina Henríquez
+,6c81f6c5-1525-4352-99e0-5ae892d1c5a0,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Carolina Henríquez
+,8cb00eef-2918-4777-9839-dac9005088e2,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Carolina Henríquez
+,091bc839-d7e0-48c7-aa89-a502365385cf,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Carolina Henríquez
+,e4254ef0-ccb1-4e48-a262-35597eec28e5,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Carolina Henríquez
+,0db64b83-5dce-4b73-9f3f-239c93928928,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Carolina Henríquez
+,247c6001-357a-44ab-baa1-96b195026912,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Carolina Henríquez
+,eb5f8268-9d50-46e8-bc1d-8fc7532c4299,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Carolina Henríquez
+,e135c8bb-295a-41e7-b215-ea57d63fa72e,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Carolina Henríquez
+,8078b909-5e90-4d22-954c-9a2b376cddc4,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Carolina Henríquez
+,b2d0fea4-dade-4a04-bfb2-7fa3730b4858,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Carolina Henríquez
+,7cb54bac-7f52-49ca-804f-4eda1c50c66d,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Carolina Henríquez
+,a4658aeb-8ea0-4004-849e-9aa8a7a92c1f,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Carolina Henríquez
+,66839c25-576b-4fdb-b9d8-22a91301f700,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Carolina Henríquez
+,88ab7d70-0cef-4127-b3bf-660299fb41d7,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,931cf1ae-7817-4ab9-a09f-d3c0cfa9ab48,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,87be2fd9-041e-4ce4-ab67-ac64ed21ede9,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,2daf96c0-266a-4492-9124-ef9bbfa1dfec,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,d4da1df1-de5a-49ce-9e9d-93ffb3b07eb6,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,92f59a4a-89ff-41eb-9a4b-529c5431c8e1,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,b5247b2b-a6f2-4669-b033-152f1468cd03,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,ffd91a97-c44b-45c1-8c5b-03eb05a22ebc,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,3a2a0826-dbc6-4bfb-bb59-7c59e748f7a7,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,f27af272-617e-45dc-803f-ec30b217a996,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Componentes Contaminantes y Tóxicos en Alimentos,Deborah Ramírez
+,6405b552-2a03-4121-b599-43739c3422db,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,1241c470-779e-422f-9880-66e1f6eec3f2,Asignatura 2,S1-S2,S1,S2,46290,11,0,0,En producción,10,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,be7b0239-5561-43ef-a410-3c2481f269fe,Asignatura 2,S3-S4,S3,S4,46300,6,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,6accc98e-f012-4e2e-b65e-9231047ffe8b,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,7d111595-b563-4190-94da-8581eb1bc5ae,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,6364b5c1-d48e-4363-ad14-a0b5fb5dc763,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,7d9fa3ea-5cc4-4bc8-b979-24561845f8ec,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,1b85f283-afea-434f-999e-827c6087987a,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,d5e72b4d-3f60-4d30-8eba-fce8fd15133f,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,cf20674f-dfc4-4563-8858-1aa62f4f7d78,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Análisis neuromuscular del movimiento humano,Deborah Ramírez
+,f0c8b6d9-9487-4ef8-8324-1d529d85fc88,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Deborah Ramírez
+,28a76957-b318-477f-9810-1467e5cdc167,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Deborah Ramírez
+,b8c25432-659a-44f6-9e69-566d2c7da4dd,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Deborah Ramírez
+,b56917d6-27b9-4b4b-bd3d-cf2bfdb2457d,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Deborah Ramírez
+,7f5678c0-d87c-49f7-8805-934ff9a87aec,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Deborah Ramírez
+,dbe9e969-5d68-4c40-9d8d-50a7608438c3,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Deborah Ramírez
+,f3423635-7f99-4987-9a75-83993659c904,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Deborah Ramírez
+,e1914dfa-d976-4f69-ab49-fb088a42b00b,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Deborah Ramírez
+,3387315a-1559-4ae6-92c4-8a62cfa4e8a8,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Deborah Ramírez
+,9f23314a-6198-4f54-9cc5-12a3492f1b7a,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Deborah Ramírez
+,b7e69ee0-e48c-451a-944e-4299f0023c3d,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Deborah Ramírez
+,a409635c-e79b-4415-93d4-762d2ae7d278,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Deborah Ramírez
+,f9687b24-15b6-4e87-8ede-50d2e852c8b3,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Deborah Ramírez
+,8e1efce4-fa60-4a95-a451-fe67c4e91e9d,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Deborah Ramírez
+,44acd4c5-911f-44a1-b1d1-f2cc0d92ef7a,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Deborah Ramírez
+,ad82a898-6f7d-48dd-9303-0b31dafbdf5a,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Deborah Ramírez
+,7bc59639-7a7d-4575-b4d5-c28dc38cb8d7,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Deborah Ramírez
+,ce769861-d5dc-472f-95c4-7e0a909fa12b,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Deborah Ramírez
+,80d59872-51d4-4925-a8bf-b678bac98459,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Deborah Ramírez
+,b4f2c996-2c40-47ef-9f49-80b9b6543777,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Deborah Ramírez
+,4eac88b9-b179-4abc-8ad5-c2a500044cd0,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Deborah Ramírez
+,c33af300-fcab-48f4-b4e6-f970ca0ac325,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Deborah Ramírez
+,976db488-493d-45e5-ba9c-79c37162a268,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Deborah Ramírez
+,928b5ed2-34bf-42cd-9c64-67b9b27fafe3,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Deborah Ramírez
+,cc14b3c4-fec5-4028-8ef6-4e1a8d62a248,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Deborah Ramírez
+,f49ea0ce-b7be-4bfc-bb08-165f8baab843,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Deborah Ramírez
+,521c5562-2897-4a4b-b770-6422822842f5,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Deborah Ramírez
+,45902870-7681-4112-ac9d-abab2dee3270,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Deborah Ramírez
+,b13a8d77-07a1-4fb6-a7d7-0ccc8b10fc43,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Deborah Ramírez
+,64841995-ac95-4227-b8d8-a39908f21595,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Deborah Ramírez
+,61361ab7-0399-4255-a3c9-ac69ab66046b,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,3743762a-a0c7-4c51-b39d-56b45d1ae95a,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,2f34b094-ca9e-4243-aaa6-b93909964909,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,a89422d7-a5e0-4346-91c3-7b763627aaf0,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,54cc23fe-9a8e-482e-9a80-28a780b0d59b,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,434c2ce0-e25c-4a44-836b-1ff19daf5ca5,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,eb85a691-0eb4-4371-bd85-3ee8d301e05d,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,7be66166-385a-4b83-a686-a2cb1788253e,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,663310cc-b76a-4007-b243-e41eedd16aad,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,3dd36f28-df4e-40ad-b2bc-b781b169a2f8,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Valoración Integral de la Persona Mayor,Fernanda Reyes
+,d2e440da-abb5-4834-9d15-c66b5f948dd1,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,c6b014f2-8d48-411f-8a40-7b6a99a1faa5,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,f2c5aa79-fc43-4b8d-aa23-d6aa96893952,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,581da16c-5d27-4e76-90f9-e24c44024191,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,a6e8c800-ef72-4290-b975-14d644021bd7,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,86b23ced-84a8-4351-b76a-f32fa0ebcb4e,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,2aea105b-d448-41cb-8b17-e8050df64c16,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,71f17d62-bb65-41f3-8281-3973bb92a8e7,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,2b78d545-9a31-4e43-87f7-dabca0979397,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,ebb5e81a-db4b-42b8-b296-bd5e90407539,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Tecnologías de Producción Acuícola,Fernanda Reyes
+,202342b9-3511-4d69-9ea6-d6d389ce8161,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,a2ea9e96-ac4d-45fe-b17f-d2d160fb4d79,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,a6a658a2-5091-4373-9edc-59998bcc1f10,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,1ecf1a7f-de7d-4209-a282-8028b5fef6b7,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,96569782-5091-42e2-b671-b1def7043de7,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,48d6e59a-abd7-46f6-98a5-cd24c9ab7742,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,050fcf8a-79dd-47a5-bbd3-d40f83e1c796,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,b38f9af3-84cd-4569-8421-5763a10e0d7d,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,a7e013ae-685f-4dbf-9944-58d273e25e04,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,7b952d6a-7229-42ae-ad81-ef68f70d0684,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Manejo de Rumiantes en Pastoreo,Fernanda Reyes
+,b4b59bac-115c-49f4-a3a5-1652327db0dd,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Fernanda Reyes
+,d36f083d-c0eb-4f0d-997d-a398fab3fc7d,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Fernanda Reyes
+,8577600e-1b07-4de9-8ba1-754fb31ec418,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Fernanda Reyes
+,114e0476-4b6f-4dd6-8a22-acad3db22700,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Fernanda Reyes
+,7e2780ef-2abb-4b87-b40e-67196ed8357b,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Fernanda Reyes
+,7b35a849-e873-4940-baa0-b2168c10e396,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Fernanda Reyes
+,65e7fe18-518f-4289-8ed1-7051c2525ae9,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Fernanda Reyes
+,afe1dc1b-d95e-4e06-92c3-353b245b5673,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Fernanda Reyes
+,2a8891a4-0686-442a-b403-b8f7875af72c,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Fernanda Reyes
+,26fdc802-4a7f-46f3-81c4-dc79a79d7c32,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Fernanda Reyes
+,b6368274-81d8-4358-a14b-90ab1a4f3ac9,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Fernanda Reyes
+,95250b63-f2ea-484c-8184-c5b83a950c66,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Fernanda Reyes
+,672cdcfd-22e7-4e85-bc56-0ca226dae012,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Fernanda Reyes
+,31551683-3948-479b-beb3-c59337e4a29d,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Fernanda Reyes
+,fdda23ab-5c72-4d46-acf9-4deb7df4e092,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Fernanda Reyes
+,e82985cf-c4b0-4490-ad49-31cbaa55b808,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Fernanda Reyes
+,f94dca0e-247e-4547-9e79-92105e65847f,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Fernanda Reyes
+,442198ee-6ead-499e-a517-6faee0848d56,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Fernanda Reyes
+,1cf83c65-aaf9-43c4-b5c3-f2b134ffb884,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Fernanda Reyes
+,3faffa8f-6e35-4069-abed-98fe53a36391,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Fernanda Reyes
+,3d4fdd1c-3b3f-46da-90e9-6ddb128c09a6,Asignatura 1,S0,S0,,46280,4,1,0.25,En producción,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,43e497a9-058e-4586-9323-5e50e41f17e0,Asignatura 1,S1-S2,S1,S2,46290,17,0,0,En producción,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,fbe7a73b-54b9-44c1-8594-07773c6d0708,Asignatura 1,S3-S4,S3,S4,46300,0,0,#DIV/0!,No inicia,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,91f3e650-a288-4ce5-ad45-c64b399b96b7,Asignatura 1,S5-S6,S5,S6,46310,5,0,0,En producción,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,5ed26ada-174f-4925-b432-6b106f0ce3ff,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,d4683c7c-1b52-4c13-9e4f-bd38d7fec836,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,5c750686-1ae0-4adc-9467-1bd6484604dc,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,8844921f-a410-4132-9686-ec7f406a0029,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,93858eb7-0463-49bf-9411-949562624e4a,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,210da5a5-0a7f-490c-afb8-ce482c70395f,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Operación Remota y Robótica en Minería,Natalie Baeza
+,ba302b55-5774-4f02-b766-b1b393367836,Asignatura 2,S0,S0,,46280,4,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,2e0c92f7-a66e-4851-be56-a725300fb71f,Asignatura 2,S1-S2,S1,S2,46290,12,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,5db53998-2605-4ecf-a021-7dfa179da0cb,Asignatura 2,S3-S4,S3,S4,46300,4,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,f78a9cf1-f679-48bc-bd0b-a07f8d6c3116,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,84f339ec-c70d-46a1-90e6-23854dcede68,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,e3539e4f-366f-43da-937e-15ed7dc187f1,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,0843eb2a-2ba0-4425-9497-f979add37f05,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,b9bd3813-8acc-4354-bea1-c3bad49490b7,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,e961e719-8be7-4dd5-9395-695099dd0a01,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,8ef35794-3997-4dfd-81fe-82aa6ff7ea0c,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Mercado I+D+i -2,Natalie Baeza
+,16f28213-8d6c-4ed3-a85e-7674275bd732,Asignatura 3,S0,S0,,46280,4,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,e9c6796f-3e71-4b3a-b5ef-d01e02beb83b,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,2cae25e2-0ea2-4667-8a12-eefecc04c33a,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,1424242e-84b7-4509-8439-42a66ee073f3,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,f9016883-9558-4550-a9e7-107f3a1eb085,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,6d199418-9fac-44cc-8be7-f898ebeca47b,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,d4d9ab9a-98fd-41dc-8975-73c47892cdfe,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,aa8fcee0-6a31-427b-8736-f84017aefeb2,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,fa947756-aec8-4cbc-86ca-79b5e058f1c0,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,da2b5f60-9846-4a62-87ac-8da141f4cb66,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Gestión de Proyectos y Administración,Natalie Baeza
+,42aea423-5617-4480-bd98-7d5419e70133,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,86139cc8-85c0-4859-ae4b-e23edfba77b3,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,35c5c2c9-7def-4cce-9781-a1d42f2ee17c,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,1658300c-4758-4a96-abc5-444c12e48724,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,014030cf-7c94-45ec-9474-78a81dbef0ba,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,2601174f-0d46-4c8f-9aa9-d0818851788d,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,1c7121df-3c5a-4186-8dd7-5c24efc65c98,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,675817c1-1566-4c2e-b452-29220dbf4dbb,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,1be507a3-a3ae-4e9c-b9ad-69f54886bceb,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,6ec85751-0df4-4d83-96d5-ce45d4674e10,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Evaluación integral del comportamiento alimentario y nutrición,Natalie Baeza
+,532eeda0-4541-48b6-8856-34702d20b775,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,5e97dcfb-897e-44f2-addb-dc6f4848d7b9,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,6eb6309e-2cdb-4328-ad99-ba65daeb20e4,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,b701aa7f-7291-4a8d-b6c6-260737ef6fdc,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,193258be-bfc9-497a-8939-22dd5a9feca7,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,a7919c82-eb31-43c1-9932-db4c4b6bd42f,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,beb2780a-1450-4ca9-aab3-c80cb7661e00,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,9ced967d-f94b-43b5-ba63-d5064aa8368d,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,cdaf95df-a704-4569-a6f2-523af761c5bb,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,206f3473-2ede-4700-9b80-f676a2cee6d3,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Conservación Biológica en un Contexto Cambio Global,Natalie Baeza
+,fc101b0a-b971-44a3-bd08-f1fc320d541f,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,18e3ee31-bfce-4663-876b-c0cfb4867814,Asignatura 1,S1-S2,S1,S2,46290,11,4,0.363636363636364,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,6a0e3e79-5f8e-49ea-904c-4d907fc4fc6e,Asignatura 1,S3-S4,S3,S4,46300,5,0,0,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,ae77f89e-e19c-4508-beca-dff3d69b91c1,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,155bf0e0-f9d1-4631-a5dd-30e2d4fbfa4e,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,976f8c1b-118b-40e9-a2e4-b5f15fb9377b,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,46e59ddb-2311-4791-af86-8d8da95d224e,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,e56e656e-7a16-483c-9de5-5c205d713c63,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,125aba50-fcee-4afd-bb3b-c348ba45b5a8,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,b1168ba1-3d5a-4e4f-8e0c-10a1f3449d98,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,"Ética, ciudadanía y sociedad",Noelia Jara
+,c2b34a58-20fd-4c88-acbe-a64be32de481,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,ebf2de40-52a6-4aa8-8a6f-6017f371e30c,Asignatura 2,S1-S2,S1,S2,46290,14,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,45776367-4744-4818-8637-9f5d1223f788,Asignatura 2,S3-S4,S3,S4,46300,3,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,2ff9b89a-33b2-43ba-b92b-96d90b25b627,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,973e8f94-b548-4144-a05e-44b346f24d58,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,48e496c4-46cd-43f9-aaf2-36c8bb8e550a,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,56f4d606-57c6-4c4c-9768-ad9f2189ede1,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,e9163038-2378-4ddd-9619-fed97b3b6d0e,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,789d3f0b-dd8c-4923-aa1b-ad9fc6570d0f,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,e2a49f43-3de7-44e5-83e1-c83954fd4b3e,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Emprendimiento en Salud II,Noelia Jara
+,f9940af8-2ebb-42f9-84f0-ff5d52a25b9e,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,7a28bc92-3109-4cef-9e3c-58262e0f5fa8,Asignatura 3,S1-S2,S1,S2,46290,11,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,40602cbb-85bf-4507-92e5-bacbcf95daa9,Asignatura 3,S3-S4,S3,S4,46300,5,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,6a4502bc-ba57-4d40-ba74-21f5151ad5d2,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,2f460087-3285-4030-9db4-8f7180e1426c,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,5c86d8d0-d952-4793-9044-9997a215f715,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,0669c92d-cb96-4084-b8cc-316056bf682c,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,2382acdb-e34d-4ab3-9612-3cedd5354020,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,7392d9a4-e307-4cc1-a8e4-ae8e78daf092,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,7fefd6e0-edc8-450a-b3c1-c620a132cdb2,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fundamentos del Envejecimiento y Atención Integral,Noelia Jara
+,4a66e0c0-8c68-4daa-97b9-c8efd1ec80dd,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,59574afb-f990-4675-bea8-f7babc6954ed,Asignatura 4,S1-S2,S1,S2,46290,11,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,d93d040d-8231-4888-a853-0a79cba31f6e,Asignatura 4,S3-S4,S3,S4,46300,5,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,c6795200-23c9-414b-9631-557a27de4bff,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,9e36e208-621e-4444-88ef-23893d83589a,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,0cfc1186-9a08-4bd7-b1d3-2f2209afeb85,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,daea49cb-70b5-4b54-8e5d-b385d0401d1e,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,5f416a0e-b5d0-433b-a999-71537c8c6535,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,b6eb9973-f626-4ac3-82a4-c3b01d01a361,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,1eb64d2c-6632-4ea2-b16f-37345b2182a4,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,Liderazgo y coaching para el cambio organizacional,Noelia Jara
+,e6840755-da81-4e61-a3b7-6498c7dc3a5f,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,7745489d-5d18-42a0-a938-7d1bb6b75ded,Asignatura 5,S1-S2,S1,S2,46290,14,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,5ca49430-71ed-4215-bb92-017cb1a0227a,Asignatura 5,S3-S4,S3,S4,46300,2,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,8f05a896-df93-4d85-b1d4-7c48dede66f7,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,147cf82e-33c5-4e19-a166-58b53ae9f6ba,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,77557573-e621-4fc9-a107-4b54fd40c9e8,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,efda193b-63ed-4ae8-b201-1ce44b61dfdb,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,da9e5a94-0d04-4e90-a806-6acdf152b92e,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,c9f4ad00-bf31-4b6b-aba7-f68788ec24a8,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,59ffa8c3-6e89-4397-89da-5a9dae10e317,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Finanzas Personales,Noelia Jara
+,fcddb183-28b4-47f0-b767-3c66dcf2066e,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,5790854b-6baf-41e9-b9ca-70214b5339b2,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,2f10e227-9253-46af-b256-3bb34f4faa09,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,d1425f89-7e3b-4847-b47a-05426e0a990f,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,f6836ef2-880a-47bf-ab88-8c5de2c9d416,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,edc86b7f-a292-4157-abd2-d82d5d952434,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,f3b67cf4-c3a8-436e-915f-0f84873e2244,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,cfc65a70-a360-4c22-859c-15d581529929,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,f231642d-bf58-437c-8fc6-ccd45666159b,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,afada152-928d-4c8c-9f36-78ac82ad09fe,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Nivelación Ciencias Básicas,Noemí Urrutia
+,e57956d3-1258-430e-98aa-b194d286d763,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,1fefe510-c048-46fe-aa28-11d83ebbcfd6,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,5628c906-a5d4-4564-8085-4bd4b0bc790b,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,9af2812e-0266-487e-ad2d-bbd60cdf70d1,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,cb9b6bf3-9426-41b5-b92c-e48b031ac231,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,40eff4bf-19af-4f27-8a87-28b56926dab8,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,b2432b28-fc08-4a23-b2d1-3a35d62ee31f,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,b7ae4d26-9e4a-4d97-9503-05132c91e134,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,6ca4ff36-0418-4aec-9010-f664203368ca,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,4b05f8c1-7562-45c2-a55e-a059f57d379d,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Formulación y gestión de proyectos,Noemí Urrutia
+,ba2deae1-5249-4002-be21-028abb3e6bcb,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Noemí Urrutia
+,abd1e086-8b52-4e6e-8065-19efd9cdaf07,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Noemí Urrutia
+,18c8758b-5d5b-4257-9465-54718e13f454,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Noemí Urrutia
+,0ba7f9a4-cd82-446d-a19e-8eef904ed775,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Noemí Urrutia
+,0d5ff6e4-dc9b-4464-b28a-48021b7923a0,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Noemí Urrutia
+,ebf5cab5-4a33-47ce-a6fa-c13d14f2a6a2,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Noemí Urrutia
+,6a8b02a3-808e-4720-a99b-5aa62dbea459,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Noemí Urrutia
+,bde19edf-9a79-4913-85d0-458e7108a18c,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Noemí Urrutia
+,32a02230-bb8e-4b98-905a-4ad9f8625750,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Noemí Urrutia
+,e6a358b9-3ef3-42ab-bcc8-ec9124ce403c,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Noemí Urrutia
+,9ef6bb9a-a721-4f63-9fa7-1038f79c1523,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Noemí Urrutia
+,e9abec4f-be28-4c83-bd2d-25c9d9ae3acf,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Noemí Urrutia
+,eb0fb6c1-d05a-4239-8ae9-a1f82d859148,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Noemí Urrutia
+,bf15fd7b-4d4e-4719-9c36-89b1243c7988,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Noemí Urrutia
+,3ecc1146-8551-4cda-88e4-62ca39c126c2,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Noemí Urrutia
+,e0d016e9-c696-459e-bb86-57a272cdfb34,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Noemí Urrutia
+,5313b184-bef5-4a96-82b7-1705668ac842,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Noemí Urrutia
+,31d58655-bd90-443b-9986-705b6b166ac2,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Noemí Urrutia
+,9c9356f0-90f4-494f-8705-632f9f10231e,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Noemí Urrutia
+,5c29ca7f-5690-40b8-b802-a81c324767b7,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Noemí Urrutia
+,dcc52138-9946-4178-9a98-d7322b71c603,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Noemí Urrutia
+,89c40598-e5c9-4158-a333-5ead328fc5d7,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Noemí Urrutia
+,6ced07cd-309d-4c25-a9f8-a99e0a8a9e99,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Noemí Urrutia
+,f90b6d29-1ff9-4089-92b7-9e56add39408,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Noemí Urrutia
+,ee818d77-ac3a-452f-8e11-3683bc93e64f,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Noemí Urrutia
+,1b1eee8b-d7aa-4aa6-a7b7-e5803d736d1d,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Noemí Urrutia
+,abdbdffb-26b8-4c59-bbff-d01c6e4d5a11,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Noemí Urrutia
+,7ee953a2-bf1c-4176-b656-c97a40486c21,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Noemí Urrutia
+,52699c70-013b-441b-8e0f-8b2bbfc6f6d3,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Noemí Urrutia
+,81f651cd-07ca-43d3-834b-577ad9885db8,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Noemí Urrutia
+,2535e0b6-b1de-4478-bebf-879269d9a087,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,27e63d32-77a4-435e-9fc9-1948fdca6ed5,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,473993c2-84f1-4fef-9f00-1a9a421d6a76,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,5cd4f27f-e6ff-4b87-ac9a-ff82233b9b47,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,8147bdef-c979-42c2-b17a-b53db3f63289,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,a990e8e5-ab9d-4f80-9834-9ff575e21c14,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,27b4b723-ded7-4a04-80d8-e5fb5ffe029b,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,ada5cd87-d4af-4037-8524-ac6e1ea198bc,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,7cc49bf3-4e52-4822-892d-9563ffb2a2cc,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,d6017979-b96a-4235-9317-7f3d8cbef609,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Fundamentos de Ecología,Alejandra Cisternas
+,89e8b9db-68a5-4010-a0a3-d97821097843,Asignatura 2,S0,S0,,46280,3,1.6,0.533333333333333,En producción,2,Estadísticas para Ingeniería,Alejandra Cisternas
+,d600c82c-9b90-4fea-be58-711158739c70,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Estadísticas para Ingeniería,Alejandra Cisternas
+,1d1eba49-7501-42ab-83c4-abfc4637099c,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Estadísticas para Ingeniería,Alejandra Cisternas
+,9537768f-e17f-4d1b-97ce-eb69093f86ae,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Estadísticas para Ingeniería,Alejandra Cisternas
+,637a21af-efb1-4eb8-a280-5be2ae7e4440,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Estadísticas para Ingeniería,Alejandra Cisternas
+,f42cf07f-8583-419c-b085-98db65a6daad,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Estadísticas para Ingeniería,Alejandra Cisternas
+,e965d9b1-886b-4419-bf37-00031ab65c6d,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Estadísticas para Ingeniería,Alejandra Cisternas
+,1a8373e7-afa3-4468-9519-6eed5041eb82,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Estadísticas para Ingeniería,Alejandra Cisternas
+,0aa8e781-258e-4665-b659-973cbb40077d,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Estadísticas para Ingeniería,Alejandra Cisternas
+,454adc2b-7ae9-4e6a-88c2-f1f56fc98fda,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Estadísticas para Ingeniería,Alejandra Cisternas
+,dfcb09bf-61c3-4b08-9b96-aad9fee90720,Asignatura 3,S0,S0,,46280,3,0.2,0.0666666666666667,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,7d6d65e3-6cd6-4763-aabe-258beaf39a8e,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,6c7de02d-5c42-4610-9132-21c671675d13,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,27b066f5-23c0-4fd8-9e05-d70a2ce0fe6d,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,4d9f6537-2e90-43a3-aace-0e38cce5bb2b,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,f73f0308-09eb-410a-ba34-bf1cfb30a0c8,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,5f96e42a-3e19-49a7-b6a5-0dd057323975,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,a80300fa-c440-4e2e-a1ff-b15a708ab38a,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,92a7f394-ecbc-4e06-96f6-94983cbae781,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,2fb95917-f9d1-4095-aac6-ee2b25c466d6,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Gestión y Diseño de Programas Sociales,Alejandra Cisternas
+,0c5f5f29-8c47-4349-98b8-b9230c01a702,Asignatura 4,S0,S0,,46280,3,0.2,0.0666666666666667,En producción,0,,Alejandra Cisternas
+,bbccdd71-447f-4cc1-a077-8fa662c644db,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Alejandra Cisternas
+,1cdae73a-ba0f-406e-9a95-264e12241b6a,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Alejandra Cisternas
+,98cf86b3-e38d-4684-8062-3ce248d3ca57,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Alejandra Cisternas
+,22fe78b1-5075-41e9-9858-933e76b83c8c,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Alejandra Cisternas
+,997161ab-9161-46fa-98a0-99b81142e534,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Alejandra Cisternas
+,989841d9-0c4d-4561-8742-dad5f1741a6c,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Alejandra Cisternas
+,a185dced-a5f9-4d6a-9a8d-9f06368b3a3b,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Alejandra Cisternas
+,f3333fa5-24bc-4aea-9557-d5895041829c,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Alejandra Cisternas
+,24df9e58-7d31-43d0-8f16-0c2bcba92af3,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Alejandra Cisternas
+,ce72a210-94dd-4f8f-a17a-a1768903c288,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Alejandra Cisternas
+,d2ac103e-53c8-43ef-a12f-282b4fc505e4,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Alejandra Cisternas
+,96ee40c9-ac26-4bd0-a6ed-f95ff094f6a4,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Alejandra Cisternas
+,d5c808be-d144-43fb-bb37-f8c3c2ed3ebd,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Alejandra Cisternas
+,d5622488-91d8-4f32-8fd5-6a94b508dcc3,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Alejandra Cisternas
+,71774322-c7cc-4ce0-9f1a-fa966e9c8e50,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Alejandra Cisternas
+,e2c97cd7-54e1-4499-af99-cb76af6c1000,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Alejandra Cisternas
+,4fc8d910-2290-47b0-a3bd-e89462fddd32,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Alejandra Cisternas
+,d5a444d2-9e1e-4669-ac64-3e0a7d717df9,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Alejandra Cisternas
+,23671a48-40e8-4049-9f6f-8f162c2c5b6a,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Alejandra Cisternas
+,0f6e5fae-ad5a-4a3b-a330-6a707464e177,Asignatura 1,S0,S0,,46280,4,4,1,Cerrado,1,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,b086c415-636c-4b0e-822f-cb839b7f35b4,Asignatura 1,S1-S2,S1,S2,46290,15,15,1,Cerrado,0,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,8e3243c7-5b88-43c4-b74f-f4156dd331c3,Asignatura 1,S3-S4,S3,S4,46300,13,13,1,Cerrado,0,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,7c22ec0f-8391-44af-b23d-fa876ef8b7ff,Asignatura 1,S5-S6,S5,S6,46310,17,17,1,Cerrado,0,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,33a31143-1fd8-411f-a55e-d5a66a15f0be,Asignatura 1,S7-S8,S7,S8,46320,0,0,,No inicia,0,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,b69128a7-c0fb-4a38-b36e-7e1829644f3e,Asignatura 1,S9-S10,S9,S10,46331,0,0,,No inicia,0,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,dc550229-d7b2-481f-bf31-57ba338890bd,Asignatura 1,S11-S12,S11,S12,46341,0,0,,No inicia,0,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,3c1aa880-3ca7-44d5-b090-37e88ec88672,Asignatura 1,S13-S14,S13,S14,46351,0,0,,No inicia,0,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,93f3c350-21f5-4eea-ae42-d153bf12608d,Asignatura 1,S15-S16,S15,S16,46361,0,0,,No inicia,0,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,b8e262f0-54cf-44ff-a66f-6a6db4eba964,Asignatura 1,S17-S18,S17,S18,46371,0,0,,No inicia,0,Modelo teórico y trabajo interdisciplinario y transdisciplinario ,Brenda Bastías
+,40d9e5e7-63ec-4f7a-8d4b-ce0a3ba8b8c1,Asignatura 2,S0,S0,,46280,4,2,0.5,En producción,0,Modelos de Optimización,Brenda Bastías
+,90a7497a-8744-44a1-a75e-7aa60049f1ec,Asignatura 2,S1-S2,S1,S2,46290,8,1.5,0.1875,En producción,0,Modelos de Optimización,Brenda Bastías
+,d8026d2c-8d65-4515-9e12-4bdd4bb75a4a,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Modelos de Optimización,Brenda Bastías
+,ca86eeb4-e85f-47e3-99c3-1d37acab1ca3,Asignatura 2,S5-S6,S5,S6,46310,6,0,0,En producción,0,Modelos de Optimización,Brenda Bastías
+,947822ad-0603-47db-b619-ad9b246e149f,Asignatura 2,S7-S8,S7,S8,46320,7,0,0,En producción,0,Modelos de Optimización,Brenda Bastías
+,138506af-e9fb-4066-b273-5042f869ac1c,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Modelos de Optimización,Brenda Bastías
+,930d86b9-b976-4cc1-9410-02171bedbba6,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Modelos de Optimización,Brenda Bastías
+,0d744c53-a848-4c6e-bc80-f3a5e3b3d276,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Modelos de Optimización,Brenda Bastías
+,14c70bcd-297a-45ab-a179-885645e8ef37,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Modelos de Optimización,Brenda Bastías
+,9bd0c564-6fce-4096-9f05-336c84581c78,Asignatura 2,S17-S18,S17,S18,46371,7,0,0,En producción,0,Modelos de Optimización,Brenda Bastías
+,0721cc17-d9bc-48dc-a7e2-d0a396c4b616,Asignatura 5,S0,S0,,46280,4,0,0,En producción,0,Asignatura:,Brenda Bastías
+,2d998b79-9a90-4b84-99b4-25e209516472,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,Asignatura:,Brenda Bastías
+,92d2ad01-5c2d-4585-bddd-f5ee4661365e,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,Asignatura:,Brenda Bastías
+,87aebded-4378-4d83-8946-953872be6234,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,Asignatura:,Brenda Bastías
+,d9e06355-79ee-403f-87b8-06cd6c4c6f06,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,Asignatura:,Brenda Bastías
+,5032c99b-163c-44d7-80c8-6502bc7c4a5b,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,Asignatura:,Brenda Bastías
+,6cbb794d-818e-4898-8a88-d53e73ccf750,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,Asignatura:,Brenda Bastías
+,ac9f0a49-890a-4349-81c9-2841fcad1169,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,Asignatura:,Brenda Bastías
+,28447fd7-eedc-467b-a0e1-90c41b7d8d94,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,Asignatura:,Brenda Bastías
+,c4af6e15-42cd-4af9-a337-7b98fc62ea34,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,Asignatura:,Brenda Bastías
+,1c3d80a7-cefe-47fd-8c67-23ba4d220081,Asignatura 6,S0,S0,,46280,4,2,0.5,En producción,0,Desarrollo en Atención Temprana,Brenda Bastías
+,968ef1a1-ac64-4c6e-bb79-3dd460d6bbf4,Asignatura 6,S1-S2,S1,S2,46290,8,0.5,0.0625,En producción,0,Desarrollo en Atención Temprana,Brenda Bastías
+,63079610-96a4-4194-b8cc-da6cf5fbbe0b,Asignatura 6,S3-S4,S3,S4,46300,8,0,0,En producción,0,Desarrollo en Atención Temprana,Brenda Bastías
+,0075ff45-7b0f-4607-a805-fd4dda4e6d51,Asignatura 6,S5-S6,S5,S6,46310,14,0,0,En producción,0,Desarrollo en Atención Temprana,Brenda Bastías
+,b0666b45-364e-4790-890e-d0a92dbb0b3b,Asignatura 6,S7-S8,S7,S8,46320,0,0,,No inicia,0,Desarrollo en Atención Temprana,Brenda Bastías
+,9f95ef4c-c985-43a2-aeb3-9dbd77f695a1,Asignatura 6,S9-S10,S9,S10,46331,0,0,,No inicia,0,Desarrollo en Atención Temprana,Brenda Bastías
+,ef6dd24b-0965-4fc0-be24-2a34203ce3c5,Asignatura 6,S11-S12,S11,S12,46341,0,0,,No inicia,0,Desarrollo en Atención Temprana,Brenda Bastías
+,6f39d469-9335-4dca-9b2b-9f07b29e0a6f,Asignatura 6,S13-S14,S13,S14,46351,0,0,,No inicia,0,Desarrollo en Atención Temprana,Brenda Bastías
+,6a64d840-0e6f-48e8-b5b9-66de844c2e8a,Asignatura 6,S15-S16,S15,S16,46361,0,0,,No inicia,0,Desarrollo en Atención Temprana,Brenda Bastías
+,fe822131-f252-4293-bf25-0db1df90c4ec,Asignatura 6,S17-S18,S17,S18,46371,0,0,,No inicia,0,Desarrollo en Atención Temprana,Brenda Bastías
+,d76ab57c-ef9a-4fee-93ea-af1f089c1833,Asignatura 7,S0,S0,,46280,4,1,0.25,En producción,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,9281840f-1b1e-4a51-aa61-83f53d2e408a,Asignatura 7,S1-S2,S1,S2,46290,8,0,0,En producción,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,a8f05126-5df5-45e9-a1d7-53cdf0c0195d,Asignatura 7,S3-S4,S3,S4,46300,8,0,0,En producción,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,806e17e4-1d6c-45f9-a212-22218c827e54,Asignatura 7,S5-S6,S5,S6,46310,14,0,0,En producción,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,bdfb9552-1791-4ed9-9acd-c53ab5c63fc3,Asignatura 7,S7-S8,S7,S8,46320,0,0,,No inicia,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,322e13ca-71ae-40f4-b4dd-0619c0942c7c,Asignatura 7,S9-S10,S9,S10,46331,0,0,,No inicia,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,c8267bcf-6104-4831-a086-b3efad9d7a61,Asignatura 7,S11-S12,S11,S12,46341,0,0,,No inicia,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,195a501c-87b3-4147-818c-0901caf465dd,Asignatura 7,S13-S14,S13,S14,46351,0,0,,No inicia,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,0cde7d0f-3a55-43ef-b89b-68847750208b,Asignatura 7,S15-S16,S15,S16,46361,0,0,,No inicia,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,31771c8f-2bbb-41e4-a992-368d0e8812c9,Asignatura 7,S17-S18,S17,S18,46371,0,0,,No inicia,0,Familia en la atención temprana e intervención en contextos diversos ,Brenda Bastías
+,32317f79-98c7-4c91-9477-f9cb160d8f78,Asignatura 8,S0,S0,,46280,4,1,0.25,En producción,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,f8bea326-63a0-415c-acf0-8f2999460eba,Asignatura 8,S1-S2,S1,S2,46290,8,0,0,En producción,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,07ea94e4-19bd-4629-9592-1e45a9a31d32,Asignatura 8,S3-S4,S3,S4,46300,8,0,0,En producción,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,f0b20d85-ea7f-4fe0-9a77-50fc03956c48,Asignatura 8,S5-S6,S5,S6,46310,14,0,0,En producción,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,a11b94bb-2f82-4e3f-8dbc-c0a666fc43d8,Asignatura 8,S7-S8,S7,S8,46320,0,0,,No inicia,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,ece87adc-1176-4fd9-a48d-e535d8759b58,Asignatura 8,S9-S10,S9,S10,46331,0,0,,No inicia,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,6f2a0c49-1feb-44cf-a9cf-b4e2bb1e5ea4,Asignatura 8,S11-S12,S11,S12,46341,0,0,,No inicia,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,95251476-93f0-45c5-bff2-2a73a7f7d1a5,Asignatura 8,S13-S14,S13,S14,46351,0,0,,No inicia,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,a9a25d7d-1653-4c9c-8285-0e1db1b64875,Asignatura 8,S15-S16,S15,S16,46361,0,0,,No inicia,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,d51de323-8fbc-4696-ac76-95239d8b8a5a,Asignatura 8,S17-S18,S17,S18,46371,0,0,,No inicia,0,Evaluación interdisciplinaria en atención infantil temprana ,Brenda Bastías
+,646fd587-4c04-4fa6-ad0e-b3e7ec97b597,Asignatura 9,S0,S0,,46280,4,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,9991bb4a-e83f-4228-bc96-aab2d92c7ea2,Asignatura 9,S1-S2,S1,S2,46290,8,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,16237e77-402d-444a-8901-ca0680b04a71,Asignatura 9,S3-S4,S3,S4,46300,8,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,9d8ffeeb-dd91-4344-bd60-da4dc962409c,Asignatura 9,S5-S6,S5,S6,46310,7,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,bf54e94a-9cd1-42de-b3da-2c440b01ee59,Asignatura 9,S7-S8,S7,S8,46320,8,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,0e1b5898-b6c7-476a-b66f-75e77771f695,Asignatura 9,S9-S10,S9,S10,46331,7,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,0e6d85c9-d761-409b-a159-a8097032265a,Asignatura 9,S11-S12,S11,S12,46341,8,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,149a470d-2045-4272-b6b9-c2c638a5773e,Asignatura 9,S13-S14,S13,S14,46351,8,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,f1f0a706-12ca-4ffb-b97d-9a5abcbe8d2f,Asignatura 9,S15-S16,S15,S16,46361,6,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,c69b52e7-9a9a-4e38-b1f9-b79222bd80f9,Asignatura 9,S17-S18,S17,S18,46371,6,0,0,En producción,0,Innovación y Emprendimiento  ,Brenda Bastías
+,c5576b67-ac9d-4c2e-afeb-c6ea3fb00b88,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
+,3575578e-d0b8-4719-9525-ebe1dd1ca25d,Asignatura 1,S1-S2,S1,S2,46290,15,0,0,En producción,2,Estrategia Competitiva,Carla Riquelme
+,2cca778a-cd8c-456d-ab50-b6db20a6fb29,Asignatura 1,S3-S4,S3,S4,46300,15,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
+,fbf3cbc3-5e73-4d48-b650-b93a38498661,Asignatura 1,S5-S6,S5,S6,46310,19,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
+,b4768b1c-fbf4-4ea2-9d8f-001939b57d4e,Asignatura 1,S7-S8,S7,S8,46320,13,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
+,85371135-c16d-436a-b7c5-3dc1dc5d8791,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
+,72a29c54-365c-48be-9173-be4f16e4e890,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
+,7f09c088-80c4-419d-b4ec-cfa649d18dc4,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
+,6f6fe28a-5234-4b7c-b3a5-7f0c79cd0da4,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
+,ad93ce92-64a7-4c0e-89dc-b3c60ac45db6,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Estrategia Competitiva,Carla Riquelme
+,98da4e53-b28c-48a0-b3ff-38c0ef8c1fac,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,61054af9-23b6-4865-b19b-c8cdc9bf85ce,Asignatura 2,S1-S2,S1,S2,46290,16,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,1f8899ca-61c3-45dd-86e9-e48d66ea4a0f,Asignatura 2,S3-S4,S3,S4,46300,6,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,98eaed52-6512-4ab4-8342-df94d99f0a77,Asignatura 2,S5-S6,S5,S6,46310,4,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,818414b7-e1ad-4932-82b8-efabca8dcdff,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,813f47c9-2659-4629-a35d-b53addcd144b,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,9bcafbc3-a99b-4e21-8d0c-aff1ee21b285,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,b0f470b2-52cb-492b-8758-0877bb49039b,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,d55db022-9f44-4eb5-9237-7e0bfdf2e875,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,52fd6efd-5baa-46c0-a2d8-dafa0f583e32,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Manejo y Conservación en Fauna Silvestre,Carla Riquelme
+,6606e3ea-3317-4333-8995-cbfcef088d82,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,62508cc5-e814-49d0-8e46-56ac642b74e4,Asignatura 3,S1-S2,S1,S2,46290,13,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,76cab9aa-fd9d-4326-9224-567bd3f8944c,Asignatura 3,S3-S4,S3,S4,46300,17,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,d486fe18-d310-4aa3-9afb-cd3da589643c,Asignatura 3,S5-S6,S5,S6,46310,9,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,c486dc65-1b4b-45a7-ae68-d242096221fa,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,f9b148cf-9f02-4b19-a79b-641d9108c20b,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,354ecbc2-6c59-49cc-a49e-e13eca2e4e77,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,11e68cce-903c-426a-93c2-8972f6e633f2,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,f9404101-a0f7-455e-a6ec-3a3b71e8a9cd,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,63edf51f-e531-4ef2-851c-8641db529838,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Emprendimiento en Salud I,Carla Riquelme
+,baa7242c-2fc2-428b-bfb1-d30dda01692e,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Carla Riquelme
+,a04c654b-44b0-484a-9f33-c912b5f0d726,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Carla Riquelme
+,d3a49f9b-62cd-4942-808c-a6c1707a73d7,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Carla Riquelme
+,5ad2e062-c1e7-4c61-a9f8-1ba64df13534,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Carla Riquelme
+,2fbe2fed-8432-43ca-b6da-a847b714c789,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Carla Riquelme
+,45ce9a7d-92dd-4452-acf6-94c7b616fcc4,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Carla Riquelme
+,4fbee0b3-534f-41e8-a964-8d1587c255e0,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Carla Riquelme
+,1b6b84e4-32bc-480d-92b3-89281458c403,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Carla Riquelme
+,beef3e6e-96b5-4733-9d73-be1e981336cc,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Carla Riquelme
+,b183eac3-89d8-46cd-97ba-1ea4ac325b36,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Carla Riquelme
+,862ca0cc-5c32-4615-8cf4-7bb00a729d3e,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Carla Riquelme
+,200eb88f-deac-4bff-a071-e4570d51b90b,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Carla Riquelme
+,95f0d977-c46a-4b9b-a2b4-2ae80baebbbe,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Carla Riquelme
+,f185d986-1a76-48df-a118-7a6042ab3344,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Carla Riquelme
+,757e691e-7616-4ad9-8fe4-52343adb62f2,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Carla Riquelme
+,64cbc62f-4910-4456-be07-be16d13fcf3a,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Carla Riquelme
+,0ccefb90-fffa-4095-a025-d71eec9cc028,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Carla Riquelme
+,28ebe124-45b8-4789-a3d1-7ac3a7967eb5,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Carla Riquelme
+,6840df07-1818-4e54-bd20-76b205f209ff,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Carla Riquelme
+,146cac82-4404-46de-9dcc-526668f26adb,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Carla Riquelme
+,cfde61d6-0a4f-4d08-aafd-9dba4ab32350,Asignatura 1,S0,S0,,46280,3,0,0,En producción,2,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,10559d35-6f90-4451-98c5-8e78137a7e75,Asignatura 1,S1-S2,S1,S2,46290,10,0,0,En producción,7,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,e9a32b63-90e3-448b-86e2-34e4c70bd3a3,Asignatura 1,S3-S4,S3,S4,46300,6,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,d9954c76-1e9c-434f-8a85-2fe4de376249,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,3b856ec2-4aca-4aa1-8a9b-99601c2a8173,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,d29dafd0-3ece-4545-8e4a-84df5b5870a1,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,b8ab6db1-3f26-4316-b71d-c62dd79713e7,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,46d3606f-fd32-469d-a6e9-0dd517bbd3f2,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,d659218b-e2f5-4be3-8b5c-af782bf34d7d,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,17cd0000-7614-4453-99fc-acbfb1f64fad,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Electivo de Formación Profesional II: Aplicación de aprendizaje de máquinas,Catalina Salazar
+,6378509f-e842-4e45-964f-3c6c934b6fed,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Econometría,Catalina Salazar
+,3e59ffad-b6a7-4334-b637-bb0ca18ea3d2,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Econometría,Catalina Salazar
+,a1fd579e-aabb-4584-8292-7e1f5893f456,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Econometría,Catalina Salazar
+,701462a1-c542-499d-8dd4-b23057d81e54,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Econometría,Catalina Salazar
+,1b0bf784-9d7b-4bef-8629-27e3d4f531bc,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Econometría,Catalina Salazar
+,a25a2984-58e6-470e-a7fd-35c24329ce67,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Econometría,Catalina Salazar
+,f8e2439f-02d8-45be-b8b6-ecf5ceb2b269,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Econometría,Catalina Salazar
+,c492065d-a0a0-43c0-a3fc-1b859ca7ee49,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Econometría,Catalina Salazar
+,d1b142b5-fc5a-4771-a464-5c9a938a167e,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Econometría,Catalina Salazar
+,d8066ece-06a8-4c7a-a853-33f18fff9e08,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Econometría,Catalina Salazar
+,598bb7ea-5ff3-4353-9aa0-296298844601,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,a2f02d79-f7f7-4ffa-b249-35945f1c39cd,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,617ba9a1-f3d1-4861-9d46-b83c96c8b258,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,93436ff8-95fd-413d-b6ff-a8f204c3b43c,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,0c8e123b-67f1-4219-9a46-cf6a8fc0b2c4,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,f05adc5c-ee10-4fdd-a226-597da3ac9013,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,9257ebf0-81a7-4144-b1dc-854a5764bc7a,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,78cf8c38-3684-4722-b679-34360afab417,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,ec8b6232-873a-4cb5-82c7-c256fa33611e,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,7adddde9-948d-4034-808a-5582cc006fc1,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Macroeconomía,Catalina Salazar
+,0fece305-dfc0-491c-ba6b-597c742ed25f,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Catalina Salazar
+,116461d6-0ae2-4de4-926d-88d6513419ee,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Catalina Salazar
+,475cd133-a411-4bcf-9c7a-060d3a08f3ee,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Catalina Salazar
+,a5155148-3123-45c6-ab51-59a7debceca7,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Catalina Salazar
+,781567ea-2485-4e19-a0c5-93310d66e0be,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Catalina Salazar
+,daac043e-b707-4a51-be3a-6a19789812e8,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Catalina Salazar
+,172c0ed6-d3b4-4af2-9d51-c4df7cc6d8ca,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Catalina Salazar
+,43162a4b-9569-4ffd-bbbb-e8420f739025,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Catalina Salazar
+,5016fd8d-60c9-416e-a85f-841821a954f9,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Catalina Salazar
+,e84601b4-6959-4f8f-add7-c109a73228c3,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Catalina Salazar
+,6785fbe1-1849-49e6-91f7-083326bae8a5,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Catalina Salazar
+,cf94cc01-0ea4-4f54-a60a-d6cb939500b1,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Catalina Salazar
+,dc50834b-8d91-453c-a0a6-44765d19dc7a,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Catalina Salazar
+,403165e2-c103-4fd0-ad16-fefbee37aeb3,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Catalina Salazar
+,08b19922-2454-43bc-86cc-4f55ae675b74,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Catalina Salazar
+,7df8d70d-15b3-4311-b91f-7d4d305c6513,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Catalina Salazar
+,af25bd65-e434-4f3b-b076-b2bfde761410,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Catalina Salazar
+,9b19461e-2041-4ecc-9f00-675791a85dde,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Catalina Salazar
+,aa6f2d15-4725-4faa-843a-ec8ed7aa47f9,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Catalina Salazar
+,4c53acdb-f4a1-45c6-aa46-1d46e39f61ab,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Catalina Salazar
+,238bf1b4-193e-4a71-b4fd-e7910b41207e,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,a8a80d5c-19c6-455d-b93d-8b82006bff96,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,361284f7-b7ea-44fc-83c7-7ef0fec9993a,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,ba6e2566-6bf4-4a27-83b9-7ef529b6a8ed,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,4f510216-ff73-4787-b0f7-dc699f0f3632,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,ac01e95d-8934-434b-9efc-cdab0a71d784,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,10ed5851-147a-45e3-867b-4f4a2357b2c4,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,a989966b-db2a-4a5b-807f-d9880f6eec29,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,563cbc1e-59c9-4260-af2d-d0f6eb31ef26,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,2fddb54f-31ea-424e-adaf-e000d76774b9,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Administración para alta dirección,Erick Contreras
+,ac4a3ac6-8fc6-4c39-a8c6-a620f5b824db,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Machine Learning,Erick Contreras
+,5fb2325b-8ad7-49ba-ad95-8918cdd5117a,Asignatura 2,S1-S2,S1,S2,46290,12,0,0,En producción,0,Machine Learning,Erick Contreras
+,cc343afd-0a2b-43b2-8b68-80d1636688db,Asignatura 2,S3-S4,S3,S4,46300,6,0,0,En producción,0,Machine Learning,Erick Contreras
+,d0578a1b-0b0d-4984-ba0e-fe3af7a396b1,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Machine Learning,Erick Contreras
+,775fbee3-6a6d-4e9c-afb9-4a861cc70ce5,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Machine Learning,Erick Contreras
+,d67b8c28-bfad-4eea-aa6a-f5ba5636f7b6,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Machine Learning,Erick Contreras
+,b3841a7e-f18d-4b42-a7a1-68af090c9710,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Machine Learning,Erick Contreras
+,48d8de7b-2913-4193-b6eb-fd1469289bf5,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Machine Learning,Erick Contreras
+,408f695b-44aa-4e8f-b59e-97714f377be9,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Machine Learning,Erick Contreras
+,bef3e2a2-4d17-4c75-8550-a4991fd5d68b,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Machine Learning,Erick Contreras
+,acfdb6f3-3155-4a80-83e2-21cef5b67566,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,756ced6e-60f2-4da5-a940-c338ad145cd6,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,90b37365-8ca3-4143-aebc-4120df482771,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,dbb4b9cd-df98-4652-9a14-366b2e60fefb,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,26b5b184-6e0c-44db-add9-2cc67c14df3f,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,1154e965-c214-45ea-803b-f2f059120ba3,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,88224b42-8d66-42d7-8ded-aa328e2a5599,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,a1297624-e4b3-4edf-993c-ed419f53c26a,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,57003968-7f01-430c-8cc3-cb61aecb7802,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,ff674062-9744-49e0-a72a-805a8e4be74b,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Estrategias organizacionales para la creación de valor,Erick Contreras
+,3a05d0aa-1a15-4c61-bcea-5a21b425aa96,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Erick Contreras
+,f6ece68d-de8b-4880-b976-21f6734b2b94,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Erick Contreras
+,f45566ee-f51a-427c-bb0d-a581af829f39,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Erick Contreras
+,8a2925b3-ff38-4822-8a04-ffa2b8969e0b,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Erick Contreras
+,904ed83e-c0f5-4a5c-891e-e7f78b61a68f,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Erick Contreras
+,a0da94fc-69a0-4ff2-9e7c-30486aac2939,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Erick Contreras
+,f0697384-003a-48aa-abd1-caae0dcfe5a1,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Erick Contreras
+,9692f255-ea15-4de9-a640-498d48f2645c,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Erick Contreras
+,bd7d8926-1089-4bd4-b539-343c37d07dc8,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Erick Contreras
+,dd70459e-a6a9-4c6b-9d7a-9ff2a9a2bc26,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Erick Contreras
+,d0e15d60-eeeb-47da-9b7c-4e24b860b38c,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Erick Contreras
+,06ab667e-0e9d-468e-9a04-95649fca560d,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Erick Contreras
+,3d54ddae-f084-432f-b7ee-b5e0aa797859,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Erick Contreras
+,465fe8e1-91ce-4752-b35f-32af119b1a4c,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Erick Contreras
+,e61fb92c-ca3b-4aa3-ae89-f0c33d249d35,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Erick Contreras
+,c8fed96e-0061-4edc-918f-0bc08f33f5df,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Erick Contreras
+,dd28d65e-b925-4c8e-bfff-13d27f128d66,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Erick Contreras
+,1bde9c04-8a84-4c70-87a5-4ab171d31cca,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Erick Contreras
+,c23a1597-d87f-4453-8b48-49cc2c118a57,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Erick Contreras
+,6d536441-2bb0-4766-83dc-d1822b4e086e,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Erick Contreras
+,47608e37-bab4-4f1e-93f9-f2a5bee2479f,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,8d403e73-a525-4802-845f-ad6e1e508e12,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,d255c7e9-098f-49f6-8cdd-e6ccece0eaf6,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,ec92f93c-394b-471f-ac8c-2a8c15b45f03,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,bae8f8c7-cde0-4758-b670-9593173d2f85,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,557547ad-226d-4d07-bc22-7a441ed9fa32,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,7c72268a-8687-48f0-bca8-96805ec31506,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,6af2611d-de78-4b82-8c1f-7f90a8a765c6,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,77f9c6d6-4aed-4f2c-a6ed-27ab14cf7ea2,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,5eafd7d0-03e7-4f83-951f-a0dcb4dd5c78,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Diseño de proyectos de intervención,Javiera Leiva
+,2e45fcf2-74d5-4f63-ba06-a3a3e95e46c9,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,4662b461-1ee5-48a2-a726-4d861c0dfe71,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,eb0bcb04-7a71-412b-895d-252088acf630,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,a8cd6e66-5328-4d7b-ac2b-3ae4aa7f0bb2,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,94de6be4-6ff2-4519-8798-7799996199d7,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,36876b8c-d6ab-47c9-a6c3-4bde6e5c0941,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,4c478047-af35-4cc1-8253-e9c12ab05c6d,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,2bda0e9e-1d93-43b2-8f60-ec85ec6a6c39,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,462a5cf1-426f-48e3-adac-017a0c4bf59c,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,ae6d387f-1c58-4df1-9129-1f9d47125f28,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Planificación educativa,Javiera Leiva
+,c7c03ad7-47b5-44b5-8caa-ccfa79cbfef3,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Javiera Leiva
+,3333137e-737f-4c4f-9bdf-4d7141fc50ae,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Javiera Leiva
+,eeb2c706-032a-4bac-8fb2-5b87f98bb72f,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Javiera Leiva
+,a8153073-c64d-4dfd-b890-19a7c61ed7b8,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Javiera Leiva
+,e7bb7e13-c5e6-4a7c-b806-6b4ac16fdf57,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Javiera Leiva
+,60318cf7-2fb0-4956-88dc-10df812869af,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Javiera Leiva
+,db13cd17-b18c-4d27-940c-d6360c375fa4,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Javiera Leiva
+,8c3e2c65-ba33-415f-9d6d-2a192142ca9b,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Javiera Leiva
+,162f25b0-fcd8-45c6-9ba4-f932105103c6,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Javiera Leiva
+,2c244ab0-6434-486d-be72-1d01514d19e0,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Javiera Leiva
+,93de122d-66a9-4aa9-82b9-b640fc679d8e,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Javiera Leiva
+,37f9fe59-0d53-4b42-8508-bce51a69eafe,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Javiera Leiva
+,cae5fb73-3524-4ff9-ad2a-1fda70cb9404,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Javiera Leiva
+,cf8e4735-1bdf-4291-98ed-171a0b073595,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Javiera Leiva
+,b7060d4a-4e31-4366-af99-60cb45a15d36,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Javiera Leiva
+,b415ca0b-cc06-4917-9740-3ca280ae7abe,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Javiera Leiva
+,60f5cf55-a07e-4c64-a9ad-8390df0e6661,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Javiera Leiva
+,35be0400-4528-4248-9544-dbd60d632df5,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Javiera Leiva
+,d4eb1f8d-c84b-439c-8142-ad7f196a5f19,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Javiera Leiva
+,6000545f-56a8-404c-99e1-ceeb9bef5572,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Javiera Leiva
+,7afb642d-9cfe-492e-a26d-c7089906ac8a,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Javiera Leiva
+,951e1673-be5f-40c7-a810-dc0fa316499b,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Javiera Leiva
+,e231e47d-986c-4afb-9263-4e27974cb88f,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Javiera Leiva
+,67ee7c2d-dae2-4b73-99fc-ed16c652a777,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Javiera Leiva
+,4c9d2fa2-49a2-4ed5-b534-70ed92187bf7,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Javiera Leiva
+,01413076-c49a-4fef-8c8b-2710de168ec9,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Javiera Leiva
+,d777efc4-e14d-48a7-9c0d-2e1388e32bcc,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Javiera Leiva
+,0f1d3853-2842-476b-aa74-d8cda8c4eeac,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Javiera Leiva
+,b18a7b4e-a407-4776-8b91-59bcd3358a73,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Javiera Leiva
+,e069f61a-35a1-4c65-94cc-2121ac513ae3,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Javiera Leiva
+,f6ae3f42-cd46-4f7d-9bf1-ade7f82c817e,Asignatura 1,S0,S0,,46280,3,1,0.333333333333333,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,7112281d-2394-4bb5-a84e-8831a2ed8756,Asignatura 1,S1-S2,S1,S2,46290,8,4,0.5,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,941d79f2-149b-44cb-b05f-3509697a8944,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,7b7a778d-8833-4596-b449-37b9121eebcc,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,be65e04c-64a9-4926-9736-9debbce677c1,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,b8e2820b-38f3-4c43-8dda-d2f0c58853cd,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,bf60606e-2a08-45d3-83a1-37ef61612843,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,c7a9523a-816d-474b-9e20-85c3e4015990,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,a428e5d6-bcf9-47f1-9ef8-fbd9194853e7,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,1f4b2caa-b42c-404d-aaa5-7d656361e4b6,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Comportamiento Alimentario y Nutrición en Grupos y comunidades,Rafael Siverio
+,f73e7cda-e172-4db3-9204-5af5244fd8ba,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,740a3742-37a3-45f2-bd7a-891211b293d0,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,5d2549fa-6ea1-4c95-8595-b7d44d772fac,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,cbf14473-25a7-40ed-b91e-4f95ca35f636,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,acccf96f-a21c-497a-bac1-b7ce68cbf133,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,63e9fb1e-7cfa-48f9-ab1b-3e2ecc2975b3,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,6515c4bf-028c-4a7a-80da-5c902f872c6f,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,abf17c3a-7ef1-4e4e-97a9-612a5fb0614a,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,d82c0fb0-c0c0-4d1b-8fd8-44746728bb2d,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,5b8333b6-8cf8-4678-8b47-042109d52aba,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Inglés Avanzado II,Rafael Siverio
+,38441484-884a-4afc-a9cf-4002934beaad,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,71989267-3c66-4ed8-8dc8-2925d6854b80,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,697647be-b501-42ea-abe4-033c2ff85e2a,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,9f676413-0b7c-42e8-a018-7ac1fa878304,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,8dfd660f-e727-4f0c-9576-d60e332b1d34,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,5a452754-355d-4375-af2f-9443913b099f,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,23f97298-804c-4402-a4b7-76848fc6c034,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,5b917e39-15dc-4a5f-9b9b-b17560eeb73f,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,0809f2a5-a0a3-435b-a9f2-40e8fd31a953,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,186dca6a-ade4-48bd-a37f-945a312c48e5,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,Terapia Visual Infanto Juvenil Deportiva,Rafael Siverio
+,516ff4d5-4eac-47c1-bab8-0b1c020c0f17,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Rafael Siverio
+,47071818-01b7-428f-8ceb-367079cbe0ac,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Rafael Siverio
+,5e3e1b3f-fd95-4803-b622-0462ce134a92,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Rafael Siverio
+,6ae1b32d-ef93-4f8c-8b96-6fd8ea57c7c6,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Rafael Siverio
+,603232b2-fa65-41c0-9ebd-ad16122ea8d8,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Rafael Siverio
+,65792d50-ee7d-4eed-aa40-86a4f398f65b,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Rafael Siverio
+,15077b2f-e865-4581-94fe-278e54ce69f7,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Rafael Siverio
+,a615cbb4-6cce-47df-8fbe-9ee68114d9da,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Rafael Siverio
+,9f29f308-04ce-4084-9455-5a94fc598be8,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Rafael Siverio
+,18ebe9c4-361c-41eb-9d10-cceb1e3a2368,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Rafael Siverio
+,9c6c9b4d-3304-4acf-8293-a4b41f708e00,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Rafael Siverio
+,facb446c-8867-480f-87dd-b5b640bf8eb5,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Rafael Siverio
+,ea8ba20b-84aa-496d-8f59-c988883f6b32,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Rafael Siverio
+,aa0fecd4-b959-4f87-9c76-45e2e02f08c8,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Rafael Siverio
+,d4a26bc9-cab7-404c-ae44-a42b9647f023,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Rafael Siverio
+,b88ae8c3-da5b-4d43-9656-7e4d2b1747c0,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Rafael Siverio
+,3b347e85-9a47-4341-a1e6-abbf1bb9b2e7,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Rafael Siverio
+,9372a5fd-6b93-4cba-b927-42d489bfbb77,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Rafael Siverio
+,1ea7a566-efe1-4180-a190-461af1e4b310,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Rafael Siverio
+,d85b4bf0-b765-41f6-8386-e3109aa49768,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Rafael Siverio
+,abae2711-866a-414d-bef6-0364c7dd13d9,Asignatura 1,S0,S0,,46280,3,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,477bd925-e875-4652-9243-bfbe98098fb4,Asignatura 1,S1-S2,S1,S2,46290,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,0e7c61dc-5ac3-4ed2-8735-800f00a5fd8e,Asignatura 1,S3-S4,S3,S4,46300,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,f315c0a1-5703-4fe6-bbbf-a64c10d9578d,Asignatura 1,S5-S6,S5,S6,46310,7,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,9abb33ac-bdd6-4c1b-9efa-3f36e1e44e94,Asignatura 1,S7-S8,S7,S8,46320,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,580193dd-7d7d-4ba0-98c8-7cfa79876694,Asignatura 1,S9-S10,S9,S10,46331,7,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,dc7369ea-95c5-4891-9fa6-299100c03eca,Asignatura 1,S11-S12,S11,S12,46341,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,9d3a9dcb-aeef-43c0-84e3-9eb118b8e5b9,Asignatura 1,S13-S14,S13,S14,46351,8,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,69c33309-61d6-4a2d-aa41-e6493bb2ea6e,Asignatura 1,S15-S16,S15,S16,46361,6,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,86e513b1-1317-423d-b55f-9df6168d0f9c,Asignatura 1,S17-S18,S17,S18,46371,6,0,0,En producción,0,Dirección de Organizaciones y Equipos,Yazim Meza
+,08472fb2-7240-45ca-ac30-e688071a99ca,Asignatura 2,S0,S0,,46280,3,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,179d3627-28b0-4a70-8e6b-2d5092dda5b8,Asignatura 2,S1-S2,S1,S2,46290,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,43582d7c-a2eb-47bf-b7f2-5f324e6b280f,Asignatura 2,S3-S4,S3,S4,46300,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,8219eb6f-fc3f-4264-bfae-7e02f5559c5a,Asignatura 2,S5-S6,S5,S6,46310,7,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,bcec5188-852f-4e6d-a6bd-84e8ae478190,Asignatura 2,S7-S8,S7,S8,46320,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,8cf872e7-6efc-4d0c-b293-98182aba02b2,Asignatura 2,S9-S10,S9,S10,46331,7,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,8acda976-3d66-40ff-89eb-f231c54d391a,Asignatura 2,S11-S12,S11,S12,46341,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,7709f919-cb0e-494f-8d33-e6bc0fb1918d,Asignatura 2,S13-S14,S13,S14,46351,8,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,a3769d0f-8b10-4a79-b8e9-093cd03fd3e5,Asignatura 2,S15-S16,S15,S16,46361,6,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,99be8d35-4b2f-4843-b001-49d6da353ec0,Asignatura 2,S17-S18,S17,S18,46371,6,0,0,En producción,0,Economía para la Dirección,Yazim Meza
+,6c9cb16f-d349-4f6d-86b3-3d54e9b539c2,Asignatura 3,S0,S0,,46280,3,0,0,En producción,0,,Yazim Meza
+,add125da-0a5c-4be3-9d33-fe2717ad1837,Asignatura 3,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Yazim Meza
+,bfac1760-a5ac-4661-990c-1a92f7d58850,Asignatura 3,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Yazim Meza
+,0585bc71-9155-4e6d-990d-b19a27537228,Asignatura 3,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Yazim Meza
+,f202a70a-3126-4563-8a8e-9dc663a35b00,Asignatura 3,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Yazim Meza
+,72f5f202-7495-4b0e-81a9-ffe16475dd18,Asignatura 3,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Yazim Meza
+,aab46b8a-0b1a-4f03-aad1-5282142278ee,Asignatura 3,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Yazim Meza
+,f156c4e9-17dc-46cc-a8cd-dc640dfd3fcb,Asignatura 3,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Yazim Meza
+,ce00d6ae-df07-4014-a54f-ae5464858590,Asignatura 3,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Yazim Meza
+,09dab1b2-0e75-48cc-964e-2cfe97120ebc,Asignatura 3,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Yazim Meza
+,372c632e-83ed-4298-944a-4f3bb61b4624,Asignatura 4,S0,S0,,46280,3,0,0,En producción,0,,Yazim Meza
+,9bceb7ab-c508-4e82-b9fa-508f076904f0,Asignatura 4,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Yazim Meza
+,a119f0c2-f897-4120-b567-e734d819aa40,Asignatura 4,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Yazim Meza
+,108252ab-6ff6-4c4e-9b3b-877a6da67301,Asignatura 4,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Yazim Meza
+,fdf96c6a-5f4b-4e0b-b3ab-3ccc433c8a1e,Asignatura 4,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Yazim Meza
+,a4a7fb4a-bc97-4420-a12b-bfab181cfc2a,Asignatura 4,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Yazim Meza
+,7c25f786-8d96-4e15-9d3b-36d30d1daa52,Asignatura 4,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Yazim Meza
+,0f5df4aa-d514-4081-802d-5b984bcbc3d9,Asignatura 4,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Yazim Meza
+,a21a31c4-439a-4838-9694-fd5434dada53,Asignatura 4,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Yazim Meza
+,0657501c-e674-47af-85db-58a8e4e9875d,Asignatura 4,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Yazim Meza
+,42d2e06e-deb0-4f9f-b20c-9c1052a57d6c,Asignatura 5,S0,S0,,46280,3,0,0,En producción,0,,Yazim Meza
+,8e5caceb-a052-4927-8a0f-452d993973d5,Asignatura 5,S1-S2,S1,S2,46290,8,0,0,En producción,0,,Yazim Meza
+,d7d649be-1dcf-4f7d-b91d-56ef2eb3c17b,Asignatura 5,S3-S4,S3,S4,46300,8,0,0,En producción,0,,Yazim Meza
+,62375bdd-9289-4752-bd46-0f64444bf70d,Asignatura 5,S5-S6,S5,S6,46310,7,0,0,En producción,0,,Yazim Meza
+,6d8c1a06-6cfa-4396-9d00-09bd962062f5,Asignatura 5,S7-S8,S7,S8,46320,8,0,0,En producción,0,,Yazim Meza
+,a730e249-0337-48e1-b33b-163ba1dcb65b,Asignatura 5,S9-S10,S9,S10,46331,7,0,0,En producción,0,,Yazim Meza
+,e8dcee1d-1e9b-4279-a4d5-be7afa83b35a,Asignatura 5,S11-S12,S11,S12,46341,8,0,0,En producción,0,,Yazim Meza
+,051e1dc7-3b01-4fb4-abb2-6d28ca1f7184,Asignatura 5,S13-S14,S13,S14,46351,8,0,0,En producción,0,,Yazim Meza
+,32cf7340-033c-47ac-8da6-9566e4e51733,Asignatura 5,S15-S16,S15,S16,46361,6,0,0,En producción,0,,Yazim Meza
+,24f613be-8505-4732-9e13-0a58f42fc323,Asignatura 5,S17-S18,S17,S18,46371,6,0,0,En producción,0,,Yazim Meza
