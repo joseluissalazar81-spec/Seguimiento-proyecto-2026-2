@@ -4629,6 +4629,7 @@ const GANTT_HITOS = [
 // Sin avance parcial; el bloque que vence hoy cuenta desde mañana. Fechas de _Listas!J:K.
 // Para hoy el panel usa el valor del CSV; esta función solo dibuja la curva del gráfico.
 const PLAZOS_PREGRADO  = [[2026,9,1],[2026,8,15],[2026,8,25],[2026,9,5],[2026,9,15],[2026,9,25],[2026,10,5],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
+const VENTANA_BLOQUE_DIAS = 10; // cada bloque de hitos dura 10 días
 const PLAZOS_POSTGRADO = [[2026,10,15],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
 function esperadoAsig(d, fecha, hitos){
   if(d && !tieneDocente(d)) return 0;
@@ -5338,10 +5339,21 @@ function ftkPlanifIcon(p){
   if(s>=5)      return '★';
   return '—';
 }
-function ftkHitosDots(hitos){
-  return Object.entries(hitos||{}).slice(0,10).map(([k,v])=>{
-    const cls=hitoCuadroClase(v)||'nd';
-    return `<div class="ftk-dot ${cls}" title="${k}: ${v||'—'}"></div>`;
+// Semáforo por bloque de 10 días contra su fecha límite (fechas de _Listas!J:K de Reuniones):
+// verde = Terminado · ámbar = bloque en curso (dentro de sus 10 días) sin terminar ·
+// rojo = plazo vencido sin terminar · neutro = bloque futuro · gris = No aplica.
+function ftkHitosDots(hitos, d){
+  const hoy=new Date(); hoy.setHours(0,0,0,0);
+  const plazos=(d&&d.nivel==='Postgrado'?PLAZOS_POSTGRADO:PLAZOS_PREGRADO).slice(1); // sin planificación
+  return HITO_META.map((h,i)=>{
+    const v=((hitos||{})[h.key]||'').trim(), f=plazos[i];
+    const hecho=hitoCuadroClase(v)==='val';
+    let cls='nd', txt='próximo';
+    if(v==='No aplica'||!f){ cls='nap'; txt='no aplica'; }
+    else if(hoy>f){ cls=hecho?'val':'nin'; txt=hecho?'terminado':'vencido sin terminar'; }
+    else if((f-hoy)/86400000 < VENTANA_BLOQUE_DIAS){ cls=hecho?'val':'env'; txt=hecho?'terminado':'en curso'; }
+    const fd=f?f.toLocaleDateString('es-CL',{day:'numeric',month:'numeric'}):'';
+    return `<div class="ftk-dot ${cls}" title="${h.label} (${fd}): ${v||'—'} · ${txt}"></div>`;
   }).join('');
 }
 
@@ -5370,7 +5382,7 @@ function facTickerRowHtml(d, today, deadline){
       <span class="ftk-planif ${isAt?'ftk-p-at':ftkPlanifClass(d.planif)}">${isAt?'⚠':''}${isAt?'':ftkPlanifIcon(d.planif)+' '}${isAt?'Atrasada':planifDisplay(d)}</span>
     </td>
     <td>
-      <div class="ftk-hitos">${ftkHitosDots(hitos)}</div>
+      <div class="ftk-hitos">${ftkHitosDots(hitos, d)}</div>
     </td>
     <td style="min-width:110px">
       <div class="ftk-av-wrap">
