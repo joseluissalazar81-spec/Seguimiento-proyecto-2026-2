@@ -4452,8 +4452,10 @@ function renderExecutiveHero(){
   // ── Semana actual del proyecto (basada en GANTT_HITOS deadlines) ──
   let currentWeek = 0;
   let currentBlockIdx = -1;
+  // Un bloque se da por cerrado desde el día siguiente a su fecha límite
+  // (igual que "% Esperado a hoy" de Reuniones: el que vence hoy cuenta mañana).
   GANTT_HITOS.forEach((h,i)=>{
-    if(today >= h.fecha){
+    if(today > h.fecha){
       currentWeek = h.weeksDone;
       currentBlockIdx = i;
     }
