@@ -1,4 +1,4 @@
-const CACHE = 'ust-elearning-v5';
+const CACHE = 'ust-elearning-v6'; // v6: borra las copias de CSV acumuladas por v5
 const STATIC = ['/icons/icon-192.png', '/icons/icon-512.png'];
 
 self.addEventListener('install', e => {
@@ -21,6 +21,13 @@ self.addEventListener('fetch', e => {
   // Google APIs: always network
   if (url.hostname.includes('google') || url.hostname.includes('googleapis')) {
     e.respondWith(fetch(e.request).catch(() => new Response('', {status: 503})));
+    return;
+  }
+
+  // Datos (CSV/JSON de GitHub, o cualquier pedido con ?nocache): siempre red, nunca se guardan.
+  // Antes cada descarga con ?nocache=<hora> quedaba guardada y el caché crecía sin límite.
+  if (url.hostname === 'raw.githubusercontent.com' || url.searchParams.has('nocache')) {
+    e.respondWith(fetch(e.request));
     return;
   }
 
