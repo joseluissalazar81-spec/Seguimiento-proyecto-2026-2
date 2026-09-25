@@ -2645,7 +2645,7 @@ function buildDataFromCSV(rows){
     // (fórmula ponderada 0.5/1.0 con denominador dinámico que excluye "No aplica"/"—",
     // mantenida a mano por el JP). El JS ya no la recalcula por su cuenta con nValC/denom,
     // para que nunca diverja de lo que el JP ve en su propio Excel.
-    const pct = Math.round(parsePct(get(r,iAvance)) * 100);
+    const pct = pctONull(get(r,iAvance));
     data.push({facultad,nivel,asignatura:asig,docente:get(r,iDoc)||'',fmt:get(r,iFmt)||'',
       jp:get(r,iJP)||'',di:get(r,iDI)||'',dg:get(r,iDG)||'—',implementador:get(r,iImpl)||'',
       reunion:get(r,iReunion)||'',planif:get(r,iPlanif)||'',estadoGlobal:get(r,iEstado)||'',obs:get(r,iObs)||'',
@@ -2654,7 +2654,7 @@ function buildDataFromCSV(rows){
     const hitosObj={};
     hitoKeys.forEach((k,n)=>{ hitosObj[k] = (isPostgrado && n>=4) ? 'No aplica' : mapHito(hitoVals[n]); });
     // % esperado: columna "% Esperado a hoy" de Reuniones (misma fuente que el % real).
-    const esperado = iEsperado>=0 ? Math.round(parsePct(get(r,iEsperado))*100) : null;
+    const esperado = iEsperado>=0 ? pctONull(get(r,iEsperado)) : null;
     avance[asig]={avance:pct,esperado,obs:get(r,iObs)||'',hitos:hitosObj};
 
     if(hasEstandar){
@@ -2702,6 +2702,13 @@ function parsePct(v){
   const t = String(v||'').trim();
   return t.endsWith('%') ? parseFloat(t)/100 : (parseFloat(t) || 0);
 }
+// "revisar" (todos los hitos en No aplica) o una celda con error → sin dato, no 0%.
+function pctONull(v){
+  const t=String(v||'').trim();
+  if(!/^-?[\d.,]+%?$/.test(t)) return null;
+  return Math.round(parsePct(t.replace(',','.'))*100);
+}
+function tieneDocente(d){ const t=(d.docente||'').trim(); return !!t && !/^sin docente$/i.test(t); }
 function mapHito(v){
   if(!v||v==='—'||v==='')return '—';
   if(/cargada en aula/i.test(v))return 'Cargada en aula';
@@ -4411,7 +4418,7 @@ function renderExecutiveHero(){
   //    atraso real, a diferencia de una asignatura que aún no tiene a quién asignarle). ──
   let sumAv=0, countAv=0, countCero=0, countSinDocente=0, countSinDatos=0;
   src.forEach(d=>{
-    if(!(d.docente||'').trim()){ countSinDocente++; return; }
+    if(!tieneDocente(d)){ countSinDocente++; return; }
     const av=(avSrc[d.asignatura]||{}).avance;
     if(av===undefined || av===null){ countSinDatos++; return; }
     sumAv+=av; countAv++;
@@ -4602,13 +4609,18 @@ const GANTT_HITOS = [
 // Para hoy se usa el valor del CSV; esta función solo dibuja la curva del gráfico.
 const PLAZOS_PREGRADO  = [[2026,8,15],[2026,8,15],[2026,8,25],[2026,9,5],[2026,9,15],[2026,9,25],[2026,10,5],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
 const PLAZOS_POSTGRADO = [[2026,10,15],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
+const VENTANA_ESPERADO_DIAS = 10; // _Listas!J14
 function esperadoAsig(d, fecha, hitos){
-  if(d && d.reunion && d.reunion!=='Realizada') return 0;
+  if(d && !tieneDocente(d)) return 0;
   const plazos = (d && d.nivel==='Postgrado') ? PLAZOS_POSTGRADO : PLAZOS_PREGRADO;
-  // Igual que Reuniones: los ítems "No aplica" salen del denominador (índice 0 = planificación).
+  // Igual que Reuniones: los ítems "No aplica" salen del denominador (índice 0 = planificación)
+  // y cada ítem sube de 0 a 1 en los VENTANA_ESPERADO_DIAS días previos a su fecha límite.
   const estados = [d && d.planif, ...HITO_META.map(h=>(hitos||{})[h.key])];
-  const aplica = plazos.map((f,i)=>({f, ok: estados[i]!=='No aplica'})).filter(x=>x.ok);
-  return aplica.length ? Math.round(aplica.filter(x=>x.f<=fecha).length/aplica.length*100) : 0;
+  const aplica = plazos.filter((f,i)=>estados[i]!=='No aplica');
+  if(!aplica.length) return null;
+  const hoy0 = new Date(fecha); hoy0.setHours(0,0,0,0);
+  const pts = aplica.reduce((s,f)=>s+Math.min(1,Math.max(0,((hoy0-f)/86400000+VENTANA_ESPERADO_DIAS)/VENTANA_ESPERADO_DIAS)),0);
+  return Math.round(pts/aplica.length*100);
 }
 function esperadoHoy(d, avSrc, fecha){
   const e=(avSrc[d.asignatura]||{}).esperado;
@@ -4616,9 +4628,9 @@ function esperadoHoy(d, avSrc, fecha){
 }
 // Conjunto que se promedia (igual para real y esperado): con docente asignado y con dato de avance.
 function asigsConAvance(src, avSrc){
-  return src.filter(d=>(d.docente||'').trim() && (avSrc[d.asignatura]||{}).avance!=null);
+  return src.filter(d=>tieneDocente(d) && (avSrc[d.asignatura]||{}).avance!=null);
 }
-function promedio(arr){ return arr.length ? Math.round(arr.reduce((a,b)=>a+b,0)/arr.length) : 0; }
+function promedio(arr){ arr=arr.filter(x=>x!=null); return arr.length ? Math.round(arr.reduce((a,b)=>a+b,0)/arr.length) : 0; }
 
 let ovBarInstance = null, ovDonutInstance = null, ovStateDonutInstance = null;
 let overviewVisible = false;
