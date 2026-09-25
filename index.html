@@ -2509,6 +2509,25 @@ async function loadRecursosData(){
     const DI_ASIGNATURA_ORDER = buildDiAsignaturaOrder();
     const ASIG_BY_NAME = {};
     (DATA_ALL||[]).forEach(d=>{ if(d.asignatura) ASIG_BY_NAME[normDiName(d.asignatura)] = d.asignatura; });
+    // "Asignatura Real" del Seguimiento puede diferir un poco del nombre en Reuniones
+    // ("Estadísticas para la Ingeniería" vs "Estadística para Ingeniería"): se compara por
+    // palabras clave (sin tildes, plurales ni conectores), primero entre las del mismo DI.
+    const STOP = new Set(['de','del','la','las','el','los','y','en','para','a','al','e','o','con','un','una']);
+    const claves = t => normDiName(t).replace(/[^a-z0-9 ]/g,' ').split(' ')
+      .filter(w=>w && !STOP.has(w)).map(w=>w.length>4 ? w.replace(/(es|s)$/,'') : w);
+    const similitud = (a,b) => { const A=new Set(claves(a)), B=new Set(claves(b));
+      if(!A.size||!B.size) return 0; let i=0; A.forEach(w=>{ if(B.has(w)) i++; });
+      return i/Math.min(A.size,B.size); };
+    const matchReal = (real, di) => {
+      const exacto = ASIG_BY_NAME[normDiName(real)]; if(exacto) return exacto;
+      const delDi = (DATA_ALL||[]).filter(d=>normDiName(d.di)===normDiName(di));
+      for(const pool of [delDi, DATA_ALL||[]]){
+        let best=null, bs=0;
+        pool.forEach(d=>{ const sc=similitud(real,d.asignatura); if(sc>bs){bs=sc;best=d.asignatura;} });
+        if(bs>=0.75) return best;
+      }
+      return null;
+    };
     const resp = await fetch(RECURSOS_URL + '?nocache=' + Date.now());
     if(!resp.ok) return;
     const rows = parseCSV(await resp.text()).slice(1);
@@ -2533,8 +2552,10 @@ async function loadRecursosData(){
       // Si el Excel del DI ya trae "Asignatura Real" (columna agregada al archivo), se usa
       // directo — es la fuente confiable. Si no, se cae al método anterior (posición + orden
       // de Track 1) hasta que se corrija ese archivo.
-      let asig = asigReal && ASIG_BY_NAME[normDiName(asigReal)];
-      if(!asig){
+      let asig = asigReal ? matchReal(asigReal, di) : null;
+      // Solo se adivina por posición si el Seguimiento NO trae "Asignatura Real";
+      // si la trae y no calza con ninguna asignatura de Reuniones, se omite (no se asigna mal).
+      if(!asig && !asigReal){
         const combinedIdx = (diOffset[di]||0) + posNum; // 1-based
         const lista = DI_ASIGNATURA_ORDER[normDiName(di)];
         asig = lista && lista[combinedIdx-1];
