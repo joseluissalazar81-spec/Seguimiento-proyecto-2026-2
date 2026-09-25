@@ -4602,23 +4602,19 @@ const GANTT_HITOS = [
 ];
 
 // ── % esperado: misma regla que la columna "% Esperado a hoy" de Reuniones_Proyecto ──
-// Cada ítem (planificación + hitos que aplican) cuenta 1 cuando su fecha límite ya pasó
-// (debería estar Terminado). Fechas de _Listas!J:K — postgrado corre 15/11–15/12.
-// Para hoy se usa el valor del CSV; esta función solo dibuja la curva del gráfico.
-const PLAZOS_PREGRADO  = [[2026,9,1],[2026,8,15],[2026,8,25],[2026,9,5],[2026,9,15],[2026,9,25],[2026,10,5],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
-const PLAZOS_POSTGRADO = [[2026,9,1],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
-const VENTANA_ESPERADO_DIAS = 10; // _Listas!J14
+// Esperado = bloques con fecha límite ya pasada ÷ bloques que aplican (11 − "No aplica").
+// Sin avance parcial; el bloque que vence hoy cuenta desde mañana. Fechas de _Listas!J:K.
+// Para hoy el panel usa el valor del CSV; esta función solo dibuja la curva del gráfico.
+const PLAZOS_PREGRADO  = [[2026,8,15],[2026,8,15],[2026,8,25],[2026,9,5],[2026,9,15],[2026,9,25],[2026,10,5],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
+const PLAZOS_POSTGRADO = [[2026,10,15],[2026,10,15],[2026,10,25],[2026,11,5],[2026,11,15]].map(f=>new Date(...f));
 function esperadoAsig(d, fecha, hitos){
   if(d && !tieneDocente(d)) return 0;
   const plazos = (d && d.nivel==='Postgrado') ? PLAZOS_POSTGRADO : PLAZOS_PREGRADO;
-  // Igual que Reuniones: los ítems "No aplica" salen del denominador (índice 0 = planificación)
-  // y cada ítem sube de 0 a 1 en los VENTANA_ESPERADO_DIAS días previos a su fecha límite.
-  const estados = [d && d.planif, ...HITO_META.map(h=>(hitos||{})[h.key])];
+  const estados = [d && d.planif, ...HITO_META.map(h=>(hitos||{})[h.key])]; // índice 0 = planificación
   const aplica = plazos.filter((f,i)=>estados[i]!=='No aplica');
   if(!aplica.length) return null;
   const hoy0 = new Date(fecha); hoy0.setHours(0,0,0,0);
-  const pts = aplica.reduce((s,f)=>s+Math.min(1,Math.max(0,((hoy0-f)/86400000+VENTANA_ESPERADO_DIAS)/VENTANA_ESPERADO_DIAS)),0);
-  return Math.round(pts/aplica.length*100);
+  return Math.round(aplica.filter(f=>f<hoy0).length/aplica.length*100);
 }
 function esperadoHoy(d, avSrc, fecha){
   const e=(avSrc[d.asignatura]||{}).esperado;
