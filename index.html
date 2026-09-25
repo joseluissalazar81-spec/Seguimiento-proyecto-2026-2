@@ -5295,15 +5295,24 @@ function fvPlanifIcon(p, d){
   if(p==='No aplica')                        return '—';
   return '○';
 }
+// Clasifica el estado de un hito de Reuniones (estados antiguos y nuevos) para los cuadritos:
+// val = terminado · env = en revisión (QA, validación docente, enviada) · con = en producción
+// nin = no inicia · nap = no aplica · '' = sin comenzar / sin dato (neutro)
+function hitoCuadroClase(v){
+  v=(v||'').trim();
+  if(!v||v==='—') return '';
+  if(/^(Validada|Terminado|Realizada|Cargada en aula)$/i.test(v)) return 'val';
+  if(/^No aplica$/i.test(v)) return 'nap';
+  if(/^No inicia$/i.test(v)) return 'nin';
+  if(/^Sin comenzar$/i.test(v)) return ''; // hito futuro: neutro, no rojo
+  if(/^Enviada|validaci[oó]n docente|^QA$|DEL 2/i.test(v)) return 'env';
+  return 'con'; // En construcción, En producción DI/DM, En implementación IM, Ajustes…
+}
 function fvHitosDots(hitos){
   const keys=['s0','s1s2','s3s4','s5s6','s7s8','s9s10','s11s12','s13s14','s15s16','s17s18'];
   return keys.map(k=>{
     const v=hitos[k]||'';
-    let cls='nin';
-    if(v==='Validada') cls='val';
-    else if(v==='Enviada'||v.startsWith('Enviada')) cls='env';
-    else if(v==='En construcción') cls='con';
-    else if(v==='No aplica') cls='nap';
+    const cls=hitoCuadroClase(v)||'nin';
     return `<div class="fv-dot ${cls}" title="${k}: ${v||'Sin iniciar'}"></div>`;
   }).join('');
 }
@@ -5331,12 +5340,7 @@ function ftkPlanifIcon(p){
 }
 function ftkHitosDots(hitos){
   return Object.entries(hitos||{}).slice(0,10).map(([k,v])=>{
-    let cls='nd';
-    if(v==='Validada'||v==='Realizada'||v==='Cargada en aula') cls='val';
-    else if(v==='Enviada') cls='env';
-    else if(v==='En construcción') cls='con';
-    else if(v==='No inicia') cls='nin';
-    else if(v==='No aplica') cls='nap';
+    const cls=hitoCuadroClase(v)||'nd';
     return `<div class="ftk-dot ${cls}" title="${k}: ${v||'—'}"></div>`;
   }).join('');
 }
