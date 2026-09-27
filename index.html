@@ -2342,17 +2342,13 @@ async function loadMoodleUrlsLive(){
   }catch(err){ console.warn('loadMoodleUrlsLive error:', err); }
 }
 function getMoodleUrl(asignatura, facultad){
-  // Prioridad: 1) URL cargada a mano en moodle-urls.csv (la más reciente),
-  // 2) URL que traiga recursos-2026-2.csv (si algún día se agrega esa columna),
-  // 3) tabla fija MOODLE_URLS (proceso anterior, solo como último recurso).
-  if(MOODLE_URLS_LIVE[asignatura]) return MOODLE_URLS_LIVE[asignatura];
-  const fromRecursos = RECURSOS_DATA[asignatura] && RECURSOS_DATA[asignatura].url;
-  if(fromRecursos) return fromRecursos;
-  const exact=MOODLE_URLS[asignatura+'|'+facultad]||MOODLE_URLS[asignatura];
-  if(exact)return exact;
-  const kF=(asignatura+'|'+(facultad||'')).toLowerCase(), k2=asignatura.toLowerCase();
-  for(const k of Object.keys(MOODLE_URLS)){const kl=k.toLowerCase();if(kl===kF||kl===k2)return MOODLE_URLS[k];}
-  return null;
+  // Única fuente: columna "Enlace de Aula" de Reuniones_Proyecto (CSV seguimiento-2026-2).
+  // Las fuentes anteriores (moodle-urls.csv y la tabla fija MOODLE_URLS) tenían enlaces
+  // malos; si Reuniones no trae enlace, no se muestra el botón en vez de uno equivocado.
+  const d=(DATA_ALL&&DATA_ALL.length?DATA_ALL:DATA).find(x=>x.asignatura===asignatura&&(!facultad||x.facultad===facultad))
+        ||(DATA_ALL&&DATA_ALL.length?DATA_ALL:DATA).find(x=>x.asignatura===asignatura);
+  const u=d&&d.enlaceAula;
+  return u&&/^https?:\/\//i.test(u)?u:null;
 }
 
 // ── Programas de asignatura (PDFs) ───────────────────────────────────────────
@@ -2621,7 +2617,7 @@ function buildDataFromCSV(rows){
     iReunion=col('Reunión docente'), iPlanif=col('Planificación didáctica'), iEstado=col('Estado global'),
     iObs=col('Observaciones'), iCorreo=col('Correo docente'), iFechaSR=col('Fecha Sin Respuesta'),
     iEnvDEL=col('Fecha envío DEL'), iDEL2=col('Fecha DEL 2° Inst.','Fecha DEL 2 Inst.'), iAvance=col('% Avance'), iEsperado=col('% Esperado a hoy'), iReunionDoc=col('Reunión docente'),
-    iLinkSeg=col('Link Seguimiento');
+    iLinkSeg=col('Link Seguimiento'), iAula=col('Enlace de Aula');
 
   // Columnas de estandarización (horas/recursos) — pueden no existir aún en el CSV vigente;
   // en ese caso quedan en -1 y esta sección simplemente no se muestra.
@@ -2671,7 +2667,7 @@ function buildDataFromCSV(rows){
       jp:get(r,iJP)||'',di:get(r,iDI)||'',dg:get(r,iDG)||'—',implementador:get(r,iImpl)||'',
       reunion:get(r,iReunion)||'',planif:get(r,iPlanif)||'',estadoGlobal:get(r,iEstado)||'',obs:get(r,iObs)||'',
       correo:get(r,iCorreo)||'',fechaSR:get(r,iFechaSR)||'',envDELfecha:get(r,iEnvDEL)||'',del2fecha:get(r,iDEL2)||'',
-      linkSeguimiento:(get(r,iLinkSeg)||'').trim()});
+      linkSeguimiento:(get(r,iLinkSeg)||'').trim(), enlaceAula:(get(r,iAula)||'').trim()});
     const hitosObj={};
     hitoKeys.forEach((k,n)=>{ hitosObj[k] = (isPostgrado && n>=4) ? 'No aplica' : mapHito(hitoVals[n]); });
     // % esperado: columna "% Esperado a hoy" de Reuniones (misma fuente que el % real).
