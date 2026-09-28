@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script>if(typeof Chart==='undefined'){document.write('<scr'+'ipt src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"><\/scr'+'ipt>');}</script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -3573,29 +3574,50 @@ document.getElementById('overlay').addEventListener('click',closePanel);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closePanel()});
 
 // ─── EXPORT ───
-function exportToExcel(){
-  const rows=filtered(); // corregido: era filterRows() (función inexistente)
-  const data=rows.map(d=>{
-    const av=AVANCE[d.asignatura]||{};
-    return {
-      'Facultad':d.facultad,'Asignatura':d.asignatura,'Docente':d.docente,
-      'JP':d.jp,'DI':d.di,'DG':d.dg,'Implementador':d.implementador,
-      'Reunión':d.reunion,'Planificación':d.planif,
-      'Fecha envío DEL':d.envDELfecha||'','Fecha DEL 2° Inst.':d.del2fecha||'',
-      'Avance %':av.avance||0,
-      'S0':av.hitos&&av.hitos.s0||'','S1-S2':av.hitos&&av.hitos.s1s2||'',
-      'S3-S4':av.hitos&&av.hitos.s3s4||'','S5-S6':av.hitos&&av.hitos.s5s6||'',
-      'S7-S8':av.hitos&&av.hitos.s7s8||'','S9-S10':av.hitos&&av.hitos.s9s10||'',
-      'S11-S12':av.hitos&&av.hitos.s11s12||'','S13-S14':av.hitos&&av.hitos.s13s14||'',
-      'S15-S16':av.hitos&&av.hitos.s15s16||'','S17-S18':av.hitos&&av.hitos.s17s18||'',
-      'Observaciones':av.obs||d.obs||''
-    };
-  });
+// ── Exportación a Excel: una fila por aula ─────────────────────────────────────
+// Fuente de aulas clonadas: hoja "Aulas" de Reuniones exportada a data/aulas-2026-2.csv
+// (Asignatura, Enlace, Programa, Escuela, Banner, Recurso). Si aún no existe, se exporta
+// una fila por asignatura con su aula maestra ("Enlace de Aula" de Reuniones).
+const AULAS_URL = 'https://raw.githubusercontent.com/joseluissalazar81-spec/seguimiento-proyecto-2026-2/data/data/aulas-2026-2.csv';
+async function loadAulasClonadas(){
+  try{
+    const r=await fetch(AULAS_URL+'?nocache='+Date.now()); if(!r.ok) return [];
+    const rows=parseCSV(await r.text()); const h=(rows[0]||[]).map(normHdr);
+    const c=(...n)=>{for(const x of n){const i=h.findIndex(k=>k.startsWith(normHdr(x))); if(i>=0) return i;} return -1;};
+    const iA=c('Asignatura'), iE=c('Enlace'), iP=c('Programa'), iS=c('Escuela'), iB=c('Banner'), iR=c('Recurso');
+    return rows.slice(1).filter(r=>(r[iA]||'').trim()).map(r=>({asignatura:r[iA].trim(), enlace:(r[iE]||'').trim(),
+      programa:(r[iP]||'').trim(), escuela:(r[iS]||'').trim(), banner:(r[iB]||'').trim(), recurso:(r[iR]||'').trim()}));
+  }catch(e){ return []; }
+}
+function idAula(url){ const m=/[?&]id=(\d+)/.exec(url||''); return m?Number(m[1]):''; }
+function statusProduccion(av){ if(av==null) return ''; return av>=100?'Finalizada':av>0?'En Producción':'Pendiente'; }
+// Bloque vigente (el que vence hoy o el próximo) y su estado en Reuniones, ej. "S1–S2 · QA".
+function estadoAula(d){
+  const av=AVANCE[d.asignatura]||{}; if(av.avance>=100) return 'Finalizada';
+  const hoy=new Date(); hoy.setHours(0,0,0,0);
+  const plazos=(d.nivel==='Postgrado'?PLAZOS_POSTGRADO:PLAZOS_PREGRADO).slice(1);
+  const i=HITO_META.findIndex((h,k)=>plazos[k]&&plazos[k]>=hoy&&(av.hitos||{})[h.key]!=='No aplica');
+  if(i<0) return '';
+  return HITO_META[i].label+' · '+(((av.hitos||{})[HITO_META[i].key])||'—');
+}
+async function exportToExcel(){
+  if(typeof XLSX==='undefined'){ alert('No se pudo cargar el generador de Excel. Recarga la página e intenta de nuevo.'); return; }
+  const rows=filtered();
+  const clones=await loadAulasClonadas();
+  const porAsig={}; clones.forEach(x=>{(porAsig[x.asignatura]=porAsig[x.asignatura]||[]).push(x);});
+  const fila=(d,x)=>{ const av=(AVANCE[d.asignatura]||{}).avance;
+    return {'ID_Aula':idAula(x?x.enlace:d.enlaceAula),'Asignatura':d.asignatura,'Programa':x?x.programa:'',
+      'Escuela':x?x.escuela:'','Banner':x?x.banner:'','Status producción':statusProduccion(av),
+      'Estado del aula':estadoAula(d),'Recurso':x?x.recurso:'','% avance':av==null?'':av/100}; };
+  const data=[]; rows.forEach(d=>{ const cl=porAsig[d.asignatura]; if(cl&&cl.length) cl.forEach(x=>data.push(fila(d,x))); else data.push(fila(d,null)); });
   const ws=XLSX.utils.json_to_sheet(data);
-  ws['!cols']=[{wch:18},{wch:38},{wch:24},{wch:12},{wch:12},{wch:12},{wch:16},{wch:14},{wch:22},{wch:14},{wch:14},{wch:9},{wch:14},{wch:10},{wch:10},{wch:10},{wch:10},{wch:10},{wch:10},{wch:10},{wch:10},{wch:10},{wch:40}];
+  ws['!cols']=[{wch:10},{wch:44},{wch:28},{wch:24},{wch:14},{wch:17},{wch:30},{wch:14},{wch:10}];
+  const rng=XLSX.utils.decode_range(ws['!ref']);
+  for(let R=1;R<=rng.e.r;R++){ const cell=ws[XLSX.utils.encode_cell({r:R,c:8})]; if(cell&&typeof cell.v==='number') cell.z='0%'; }
+  ws['!autofilter']={ref:ws['!ref']};
   const wb=XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb,ws,'Seguimiento');
-  XLSX.writeFile(wb,'Seguimiento_UST_'+new Date().toISOString().slice(0,10)+'.xlsx');
+  XLSX.utils.book_append_sheet(wb,ws,'Aulas');
+  XLSX.writeFile(wb,'Aulas_UST_2026-2_'+new Date().toISOString().slice(0,10)+'.xlsx');
 }
 document.getElementById('export-btn').addEventListener('click',exportToExcel);
 
