@@ -1952,7 +1952,7 @@
           <div class="ov-legend" id="ov-legend"></div>
         </div>
         <div class="ov-chart-card" style="grid-column:span 2">
-          <div class="ov-chart-title">Avance por facultad — hitos S0 validados</div>
+          <div class="ov-chart-title">Avance por facultad — % avance promedio</div>
           <canvas id="ovBarChart" height="160"></canvas>
         </div>
         <div class="ov-chart-card" style="grid-column:1/-1">
@@ -4692,34 +4692,32 @@ function renderOverview(){
   // Indicar si se usa fallback (build forzado 2026-08-12d)
 
   // ── Conteos generales ──
+  // Mismas cifras que el resto del panel: % Avance y % Esperado de Reuniones_Proyecto,
+  // promediados sobre las asignaturas con docente asignado.
   const total = src.length;
   let validadas=0, enProd=0, sinIniciar=0;
   src.forEach(d=>{
-    const av = avSrc[d.asignatura]||{};
-    const hitosVals = Object.values(av.hitos||{});
-    const todosV = hitosVals.length>0 && hitosVals.every(h=>h==='Validada'||h==='No aplica'||h==='—'||h==='');
-    const alguno  = hitosVals.some(h=>h==='En construcción'||h==='Enviada'||h.startsWith('Enviada'));
-    if(av.avance>=100||todosV) validadas++;
-    else if(alguno||av.avance>0) enProd++;
-    else sinIniciar++;
+    const a=(avSrc[d.asignatura]||{}).avance;
+    if(a>=100) validadas++; else if(a>0) enProd++; else sinIniciar++;
   });
-  const pctAvance = total>0 ? Math.round((validadas+(enProd*.5))/total*100) : 0;
-  const semAv = semaforo(pctAvance);
+  const base = asigsConAvance(src, avSrc);
+  const pctAvance = promedio(base.map(d=>avSrc[d.asignatura].avance));
+  const pctTiempoEsp = promedio(base.map(d=>esperadoHoy(d, avSrc, today)));
 
-  // ── Comparar avance con tiempo ──
-  let estado = 'A tiempo';
-  let semEstado = 'verde';
-  const diff = pctAvance - pctTiempo;
-  if(diff < -20){estado='Atrasado'; semEstado='rojo';}
-  else if(diff < -5){estado='En riesgo'; semEstado='amarillo';}
-  else if(diff >= 0){estado='Adelantado'; semEstado='verde';}
+  // ── Comparar avance real con esperado (mismos umbrales que las facultades) ──
+  const diff = pctAvance - pctTiempoEsp;
+  let estado='Atrasado', semEstado='rojo';
+  if(diff >= 5){estado='Adelantado'; semEstado='verde';}
+  else if(diff >= -5){estado='A tiempo'; semEstado='verde';}
+  else if(diff >= -20){estado='En riesgo'; semEstado='amarillo';}
+  const semAv = semEstado;
 
   // ── Tarjetas métricas ──
   document.getElementById('ov-metrics').innerHTML = `
     <div class="ov-metric sem-${semEstado}">
       <div class="ov-m-label">Estado del proyecto</div>
       <div class="ov-m-val" style="color:var(--${semEstado==='verde'?'ve':semEstado==='amarillo'?'am':'ro'})">${estado}</div>
-      <div class="ov-m-sub">Avance ${pctAvance}% vs tiempo ${pctTiempo}%</div>
+      <div class="ov-m-sub">Avance ${pctAvance}% vs esperado ${pctTiempoEsp}%</div>
     </div>
     <div class="ov-metric sem-azul">
       <div class="ov-m-label">Días del proyecto</div>
@@ -4732,18 +4730,19 @@ function renderOverview(){
       <div class="ov-m-sub">${enProd} en producción · ${sinIniciar} sin iniciar</div>
     </div>
     <div class="ov-metric sem-${semAv}">
-      <div class="ov-m-label">Avance ponderado</div>
+      <div class="ov-m-label">Avance real</div>
       <div class="ov-m-val" style="color:var(--${semAv==='verde'?'ve':semAv==='amarillo'?'am':'ro'})">${pctAvance}%</div>
-      <div class="ov-m-sub">Según hitos y avance por asignatura</div>
-      <div class="ov-m-badge badge-${semAv}">${semAv==='verde'?'A tiempo':semAv==='amarillo'?'En riesgo':'Atrasado'}</div>
+      <div class="ov-m-sub">% Avance de Reuniones · ${base.length} con docente</div>
+      <div class="ov-m-badge badge-${semAv}">${estado}</div>
     </div>`;
 
   // ── Donut general ──
   document.getElementById('ov-pct-label').innerHTML =
     `<div class="ov-pct-big">${pctAvance}%</div><div class="ov-pct-label">avance</div>`;
-  const pendiente  = Math.max(0, 100 - pctAvance - Math.round(sinIniciar/total*100));
-  const sinInicPct = Math.round(sinIniciar/total*100);
-  const donutData  = [pctAvance, pendiente, sinInicPct];
+  // Donut: reparto de asignaturas (completadas / en producción / sin iniciar), suma 100%.
+  const pctOf = n => total ? Math.round(n/total*100) : 0;
+  const complPct = pctOf(validadas), sinInicPct = pctOf(sinIniciar), pendiente = Math.max(0, 100-complPct-sinInicPct);
+  const donutData  = [complPct, pendiente, sinInicPct];
   const donutColors= ['#A9D18C','#F2CB7D','#D6DADF'];
 
   if(ovDonutInstance){ovDonutInstance.destroy();}
@@ -4754,16 +4753,16 @@ function renderOverview(){
     options:{cutout:'68%',plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.raw}%`}}},animation:{duration:400}}
   });
   document.getElementById('ov-legend').innerHTML = [
-    {label:'Completado',color:donutColors[0],val:pctAvance+'%'},
-    {label:'En progreso',color:donutColors[1],val:pendiente+'%'},
-    {label:'Sin iniciar', color:donutColors[2],val:sinInicPct+'%'},
+    {label:'Completadas',color:donutColors[0],val:complPct+'% ('+validadas+')'},
+    {label:'En producción',color:donutColors[1],val:pendiente+'% ('+enProd+')'},
+    {label:'Sin iniciar', color:donutColors[2],val:sinInicPct+'% ('+sinIniciar+')'},
   ].map(l=>`<div class="ov-leg-item"><span class="ov-leg-dot" style="background:${l.color}"></span><span class="ov-leg-label">${l.label}</span><span class="ov-leg-val">${l.val}</span></div>`).join('');
 
   // ── Barra por facultad ──
   const facData = FAC_ORDER.filter(f=>src.some(d=>d.facultad===f)).map(fac=>{
     const items = src.filter(d=>d.facultad===fac);
-    const val   = items.filter(d=>{const av=avSrc[d.asignatura];return av&&av.hitos&&av.hitos.s0==='Validada'}).length;
-    return {label: FAC_ABBR[fac]||fac, val, total: items.length, pct: Math.round(val/items.length*100)};
+    const pct   = promedio(asigsConAvance(items, avSrc).map(d=>avSrc[d.asignatura].avance));
+    return {label: FAC_ABBR[fac]||fac, val: pct, total: items.length, pct};
   });
   const barColors = FAC_ORDER.filter(f=>src.some(d=>d.facultad===f)).map(f=>eduHubColorFor(f));
 
@@ -4789,7 +4788,7 @@ function renderOverview(){
       },
       plugins:{
         legend:{display:false},
-        tooltip:{callbacks:{label:ctx=>`${ctx.raw}% — ${facData[ctx.dataIndex].val}/${facData[ctx.dataIndex].total} asignaturas S0 validadas`}}
+        tooltip:{callbacks:{label:ctx=>`${ctx.raw}% avance promedio — ${facData[ctx.dataIndex].total} asignaturas`}}
       },
       animation:{duration:400}
     }
@@ -4850,15 +4849,10 @@ function renderGlobalSemaforo(){
   const totalDias  = Math.round((GANTT_END - GANTT_START) / 86400000);
   const diasTransc = Math.max(0,Math.round((today - GANTT_START)/86400000));
   const pctTiempo  = Math.min(100,Math.round(diasTransc/totalDias*100));
-  let validadas=0,enProd=0;
-  src.forEach(d=>{
-    const av=avSrc[d.asignatura]||{};
-    const hv=Object.values(av.hitos||{});
-    if(av.avance>=100||hv.every(h=>h==='Validada'||h==='No aplica'||h==='—'||!h)) validadas++;
-    else if(av.avance>0||hv.some(h=>h&&h!=='No aplica'&&h!=='—'&&h!=='No inicia')) enProd++;
-  });
-  const pct = src.length>0?Math.round((validadas+(enProd*.5))/src.length*100):0;
-  const diff = pct - pctTiempo;
+  // Mismas cifras que el resto del panel: % Avance vs % Esperado de Reuniones.
+  const base = asigsConAvance(src, avSrc);
+  const pct = promedio(base.map(d=>avSrc[d.asignatura].avance));
+  const diff = pct - promedio(base.map(d=>esperadoHoy(d, avSrc, today)));
   let sem='verde', label='A tiempo';
   if(diff < -20){sem='rojo';label='Atrasado';}
   else if(diff < -5){sem='amarillo';label='En riesgo';}
