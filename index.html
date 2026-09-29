@@ -2342,6 +2342,34 @@ async function loadMoodleUrlsLive(){
     MOODLE_URLS_LIVE = out;
   }catch(err){ console.warn('loadMoodleUrlsLive error:', err); }
 }
+// ── Enlace al Seguimiento.xlsx de cada DI ─────────────────────────────────────
+// El CSV de Reuniones solo trae el texto "Abrir seguimiento" (Power Automate pierde el
+// hipervínculo), así que el enlace se toma de la hoja "Links DI" de Reuniones (copiada aquí).
+// Si algún día el CSV trae la URL completa, se usa esa.
+const LINKS_SEGUIMIENTO_DI = {
+  "Yazim Meza": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7BA7BDF76C-ECCA-4D67-8AB1-269458733D4D%7D&file=Seguimiento%20Yazim%20Meza.xlsx&action=default&mobileredirect=true",
+  "Javiera Leiva": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7BF416CCC1-F488-466F-881D-67A293D96CB1%7D&file=Seguimiento%20Javiera%20Leiva.xlsx&action=default&mobileredirect=true",
+  "Bárbara González": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7BD69F5A4F-1D37-448D-9523-0DAE00C6BB74%7D&file=Seguimiento%20B%C3%A1rbara%20Gonz%C3%A1lez.xlsx&action=default&mobileredirect=true",
+  "Bárbara Soler": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7B0C51616C-04CC-486D-89A2-770C0D2912BB%7D&file=Seguimiento%20B%C3%A1rbara%20Soler.xlsx&action=default&mobileredirect=true",
+  "Carolina Henríquez": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7B957C6F0C-16CD-442F-A718-4E77BF197943%7D&file=Seguimiento%20Carolina%20Henr%C3%ADquez.xlsx&action=default&mobileredirect=true",
+  "Deborah Ramírez": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7BB84B05B3-9F16-4266-B795-DBA1270C493D%7D&file=Seguimiento%20Deborah%20Ram%C3%ADrez.xlsx&action=default&mobileredirect=true",
+  "Fernanda Reyes": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7BBDF4CCEF-E783-4E56-B1E9-7DFA4880A43D%7D&file=Seguimiento%20Fernanda%20Reyes.xlsx&action=default&mobileredirect=true",
+  "Natalie Baeza": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7B1CB2FC58-9D6C-42C2-9E40-6B90BD912519%7D&file=Seguimiento%20Natalie%20Baeza.xlsx&action=default&mobileredirect=true",
+  "Noelia Jara": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7B996004C6-83D8-418D-91F8-4D4CD167282A%7D&file=Seguimiento%20Noelia%20Jara.xlsx&action=default&mobileredirect=true",
+  "Noemí Urrutia": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7BC267080D-B4A7-4965-9F24-6BF510D2BFE9%7D&file=Seguimiento%20Noem%C3%AD%20Urrutia.xlsx&action=default&mobileredirect=true",
+  "Alejandra Cisternas": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7BF7C6D95D-B017-4947-ABBA-D92701EF472F%7D&file=Seguimiento%20Alejandra%20Cisternas.xlsx&action=default&mobileredirect=true",
+  "Rafael Siverio": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7B562D72A3-FE76-4EE9-8B20-36AD96DB010E%7D&file=Seguimiento%20Rafael%20Siverio.xlsx&action=default&mobileredirect=true",
+  "Catalina Salazar": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7B85057A04-F11A-4E73-A462-71DC286CA928%7D&file=Seguimiento%20Catalina%20Salazar.xlsx&action=default&mobileredirect=true",
+  "Erick Contreras": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7B89606B75-1E5D-472A-9D96-8A34EC31CECD%7D&file=Seguimiento%20Erick%20Contreras.xlsx&action=default&mobileredirect=true",
+  "Carla Riquelme": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7BCF488BF9-02A5-4DD7-8484-B458731E0A9E%7D&file=Seguimiento%20Carla%20Riquelme.xlsx&action=default&mobileredirect=true",
+  "Brenda Bastías": "https://alumnossantotomas-my.sharepoint.com/:x:/r/personal/jsalazar26_santotomas_cl/_layouts/15/Doc.aspx?sourcedoc=%7BB9B94163-BA09-4FC6-9862-03E62161D9C0%7D&file=Seguimiento%20Brenda%20Bast%C3%ADas.xlsx&action=default&mobileredirect=true"
+};
+function linkSeguimientoDI(d){
+  const csv=(d.linkSeguimiento||'').trim();
+  if(/^https?:\/\//i.test(csv)) return csv;
+  const k=Object.keys(LINKS_SEGUIMIENTO_DI).find(n=>normDiName(n)===normDiName(d.di));
+  return k?LINKS_SEGUIMIENTO_DI[k]:'';
+}
 function getMoodleUrl(asignatura, facultad){
   // Única fuente: columna "Enlace de Aula" de Reuniones_Proyecto (CSV seguimiento-2026-2).
   // Las fuentes anteriores (moodle-urls.csv y la tabla fija MOODLE_URLS) tenían enlaces
@@ -3445,7 +3473,7 @@ function openPanel(idx){
   // necesita entrar a revisar el archivo del DI.
   const seguimientoLink=document.getElementById('p-seguimiento-link');
   const hasDG = (d.dg||'—').trim()!=='—' && (d.dg||'').trim()!=='';
-  const seguimientoUrl = hasDG ? (d.linkSeguimiento||'') : '';
+  const seguimientoUrl = hasDG ? linkSeguimientoDI(d) : '';
   if(moodleUrl||progUrl||seguimientoUrl){moodleWrap.style.display='block';}else{moodleWrap.style.display='none';}
   if(moodleUrl){moodleLink.href=moodleUrl;moodleLink.style.display='inline-flex';}else{moodleLink.style.display='none';}
   if(progLink){if(progUrl){progLink.href=progUrl;progLink.style.display='inline-flex';}else{progLink.style.display='none';}}
