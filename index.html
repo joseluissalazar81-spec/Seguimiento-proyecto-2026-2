@@ -4200,6 +4200,13 @@ document.addEventListener('DOMContentLoaded',()=>{
       btn.textContent='¡Copiado!'; setTimeout(()=>btn.textContent='Copiar texto', 2000);
     });
   });
+  document.getElementById('mail-open-btn')?.addEventListener('click',()=>{
+    const to      = encodeURIComponent(document.getElementById('mail-to').value);
+    const cc      = encodeURIComponent(document.getElementById('mail-cc').value);
+    const subject = encodeURIComponent(document.getElementById('mail-subject').value);
+    const body    = encodeURIComponent(document.getElementById('mail-body').value);
+    window.location.href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
+  });
 });
 
 // ── DIRECTORES DE ESCUELA (DNE) ──────────────────────────────────────────────
@@ -5667,14 +5674,6 @@ openPanel = function(idx){
   _origOpenPanel(idx);
   if(DATA[idx]) renderHistorial(DATA[idx].asignatura);
 };
-
-document.getElementById('mail-open-btn').addEventListener('click',()=>{
-  const to      = encodeURIComponent(document.getElementById('mail-to').value);
-  const cc      = encodeURIComponent(document.getElementById('mail-cc').value);
-  const subject = encodeURIComponent(document.getElementById('mail-subject').value);
-  const body    = encodeURIComponent(document.getElementById('mail-body').value);
-  window.location.href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
-});
 
 // ── MODAL DETALLE DE HITO ────────────────────────────────────────────────────
 function openHitoModal(idx){
