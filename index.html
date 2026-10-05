@@ -5765,8 +5765,10 @@ function jppDestroyCharts(){
 function abrirPanelJP(jpName){
   document.getElementById('jpp-av').textContent = jppIniciales(jpName);
   document.getElementById('jpp-title').textContent = 'Panel de control — '+jpName;
-  renderJPPanelGeneral(jpName);
+  // Mostrar el overlay ANTES de crear los charts: Chart.js mide el canvas al
+  // inicializar, y con display:none el contenedor mide 0x0 y no dibuja nada.
   document.getElementById('jp-panel-overlay').style.display='flex';
+  renderJPPanelGeneral(jpName);
 }
 
 function renderJPPanelGeneral(jpName){
