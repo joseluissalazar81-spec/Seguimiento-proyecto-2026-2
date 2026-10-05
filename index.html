@@ -1652,6 +1652,46 @@
     #dne-btn{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:4px 12px;font-size:11.5px;color:rgba(255,255,255,.92);cursor:pointer;font-family:inherit;transition:background .15s}
     #dne-btn:hover{background:rgba(255,255,255,.2)}
 
+    /* ── PANEL DE CONTROL POR JP ── */
+    #jp-panel-overlay{position:fixed;inset:0;z-index:650;background:rgba(20,30,45,.55);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px}
+    #jp-panel{background:#fff;border-radius:14px;width:760px;max-width:97vw;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 64px rgba(20,30,45,.35)}
+    .jpp-hdr{background:linear-gradient(135deg,#141D19,#1F392F);padding:16px 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+    .jpp-hdr-left{display:flex;align-items:center;gap:12px;min-width:0}
+    .jpp-av{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;flex-shrink:0}
+    .jpp-hdr-title{font-size:14px;font-weight:800;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .jpp-hdr-sub{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    #jpp-close{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:50%;width:28px;height:28px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;flex-shrink:0;transition:background .2s}
+    #jpp-close:hover{background:rgba(255,255,255,.28)}
+    .jpp-body{padding:18px 22px;overflow-y:auto;flex:1}
+    .jpp-back{display:inline-flex;align-items:center;gap:5px;background:none;border:none;color:#284639;font-size:11.5px;font-weight:700;cursor:pointer;padding:0 0 14px;font-family:inherit}
+    .jpp-back:hover{text-decoration:underline}
+    .jpp-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+    .jpp-stat{border-radius:10px;padding:12px 10px;text-align:center;border:1px solid rgba(59,110,140,.15);background:#f8fafc}
+    .jpp-stat-n{font-size:21px;font-weight:800;font-family:"DM Mono",monospace;color:#141D19}
+    .jpp-stat-l{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:rgba(18,16,28,.45);margin-top:3px}
+    .jpp-stat.warn .jpp-stat-n{color:#b03030}
+    .jpp-section-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#284639;margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid rgba(59,110,140,.15)}
+    .jpp-di-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .jpp-di-card{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid rgba(59,110,140,.15);border-radius:10px;cursor:pointer;background:#fff;transition:all .15s;text-align:left;font-family:inherit}
+    .jpp-di-card:hover{border-color:#284639;background:rgba(59,110,140,.04)}
+    .jpp-di-av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#284639,#1F392F);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0}
+    .jpp-di-info{flex:1;min-width:0}
+    .jpp-di-name{font-size:12px;font-weight:700;color:#141D19;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .jpp-di-meta{font-size:10px;color:rgba(18,16,28,.5);margin-top:1px}
+    .jpp-di-bar-wrap{height:4px;background:rgba(59,110,140,.12);border-radius:3px;overflow:hidden;margin-top:5px}
+    .jpp-di-bar{height:100%;border-radius:3px}
+    .jpp-di-pct{font-size:14px;font-weight:800;font-family:"DM Mono",monospace;min-width:40px;text-align:right;flex-shrink:0}
+    .jpp-table{width:100%;border-collapse:collapse;font-size:11.5px}
+    .jpp-table th{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#284639;padding:7px 8px;border-bottom:2px solid rgba(59,110,140,.15);text-align:left;white-space:nowrap;background:#f8fafc}
+    .jpp-table td{padding:8px;border-bottom:1px solid rgba(0,0,0,.05);vertical-align:middle}
+    .jpp-table tr:last-child td{border-bottom:none}
+    .jpp-table tr:hover td{background:rgba(59,110,140,.04)}
+    .jpp-asig-name{font-weight:600;color:#141D19}
+    .jpp-pct-cell{font-family:"DM Mono",monospace;font-weight:700}
+    .jpp-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;white-space:nowrap;display:inline-block}
+    .jpp-badge.at{background:rgba(176,48,48,.12);color:#b03030}
+    .jpp-badge.prog{background:rgba(59,110,140,.12);color:#284639}
+
     /* ── MODAL INFORME DNE ── */
     #inf-modal-overlay{position:fixed;inset:0;z-index:650;background:rgba(20,30,45,.55);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center}
     #inf-modal{background:#fff;border-radius:14px;width:680px;max-width:97vw;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 64px rgba(20,30,45,.35)}
@@ -3098,7 +3138,9 @@ function renderTeamPills(){
     vals.forEach(v=>{
       const act = filters[r.key]===v;
       const cnt = DATA.filter(d=>d[r.field]===v).length;
-      html += `<button class="sb-pill${act?' active':''}" onclick="setTeamFilter('${r.key}','${v}')">${v} <span class="sb-cnt">${cnt}</span></button>`;
+      const esPanelJP = r.key==='jp' && (v==='José Luis' || v==='Noelia');
+      const onclick = esPanelJP ? `abrirPanelJP('${v}')` : `setTeamFilter('${r.key}','${v}')`;
+      html += `<button class="sb-pill${act?' active':''}" onclick="${onclick}">${v} <span class="sb-cnt">${cnt}</span></button>`;
     });
   });
   bar.innerHTML = html;
@@ -5695,6 +5737,132 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'&&hmo) hmo.style.display='none'; });
 });
 
+// ── PANEL DE CONTROL POR JP ─────────────────────────────────────────────────
+// Vista general con los DI a cargo de un JP (solo José Luis / Noelia) y, al
+// hacer clic en un DI, el detalle de todas sus asignaturas. No toca filters
+// ni la tabla: es un popup informativo aparte.
+function jppPct(asig){ return (AVANCE_ALL[asig]||AVANCE[asig]||{}).avance||0; }
+function jppEsperado(asig){ const a=AVANCE_ALL[asig]||AVANCE[asig]||{}; return a.esperado==null?null:a.esperado; }
+function jppIniciales(nombre){ return (nombre||'').trim().split(/\s+/).slice(0,2).map(s=>s[0]||'').join('').toUpperCase(); }
+function jppBarColor(pct){ return pct>=70?'#4a8c6a':pct>=40?'#d4943a':'#b03030'; }
+function jppEsc(s){ return String(s||'').replace(/'/g,"\\'"); }
+
+// Deriva al popup real de la asignatura (el panel lateral #panel), cerrando
+// antes el popup del JP. Busca primero en currentRows (respeta la fila ya
+// resaltada en la tabla); si los filtros activos la dejan afuera, usa
+// DATA_ALL para no depender del filtro lateral.
+function jppAbrirAsignatura(asignatura, docente){
+  document.getElementById('jp-panel-overlay').style.display='none';
+  let idx = currentRows.findIndex(x=>x.asignatura===asignatura&&x.docente===docente);
+  if(idx<0){
+    currentRows = DATA_ALL;
+    idx = currentRows.findIndex(x=>x.asignatura===asignatura&&x.docente===docente);
+  }
+  if(idx>=0) openPanel(idx);
+}
+
+function abrirPanelJP(jpName){
+  document.getElementById('jpp-av').textContent = jppIniciales(jpName);
+  document.getElementById('jpp-title').textContent = 'Panel de control — '+jpName;
+  renderJPPanelGeneral(jpName);
+  document.getElementById('jp-panel-overlay').style.display='flex';
+}
+
+function renderJPPanelGeneral(jpName){
+  const src = DATA_ALL.length ? DATA_ALL : DATA;
+  const items = src.filter(d=>d.jp===jpName);
+  const total = items.length;
+  const avgAv = total? Math.round(items.reduce((s,d)=>s+jppPct(d.asignatura),0)/total):0;
+  const conEsp = items.filter(d=>jppEsperado(d.asignatura)!=null);
+  const avgEsp = conEsp.length? Math.round(conEsp.reduce((s,d)=>s+jppEsperado(d.asignatura),0)/conEsp.length):null;
+  const atrasadas = items.filter(isAtrasada).length;
+
+  document.getElementById('jpp-sub').textContent = total+' asignaturas a cargo';
+
+  const porDI = {};
+  items.forEach(d=>{
+    const di=(d.di||'').trim();
+    if(!di) return;
+    if(!porDI[di]) porDI[di]=[];
+    porDI[di].push(d);
+  });
+  const diNombres = Object.keys(porDI).sort((a,b)=>a.localeCompare(b,'es'));
+
+  const html = `
+    <div class="jpp-stats">
+      <div class="jpp-stat"><div class="jpp-stat-n">${total}</div><div class="jpp-stat-l">Asignaturas</div></div>
+      <div class="jpp-stat"><div class="jpp-stat-n">${avgAv}%</div><div class="jpp-stat-l">Avance prom.</div></div>
+      <div class="jpp-stat"><div class="jpp-stat-n">${avgEsp==null?'—':avgEsp+'%'}</div><div class="jpp-stat-l">Esperado prom.</div></div>
+      <div class="jpp-stat${atrasadas>0?' warn':''}"><div class="jpp-stat-n">${atrasadas}</div><div class="jpp-stat-l">Atrasadas</div></div>
+    </div>
+    <div class="jpp-section-title">Diseñadores Instruccionales a cargo (${diNombres.length})</div>
+    <div class="jpp-di-grid">
+      ${diNombres.map(di=>{
+        const list=porDI[di];
+        const n=list.length;
+        const avg=n?Math.round(list.reduce((s,d)=>s+jppPct(d.asignatura),0)/n):0;
+        const at=list.filter(isAtrasada).length;
+        return `<button class="jpp-di-card" onclick="renderJPPanelDetalleDI('${jppEsc(jpName)}','${jppEsc(di)}')">
+          <div class="jpp-di-av">${jppIniciales(di)}</div>
+          <div class="jpp-di-info">
+            <div class="jpp-di-name">${di}</div>
+            <div class="jpp-di-meta">${n} asig.${at?' · ⚠ '+at+' atrasada'+(at>1?'s':''):''}</div>
+            <div class="jpp-di-bar-wrap"><div class="jpp-di-bar" style="width:${avg}%;background:${jppBarColor(avg)}"></div></div>
+          </div>
+          <div class="jpp-di-pct" style="color:${jppBarColor(avg)}">${avg}%</div>
+        </button>`;
+      }).join('')}
+    </div>`;
+  document.getElementById('jpp-body').innerHTML = html;
+}
+
+function renderJPPanelDetalleDI(jpName, diName){
+  const src = DATA_ALL.length ? DATA_ALL : DATA;
+  const items = src.filter(d=>d.jp===jpName && (d.di||'').trim()===diName)
+    .sort((a,b)=>a.asignatura.localeCompare(b.asignatura,'es'));
+  const n=items.length;
+  const avg = n? Math.round(items.reduce((s,d)=>s+jppPct(d.asignatura),0)/n):0;
+  const conEsp = items.filter(d=>jppEsperado(d.asignatura)!=null);
+  const avgEsp = conEsp.length? Math.round(conEsp.reduce((s,d)=>s+jppEsperado(d.asignatura),0)/conEsp.length):null;
+  const atrasadas = items.filter(isAtrasada).length;
+
+  document.getElementById('jpp-sub').textContent = diName+' — '+n+' asignaturas';
+
+  const html = `
+    <button class="jpp-back" onclick="renderJPPanelGeneral('${jppEsc(jpName)}')">&#8592; Volver al panel general</button>
+    <div class="jpp-stats">
+      <div class="jpp-stat"><div class="jpp-stat-n">${n}</div><div class="jpp-stat-l">Asignaturas</div></div>
+      <div class="jpp-stat"><div class="jpp-stat-n">${avg}%</div><div class="jpp-stat-l">Avance prom.</div></div>
+      <div class="jpp-stat"><div class="jpp-stat-n">${avgEsp==null?'—':avgEsp+'%'}</div><div class="jpp-stat-l">Esperado prom.</div></div>
+      <div class="jpp-stat${atrasadas>0?' warn':''}"><div class="jpp-stat-n">${atrasadas}</div><div class="jpp-stat-l">Atrasadas</div></div>
+    </div>
+    <div class="jpp-section-title">Detalle por asignatura</div>
+    <table class="jpp-table">
+      <thead><tr><th>Asignatura</th><th>Facultad</th><th>Docente</th><th>Planificación</th><th>% Avance</th><th>% Esperado</th></tr></thead>
+      <tbody>
+        ${items.map(d=>{
+          const av=jppPct(d.asignatura);
+          const esp=jppEsperado(d.asignatura);
+          const atr=isAtrasada(d);
+          return `<tr style="cursor:pointer" onclick="jppAbrirAsignatura('${jppEsc(d.asignatura)}','${jppEsc(d.docente)}')">
+            <td class="jpp-asig-name">${d.asignatura}</td>
+            <td>${d.facultad||'—'}</td>
+            <td>${d.docente||'—'}</td>
+            <td><span class="jpp-badge ${atr?'at':'prog'}">${atr?'⚠ ':''}${planifDisplay(d)}</span></td>
+            <td class="jpp-pct-cell" style="color:${jppBarColor(av)}">${av}%</td>
+            <td class="jpp-pct-cell">${esp==null?'—':esp+'%'}</td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>`;
+  document.getElementById('jpp-body').innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  const jpo = document.getElementById('jp-panel-overlay');
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'&&jpo&&jpo.style.display==='flex') jpo.style.display='none'; });
+});
+
 // ── MODAL INFORME DNE ────────────────────────────────────────────────────────
 function abrirModalInforme(){
   const ov  = document.getElementById('inf-modal-overlay');
@@ -6091,6 +6259,23 @@ window.addEventListener('load', function(){
         </button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- PANEL DE CONTROL POR JP -->
+<div id="jp-panel-overlay" style="display:none" onclick="if(event.target===this)this.style.display='none'">
+  <div id="jp-panel">
+    <div class="jpp-hdr">
+      <div class="jpp-hdr-left">
+        <div class="jpp-av" id="jpp-av"></div>
+        <div style="min-width:0">
+          <div class="jpp-hdr-title" id="jpp-title"></div>
+          <div class="jpp-hdr-sub" id="jpp-sub"></div>
+        </div>
+      </div>
+      <button id="jpp-close" onclick="document.getElementById('jp-panel-overlay').style.display='none'">&#x2715;</button>
+    </div>
+    <div class="jpp-body" id="jpp-body"></div>
   </div>
 </div>
 
