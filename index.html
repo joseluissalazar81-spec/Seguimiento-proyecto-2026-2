@@ -1686,6 +1686,16 @@
     .jpp-table td{padding:8px;border-bottom:1px solid rgba(0,0,0,.05);vertical-align:middle}
     .jpp-table tr:last-child td{border-bottom:none}
     .jpp-table tr:hover td{background:rgba(59,110,140,.04)}
+    .jpp-charts-row{display:grid;grid-template-columns:1.3fr 1fr;gap:12px;margin-bottom:18px}
+    .jpp-charts-row .ov-chart-card{padding:14px 16px}
+    .jpp-charts-row .ov-donut-wrap{width:110px;height:110px}
+    @media(max-width:640px){
+      .jpp-charts-row{grid-template-columns:1fr}
+      .jpp-stats{grid-template-columns:repeat(2,1fr)}
+      .jpp-di-grid{grid-template-columns:1fr}
+      .jpp-body{padding:14px}
+      .jpp-table{display:block;overflow-x:auto}
+    }
     .jpp-asig-name{font-weight:600;color:#141D19}
     .jpp-pct-cell{font-family:"DM Mono",monospace;font-weight:700}
     .jpp-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;white-space:nowrap;display:inline-block}
@@ -5747,18 +5757,10 @@ function jppIniciales(nombre){ return (nombre||'').trim().split(/\s+/).slice(0,2
 function jppBarColor(pct){ return pct>=70?'#4a8c6a':pct>=40?'#d4943a':'#b03030'; }
 function jppEsc(s){ return String(s||'').replace(/'/g,"\\'"); }
 
-// Deriva al popup real de la asignatura (el panel lateral #panel), cerrando
-// antes el popup del JP. Busca primero en currentRows (respeta la fila ya
-// resaltada en la tabla); si los filtros activos la dejan afuera, usa
-// DATA_ALL para no depender del filtro lateral.
-function jppAbrirAsignatura(asignatura, docente){
-  document.getElementById('jp-panel-overlay').style.display='none';
-  let idx = currentRows.findIndex(x=>x.asignatura===asignatura&&x.docente===docente);
-  if(idx<0){
-    currentRows = DATA_ALL;
-    idx = currentRows.findIndex(x=>x.asignatura===asignatura&&x.docente===docente);
-  }
-  if(idx>=0) openPanel(idx);
+let jppBarInst=null, jppDonutInst=null, jppDetailInst=null;
+function jppDestroyCharts(){
+  [jppBarInst,jppDonutInst,jppDetailInst].forEach(c=>{ if(c) c.destroy(); });
+  jppBarInst=jppDonutInst=jppDetailInst=null;
 }
 
 function abrirPanelJP(jpName){
@@ -5769,6 +5771,7 @@ function abrirPanelJP(jpName){
 }
 
 function renderJPPanelGeneral(jpName){
+  jppDestroyCharts();
   const src = DATA_ALL.length ? DATA_ALL : DATA;
   const items = src.filter(d=>d.jp===jpName);
   const total = items.length;
@@ -5787,6 +5790,18 @@ function renderJPPanelGeneral(jpName){
     porDI[di].push(d);
   });
   const diNombres = Object.keys(porDI).sort((a,b)=>a.localeCompare(b,'es'));
+  const diStats = diNombres.map(di=>{
+    const list=porDI[di];
+    const n=list.length;
+    const avg=n?Math.round(list.reduce((s,d)=>s+jppPct(d.asignatura),0)/n):0;
+    const at=list.filter(isAtrasada).length;
+    return {di,n,avg,at};
+  });
+
+  // Donut: reparto por avance (misma lógica que el overview ejecutivo)
+  let completadas=0, enProd=0, sinIniciar=0;
+  items.forEach(d=>{ const a=jppPct(d.asignatura); if(a>=100) completadas++; else if(a>0) enProd++; else sinIniciar++; });
+  const donutColors=['#4a8c6a','#d4943a','#c9cfd6'];
 
   const html = `
     <div class="jpp-stats">
@@ -5795,13 +5810,24 @@ function renderJPPanelGeneral(jpName){
       <div class="jpp-stat"><div class="jpp-stat-n">${avgEsp==null?'—':avgEsp+'%'}</div><div class="jpp-stat-l">Esperado prom.</div></div>
       <div class="jpp-stat${atrasadas>0?' warn':''}"><div class="jpp-stat-n">${atrasadas}</div><div class="jpp-stat-l">Atrasadas</div></div>
     </div>
-    <div class="jpp-section-title">Diseñadores Instruccionales a cargo (${diNombres.length})</div>
+    <div class="jpp-charts-row">
+      <div class="ov-chart-card">
+        <div class="ov-chart-title">Avance por DI</div>
+        <canvas id="jppBarChart" height="${Math.max(120,diStats.length*30)}"></canvas>
+      </div>
+      <div class="ov-chart-card">
+        <div class="ov-chart-title">Estado de las asignaturas</div>
+        <div class="ov-donut-wrap"><canvas id="jppDonutChart" width="110" height="110"></canvas><div class="ov-donut-center" id="jppDonutCenter"></div></div>
+        <div class="ov-legend">
+          <div class="ov-leg-item"><span class="ov-leg-dot" style="background:${donutColors[0]}"></span><span class="ov-leg-label">Completadas</span><span class="ov-leg-val">${completadas}</span></div>
+          <div class="ov-leg-item"><span class="ov-leg-dot" style="background:${donutColors[1]}"></span><span class="ov-leg-label">En producción</span><span class="ov-leg-val">${enProd}</span></div>
+          <div class="ov-leg-item"><span class="ov-leg-dot" style="background:${donutColors[2]}"></span><span class="ov-leg-label">Sin iniciar</span><span class="ov-leg-val">${sinIniciar}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="jpp-section-title">Diseñadores Instruccionales a cargo (${diStats.length})</div>
     <div class="jpp-di-grid">
-      ${diNombres.map(di=>{
-        const list=porDI[di];
-        const n=list.length;
-        const avg=n?Math.round(list.reduce((s,d)=>s+jppPct(d.asignatura),0)/n):0;
-        const at=list.filter(isAtrasada).length;
+      ${diStats.map(({di,n,avg,at})=>{
         return `<button class="jpp-di-card" onclick="renderJPPanelDetalleDI('${jppEsc(jpName)}','${jppEsc(di)}')">
           <div class="jpp-di-av">${jppIniciales(di)}</div>
           <div class="jpp-di-info">
@@ -5814,9 +5840,29 @@ function renderJPPanelGeneral(jpName){
       }).join('')}
     </div>`;
   document.getElementById('jpp-body').innerHTML = html;
+
+  document.getElementById('jppDonutCenter').innerHTML = `<div class="ov-pct-big" style="font-size:19px">${avgAv}%</div><div class="ov-pct-label">avance</div>`;
+  jppDonutInst = new Chart(document.getElementById('jppDonutChart').getContext('2d'),{
+    type:'doughnut',
+    data:{datasets:[{data:[completadas,enProd,sinIniciar],backgroundColor:donutColors,borderWidth:2,borderColor:'#fff',hoverOffset:3}]},
+    options:{cutout:'68%',plugins:{legend:{display:false}},animation:{duration:400}}
+  });
+  jppBarInst = new Chart(document.getElementById('jppBarChart').getContext('2d'),{
+    type:'bar',
+    data:{labels:diStats.map(s=>s.di),datasets:[{data:diStats.map(s=>s.avg),backgroundColor:diStats.map(s=>jppBarColor(s.avg)),borderRadius:4,barThickness:16,minBarLength:4}]},
+    options:{
+      indexAxis:'y',
+      scales:{x:{max:100,grid:{color:'rgba(0,0,0,.05)'},ticks:{callback:v=>v+'%',font:{size:10}}},y:{grid:{display:false},ticks:{font:{size:10.5}}}},
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.raw}% avance promedio — ${diStats[ctx.dataIndex].n} asignaturas`}}},
+      onClick:(evt,els)=>{ if(els.length) renderJPPanelDetalleDI(jpName, diStats[els[0].index].di); },
+      onHover:(evt,els)=>{ evt.native.target.style.cursor = els.length?'pointer':'default'; },
+      animation:{duration:400}
+    }
+  });
 }
 
 function renderJPPanelDetalleDI(jpName, diName){
+  jppDestroyCharts();
   const src = DATA_ALL.length ? DATA_ALL : DATA;
   const items = src.filter(d=>d.jp===jpName && (d.di||'').trim()===diName)
     .sort((a,b)=>a.asignatura.localeCompare(b.asignatura,'es'));
@@ -5836,6 +5882,10 @@ function renderJPPanelDetalleDI(jpName, diName){
       <div class="jpp-stat"><div class="jpp-stat-n">${avgEsp==null?'—':avgEsp+'%'}</div><div class="jpp-stat-l">Esperado prom.</div></div>
       <div class="jpp-stat${atrasadas>0?' warn':''}"><div class="jpp-stat-n">${atrasadas}</div><div class="jpp-stat-l">Atrasadas</div></div>
     </div>
+    <div class="ov-chart-card" style="margin-bottom:18px">
+      <div class="ov-chart-title">Avance vs. esperado por asignatura</div>
+      <canvas id="jppDetailChart" height="${Math.max(120,n*34)}"></canvas>
+    </div>
     <div class="jpp-section-title">Detalle por asignatura</div>
     <table class="jpp-table">
       <thead><tr><th>Asignatura</th><th>Facultad</th><th>Docente</th><th>Planificación</th><th>% Avance</th><th>% Esperado</th></tr></thead>
@@ -5844,7 +5894,7 @@ function renderJPPanelDetalleDI(jpName, diName){
           const av=jppPct(d.asignatura);
           const esp=jppEsperado(d.asignatura);
           const atr=isAtrasada(d);
-          return `<tr style="cursor:pointer" onclick="jppAbrirAsignatura('${jppEsc(d.asignatura)}','${jppEsc(d.docente)}')">
+          return `<tr>
             <td class="jpp-asig-name">${d.asignatura}</td>
             <td>${d.facultad||'—'}</td>
             <td>${d.docente||'—'}</td>
@@ -5856,6 +5906,23 @@ function renderJPPanelDetalleDI(jpName, diName){
       </tbody>
     </table>`;
   document.getElementById('jpp-body').innerHTML = html;
+
+  jppDetailInst = new Chart(document.getElementById('jppDetailChart').getContext('2d'),{
+    type:'bar',
+    data:{
+      labels: items.map(d=>d.asignatura),
+      datasets:[
+        {label:'Avance', data:items.map(d=>jppPct(d.asignatura)), backgroundColor:'#284639', borderRadius:4, barThickness:9},
+        {label:'Esperado', data:items.map(d=>jppEsperado(d.asignatura)||0), backgroundColor:'#d4943a', borderRadius:4, barThickness:9},
+      ]
+    },
+    options:{
+      indexAxis:'y',
+      scales:{x:{max:100,grid:{color:'rgba(0,0,0,.05)'},ticks:{callback:v=>v+'%',font:{size:10}}},y:{grid:{display:false},ticks:{font:{size:10}}}},
+      plugins:{legend:{display:true,position:'top',labels:{boxWidth:10,font:{size:10.5}}},tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.raw}%`}}},
+      animation:{duration:400}
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
