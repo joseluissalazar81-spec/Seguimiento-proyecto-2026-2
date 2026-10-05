@@ -4694,7 +4694,10 @@ function renderExecutiveHero(){
       } else if(isActual) {
         cls = 'actual';
       }
-      const fmtD = h.fecha.toLocaleDateString('es-CL',{day:'2-digit',month:'2-digit'});
+      const fechaInicio = i===0 ? GANTT_START : GANTT_HITOS[i-1].fecha;
+      const fmtIni = fechaInicio.toLocaleDateString('es-CL',{day:'2-digit',month:'2-digit'});
+      const fmtFin = h.fecha.toLocaleDateString('es-CL',{day:'2-digit',month:'2-digit'});
+      const fmtD = `${fmtIni}–${fmtFin}`;
       const pinHTML = isActual
         ? `<div class="exec-block-today-flag">📍 HOY</div>`
         : '';
