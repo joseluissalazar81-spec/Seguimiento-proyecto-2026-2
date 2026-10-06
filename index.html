@@ -5944,6 +5944,24 @@ function abrirPanelInformeFacultades(){
 
 function fiColor(fac){ return FAC_COLORS[fac]||'#284639'; }
 
+// Un ícono temático por facultad (en vez de iniciales), color heredado (currentColor = blanco sobre el círculo).
+const FAC_ICON_SVGS = {
+  'Ingeniería y Negocios': '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+  'Ciencias Sociales y Educación': '<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/>',
+  'Formación General': '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
+  'Salud': '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8Z"/>',
+};
+const FAC_ICON_PAW = '<ellipse cx="12" cy="16.5" rx="5" ry="4"/><ellipse cx="4.5" cy="9.5" rx="2" ry="2.5"/><ellipse cx="9.3" cy="5.5" rx="2" ry="2.5"/><ellipse cx="14.7" cy="5.5" rx="2" ry="2.5"/><ellipse cx="19.5" cy="9.5" rx="2" ry="2.5"/>';
+function fiFacIcon(fac, size){
+  size = size||16;
+  if(fac==='Recursos Naturales y Medicina Veterinaria'){
+    return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="currentColor">${FAC_ICON_PAW}</svg>`;
+  }
+  const path = FAC_ICON_SVGS[fac];
+  if(!path) return FAC_ABBR[fac]||jppIniciales(fac);
+  return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${path}</svg>`;
+}
+
 function renderInformeFacultadesGeneral(){
   fiCloseDneMenu();
   fiDestroyChart();
@@ -5969,7 +5987,7 @@ function renderInformeFacultadesGeneral(){
         const {n,avg,atrasadas} = fiFacStats(f);
         const col = fiColor(f);
         return `<button class="jpp-di-card" style="border-left:4px solid ${col}" onclick="renderInformeFacultadDetalle('${jppEsc(f)}')">
-          <div class="jpp-di-av" style="background:${col}">${FAC_ABBR[f]||jppIniciales(f)}</div>
+          <div class="jpp-di-av" style="background:${col}">${fiFacIcon(f,16)}</div>
           <div class="jpp-di-info">
             <div class="jpp-di-name">${f}</div>
             <div class="jpp-di-meta">${n} asig.${atrasadas?' · ⚠ '+atrasadas+' atrasada'+(atrasadas>1?'s':''):''}</div>
@@ -5998,7 +6016,7 @@ function renderInformeFacultadDetalle(fac){
 
   document.getElementById('fi-title').textContent = fac;
   document.getElementById('fi-sub').textContent = `${n} asignaturas`;
-  document.getElementById('fi-av').textContent = FAC_ABBR[fac]||jppIniciales(fac);
+  document.getElementById('fi-av').innerHTML = fiFacIcon(fac,19);
   document.querySelector('#fi-panel .jpp-hdr').style.background = `linear-gradient(135deg,${col},${col}dd)`;
 
   const html = `
