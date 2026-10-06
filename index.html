@@ -5942,6 +5942,8 @@ function abrirPanelInformeFacultades(){
   renderInformeFacultadesGeneral();
 }
 
+function fiColor(fac){ return FAC_COLORS[fac]||'#284639'; }
+
 function renderInformeFacultadesGeneral(){
   fiCloseDneMenu();
   fiDestroyChart();
@@ -5951,6 +5953,8 @@ function renderInformeFacultadesGeneral(){
 
   document.getElementById('fi-title').textContent = 'Informes por facultad';
   document.getElementById('fi-sub').textContent = `${total} asignaturas · ${facs.length} facultades`;
+  document.getElementById('fi-av').textContent = '📋';
+  document.querySelector('#fi-panel .jpp-hdr').style.background = 'linear-gradient(135deg,#141D19,#1F392F)';
 
   const html = `
     <div class="jpp-stats">
@@ -5963,8 +5967,9 @@ function renderInformeFacultadesGeneral(){
     <div class="jpp-di-grid">
       ${facs.map(f=>{
         const {n,avg,atrasadas} = fiFacStats(f);
-        return `<button class="jpp-di-card" onclick="renderInformeFacultadDetalle('${jppEsc(f)}')">
-          <div class="jpp-di-av">${FAC_ABBR[f]||jppIniciales(f)}</div>
+        const col = fiColor(f);
+        return `<button class="jpp-di-card" style="border-left:4px solid ${col}" onclick="renderInformeFacultadDetalle('${jppEsc(f)}')">
+          <div class="jpp-di-av" style="background:${col}">${FAC_ABBR[f]||jppIniciales(f)}</div>
           <div class="jpp-di-info">
             <div class="jpp-di-name">${f}</div>
             <div class="jpp-di-meta">${n} asig.${atrasadas?' · ⚠ '+atrasadas+' atrasada'+(atrasadas>1?'s':''):''}</div>
@@ -5989,9 +5994,12 @@ function renderInformeFacultadDetalle(fac){
   const avg = n? Math.round(items.reduce((s,x)=>s+x.av,0)/n):0;
   const atrasadas = items.filter(x=>x.atr).length;
   const dnes = fiDnesDeFacultad(fac);
+  const col = fiColor(fac);
 
   document.getElementById('fi-title').textContent = fac;
   document.getElementById('fi-sub').textContent = `${n} asignaturas`;
+  document.getElementById('fi-av').textContent = FAC_ABBR[fac]||jppIniciales(fac);
+  document.querySelector('#fi-panel .jpp-hdr').style.background = `linear-gradient(135deg,${col},${col}dd)`;
 
   const html = `
     <button class="jpp-back" onclick="renderInformeFacultadesGeneral()">&#8592; Volver a facultades</button>
