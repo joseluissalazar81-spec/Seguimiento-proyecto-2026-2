@@ -5129,7 +5129,7 @@ function generarInforme(facOverride){
       .map(d=>({d, av:(avSrc[d.asignatura]||{}).avance||0, atr:isAtrasada(d)}))
       .sort((a,b)=>b.av-a.av)
       .map(({d,av,atr})=>{
-        const barColor = av>=70?'#27a06e':av>=40?'#d4a820':'#c04848';
+        const barColor = atr?'#c04848':(av>=70?'#27a06e':'#d4a820');
         return `<div class="asig-row${atr?' atrasada':''}">
           <div class="asig-row-lbl"><span class="asig-row-nom">${d.asignatura}</span><span class="asig-row-doc">${d.docente}${atr?' · ⚠ atrasada':''}</span></div>
           <div class="asig-row-track"><div class="asig-row-fill" style="width:${av}%;background:${barColor}"></div></div>
@@ -6015,7 +6015,7 @@ function renderInformeFacultadDetalle(fac){
     type:'bar',
     data:{
       labels: items.map(x=>`${x.d.asignatura} — ${x.d.docente}`),
-      datasets:[{data:items.map(x=>x.av), backgroundColor:items.map(x=>jppBarColor(x.av)), borderRadius:4, barThickness:12, minBarLength:4}]
+      datasets:[{data:items.map(x=>x.av), backgroundColor:items.map(x=>x.atr?'#b03030':(x.av>=70?'#4a8c6a':'#d4943a')), borderRadius:4, barThickness:12, minBarLength:4}]
     },
     options:{
       indexAxis:'y',
